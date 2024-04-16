@@ -38,6 +38,9 @@ chapters:
   - title: Quantum Information  
     sections:
       - file: QuantumInformationFile\entropyFunction
+  - title: Important Mathematical Notions
+    sections:
+      - file: MathNotes\mathematicalNotes1_preorder.md
   # - title: My Papers
   #   sections:
   #     - file: >-
