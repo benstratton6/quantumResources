@@ -1,0 +1,22 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  title: Quantum Resources
+  # description:
+  keywords: []
+  authors: []
+  # github: 
+  bibliography: []
+site:
+  template: book-theme
+  name: QR
+  title: Quantum Resources Site
+  options:
+      logo: images\logo.png
+  nav: []
+  actions:
+    - title: Google Scholar
+      url: https://scholar.google.com/citations?user=u6v0KGYAAAAJ&hl=en
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/ben-stratton-544698151/
+  domains: []
