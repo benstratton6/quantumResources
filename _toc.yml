@@ -22,8 +22,9 @@ parts:
 chapters:
   - title: Mathematical Pleminaries 
     sections: 
-      - file: mathematicalPleminaries\Vectors
-      - file: mathematicalPleminaries\VectorSpaces
+      - file: mathematicalPleminaries\mathematicalPleminaries1_Vectors
+      - file: mathematicalPleminaries\mathematicalPleminaries2_VectorSpaces
+      - file: mathematicalPleminaries\mathematicalPleminaries3_innerProducts
       - file: mathematicalPleminaries\mathematicalPleminariesGlossary
   - title: Quantum Mechanics Formalism  
     sections:

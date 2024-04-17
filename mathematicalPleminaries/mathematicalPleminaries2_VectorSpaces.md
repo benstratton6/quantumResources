@@ -25,15 +25,10 @@ A vector space, defined over a field $\mathbb{F}$, is a set $V$ whose elements c
 Vector spaces defined over $\mathbb{R}$ are known as real vector spaces, whilst vector spaces defined over $\mathbb{C}$ are defined as complex vector spaces. 
 
 ## Vector Space Axioms
-
-In order for $V$ to be a vector space, the addition and scalar multiplication operations must meet a set of Axioms, defined below. 
-```{card} 
-:header: **Vector Space Axioms**
-:footer: Vector Space Axioms
-
-In order to be a vector space, the following conditions must be obeyed. 
-
 Let $\psi, ~\sigma, ~\omega~\in~V$ and $a,b \in \mathbb{F}^{1}$.
+
+(vector_space_axioms_target)=
+In order for $V$ to be a vector space, the addition and scalar multiplication operations must meet a set of Axioms, defined below.
 
 The addition operation must obey the following conditions 
 
@@ -51,7 +46,7 @@ The multiplication by a scalar operation must obey the following conditions
     - distributive over $V$
 2. $(a+b)\psi = a\psi + b\psi$
     - distributive over scalar
-```
+
 
 ## Further Vector Space Properties 
 ::::{tab-set}

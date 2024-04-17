@@ -20,13 +20,7 @@ exports:
     article_type: Report
 ---
 
-## Math test
-
-Here is an equation 
-
-\begin{equation}
-\mathcal{N}(\rho) = \rho'
-\end{equation}
+All finite dimensional inner product spaces are Hilbert spaces. Infinte dimensional Hilbert spaces differ due to the completeness relation. This means that sums converge (see Cauchy sequence) when they tend to infinitely. 
 
 
 
