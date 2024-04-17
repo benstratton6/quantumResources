@@ -37,7 +37,8 @@ chapters:
       - file: ResourceTheroriesFile\resourceTheoriesGlossaryofTerms.md
   - title: Quantum Information  
     sections:
-      - file: QuantumInformationFile\entropyFunction
+      - file: QuantumInformationFile\QuantumInfo_entropyFunction
+      - file: QuantumInformationFile\QuantumInfo_AlgorithmicCooling
   - title: Important Mathematical Notions
     sections:
       - file: MathNotes\mathematicalNotes1_preorder.md

@@ -1,5 +1,5 @@
 ---
-title: Pre-order and Partial Order
+title: Pre Order and Partial Order
 subject: Tutorial
 subtitle: 
 # short_title: How to MyST
