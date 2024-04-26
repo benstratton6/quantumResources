@@ -97,9 +97,124 @@ S_\alpha \bigg( \sum_{i} p_{i} \rho_i \bigg) \geq \sum_{i} p_{i} S_\alpha(\rho_{
 7. $S_{\alpha_1}(\rho) \geq S_{\alpha_2}(\rho)$ for $1 < \alpha_1 \leq \alpha_2 $.
 :::
 
+## Quantum Relative $\alpha$-Rényi Entropies 
+
+Let $\rho, \sigma$ be quantum states. The quantum relative $\alpha$-Rényi entropy is given by
+\begin{equation}
+S_{\alpha}(\rho \vert \vert \sigma) = \frac{1}{1-\alpha} \log \big[ \textrm{tr} \big( \rho^{\alpha} \sigma^{1-\alpha} \big) \big]
+\end{equation}
+
+The following entropy functions are limits of the quantum relative $\alpha$-Rényi entropies:
+
+:::{dropdown} Properties
+:close:
+1. $S_{\alpha}(\rho \vert \vert \sigma) \geq 0$ with $S_{\alpha}(\rho \vert \vert \sigma)=0$ iif $\rho=\sigma$. 
+2. If $\mathcal{E}$ is a quantum channel then 
+\begin{equation}
+S_{\alpha}(\rho \vert \vert \sigma) \geq S_{\alpha}( \mathcal{E}(\rho) \vert \vert \mathcal{E}(\sigma)).
+\end{equation}
+  - This is the [data processing inequality.](https://en.wikipedia.org/wiki/Data_processing_inequality)
+:::
+
+### Max Relative Entropy 
+
+Let $\rho, \sigma$ be two operators such that $\rho \geq 0, ~\textrm{tr}(\rho)=1$ and $\sigma \geq 0$. The [max relative entropy](https://doi.org/10.1109/TIT.2009.2018325) is given by 
+\begin{equation}
+D_{\textrm{max}}(\rho \vert \vert \sigma) = \log \big[ \textrm{min} \{ \lambda~:~\rho \leq \lambda \sigma \} \big]
+\end{equation}
+or 
+\begin{equation}
+D_{\textrm{max}}(\rho \vert \vert \sigma) = \log \big[ \mu_{max} (\sigma^{\frac{1}{2}} \rho \sigma^{\frac{1}{2}} ) \big]
+\end{equation}
+where $\mu_{min}(A)$ is the minimum eigenvalue of the operator $A$ if $\textrm{supp}(\rho) \subseteq \textrm{supp}(\sigma)$, it is defined as $+ \infty $ otherwise.
+
+:::{dropdown} Properties
+:close:
+1. $D_{\textrm{max}}( \rho \vert \vert \sigma) \geq 0$ with $D_{\textrm{max}}(\rho \vert \vert \sigma)=0$ iif $\rho=\sigma$ and both are states. 
+2. If $\mathcal{E}$ is a quantum channel then 
+\begin{equation}
+D_{\textrm{max}}( \rho \vert \vert \sigma) \geq D_{\textrm{max}}( \mathcal{E}(\rho) \vert \vert \mathcal{E}(\sigma)).
+\end{equation}
+  - This is the [data processing inequality.](https://en.wikipedia.org/wiki/Data_processing_inequality)
+3. If $\rho = \sum_{i}^{n} p_i \rho_i$ and $\sigma = \sum_i^{n} q_i \sigma_1$ are two mixtures, then 
+\begin{equation}
+D_{\textrm{max}}(\rho \vert \vert \sigma) \leq max_{i} D_{\textrm{max}}(\rho_i \vert \vert \sigma_i)
+\end{equation}
+4. $D_{\textrm{max}}(\rho \vert \vert \sigma) \geq S(\rho \vert \vert \sigma)$
+5. $D_{\textrm{max}}(U \rho U^{\dagger} \vert \vert U \sigma U^{\dagger}) = D_{\textrm{max}}(\rho \vert \vert \sigma) $
+6. $D_{\textrm{max}}(\rho \vert \vert \sigma) \leq - \log{\mu_{min}(\sigma)} $
+7. $D_{\textrm{max}}(\rho_1 \otimes \rho_2 \vert \vert \sigma_1 \otimes \sigma_2) = D_{\textrm{max}}(\rho_1 \vert \vert \sigma_2) + D_{\textrm{max}}(\rho_2 \vert \vert \sigma_2)$   
+8. $D_{\textrm{max}}(A:B) = D_{\textrm{max}}(\rho_{AB} \vert \vert \rho_A \otimes \rho_B)$
+  - A mutual information like quantity 
+:::
+
+### Min Relative Entropy 
+
+Let $\rho, \sigma$ be two operators such that $\rho \geq 0, ~\textrm{tr}(\rho)=1$ and $\sigma \geq 0$. The [min relative entropy](https://doi.org/10.1109/TIT.2009.2018325) is given by 
+\begin{equation}
+D_{\textrm{min}}(\rho \vert \vert \sigma) = - \log \big[ \textrm{Tr} \big( \Pi_{\rho} \sigma \big) \big]
+\end{equation}
+where $\Pi_{\rho}$ is the projector onto the support of $\rho$ if $\textrm{supp}(\rho) \subseteq \textrm{supp}(\sigma)$.
+
+Note that
+\begin{equation}
+D_{\textrm{min}}( \rho \vert \vert \sigma) = \lim_{\alpha \rightarrow 0^+} S_{\alpha}(\rho \vert \vert \sigma)
+\end{equation}
+
+:::{dropdown} Properties
+:close:
+1. $D_{\textrm{min}}( \rho \vert \vert \sigma) \geq 0$ with $D_{\textrm{min}}(\rho \vert \vert \sigma)=0$ iif $\rho=\sigma$ and both are states. In general, $D_{\textrm{min}}( \rho \vert \vert \sigma)=0$ if $\rho$ and $\sigma$ have identical supports. 
+2. $D_{\textrm{min}}( \rho \vert \vert \sigma) \leq D_{\textrm{max}}( \rho \vert \vert \sigma)$
+3. If $\mathcal{E}$ is a quantum channel then 
+\begin{equation}
+D_{\textrm{min}}( \rho \vert \vert \sigma) \geq D_{\textrm{min}}( \mathcal{E}(\rho) \vert \vert \mathcal{E}(\sigma)).
+\end{equation}
+  - This is the [data processing inequality.](https://en.wikipedia.org/wiki/Data_processing_inequality)
+4. If $\rho = \sum_{i}^{n} p_i \rho_i$ and $\sigma = \sum_i^{n} p_i \sigma_1$ are two mixtures, then 
+\begin{equation}
+D_{\textrm{min}}(\rho \vert \vert \sigma) \leq \sum_i p_i D_{\textrm{min}}(\rho_i \vert \vert \sigma_i)
+\end{equation}
+5. $D_{\textrm{min}}(\rho \vert \vert \sigma) \leq S(\rho \vert \vert \sigma)$
+6. $D_{\textrm{min}}(U \rho U^{\dagger} \vert \vert U \sigma U^{\dagger}) = D_{\textrm{min}}(\rho \vert \vert \sigma) $
+7. $D_{\textrm{min}}(\rho \vert \vert \sigma) \leq - \log{\mu_{min}(\sigma)} $
+8. $D_{\textrm{min}}(A:B) = D_{\textrm{min}}(\rho_{AB} \vert \vert \rho_A \otimes \rho_B)$
+  - A mutual information like quantity 
+:::
+
 ## Quantum Sandwiched $\alpha$-Rényi Entropies
 
+Let $\rho, \sigma$ be quantum states. The quantum quantum sandwiched $\alpha$-Rényi entropy is given by 
+\begin{equation}
+D_{\alpha}( \rho \vert \vert \sigma) = \frac{1}{1-\alpha} \log { \bigg[ \textrm{tr} \big( \sigma^{\frac{1-\alpha}{2 \alpha}} \rho \sigma^{\frac{1-\alpha}{2 \alpha}} \big)^{\alpha} \bigg] } .
+\end{equation}
+if $\textrm{supp}(\rho) \subseteq \textrm{supp}(\sigma)$, it is defined as $+ \infty $ otherwise.
 
-## Max Relative Entropy 
+:::{dropdown} Properties
+:close:
+1. $D_\alpha(\rho \vert \vert \sigma) \geq 0$ where $D_\alpha(\rho \vert \vert \sigma)$ iif $\rho=\sigma$.
+2. If $\mathcal{E}$ is a quantum channel and $\alpha \in [\frac{1}{2}, 1)$ and $(1, \infty)$ then 
+\begin{equation}
+D_{\alpha}( \rho \vert \vert \sigma) \geq D_{\alpha}( \mathcal{E}(\rho) \vert \vert \mathcal{E}(\sigma)).
+\end{equation}
+  - This is the [data processing inequality.](https://doi.org/10.1063/1.4838855)
+3. $D_{\alpha}(\rho \vert \vert \sigma) \geq D_{\beta}(\rho \vert \vert \sigma)$ if $\alpha \geq \beta$. 
+:::
 
-## Min Relative Entropy 
+The following entropy functions are limits of the quantum sandwiched $\alpha$-Rényi entropies:
+
+### Min Relative Entropy 
+
+Let $\rho, \sigma$ be two states, the min relative entropy is given by 
+\begin{equation}
+D_{\textrm{min}}(\rho \vert \vert \sigma) = - \log \big[ \textrm{Tr} \big( \sqrt{\rho} \sqrt{\sigma} \big)^{2} \big]
+\end{equation}
+
+:::{dropdown} Properties
+:close:
+1. $D_{\textrm{min}}( \rho \vert \vert \sigma) \geq 0$ with $D_{\textrm{min}}(\rho \vert \vert \sigma)=0$ iif $\rho=\sigma$. 
+2. If $\mathcal{E}$ is a quantum channel then 
+\begin{equation}
+D_{\textrm{min}}( \rho \vert \vert \sigma) \geq D_{\textrm{min}}( \mathcal{E}(\rho) \vert \vert \mathcal{E}(\sigma)).
+\end{equation}
+  - This is the [data processing inequality.](https://en.wikipedia.org/wiki/Data_processing_inequality)
+:::

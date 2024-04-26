@@ -20,11 +20,12 @@ root: index
 #   - file: ResourceTheroriesFile\popUpNotesResourceTheories.md
 parts:
 chapters:
-  - title: Mathematical Pleminaries 
+  - title: Linear Algebra
     sections: 
       - file: mathematicalPleminaries\mathematicalPleminaries1_Vectors
       - file: mathematicalPleminaries\mathematicalPleminaries2_VectorSpaces
       - file: mathematicalPleminaries\mathematicalPleminaries3_innerProducts
+      - file: mathematicalPleminaries\mathematicalPleminaries4_dualSpaces
       - file: mathematicalPleminaries\mathematicalPleminariesGlossary
   - title: Quantum Mechanics Formalism  
     sections:
@@ -42,7 +43,8 @@ chapters:
       - file: QuantumInformationFile\QuantumInfo_AlgorithmicCooling
   - title: Important Mathematical Notions
     sections:
-      - file: MathNotes\mathematicalNotes1_preorder.md
+      - file: MathNotes\mathematicalNotes1_preorder
+      - file: MathNotes\mathematicalNotes2_convexity
   # - title: My Papers
   #   sections:
   #     - file: >-

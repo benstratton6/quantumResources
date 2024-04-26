@@ -53,7 +53,7 @@ The multiplication by a scalar operation must obey the following conditions
 :::{tab-item} Linear Combination
 :sync: tab1
 Let $a_{1}, ~a_{2}, \ldots ~a_{n}~\in~V~\forall~n$ and $\lambda_1,~\lambda_2, \ldots ~\lambda_n~\in~\mathbb{F}^{1} ~\forall~n$
-
+(linear_combination_Vector_space_target)=
 A linear combination of the vectors $\{ a_{1}, ~a_{2}, \ldots, ~a_{n} \} $ is given by
 
 \begin{equation}
@@ -92,7 +92,7 @@ $G$ is a linear subspace of $V$ if
 :::{tab-item} Basis
 :sync: tab4
 Let $a_{1}, ~a_{2}, \ldots, ~a_{n}~\in~V~\forall~n$ 
-
+(basis_vector_space_target)=
 The set of vectors $\{ a_{1}, ~a_{2}, \ldots, ~a_{n} \} $ are a basis of $V$ if 
 1. $\textrm{Span}(\{ a_{1}, ~a_{2}, \ldots ~a_{n} \}) = V$
     - Any vectors in $V$ can written as a linear combination of the vectors in $\{ a_{1}, ~a_{2}, \ldots ~a_{n} \} $ [💭](#span_definition_target). 
