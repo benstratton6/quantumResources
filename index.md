@@ -59,7 +59,6 @@ Other notational highlights alongside my academic pursuits have been teaching a 
 :close:
 Information is instrumental in our understanding of thermodynamics. Their interplay has been studied through completely degenerate Hamiltonians whereby the informational contributions to thermodynamic transformations can be isolated. In this setting, all states other than the maximally mixed state are considered to be in informational nonequilibrium. An important yet still open question is how to characterize the ability of quantum dynamics to preserve informational nonequilibrium. Here, the dynamical resource theory of informational nonequilibrium preservability is introduced to begin providing an answer to this question. A characterization of the allowed operations is given for qubit channels and the n-dimensional Weyl-covariant channels—a physically relevant subset of the general channels. An operational interpretation of a state discrimination game with Bell state measurements is given. Finally, an explicit link between a channel’s classical capacity and its ability to preserve informational nonequilibrium is made.
 
-[MyST Paper](MyPapers\Dynamical Resource Theory of Informational Nonequilibrium Preservability.md)
 :::
 
 ## Talks

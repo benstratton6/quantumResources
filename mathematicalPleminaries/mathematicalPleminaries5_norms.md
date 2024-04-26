@@ -64,6 +64,8 @@ In addition to satisfying the above requirements, to be considered a norm on a v
 
 ## Matrix Norm Examples
 
+The following norms are all unitarily invariant, meaning $\vert \vert A \vert \vert =  \vert \vert UAU^{\dagger} \vert \vert$. 
+
 ::::{tab-set}
 :::{tab-item} 
 :sync: tab3
@@ -73,8 +75,19 @@ In addition to satisfying the above requirements, to be considered a norm on a v
 :sync: tab4
 Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{F}^{m \times n}$. The $k$-Ky Fan norm is given by
 \begin{equation}
-\vert \vert A \vert \vert _{*} = \sum_{i}^{k} \vert \mu_{i}(A) \vert,
+\vert \vert A \vert \vert _{*} = \sum_{i}^{k} \vert \mu^{\downarrow}_{i}(A) \vert,
 \end{equation}
-where $\mu_i (A)$ is the $i$th singular value of $A$ such that $ \mu_i(A) \geq \mu_{i+1}(A)~\forall~i$. Hence the Ky Fan Norm is the sum of the $k$th largest singular values.
+where $\mu^{\downarrow}_i (A)$ is the $i$th singular value of $A$ such that $ \mu^{\downarrow}_i(A) \geq \mu^{\downarrow}_{i+1}(A)~\forall~i$. Hence the Ky Fan Norm is the sum of the $k$th largest singular values.
+
+**Ky Fan Dominance**: Let $B~\in~M$ be a matrix such that $B~\in~\mathbb{F}^{m \times n}$. If it follows that
+\begin{equation}
+\vert \vert A \vert \vert _{k} \leq \vert \vert B \vert \vert _{k},
+\end{equation}
+for all $k$, then for all unitarily invariant norms it is the case that 
+\begin{equation}
+\vert \vert A \vert \vert \leq \vert \vert B \vert \vert.
+\end{equation}
 :::
 ::::
+
+

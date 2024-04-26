@@ -28,4 +28,4 @@ exports:
 **linearly independent:** The set of vectors $\{ a_{1}, ~a_{2}, \ldots, ~a_{n} \} $ are linearly independent if there does not exists $\lambda_1,~\lambda_2, \ldots ~\lambda_n~\in~\mathbb{F}^{1}$ such that $\lambda_1 a_{1} + \lambda_2 a_2 \ldots \lambda_n a_n = 0$ unless $\lambda_{j}$ is equal to $0$ for all $n$.
 
 (functional_target_glossary)=
-A functional takes a vector as input and outputs an element of the field the vector is defined over
+**A functional**: takes a vector as input and outputs an element of the field the vector is defined over
