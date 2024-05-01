@@ -23,15 +23,16 @@ chapters:
   - title: Linear Algebra
     sections: 
       - file: mathematicalPleminaries\mathematicalPleminaries1_Vectors
+      - file: mathematicalPleminaries\mathematicalPleminaries6_Matrices
       - file: mathematicalPleminaries\mathematicalPleminaries2_VectorSpaces
       - file: mathematicalPleminaries\mathematicalPleminaries3_innerProducts
       - file: mathematicalPleminaries\mathematicalPleminaries4_dualSpaces
       - file: mathematicalPleminaries\mathematicalPleminaries5_norms
       - file: mathematicalPleminaries\mathematicalPleminariesGlossary
-  - title: Quantum Mechanics Formalism  
-    sections:
-      - file: Notes_QuantPh\HilbertSpaces
-      - file: Notes_QuantPh\Observables
+  # - title: Quantum Mechanics Formalism  
+  #   sections:
+  #     - file: Notes_QuantPh\HilbertSpaces
+  #     - file: Notes_QuantPh\Observables
   - title: Resource Theories   
     sections:
       - file: ResourceTheroriesFile\ResourceTheories1.md

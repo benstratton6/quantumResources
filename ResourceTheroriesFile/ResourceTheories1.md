@@ -32,6 +32,16 @@ Value emerges from limitation. The study of these limitations, that arise from s
 
 Within a given resource theory, one therefore has allowed operations and free objects.
 
+```{figure} resourceTheories_introduction_1.png
+:alt: 
+:class: bg-primary
+:width: 600px
+:align: center
+:target: free_Operatons_allowed_operations_target
+
+a) The free objects of a resource theory inside the set of all objects. A resourceful and a resourceless object are shown b) The set of allowed operations of a resource theory inside the set of all operations.  
+```
+
 ### Allowed Operations
 
 Allowed operations are resource non-increasing operations. Hence, if there exists an allowed operation $\mathcal{E}$, between two objects $\rho$ and $\sigma$, such that $\mathcal{E}(\rho)=\sigma$, then it must be the case that $\sigma$ has less than or equal to the resource content of $\rho$. 
@@ -41,10 +51,17 @@ The allowed operations define a [preorder](#pre_order_conditions_target) on the 
     \rho \prec \sigma.
 \end{equation}
 
-Allowed operations are defined by the physical constraints of the system one is interested in investigating
+The preorder determines how resourceful objects are compared to each other. 
+
+Allowed operations are typically defined by the physical constraints of the system one is interested in investigating, such as in the resource theory of entanglement. However, they can be mathematically motivated, such as in the resource theory of symmetry.
 
 ### Free Objects
 
+Free objects are the set of objects upon which the allowed operations act invariantly. Hence, if an agent - who can only perform allowed operations - has only objects from the free set, they are only able to reach other objects in the free set. 
+
+It is assumed that an agent can generate any arbitrarily large amount of free objects at not cost. 
+
+Objects in the free set are said to be *resourceless*. Any object not in the set of free objects is said to contain *resource*.
 
 ### Operational Interpretations
 

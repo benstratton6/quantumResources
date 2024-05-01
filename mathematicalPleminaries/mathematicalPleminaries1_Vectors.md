@@ -12,7 +12,7 @@ authors:
     email: ben.stratton@bristol.ac.uk
 # license: CC-BY-4.0
 keywords: Vectors, dot product, cross product. 
-abstract: A very brief overview of vectors, operations of vectors and some other key properties. 
+abstract: A very brief overview of vectors, operations of vectors and other key properties. 
 exports:
 #   - format: docx
   - format: pdf

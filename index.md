@@ -47,7 +47,7 @@ Originally from Devon, England, I studied for my MSci in physics at the Universi
 Other notational highlights alongside my academic pursuits have been teaching a class as part of the Foundations of Physics course for foundation year students, demonstrated in the second year lab, co-organising Careers in Quantum – a student led quantum careers fair, and conducting outreach. 
 
 
-:::{figure} ./images/BenStrattonHeadShot.jpg
+:::{figure} ./images/BenStrattonHeadShot.png
 :name: BenStratonHeadShot
 :width: 200px
 :align: center

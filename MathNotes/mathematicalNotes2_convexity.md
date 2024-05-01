@@ -58,3 +58,23 @@ The argument of the left hand side, $tx_1 + (1-t)x_2$, is the straight line betw
 If the above criteria is satisfied, the function $f(X)$ is a convex function. 
 
 ## Convex Sets
+
+```{figure} mathematicalNotes2_convexity_image_3.png
+:alt: 
+:class: bg-primary
+:width: 600px
+:align: center
+:target: convexity_figure_sets_target
+
+a) A convex set b) a non-convex set.  
+```
+
+Let $V$ be a vector space over a field $\mathbb{F}$. A subset $S \subset V$ is convex if for all $\psi, \sigma~\in~S$ the line segment connecting $ \psi $ and $ \sigma $ is also in $S$, as seen in Fig (a) above. Mathemtically this means that 
+\begin{equation}
+t\psi + (1-t) \sigma~\in~S~\forall~(\psi,\sigma)~\in~S,~~ t~\in~[0,1].
+\end{equation}
+If a mixture of elements in the subset can lead to an element outside of the subset, as seen in fig (b) above where some points on the line segment are outside the boundary of the set, the subset is not convex. 
+
+The boundary of a convex set is always a convex curve.
+
+The convex hull of a set $S' \subset V$ is the smallest convex set that contains $S'$. 
