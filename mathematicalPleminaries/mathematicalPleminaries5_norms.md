@@ -12,7 +12,7 @@ authors:
     email: ben.stratton@bristol.ac.uk
 # license: CC-BY-4.0
 keywords: Vector Spaces, Vectors, Matrices, Norms 
-abstract: The conditions for a functional on a vector space to be a norm and some examples of both vector and matrix norms.  
+abstract: The conditions for a [functional](#functional_target_glossary) on a vector space to be a norm and some examples of both vector and matrix norms.  
 exports:
 #   - format: docx
   - format: pdf
@@ -126,13 +126,13 @@ It is also given by
 :sync: tab6
 Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{F}^{m \times n}$. The $k$-Ky Fan norm is given by
 \begin{equation}
-\vert \vert A \vert \vert _{*} = \sum_{i}^{k} \vert \mu^{\downarrow}_{i}(A) \vert,
+\vert \vert A \vert \vert^{k} _{*} = \sum_{i}^{k} \vert \mu^{\downarrow}_{i}(A) \vert,
 \end{equation}
 where $\mu^{\downarrow}_i (A)$ is the $i$th singular value of $A$ such that $ \mu^{\downarrow}_i(A) \geq \mu^{\downarrow}_{i+1}(A)~\forall~i$. Hence the Ky Fan Norm is the sum of the $k$th largest singular values.
 
 **Ky Fan Dominance**: Let $B~\in~M$ be a matrix such that $B~\in~\mathbb{F}^{m \times n}$. If it follows that
 \begin{equation}
-\vert \vert A \vert \vert _{k} \leq \vert \vert B \vert \vert _{k},
+\vert \vert A \vert \vert^{k} _{*} \leq \vert \vert B \vert \vert^{k} _{*},
 \end{equation}
 for all $k$, then for all unitarily invariant norms it is the case that 
 \begin{equation}
