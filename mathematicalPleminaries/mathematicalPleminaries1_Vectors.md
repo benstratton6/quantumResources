@@ -112,6 +112,8 @@ Let $\bm{x} \in \mathbb{F}^{n}, ~ \lambda \in \mathbb{F}^{1}$
 - $\vert \vert \bm{x} \vert \vert \geq 0, ~\textrm{where}~\vert \vert \bm{x} \vert \vert = 0 ~\textrm{iif.}~\bm{x}=0$
 - $\vert \vert \lambda \bm{x} \vert \vert = \vert \lambda \vert ~ \vert \vert \bm{x} \vert \vert$
 - $ \vert \vert \bm{x} + \bm{y} \vert \vert \leq \vert \vert \bm{x} \vert \vert + \vert \vert \bm{y} \vert \vert$
+
+This is just one example of a vector norm. See more on the [norms page](#norms_page_target)
 :::
 :::{tab-item} Orthogonality
 :sync: tab6

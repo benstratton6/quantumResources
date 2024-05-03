@@ -19,7 +19,7 @@ exports:
     template: physical_review_journals
     article_type: Report
 ---
-
+(norms_page_target)=
 ## Norm Conditions
 
 Let $V$ be a vector space over the field $\mathbb{F}$. A functional, $ \vert \vert \cdot \vert \vert $, on $V$ from it's elements to the positive real numbers, $\vert \vert \cdot \vert \vert: V \rightarrow \mathbb{R}^{+}$ is a norm if it satisfies the following conditions for $\psi, \sigma ~\in ~V$ and $\lambda~\in~\mathbb{F}^{1}$:
@@ -61,7 +61,7 @@ This is just the maximum elements of $ \psi $.
 ::::
 
 ## Matrix Norms
-In addition to satisfying the above requirements, to be considered a norm on a vector space which has matrices as elements, $M$, the functional $\Omega: M \rightarrow \mathbb{R}^{+}$ must satisfy the following condition for all $A,B~\in~M$: 
+In addition to satisfying the above requirements, to be considered a norm on a vector space, $M$, which has matrices as elements, the functional $\Omega: M \rightarrow \mathbb{R}^{+}$ must satisfy the following condition for all $A,B~\in~M$: 
 
 1. $\vert \vert AB \vert \vert \leq \vert \vert A \vert \vert ~ \vert \vert B \vert \vert$
 
