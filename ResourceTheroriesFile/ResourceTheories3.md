@@ -27,7 +27,7 @@ A function $f$ mapping from some state $ \rho $ to a real number, $f: \rho \righ
 \begin{equation}
 f(\rho) \geq f(\mathcal{E}(\rho))
 \end{equation}
-where $\mathcal{E} \in \mathfrak{F}$. This means the function is [monotonic](https://en.wikipedia.org/wiki/Monotonic_function) under allowed operations. Physically, this means that function cannot increase for something less resourceful. Resource measures are often just called Monotones.  
+where $\mathcal{E} \in \mathfrak{F}$. This means the function is [monotonic](https://en.wikipedia.org/wiki/Monotonic_function) under allowed operations. Physically, this means that the quantifier for $\rho$ cannot be larger for something less resourceful then $\rho$, namely $\mathcal{E}(\rho)$. Resource measures are often just called Monotones.  
 
 ## Resource Measures Features
 ::::{tab-set}
