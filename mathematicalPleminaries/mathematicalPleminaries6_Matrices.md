@@ -98,18 +98,56 @@ a_{21}+b_{21} & a_{22}+b_{22} & \ldots & a_{2m}+b_{2m} \\
 a_{n1}+b_{n1} & a_{n2}+b_{n2} & \ldots & a_{nm}+b_{nm} \\
 \end{pmatrix}
 \end{equation}
+The same logic follows for matrix subtraction. 
+
 ::::
 
 
 ::::{tab-set}
 :::{tab-item} Transpose
 :sync: tab5
-Let $A~\in~\mathbb{M}_{nm}$
+Let $A,B~\in~\mathbb{M}_{nm}(\mathbb{F})$, $C~\in~\mathbb{M}_{ml}(\mathbb{F})$, $\bm{x}~\in~\mathbb{F}^{m}, ~\bm{y}~\in~\mathbb{F}^{n}$. 
+(tranpose_matrix_operations_target)=
+The transpose of $A$, given by $A^{t}~\in~\mathbb{M}_{mn}(\mathbb{F})$, is the matrix obtained by swapping the roles and columns of the matrix $A$. If the matrix element of $A$ in the $i$th row and $j$th column is given by $a_{ij}$, the matrix elements of $A^{t}$ in the $i$th row and $j$th column is given by $a_{ji}$. 
+
+**Properties**: 
+- $(AC)^{t} = C^{t}A^{t}$
+- $(A+B)^{t} = A^{t} + B^{t} = B^{t} + A^{t}$. 
+- $\bm{y} \cdot A \bm{x} = (A^{t}\bm{y}) \cdot \bm{x}$
+
+:::
+:::{tab-item} Conjugate transpose
+:sync: tab6
+
+Let $A,B~\in~\mathbb{M}_{nm}(\mathbb{C})$, $C~\in~\mathbb{M}_{ml}(\mathbb{C})$.
+
+The conjugate transpose of $A$, given by $A^{\dagger}~\in~\mathbb{M}_{mn}(\mathbb{C})$, is the matrix obtained by first [transposing](#tranpose_matrix_operations_target) $A$, given by $A^{t}$, and then taking the complex conjugate of all its elements, given by $A^{*}$. This operations can be done is any order, such that $A^{\dagger} = (A^{t})^{*} = (A^{*})^{t}$.
+
+**Properties**: 
+- $(AC)^{\dagger} = C^{\dagger}A^{\dagger}$
+- $(A+B)^{\dagger} = A^{\dagger} + B^{\dagger} = B^{\dagger} + A^{\dagger}$. 
+
+:::
+:::{tab-item} Inverse
+:sync: tab7
+
+Let $A,B~\in~\mathbb{M}_{nn}(\mathbb{F})$. 
+
+The matrix $A$ is invertible (non-singular) if there exists a matrix $A^{-1}~\in~\mathbb{M}_{nn}(\mathbb{F})$ such that 
+\begin{equation}
+A^{-1}A = \mathbb{I},
+\end{equation}
+where $\mathbb{I}$ is the identity matrix. 
+
+**Properties**
+- $(A^{-1})^{-1} = A$
+- If $BA=\mathbb{I}$ for some $B$ then $B=A^{-1}$. 
+- If both $A$ and $B$ are invertible the $AB$ is invertible with $(AB)^{-1} = B^{-1}A^{-1}$. 
 
 :::
 :::{tab-item} Matrix Multiplication
-:sync: tab4
-Let $A~\in~\mathbb{M}_{nm}$ and $B~\in~\mathbb{M}_{ml} and $C=AB$
+:sync: tab8
+Let $A~\in~\mathbb{M}_{nm}$ and $B~\in~\mathbb{M}_{ml}$ and $C=AB$
 
 The elements $c_{ij}$ is given by 
 \begin{equation}
@@ -164,4 +202,13 @@ a_{n1} b_{11} + a_{n2} b_{21} + \ldots + a_{nm} b_{m1} & \ldots & a_{n1} b_{1l} 
 
 Matrix properties 
 
-
+::::{tab-set}
+:::{tab-item} Hermitian
+:sync: tab1
+Tab one
+:::
+:::{tab-item} Unitary
+:sync: tab2
+Tab two
+:::
+::::

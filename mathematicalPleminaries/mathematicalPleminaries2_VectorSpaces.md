@@ -76,6 +76,8 @@ Let $a_{1}, ~a_{2}, \ldots ~a_{n}~\in~V~\forall~n$
 \lambda_1 a_{1} + \lambda_2 a_2 \ldots \lambda_n a_n = 0
 \end{equation}
 unless $\lambda_{j}$ is equal to $0$ for all $n$.
+
+In a space defined over $\mathbb{F}^{m}$, the most elements a set of linearly independent vectors could contain is $m$.  
 :::
 :::{tab-item} Linear Subspace
 :sync: tab3
@@ -97,6 +99,11 @@ The set of vectors $\{ a_{1}, ~a_{2}, \ldots, ~a_{n} \} $ are a basis of $V$ if
 1. $\textrm{Span}(\{ a_{1}, ~a_{2}, \ldots ~a_{n} \}) = V$
     - Any vectors in $V$ can written as a linear combination of the vectors in $\{ a_{1}, ~a_{2}, \ldots ~a_{n} \} $ [💭](#span_definition_target). 
 2. The vectors $\{ a_{1}, ~a_{2}, \ldots ~a_{n} \} $ are [linear independent](#linearly_independent_target_glossary).  
+
+For any $\psi~\in~V$, if $\{ a_{1}, ~a_{2}, \ldots, ~a_{n} \} $ forms a basis, there exists a unique set of scalars $\lambda_{1}, \lambda_2, \ldots, \lambda_{n}~\in~\mathbb{F}^{n}$ such that 
+\begin{equation}
+\psi = \lambda_{1} a_{1} + \lambda_2 a_{2} + \ldots + \lambda_{n} a_{n}.
+\end{equation}
 :::
 ::::
 

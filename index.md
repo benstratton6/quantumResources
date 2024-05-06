@@ -20,31 +20,11 @@ Please do get in touch if you would like to add anything or notice a mistake.
 
 ## About Me
 
-My name is Ben Stratton and I am a third year PhD student at the University of Bristol studying problems in quantum information theory. My current interests are in and around the fields of quantum resource theories, quantum computation and quantum technologies.
+My name is Ben Stratton and I am a third year PhD student at the University of Bristol studying problems in quantum information theory. My current interests are in and around the fields of quantum resource theories, quantum thermodynamics, quantum computation and general quantum technologies.
 
-::::{tab-set}
-:::{tab-item} Resource Theories 
-:sync: tab1
-Resource thoeries are a systematic approach to studying the quantum properties that cause quantum systems to differ from the classical systems. 
+Originally from Devon, England, I studied for my MSci in physics at the University of Bristol between 2016-2020, taking units in Quantum Information Theory, Quantum Computation, Advance Quantum Mechanics and Advance Computational Physics. I returned to Bristol in 2021 to join the Quantum Engineering Centre for Doctoral Training. During the first year of my PhD I undertook an interdisciplinary range of teaching that included courses in Quantum Light and Matter, Applied Quantum Theory, Nanofabrication and Quantum Systems Engineering. I then joined the Quantum Information Theory group under the supervision of Paul Skrzypczyk to work on problems in quantum information theory.
 
-To learn about resource theories see [Quantum Resource Theories](10.1103/RevModPhys.91.025001) or [Resource of the Quantum World](
-https://doi.org/10.48550/arXiv.2402.05474)
-:::
-:::{tab-item} Quantum Computation 
-:sync: tab2
-Quantum computation is the study of computing with information stored in quantum mechanical properties. It has been shown that by encoding, processing and then decoding information store in quantum proerties, algorithms with exponential speed ups over the best known classicl algorithms can be found. There is now an effort to try and find algorithms that can solve problems useful for industry and society for which quantum computation can provide an advantage over the best know classical algorithm. Such an advantage could be in terms of speed or cost. 
-
-A good place to begin learning about quantum computation, a text book that is sacred in the field, is [Quantum Computation and Quantum Information](https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE#overview).
-:::
-:::{tab-item} Quantum Technologies 
-:sync: tab2
-I find the emergying quantum technologies sector to be of great intrest.
-:::
-::::
-
-Originally from Devon, England, I studied for my MSci in physics at the University of Bristol between 2016-2020, taking units in Quantum Information Theory, Quantum Computation, Advance Quantum Mechanics and Advance Computational Physics. I returned to Bristol in 2021 to join the Quantum Engineering Centre for Doctoral Training. During the first year of my PhD I undertook an interdisciplinary range of teaching that included Quantum Light and Matter, Applied Quantum Theory, Nanofabrication and Quantum Systems Engineering. I then joined the Quantum Information Theory group under the supervision of Paul Skrzypczyk.
-
-Other notational highlights alongside my academic pursuits have been teaching a class as part of the Foundations of Physics course for foundation year students, demonstrated in the second year lab, co-organising Careers in Quantum – a student led quantum careers fair, and conducting outreach. 
+Other notational highlights alongside my academic pursuits have been teaching a class as part of the Foundations of Physics course for foundation year students, demonstrated in the second year lab, co-organising Careers in Quantum – a student led quantum careers fair, and conducting outreach at the Blue Dot Science Festival. 
 
 
 :::{figure} ./images/BenStrattonHeadShot.png
