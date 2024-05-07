@@ -28,6 +28,7 @@ chapters:
       - file: mathematicalPleminaries\mathematicalPleminaries3_innerProducts
       - file: mathematicalPleminaries\mathematicalPleminaries4_dualSpaces
       - file: mathematicalPleminaries\mathematicalPleminaries5_norms
+      - file: mathematicalPleminaries\mathematicalPleminaries6_Linear_Maps
       - file: mathematicalPleminaries\mathematicalPleminariesGlossary
   # - title: Quantum Mechanics Formalism  
   #   sections:

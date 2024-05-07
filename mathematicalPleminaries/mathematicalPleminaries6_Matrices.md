@@ -120,7 +120,7 @@ The transpose of $A$, given by $A^{t}~\in~\mathbb{M}_{mn}(\mathbb{F})$, is the m
 :sync: tab6
 
 Let $A,B~\in~\mathbb{M}_{nm}(\mathbb{C})$, $C~\in~\mathbb{M}_{ml}(\mathbb{C})$.
-
+(conjugate_tranpose_matrix_operations_target)=
 The conjugate transpose of $A$, given by $A^{\dagger}~\in~\mathbb{M}_{mn}(\mathbb{C})$, is the matrix obtained by first [transposing](#tranpose_matrix_operations_target) $A$, given by $A^{t}$, and then taking the complex conjugate of all its elements, given by $A^{*}$. This operations can be done is any order, such that $A^{\dagger} = (A^{t})^{*} = (A^{*})^{t}$.
 
 **Properties**: 
@@ -203,12 +203,63 @@ a_{n1} b_{11} + a_{n2} b_{21} + \ldots + a_{nm} b_{m1} & \ldots & a_{n1} b_{1l} 
 Matrix properties 
 
 ::::{tab-set}
+:::{tab-item} Triangular 
+:sync: tab9
+Let $A~\in~\mathbb{M}_{nm}$ with elements $a_{ij}$ ($i$th row and $j$th column)
+
+$A$ is upper triangular if $a_{ij}=0$ if $i>j$. For example
+\begin{equation}
+A = \begin{pmatrix}
+1 & 2 & 3 \\
+0 & 2 & 4 \\
+0 & 0 & 3 \\
+\end{pmatrix}
+\end{equation}
+
+$A$ is lower triangular if $a_{ij}=0$ if $i<j$. For example
+\begin{equation}
+A = \begin{pmatrix}
+1 & 0 & 0 \\
+2 & 4 & 0 \\
+3 & 2 & 1 \\
+\end{pmatrix}
+\end{equation}
+
+:::
+:::{tab-item} Symmetric
+:sync: tab10
+Let $A~\in~\mathbb{M}_{nm}$. 
+
+A is symmetric if $A=A^{t}$ where $(\cdot)^{t}$ is the [transpose operation](#tranpose_matrix_operations_target). 
+
+:::
+:::{tab-item} Anti-symmetric 
+:sync: tab11
+
+Let $A~\in~\mathbb{M}_{nm}$ with elements $a_{ij}$ ($i$th row and $j$th column)
+
+$A$ is anti-symmetric if $a_{ij} = -a_{ji}$. For example
+
+\begin{equation}
+A = \begin{pmatrix}
+1 & 2 & -4 \\
+-2 & 3 & 5 \\
+4 & -5 & 1 \\
+\end{pmatrix}
+\end{equation}
+:::
 :::{tab-item} Hermitian
-:sync: tab1
-Tab one
+:sync: tab12
+Let $A~\in~\mathbb{M}_{nm}$. 
+
+A is hermitian if $A=A^{\dagger}$ where $(\cdot)^{\dagger}$ is the [conjugate transpose operation](#conjugate_tranpose_matrix_operations_target).
+
 :::
-:::{tab-item} Unitary
-:sync: tab2
-Tab two
-:::
+:::{tab-item} Diagonal 
+:sync: tab13
+
+Let $A~\in~\mathbb{M}_{nm}$ with elements $a_{ij}$ ($i$th row and $j$th column)
+
+$A$ is diagonal if $a_{ij} = 0$ if $i \neq j$. 
+
 ::::

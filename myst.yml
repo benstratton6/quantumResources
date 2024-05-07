@@ -9,10 +9,10 @@ project:
   bibliography: []
 site:
   template: book-theme
-  name: QR
+  name: Quantum Resources
   title: Quantum Resources Site
   options:
-      logo: images\logo.png
+      logo: images\logo2.svg
   nav: []
   actions:
     - title: Google Scholar
