@@ -44,10 +44,14 @@ chapters:
     sections:
       - file: QuantumInformationFile\QuantumInfo_entropyFunction
       - file: QuantumInformationFile\QuantumInfo_AlgorithmicCooling
+      - file: QuantumInformationFile\QuantumInfo_UsefulTricks
   - title: Important Mathematical Notions
     sections:
+      - file: MathNotes\mathematicalNotes1_stocasticMatrices
+      - file: MathNotes\mathematicalNotes1_majorisation
       - file: MathNotes\mathematicalNotes1_preorder
       - file: MathNotes\mathematicalNotes2_convexity
+      
   # - title: My Papers
   #   sections:
   #     - file: >-
