@@ -24,12 +24,14 @@ Let $\bm{x}, \bm{y}~\in~\mathbb{R}^{n}$ with components $(x_1, x_2, \ldots, x_n)
 
 If $\bm{x}$ majorises $\bm{y}$, then $\bm{y}$ can be considered to be *more mixed* or *closer* to the maximally mixed vector, $I = (1/n, 1/n, \ldots, 1/n)$, then $\bm{x}$. 
 
-$\bm{x}$ majorises $\bm{y}$, typically denoted by $\bm{x} \succ \bm{y}$,
+If $\bm{x}$ majorises $\bm{y}$ then it is typically denoted by $\bm{x} \succ \bm{y}$.
+
+$\bm{x}$ majorises $\bm{y}$: 
 - If and only if, 
 \begin{equation}
 \sum^{k}_{i} x^{\downarrow}_{i} \geq \sum^{k}_{i} y^{\downarrow}_{i} ~~ \forall ~ k = 1,2, \ldots, n-1 ~ \textrm{with}~ \sum_{i}^{n} x_{i} = \sum_{i}^{n} y_{i}.
 \end{equation}
-where $x^{\downarrow}_{i}$ and $y^{\downarrow}_{i}$ are the components of $\bm{x}$ and $\bm{y}$ respectively ordered in non-increasing order, such that $x_i \geq x_{i+1}~\forall~i$.
+where $x^{\downarrow}_{i}$ and $y^{\downarrow}_{i}$ are the components of $\bm{x}$ and $\bm{y}$ respectively, ordered in non-increasing order, such that $x_i \geq x_{i+1}~\forall~i$.
 
 - If and only if there exists a stochastic matrix $A$ satisfying 
 \begin{equation}
