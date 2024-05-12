@@ -11,7 +11,7 @@ authors:
     orcid: 0009-0001-2746-3668
     email: ben.stratton@bristol.ac.uk
 # license: CC-BY-4.0
-keywords: Vector Spaces, Vectors, Matrices, Norms 
+keywords: Norms, Vector Spaces, Vectors, Matrices 
 abstract: The conditions for a [functional](#functional_target_glossary) on a vector space to be a norm and some examples of both vector and matrix norms.  
 exports:
 #   - format: docx

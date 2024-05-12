@@ -11,7 +11,7 @@ authors:
     orcid: 0009-0001-2746-3668
     email: ben.stratton@bristol.ac.uk
 # license: CC-BY-4.0
-keywords: Entropy, Relative Entropy. 
+keywords: Entropy, Relative Entropy, Rényi Entropies. 
 abstract: Some Quantum entropy functions and their properties are given. 
 exports:
 #   - format: docx

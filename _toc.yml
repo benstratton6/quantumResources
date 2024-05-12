@@ -25,10 +25,12 @@ chapters:
       - file: linearAlgebra\mathematicalPleminaries1_Vectors
       - file: linearAlgebra\mathematicalPleminaries6_Matrices
       - file: linearAlgebra\mathematicalPleminaries2_VectorSpaces
+      - file: linearAlgebra\mathematicalPleminaries8_basis
+      - file: linearAlgebra\mathematicalPleminaries7_Linear_Maps
       - file: linearAlgebra\mathematicalPleminaries3_innerProducts
       - file: linearAlgebra\mathematicalPleminaries4_dualSpaces
+      - file: linearAlgebra\mathematicalPleminaries9_eigenvectors
       - file: linearAlgebra\mathematicalPleminaries5_norms
-      - file: linearAlgebra\mathematicalPleminaries6_Linear_Maps
       - file: linearAlgebra\mathematicalPleminariesGlossary
   # - title: Quantum Mechanics Formalism  
   #   sections:
@@ -42,13 +44,13 @@ chapters:
       - file: ResourceTheroriesFile\resourceTheoriesGlossaryofTerms.md
   - title: Quantum Information  
     sections:
-      - file: QuantumInformationFile\QuantumInfo_entropyFunction
-      - file: QuantumInformationFile\QuantumInfo_AlgorithmicCooling
-      - file: QuantumInformationFile\QuantumInfo_UsefulTricks
+      - file: QuantumInformationFile\QuantumInfo1_entropyFunction
+      - file: QuantumInformationFile\QuantumInfo2_AlgorithmicCooling
+      - file: QuantumInformationFile\QuantumInfo3_UsefulTricks
   - title: Important Mathematical Notions
     sections:
-      - file: MathNotes\mathematicalNotes1_stocasticMatrices
-      - file: MathNotes\mathematicalNotes1_majorisation
+      - file: MathNotes\mathematicalNotes4_stocasticMatrices
+      - file: MathNotes\mathematicalNotes3_majorisation
       - file: MathNotes\mathematicalNotes1_preorder
       - file: MathNotes\mathematicalNotes2_convexity
       

@@ -104,6 +104,11 @@ For any $\psi~\in~V$, if $\{ a_{1}, ~a_{2}, \ldots, ~a_{n} \} $ forms a basis, t
 \begin{equation}
 \psi = \lambda_{1} a_{1} + \lambda_2 a_{2} + \ldots + \lambda_{n} a_{n}.
 \end{equation}
+
+(dimension_vector_spaces_target)=
+The **dimension of a vector space** $V$, given by $\textrm{dim}V$, is the minimum number of elements in a basis of $V$, or the number of vectors needed to Span $V$. 
+
+For more on basis [see here](#basis_basis_target)
 :::
 ::::
 
