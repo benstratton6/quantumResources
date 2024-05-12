@@ -33,10 +33,11 @@ $\bm{x}$ majorises $\bm{y}$:
 \end{equation}
 where $x^{\downarrow}_{i}$ and $y^{\downarrow}_{i}$ are the components of $\bm{x}$ and $\bm{y}$ respectively, ordered in non-increasing order, such that $x_i \geq x_{i+1}~\forall~i$.
 
-- If and only if there exists a stochastic matrix $A$ satisfying 
+- If and only if there exists a [stochastic matrix](#stocastic_matrices_mathnotes_target) $A$ satisfying 
 \begin{equation}
 A \bm{x} = \bm{y}, ~~ A I = I.
 \end{equation}
+(where the second condition ensures $A$ needs to be [doubly stochastic](#double_stocastic_matrix_mathNotes_target)). 
 
 ### Schur-convex
 

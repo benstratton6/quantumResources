@@ -22,14 +22,14 @@ parts:
 chapters:
   - title: Linear Algebra
     sections: 
-      - file: mathematicalPleminaries\mathematicalPleminaries1_Vectors
-      - file: mathematicalPleminaries\mathematicalPleminaries6_Matrices
-      - file: mathematicalPleminaries\mathematicalPleminaries2_VectorSpaces
-      - file: mathematicalPleminaries\mathematicalPleminaries3_innerProducts
-      - file: mathematicalPleminaries\mathematicalPleminaries4_dualSpaces
-      - file: mathematicalPleminaries\mathematicalPleminaries5_norms
-      - file: mathematicalPleminaries\mathematicalPleminaries6_Linear_Maps
-      - file: mathematicalPleminaries\mathematicalPleminariesGlossary
+      - file: linearAlgebra\mathematicalPleminaries1_Vectors
+      - file: linearAlgebra\mathematicalPleminaries6_Matrices
+      - file: linearAlgebra\mathematicalPleminaries2_VectorSpaces
+      - file: linearAlgebra\mathematicalPleminaries3_innerProducts
+      - file: linearAlgebra\mathematicalPleminaries4_dualSpaces
+      - file: linearAlgebra\mathematicalPleminaries5_norms
+      - file: linearAlgebra\mathematicalPleminaries6_Linear_Maps
+      - file: linearAlgebra\mathematicalPleminariesGlossary
   # - title: Quantum Mechanics Formalism  
   #   sections:
   #     - file: Notes_QuantPh\HilbertSpaces
