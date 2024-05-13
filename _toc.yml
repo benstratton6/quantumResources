@@ -53,6 +53,9 @@ chapters:
       - file: MathNotes\mathematicalNotes3_majorisation
       - file: MathNotes\mathematicalNotes1_preorder
       - file: MathNotes\mathematicalNotes2_convexity
+  - title: Quantitative Finance
+    sections:
+      - file: QuantFinance\quantFinance1_utilityFunctions.md
       
   # - title: My Papers
   #   sections:

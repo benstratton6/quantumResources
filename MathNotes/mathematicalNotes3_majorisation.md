@@ -26,6 +26,8 @@ If $\bm{x}$ majorises $\bm{y}$, then $\bm{y}$ can be considered to be *more mixe
 
 If $\bm{x}$ majorises $\bm{y}$ then it is typically denoted by $\bm{x} \succ \bm{y}$.
 
+### Majorisation Conditions
+
 $\bm{x}$ majorises $\bm{y}$: 
 - If and only if, 
 \begin{equation}
@@ -39,7 +41,7 @@ A \bm{x} = \bm{y}, ~~ A I = I.
 \end{equation}
 (where the second condition ensures $A$ needs to be [doubly stochastic](#double_stocastic_matrix_mathNotes_target)). 
 
-### Schur-convex
+### Schur-convex Functions
 
 A function $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$ is called Schur-convex if and only if 
 \begin{equation}

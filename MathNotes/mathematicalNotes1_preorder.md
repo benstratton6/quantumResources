@@ -22,6 +22,8 @@ exports:
 
 Let $S$ be some set and $\leq$ be some relation between the elements of the set. 
 
+### Pre-order Conditions
+
 The relation sets a pre-order on the set $S$ if
 (pre_order_conditions_target)=
 1. $a \leq a$ for all $a~\in~S$
@@ -29,7 +31,9 @@ The relation sets a pre-order on the set $S$ if
 2. $a \leq b$ and $b \leq c$ implies $a \leq c$ where $a,b,c~\in~S$. 
     - Transitivity 
 
-The relation sets a partial order on the set $S$ if both 1 and 2 are met and
+### Partial-order Conditions
+
+The relation sets a partial order on the set $S$ if both 1 and 2 from the pre-order conditions are met and
 
 3. $a \leq b$ and $b \leq a$ implies $a=b$
     - Antisymmetry 

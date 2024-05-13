@@ -26,19 +26,23 @@ A map from a vector space $V$ to a vector space $V'$ is a rule which assigns to 
 - A map from a space defined over $\mathbb{F}^{n}$ to $\mathbb{F}^{1}$ is called a [functional](#functional_target_glossary).
 - A map from a space defined over $\mathbb{F}^{n}$ to $\mathbb{F}^{n}$ is called an operator. 
 
+### Linear Map Conditions
+
 A map $L: \mathbb{F}^{n} \rightarrow \mathbb{F}^{m}$ is called a **linear map** if
 - $L(\bm{x} + \bm{y}) = L(\bm{x}) + L(\bm{y})$ forall $\bm{x}, \bm{y} \in \mathbb{F}^{n}$. 
 - $L(\lambda \bm{x}) = \lambda L(\bm{x})$ where $\lambda ~ \in ~ \mathbb{F}^{1}$
 
-Each linear map has an associated matrix. The linear map $L: \mathbb{F}^{n} \rightarrow \mathbb{F}^{m}$ has an associated matrix $M_{T}~\in~\mathbb{M}_{mn}(\mathbb{F})$ with elements given by 
+### Matrices and Linear Maps
+
+Each linear map has an associated matrix. The linear map $L: \mathbb{F}^{n} \rightarrow \mathbb{F}^{m}$ has an associated matrix $M_{L}~\in~\mathbb{M}_{mn}(\mathbb{F})$ with elements given by 
 \begin{equation}
-m_{ij} = e^{m}_{i} \cdot T(e^{n}_{j}),
+m_{ij} = e^{m}_{i} \cdot L(e^{n}_{j}),
 \end{equation}
 where $e^{n}_{i}$ and $e^{m}_{j}$ are the [standard basis](#standard_basis_basis_target) of $\mathbb{F}^{n}$ and $\mathbb{F}^{m}$ respectively. 
 
 The map $L$ can be applied to a vector $\bm{x} \in \mathbb{F}^{n}$ via its associated matrix as 
 \begin{equation}
-T(\bm{x}) = M_{T} \bm{x}~\in~\mathbb{F}^{m}.
+L(\bm{x}) = M_{L} \bm{x}~\in~\mathbb{F}^{m}.
 \end{equation}
 
 ### Operations of Linear Maps
@@ -156,7 +160,7 @@ Let $L: \mathbb{F}^{n} \rightarrow \mathbb{F}^{m}$ be a linear map.
 $L$ is bijective if it is both [surjective](#Surjective_linear_maps_target) and [injective](#injective_linear_maps_target). 
 
 **Properties:**
-- If $T: \mathbb{F}^{n} \rightarrow \mathbb{F}^{n}$ be a linear map and bijective, $T^{-1}: \mathbb{F}^{n} \rightarrow \mathbb{F}^{n}$ be also a linear map, where $T^{-1}$ is the inverse map. 
+- Let $L: \mathbb{F}^{n} \rightarrow \mathbb{F}^{n}$ be a linear map and bijective, $L^{-1}: \mathbb{F}^{n} \rightarrow \mathbb{F}^{n}$ be also a linear map, where $L^{-1}$ is the inverse map. 
 
 :::
 :::{tab-item} Nullity 
@@ -166,7 +170,7 @@ Let $L: \mathbb{F}^{n} \rightarrow \mathbb{F}^{m}$ be a linear map.
 
 The nullity of $L$ is defined to be 
 \begin{equation}
-\textrm{nullity} L \coloneqq \textrm{dim} ~\textrm{Ker} T.
+\textrm{nullity} L \coloneqq \textrm{dim} ~\textrm{Ker} L.
 \end{equation} 
 
 where $\textrm{dim}$ is the [dimension](#dimension_vector_spaces_target). 
@@ -178,7 +182,7 @@ Let $L: \mathbb{F}^{n} \rightarrow \mathbb{F}^{m}$ be a linear map.
 
 The rank of $L$ is defined to be 
 \begin{equation}
-\textrm{rank} L \coloneqq \textrm{dim} ~\textrm{Im} T.
+\textrm{rank} L \coloneqq \textrm{dim} ~\textrm{Im} L.
 \end{equation} 
 
 where $\textrm{dim}$ is the [dimension](#dimension_vector_spaces_target). 
