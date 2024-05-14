@@ -21,4 +21,7 @@ exports:
 ---
 
 (example_expected_utlity_theory_quanntFinace_glossary)=
-**Example**: If the different alternatives were potentially amounts of wealth, $w$, that the agent could get with probability $p_w$, this would be the expected wealth of the agent. 
+**Example**: If the different alternatives, $w$, were potential amounts of wealth that the agent could get with probability $p_w$, then the expected alternative would be the expected wealth of the agent (the average wealth they would expected from sampling from the distribution many times). 
+
+(Intresting_idea_utility_theroy_partial_order)=
+The is some mention of partially ordered utility in the literature, but I have not seen it formalised anywhere. 

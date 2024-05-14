@@ -28,50 +28,52 @@ Utility directly influences demand, as the higher the utility of a product or se
 (utility_function_target_quantfinance)=
 ### Utility Functions
 
-Assume there is some set of possible alternatives, $\mathfrak{W} = \{ w_{i} \}$, form which an agent can either choose from, or be assigned (situation dependent). The set $\mathfrak{W}$ has a binary relation, $>$, that allows any two elements of the set to be compared. This binary relation models the agents preference, with the agent preferring $w_{i}$ to $w_{j}$ if $w_i > w_j$. It is also assumed that possible alternatives can be mixed according to some probability distribution and give a legitimate alternative for agent, such that 
+Assume there is some set of possible alternatives, $\mathfrak{W} = \{ w_{i} \}$, from which an agent can either choose an alternative, or be assigned an alternative based off some probability distribution (situation dependent). 
+
+The set $\mathfrak{W}$ has a binary relation, $>$, that allows any two elements of the set to be compared. This binary relation models the agents preference, with the agent preferring $w_{i}$ to $w_{j}$ if $w_i > w_j$. Put differently, if $w_i > w_j$ then alternative $w_i$ brings the agent more satisfaction. 
+
+It is also assumed that possible alternatives can be mixed according to some probability distribution, with the mixture being a valid alternative, such that for two elements $(w_i, w_j)$,
 \begin{equation}
 \alpha w_{i} + (1-\alpha) w_{j} \in \mathfrak{W}~\forall~ \alpha \in [0,1].
 \end{equation}
 
-A utility function is a function that maps from the set $\mathfrak{W}$ to the real numbers, whilst preserving the ordering set by the binary relation. 
-
-Hence, $u: \mathfrak{W} \rightarrow \mathbb{R}$, such that 
+A **utility function**, $u(\cdot)$, is a map from the set $\mathfrak{W}$ to the real numbers that preserves the ordering enforced by the binary relation. Hence, $u: \mathfrak{W} \rightarrow \mathbb{R}$, such that 
 \begin{equation} 
 u(w_{i})>u(w_{j})~ ~  \textrm{if} ~ ~  w_{i}>w_j.
 \end{equation} 
 Formally, this means that utility functions are a monotone for the binary relation.  
 
-The utility function subject to a linear transformation will continue to be monotonic for the binary relation. Hence, the numerical output of a utility function does not hold any intrinsic value. It is comparisons between the utility of different alternatives that has meaning.   
+A utility function subject to a linear transformation will continue to be monotonic for the binary relation on $\mathfrak{W}$. Hence, the numerical output of a utility function does not hold any intrinsic value. It is comparisons between the utility of different alternatives that has meaning.   
 
-Utility functions allow the idea of risk to be introduced to the agents. Typically, they will include an additional parameter $R$ that is used to model the agents attitude toward risk.   
+Utility functions allow the idea of risk to be introduced for agents. Typically, they will include an additional parameter $R$ that is used to model the agents attitude toward risk. This will be denoted by $u_R(w)$. 
 
 :::{dropdown} Utility Axioms
 :closed:
 
 Let $\mathfrak{W} = \{ w_{i} \}$ be a set of alternative outcomes. 
 
-There exists a binary relation on $\mathfrak{W}$, namely $>$, and alternative outcomes and be combined via some probability distribution $\alpha \in [0,1]$ to form new alternative outcomes, 
+There exists a binary relation on $\mathfrak{W}$, namely $>$, and an operations that allows alternative outcomes to be combined via some probability distribution $\alpha \in [0,1]$ to form new alternative outcomes, 
 \begin{equation}
 w' = \alpha w_{i} + (1-\alpha) w_{j} \in \mathfrak{W}.
 \end{equation} 
 
-These concepts satisfy the following axioms:
+If these axioms are satisfied then there exists a function $u: \mathfrak{W} \rightarrow \mathbb{R}$ that preserve the ordering set on $\mathfrak{W}$ by the binary relation.
 
 1. $w_{i} > w_j$ forms a [total ordering](#total_ordering_preorder_maths_notes_target) on $\mathfrak{W}$. 
 
-This means that for all pairs of elements, $(w_{i}. w_{j})$ in $\mathfrak{W}$ one of the following relations is true
+This means that for all pairs of elements, $(w_{i}, w_{j})\in \mathfrak{W}$ one of the following relations is true
 \begin{equation}
 w_i = w_j, ~ ~ w_i > w_j ~ ~ w_i < w_j
 \end{equation}
-and if $w_{i} > w_j$ and $w_{j} > w_k$ then $w_i > w_k$.
+and if $w_{i} > w_j$ and $w_{j} > w_k$ then $w_i > w_k$ [💭](#Intresting_idea_utility_theroy_partial_order). 
 
   - **Physical Interpretation**: The agent has a preference over all possible alternatives. There is no set of possible alternative where they are "not sure" which alternative they prefer. 
 
 2. $w_i < w_j$ implies $w_i < \alpha w_i + (1-\alpha) w_j$
 
-  - Physical Interpretation: If $w_j$ is preferable to $w_i$ then having any probability of obtaining the alternative $w_j$ is preferable to having $w_i$ with certainty. 
+  - **Physical Interpretation**: If $w_j$ is preferable to $w_i$ then having any probability of obtaining the alternative $w_j$ is preferable to having $w_i$ with certainty. 
 
-3. $w_i > w_j$ implies $w_j > \alpha w_i + (1-\alpha) w_j$
+3. $w_i > w_j$ implies $w_i > \alpha w_i + (1-\alpha) w_j$
 
   - **Physical Interpretation**: If $w_i$ is preferable to $w_j$ then having any probability of obtaining the alternative $w_j$ is less-preferable to having $w_i$ with certainty. This is the alternative case to 2. 
 
@@ -80,16 +82,14 @@ and if $w_{i} > w_j$ and $w_{j} > w_k$ then $w_i > w_k$.
 \alpha w_i + (1-\alpha) w_k < w_j
 \end{equation}
 
-  - **Physical Interpretation**: Regardless of how preferable $w_k$ is to compared $w_j$, there exists a probability of $w_k$ occurring that is small enough compared to the probability of the less preferable alternative $w_i$ occurring such that taking the chance is less preferable then $w_j$.  
+  - **Physical Interpretation**: Regardless of how preferable $w_k$ is compared to $w_j$, there exists a probability of $w_k$ occurring that is small enough compared to the probability of the less preferable alternative $w_i$ occurring such that taking the chance is less preferable then taking $w_j$ with certainty.  
 
 5. $w_i > w_j > w_k$ implies the existence of an $\alpha$ such that 
 \begin{equation}
 \alpha w_i + (1-\alpha) w_k > w_j
 \end{equation}
 
-  - **Physical Interpretation**: Regardless of how less preferable $w_k$ is to compared $w_j$, there exists a probability of $w_k$ occurring that is small enough compared to the probability of the more preferable alternative $w_i$ occurring such that taking the chance is more preferable then $w_j$.  
-
-If these axioms are satasfied then there exists a function $u: \mathfrak{W} \rightarrow \mathbb{R}$ that preserve the ordering set on $\mathfrak{W}$ by the binary relation.
+  - **Physical Interpretation**: Regardless of how less preferable $w_k$ is compared to $w_j$, there exists a probability of $w_k$ occurring that is small enough compared to the probability of the more preferable alternative $w_i$ occurring such that taking the chance is more preferable then taking $w_j$ with certainty. 
 
 These axioms were taken from [Theory of Games and Economic Behavior](https://books.google.co.uk/books?id=jCN5aNJ-n-0C)
 
@@ -109,35 +109,37 @@ This is the average alterative the agent would get if they sampled from the alte
 
 The utility of this expected alternative if then given by $u \big[ \mathbb{E}(\mathfrak{W}) \big]$. 
 
-The utility of each outcome is also described by some probability distribution. This means that the **expected utility** can be found from 
+The utility of each outcome is also described by some probability distribution where the agent has utility $u(w)$ with probability $p_w$. This means that the **expected utility** can be found from 
 \begin{equation}
 \mathbb{E} \big[ u(\mathfrak{W} ) \big] = \sum_{w \in \mathfrak{W}} p_{w} u(w).
 \end{equation}
 
-A rational agent will aim to maxamise their expected utility.
+A rational agent will aim to maxamise their expected utility, i.e, maxamise their satisfaction. 
 
 ### Certainty Equivalent    
 
 The certainty equivalent, $w^{CE}$, is the alternative that the agent is as satisfied with as the expected alternative, 
 \begin{equation}
-u(w^{CE}) = \mathbb{E} \big[ u(\mathfrak{W}) \big].
+u(w^{CE}) = \mathbb{E} \big[ u(\mathfrak{W}) \big],
 \end{equation}
-The certainty equivalent is the alternative such that the utility of that alternative would give the agent the average utility over all alternatives. Hence, if the agent were offered the alternative $w^{CE}$ this would return them the expected amount of satisfaction (the expected utility)
+where $u(w^{CE})$ is the how satisfied the agent is with the alternative $w^{CE}$. 
+
+The certainty equivalent is therefore the alternative such that the utility of that alternative would give the agent the average utility over all alternatives. Hence, if the agent had the alternative $w^{CE}$ this would return them the expected amount of satisfaction (the expected utility)
 
 ### Risk from Utility
 
-Consider that there is a probability distribution over all alternatives, with probability $p_{w}$ of getting an outcome $w \in \mathfrak{W}$. All the alternatives are totalled ordered due to preference, so this is some probability of getting a high ranked preference, and some probability of getting a low ranked preference.  
+Consider that there is a probability distribution over all alternatives, with probability $p_{w}$ of getting an outcome $w \in \mathfrak{W}$. All the alternatives are totalled ordered due to preference, therefore, if taking a alternative from the distribution, there is some probability of the agent getting a high ranked preference, and some probability of the agent getting a low ranked preference.  
 
-Assume that an agent can either choose an alterative from the distribution, or they choose to take the alterative given by the certainty equivalent, $w^{CE}$, alternative with certainty.  
+Assume that an agent is given the choice to either take an alterative from the distribution or they take the alterative given by the certainty equivalent, $w^{CE}$, with certainty $(p_{w^{CE}}=1)$.  
 
-How the certainty equivalent, $w^{CE}$, relates to the expected alternative, $\mathbb{E}(\mathfrak{W})$, tell us about the risk profile of the agent. 
+How the certainty equivalent, $w^{CE}$, relates to the expected alternative, $\mathbb{E}(\mathfrak{W})$, tells us about the risk profile of the agent. 
 
 - If $w^{CE} < \mathbb{E}(\mathfrak{W})$ the agent is risk adverse. 
-  - The agent is cautious, they are happy to accept a definite alterative that is less preferable then the alternative they are expect to get from the distribution. This is to avoid the possibility of getting an even less preferable alternative. 
+  - The agent is cautious, they are happy to accept a definite alterative that is less preferable then the alternative they are expecting to get from the distribution. They do this to avoid the possibility of getting an even less preferable alternative from the distribution. 
 - If $w^{CE} = \mathbb{E}(\mathfrak{W})$ the agent is risk neutral. 
-  - The agent will just choose whichever option will give them the most preferable alternative, even one only gives the most preferable alternative on average. 
+  - The agent will choose whichever option will give them the most preferable alternative.
 - If $w^{CE} > \mathbb{E}(\mathfrak{W})$ the agent is risk seeking.
-  - The agent is not cautious, they will only take the definite alternative if it is more preferable then the alternative they are expect to get from the distribution. This is because they are happy to take the possibility of getting a less preferable alternative in the hope of getting a more preferable alternative.  
+  - The agent is not cautious, they will only take the definite alternative if it is more preferable then the alternative they are expect to get from the distribution. This is because they are happy to take the possibility of getting a less preferable alternative in the hope of getting a more preferable alternative.
 
 These risk profiles are encoded into the [curvature of the utility functions](#utility_function_curvature_target_quantFiance). 
 
