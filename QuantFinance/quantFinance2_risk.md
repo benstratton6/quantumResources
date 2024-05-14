@@ -22,7 +22,7 @@ exports:
 
 Risk aversion can be thought of as an agents attitude toward risk. More formally, it models the tendency of people to prefer outcomes will low uncertainty to those with high uncertainty, even if the average payback from the higher uncertainty outcome is equal to or larger than the payback from the low uncertainty outcome. 
 
-People will often agree to take an option that has low uncertainty and lower payoff, then high uncertainty but high payoff. For example, one could put there money in a bank account with reliable but low interest returns. Or, one could put there money into a stock that is volatile, but has a potentially high return. 
+People will often agree to take an option that has low uncertainty and lower payoff, then high uncertainty but high payoff. For example, one could put their money in a bank account with reliable but low interest returns. Or, one could put their money into a stock that is volatile, but has a potentially high return. 
 
 Risk aversion is encoded into the curvature of the [utility function](#utility_function_target_quantfinance):
 (utility_function_curvature_target_quantFiance)=
@@ -30,7 +30,7 @@ Risk aversion is encoded into the curvature of the [utility function](#utility_f
 - If $u(w)$ is linear then the agent being modelled is risk-neutral.
 - If $u(w)$ is convex then the agent being modelled is risk-seeking. 
 
-The higher the curvature of the utility function, the higher the risk aversion/risk seeking. 
+The higher the curvature of the utility function, the more the agent is either risk averse/risk seeking. 
 
 Whilst utility functions introduce the notion of risk, the concept of risk aversion allows one to quantify it. 
 
@@ -71,6 +71,18 @@ where $u_{R}''(w)$ and $u_{R}'(w)$ are the second and first derivatives of the u
 
 [Exponential utility](#exponential_utility_function_target) are functions that are unique in having constant [ARA](#ARA_utility_functions_target). This means that an agents attitude toward risk would not change if both the potential upsides and downsides were linearly scaled by some factor. More formally, this means an agents risk is independent of his liabilities (if the total amount of wealth an agent has changes, there attitude towards risk does not). 
 
-Constant ARA is considered to be unrealistic, with people taking less risk if the downside is losing a larger portion of there limited wealth, and more risk if they have more wealth to lose. Consider an underpaid PhD who becomes a billionaire after commercialising their research. If modelled under constant ARA, they would worry about losing £10 just as much before and after they became a billionaire. If modelled under constant RRA, the student would worry about losing 10% of their wealth just as much before and after they became as billionaire. 
+Constant ARA is considered to be unrealistic, with people taking less risk if the downside is losing a larger portion of there limited wealth, and more risk if th
 
-The difference between two agents with these risk profiles can be further demonstrated through a model where the agents have an investment portfolio where they have some in a risky (and hence probably high return) asset $A$ and some in a low risk (and hence probably low return) asset $B$. If an agent with constant ARA experiences an increase in wealth, they will keep the total amount of money they have in the risky asset constant. If an agent with constant RRA experiences an increase in wealth, they will keep the fraction of their portfolio they have in the risky asset constant.   
+The difference between two agents with these risk profiles can be demonstrated through the following couple of examples. 
+
+:::{dropdown} Example 1
+:closed:
+Consider an underpaid PhD who becomes a billionaire after commercialising their research. If modelled under constant ARA, they would worry about losing £10 just as much before and after they became a billionaire. If modelled under constant RRA, the student would worry about losing 10% of their wealth just as much before and after they became as billionaire. 
+:::
+
+:::{dropdown} Example 2
+:closed:
+Consider two agents that have an investment portfolio where they have some in a risky (and hence probably high return) asset $A$ and some in a low risk (and hence probably low return) asset $B$. If an agent with constant ARA experiences an increase in wealth, they will keep the total amount of money they have in the risky asset constant. If an agent with constant RRA experiences an increase in wealth, they will keep the fraction of their portfolio they have in the risky asset constant.  
+::: 
+
+ 

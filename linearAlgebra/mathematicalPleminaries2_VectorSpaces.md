@@ -24,7 +24,7 @@ A vector space, defined over a field $\mathbb{F}$, is a set $V$ whose elements c
 
 Vector spaces defined over $\mathbb{R}$ are known as real vector spaces, whilst vector spaces defined over $\mathbb{C}$ are defined as complex vector spaces. 
 
-## Vector Space Axioms
+### Vector Space Axioms
 Let $\psi, ~\sigma, ~\omega~\in~V$ and $a,b \in \mathbb{F}^{1}$.
 
 (vector_space_axioms_target)=
@@ -48,7 +48,7 @@ The multiplication by a scalar operation must obey the following conditions
     - distributive over scalar
 
 
-## Further Vector Space Properties 
+### Further Vector Space Properties 
 ::::{tab-set}
 :::{tab-item} Linear Combination
 :sync: tab1
@@ -111,6 +111,45 @@ The **dimension of a vector space** $V$, given by $\textrm{dim}V$, is the minimu
 For more on basis [see here](#basis_basis_target)
 :::
 ::::
+
+### Subspaces 
+
+Let $V$ be a vector space over $\mathbb{F}$. A subset $U \subset V$ is a subspace of $V$ if the following conditions hold
+1. $U \neq \emptyset$
+    - The subset is not empty.
+2. $u+v~\in~U~\forall~u,v~\in~U$.
+    - $U$ is closed under addition.
+3. $\lambda u~\in~U~\forall~u~\in~U, \lambda~\in~\mathbb{F}^{1}$ 
+    - $U$ is closed under multiplication by scalars. 
+
+### Properties and Operations of Subspaces
+
+::::{tab-set}
+:::{tab-item} Union of Subspaces
+:sync: tab1
+Let $V$ be a vector space and $U$ and $W$ be subsets of $V$, $U,W~\subset~V$. 
+
+The union of $U$ and $W$ is also a subspace of $V$: 
+\begin{equation}
+U \cap W \subset V
+\end{equation}
+:::
+:::{tab-item} Direct Sum
+:sync: tab2
+
+Let $V$ be a vector space and $U$ and $W$ be subsets of $V$, $U,W~\subset~V$, such that $U \cap W = \{0\}$.
+
+The direct sum of these subspace is given by
+\begin{equation}
+U \oplus W \coloneqq U + V \coloneqq \{u + w: u~\in~U, w~\in~W\}
+\end{equation}
+
+**Properties**
+
+- All vectors in $U \oplus W$ can be decomposed into a vector in $U$ and a vector in $W$. 
+- $\textrm{dim}(U \oplus W) = \textrm{dim}U + \textrm{dim}W$. 
+::::
+
 
 
 

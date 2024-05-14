@@ -188,3 +188,17 @@ The rank of $L$ is defined to be
 where $\textrm{dim}$ is the [dimension](#dimension_vector_spaces_target). 
 
 ::::
+
+### Projections
+
+A linear map $L: V \rightarrow V$ is a projection if $L^{2}=L$. 
+
+This means applying the map twice gives the same results as applying the map once. 
+
+#### Properties of Projections
+
+Let $L: V \rightarrow V$ be a projection.
+
+- $u~\in~\textrm{Im}P ~ ~ \textrm{iif} ~ ~ Pu=v$.
+- $V = \textrm{Ker} V \oplus \textrm{Im} V$ if $V$ is finite dimensional.
+

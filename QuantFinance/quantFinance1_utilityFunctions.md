@@ -1,5 +1,5 @@
 ---
-title: Utility Functions 
+title: Utility  
 subject: Tutorial
 # subtitle: The space in which quantum states live
 # short_title: How to MyST

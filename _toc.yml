@@ -53,7 +53,8 @@ chapters:
       - file: MathNotes\mathematicalNotes3_majorisation
       - file: MathNotes\mathematicalNotes1_preorder
       - file: MathNotes\mathematicalNotes2_convexity
-  - title: Quantitative Finance
+  # - title: Quantitative Finance
+  - title: Economics 
     sections:
       - file: QuantFinance\quantFinance1_utilityFunctions.md
       - file: QuantFinance\quantFinance2_risk.md
