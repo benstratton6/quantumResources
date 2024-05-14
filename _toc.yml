@@ -56,6 +56,8 @@ chapters:
   - title: Quantitative Finance
     sections:
       - file: QuantFinance\quantFinance1_utilityFunctions.md
+      - file: QuantFinance\quantFinance2_risk.md
+      - file: QuantFinance\quantFinance_glossary.md
       
   # - title: My Papers
   #   sections:

@@ -37,3 +37,7 @@ The relation sets a partial order on the set $S$ if both 1 and 2 from the pre-or
 
 3. $a \leq b$ and $b \leq a$ implies $a=b$
     - Antisymmetry 
+
+### Total Ordering
+(total_ordering_preorder_maths_notes_target)=
+If every element in $S$ can be compared by the relation, then the relation forms a total ordering on $S$. 
