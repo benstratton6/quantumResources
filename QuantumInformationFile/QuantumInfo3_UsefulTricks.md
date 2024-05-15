@@ -20,6 +20,12 @@ exports:
     article_type: Report
 ---
 
+Contents: 
+- Expectation Values Squared
+- Alternative Bipartition of Entangled States
+- Generating Maximally Entangled Basis
+
+(target_Expectation_Values_Squared)=
 ```{card} 
 :header: **Expectation Values Squared** 
 
@@ -30,6 +36,7 @@ Let $A$ be some operator and $\ket{\psi}$ be some state
 \end{equation}
 ```
 
+(target_Alternative_Bipartition_of_Entangled_States)=
 ```{card} 
 :header: **Alternative Bipartition of Entangled States** 
 
@@ -75,4 +82,51 @@ and grouping the spaces together gives
 \end{align*}
 completing the proof. 
 :::
+```
+
+(target_Generating_Maximally_Entangled_Basis)=
+```{card} 
+:header: **Generating Maximally Entangled Basis**
+
+Given a maximally entangled bipartite state, $\ket{\Phi^{+}_{00}}$, one can generate a complete maximally entangled basis using the Heisenberg-Weyl operators.
+
+In a space of local dimenions $d$, the Heisenberg-Weyl operators are defined as 
+\begin{equation}
+W_{a,b} = U^{a}V^{b} = \sum_{k=0}^{d-1} \Omega^{bc} \ket{k+a}\bra{k},
+\end{equation}
+where $a,b~\in~\{0,1,\ldots,d-1 \}$ and
+\begin{equation}
+U = \sum_{k=0}^{d-1} \ket{k+1}\bra{k}, ~ ~ V = \sum^{d-1}_{k=0} \Omega^{k} \ket{k}\bra{k}, ~ ~ \Omega = e^{\frac{2 \pi i}{d}}.
+\end{equation} 
+
+$U$ and $V$ are  $X$ and $Z$ Pauli operators generalized to higher dimension. 
+
+The set of states, 
+\begin{equation}
+\{ \ket{\Phi_{ab}^{+}} : a,b~\in~\{0,1,\ldots,d-1 \} \},
+\end{equation}
+where $\ket{\Phi_{ab}^{+}} = (\mathbb{I} \otimes W_{a,b}) \big( \ket{\Phi^{+}_{00}} \big)$ then forms a complete maximally entangled basis. 
+
+:::{dropdown} Properties of Heisenberg-Weyl operators
+:closed:
+\begin{equation}
+    \begin{split}
+        & (W_{\alpha, \beta}) ^ {t} = \Omega^{-\alpha \beta}W_{-\alpha, \beta}, \\
+        & (W_{\alpha, \beta}) ^ {\dagger} = \Omega^{\alpha \beta}W_{-\alpha, -\beta}, \\
+        & W_{\alpha, \beta}W_{\gamma, \delta} = \Omega^{\beta\gamma}W_{\alpha + \gamma, \beta + \delta} = \Omega^{\beta\gamma - \alpha\delta}W_{\gamma, \delta}W_{\alpha, \beta}. \\ \label{weylIdentites}
+        & \textrm{tr}\big[ W_{a,b} \big] = \left\{
+              \begin{array}{ll}
+                n  & \mbox{if } (a,b) = (0,0) \\
+                0 & \mbox{if } \textrm{otherwise}
+              \end{array}
+            \right.
+    \end{split}
+\end{equation}
+
+For qubits, the Heisenberg-Weyl operators are 
+\begin{equation}
+W_{0,0} = \mathbb{I}, ~~ W_{0,1} = \sigma_{z}, ~~ W_{1,0} = \sigma_{x}, ~~ W_{1,1} = -i \sigma_{y}
+\end{equation}
+:::
+
 ```
