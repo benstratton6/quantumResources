@@ -22,6 +22,7 @@ exports:
 
 Contents: 
 - Expectation Values Squared
+- Moving Operators on Entangled States
 - Alternative Bipartition of Entangled States
 - Generating Maximally Entangled Basis
 
@@ -29,11 +30,48 @@ Contents:
 ```{card} 
 :header: **Expectation Values Squared** 
 
-Let $A$ be some operator and $\ket{\psi}$ be some state
+Let $A$ be some operator and $\ket{\psi}$ be some state.
 
 \begin{equation}
 \bra{\psi} A \ket{\psi}^{2} = \bra{\psi}\bra{\psi} A \otimes A \ket{\psi}\ket{\psi}
 \end{equation}
+```
+
+```{card} 
+:header: **Moving Operators on Entangled States** 
+
+Let $A$ be some operator and $\ket{\Phi^{+}}$ be a bipartite maximally entangled state.
+
+\begin{equation}
+(A \otimes \mathbb{I}) \ket{\Phi^{+}} = (\mathbb{I} \otimes A^{t}) \ket{\Phi^{+}},
+\end{equation}
+where $(\cdot)^{t}$ is the transpose operation. 
+
+:::{dropdown} Proof
+:closed:
+Let $A$ be some operator and $\ket{\Phi^{+}} = \frac{1}{\sqrt{d}} \sum_{i} \ket{ii}$ be the bipartite maximally entangled state.
+
+Consider the elements of the vector $(A \otimes \mathbb{I}) \big( \ket{\Phi^{+}} \big)$ ,
+\begin{align*}
+\bra{kl} (A \otimes \mathbb{I}) \big( \ket{\Phi^{+}} \big) &= \frac{1}{\sqrt{d}} \sum_{i} \bra{kl} (A \otimes \mathbb{I}) \ket{ii}, \\
+&= \frac{1}{\sqrt{d}} \sum_{i} \bra{k} A \ket{i} \bra{l}\ket{i}, \\
+&= \frac{1}{\sqrt{d}} \sum_{i} \bra{k} A \ket{i} \delta_{li}, \\
+&= \frac{1}{\sqrt{d}} \bra{k} A \ket{l}.
+\end{align*}
+
+Consider the elements of the vector $(\mathbb{I} \otimes A^{t}) \big( \ket{\Phi^{+}} \big)$ ,
+
+\begin{align*}
+\bra{kl} (\mathbb{I} \otimes A^{t}) \big( \ket{\Phi^{+}} \big) &= \frac{1}{\sqrt{d}} \sum_{i} \bra{kl} (\mathbb{I} \otimes A^{t}) \ket{ii}, \\
+&= \frac{1}{\sqrt{d}} \sum_{i}  \bra{k}\ket{i} \bra{l} A^{t} \ket{i}, \\
+&= \frac{1}{\sqrt{d}} \sum_{i} \bra{l} A^{t} \ket{i} \delta_{ki},\\
+&= \frac{1}{\sqrt{d}} \bra{l} A^{t} \ket{k},\\
+&= \frac{1}{\sqrt{d}} \bra{k} A \ket{l}. 
+\end{align*}
+
+If the elements of these two vector are the same, they must be the same vector. 
+
+:::
 ```
 
 (target_Alternative_Bipartition_of_Entangled_States)=
@@ -92,7 +130,7 @@ Given a maximally entangled bipartite state, $\ket{\Phi^{+}_{00}}$, one can gene
 
 In a space of local dimenions $d$, the Heisenberg-Weyl operators are defined as 
 \begin{equation}
-W_{a,b} = U^{a}V^{b} = \sum_{k=0}^{d-1} \Omega^{bc} \ket{k+a}\bra{k},
+W_{a,b} = U^{a}V^{b} = \sum_{k=0}^{d-1} \Omega^{bk} \ket{k+a}\bra{k},
 \end{equation}
 where $a,b~\in~\{0,1,\ldots,d-1 \}$ and
 \begin{equation}
