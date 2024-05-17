@@ -45,6 +45,7 @@ chapters:
   - title: Quantum Information  
     sections:
       - file: QuantumInformationFile\QuantumInfo1_entropyFunction
+      - file: QuantumInformationFile\QuantumInfo4_stateExclusion
       - file: QuantumInformationFile\QuantumInfo2_AlgorithmicCooling
       - file: QuantumInformationFile\QuantumInfo3_UsefulTricks
   - title: Important Mathematical Notions
