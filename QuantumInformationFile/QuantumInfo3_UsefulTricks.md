@@ -26,8 +26,9 @@ Contents:
 - Alternative Bipartition of Entangled States
 - Generating Maximally Entangled Basis
 
-(target_Expectation_Values_Squared)=
-```{card} 
+Let $A$ be some operator and $\ket{\psi}$ be some state.
+
+<!-- ```{card} 
 :header: **Expectation Values Squared** 
 
 Let $A$ be some operator and $\ket{\psi}$ be some state.
@@ -74,7 +75,6 @@ If the elements of these two vector are the same, they must be the same vector. 
 :::
 ```
 
-(target_Alternative_Bipartition_of_Entangled_States)=
 ```{card} 
 :header: **Alternative Bipartition of Entangled States** 
 
@@ -122,7 +122,6 @@ completing the proof.
 :::
 ```
 
-(target_Generating_Maximally_Entangled_Basis)=
 ```{card} 
 :header: **Generating Maximally Entangled Basis**
 
@@ -152,7 +151,7 @@ where $\ket{\Phi_{ab}^{+}} = (\mathbb{I} \otimes W_{a,b}) \big( \ket{\Phi^{+}_{0
         & (W_{\alpha, \beta}) ^ {t} = \Omega^{-\alpha \beta}W_{-\alpha, \beta}, \\
         & (W_{\alpha, \beta}) ^ {\dagger} = \Omega^{\alpha \beta}W_{-\alpha, -\beta}, \\
         & W_{\alpha, \beta}W_{\gamma, \delta} = \Omega^{\beta\gamma}W_{\alpha + \gamma, \beta + \delta} = \Omega^{\beta\gamma - \alpha\delta}W_{\gamma, \delta}W_{\alpha, \beta}. \\ \label{weylIdentites}
-        & \textrm{tr}\big[ W_{a,b} \big] = \left\{
+        & \textrm{tr}\big[ W_{a,b} \big] = \left
               \begin{array}{ll}
                 n  & \mbox{if } (a,b) = (0,0) \\
                 0 & \mbox{if } \textrm{otherwise}
@@ -167,4 +166,4 @@ W_{0,0} = \mathbb{I}, ~~ W_{0,1} = \sigma_{z}, ~~ W_{1,0} = \sigma_{x}, ~~ W_{1,
 \end{equation}
 :::
 
-```
+``` -->

@@ -32,10 +32,6 @@ chapters:
       - file: linearAlgebra\mathematicalPleminaries9_eigenvectors
       - file: linearAlgebra\mathematicalPleminaries5_norms
       - file: linearAlgebra\mathematicalPleminariesGlossary
-  # - title: Quantum Mechanics Formalism  
-  #   sections:
-  #     - file: Notes_QuantPh\HilbertSpaces
-  #     - file: Notes_QuantPh\Observables
   - title: Resource Theories   
     sections:
       - file: ResourceTheroriesFile\ResourceTheories1.md
