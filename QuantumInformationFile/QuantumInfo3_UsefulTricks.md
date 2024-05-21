@@ -69,7 +69,7 @@ Consider the elements of the vector $(\mathbb{I} \otimes A^{t}) \big( \ket{\Phi^
 &= \frac{1}{\sqrt{d}} \bra{k} A \ket{l}. 
 \end{align*}
 
-If the elements of these two vector are the same, they must be the same vector. 
+If the elements of these two vector are the same, they must be the same vector. This completes the proof. 
 
 :::
 ```
