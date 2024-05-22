@@ -19,3 +19,10 @@ exports:
     template: physical_review_journals
     article_type: Report
 ---
+
+Let $V$ be a vector space defined over a field $\mathbb{F}$ and $L: V \rightarrow V$ be a linear map. A vector $\bm{x}~\in~V$, where $\bm{x} \neq 0$, is called an **eigenvector** of the map $L$ if 
+\begin{equation}
+L(v) = \lambda v,
+\end{equation}
+where $\lambda~\in~\mathbb{F}^{1}$ is the **eigenvalue** of the eigenvector $v$.
+

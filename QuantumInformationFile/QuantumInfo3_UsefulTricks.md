@@ -26,7 +26,6 @@ Contents:
 - Alternative Bipartition of Entangled States
 - Generating Maximally Entangled Basis
 
-Let $A$ be some operator and $\ket{\psi}$ be some state.
 
 <!-- ```{card} 
 :header: **Expectation Values Squared** 
@@ -36,9 +35,9 @@ Let $A$ be some operator and $\ket{\psi}$ be some state.
 \begin{equation}
 \bra{\psi} A \ket{\psi}^{2} = \bra{\psi}\bra{\psi} A \otimes A \ket{\psi}\ket{\psi}
 \end{equation}
-```
+``` -->
 
-```{card} 
+<!-- ```{card} 
 :header: **Moving Operators on Entangled States** 
 
 Let $A$ be some operator and $\ket{\Phi^{+}}$ be a bipartite maximally entangled state.
@@ -150,7 +149,7 @@ where $\ket{\Phi_{ab}^{+}} = (\mathbb{I} \otimes W_{a,b}) \big( \ket{\Phi^{+}_{0
     \begin{split}
         & (W_{\alpha, \beta}) ^ {t} = \Omega^{-\alpha \beta}W_{-\alpha, \beta}, \\
         & (W_{\alpha, \beta}) ^ {\dagger} = \Omega^{\alpha \beta}W_{-\alpha, -\beta}, \\
-        & W_{\alpha, \beta}W_{\gamma, \delta} = \Omega^{\beta\gamma}W_{\alpha + \gamma, \beta + \delta} = \Omega^{\beta\gamma - \alpha\delta}W_{\gamma, \delta}W_{\alpha, \beta}. \\ \label{weylIdentites}
+        & W_{\alpha, \beta}W_{\gamma, \delta} = \Omega^{\beta\gamma}W_{\alpha + \gamma, \beta + \delta} = \Omega^{\beta\gamma - \alpha\delta}W_{\gamma, \delta}W_{\alpha, \beta}. \\ 
         & \textrm{tr}\big[ W_{a,b} \big] = \left
               \begin{array}{ll}
                 n  & \mbox{if } (a,b) = (0,0) \\
