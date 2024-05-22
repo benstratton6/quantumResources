@@ -26,9 +26,8 @@ Contents:
 - Alternative Bipartition of Entangled States
 - Generating Maximally Entangled Basis
 
-Let $A$ be some operator and $\ket{\psi}$ be some state.
-
-<!-- ```{card} 
+<!-- (target_Expectation_Values_Squared)=
+```{card} 
 :header: **Expectation Values Squared** 
 
 Let $A$ be some operator and $\ket{\psi}$ be some state.
@@ -70,18 +69,19 @@ Consider the elements of the vector $(\mathbb{I} \otimes A^{t}) \big( \ket{\Phi^
 &= \frac{1}{\sqrt{d}} \bra{k} A \ket{l}. 
 \end{align*}
 
-If the elements of these two vector are the same, they must be the same vector. This completes the proof. 
+If the elements of these two vector are the same, they must be the same vector. 
 
 :::
 ```
 
+(target_Alternative_Bipartition_of_Entangled_States)=
 ```{card} 
 :header: **Alternative Bipartition of Entangled States** 
 
-Let $\ket{\Phi^{+}}_{AB}~\in~\mathcal{H}_{A} \otimes \mathcal{H}_{B}$ be the maximally entangled stated between a space $A$ and $B$. Let $\ket{\Phi^{+}}_{CD}~\in~\mathcal{H}_{C} \otimes \mathcal{H}_{D}$ be the maximally entangled stated between a space $C$ and $D$
+Let $\ket{\Phi^{+}}_{AB}~\in~\mathcal{H}_{A} \otimes \mathcal{H}_{B}$ be the maximally entangled stated between a space $A$ and $B$ and $\ket{\Phi^{+}}_{CD}~\in~\mathcal{H}_{C} \otimes \mathcal{H}_{D}$ the maximally entangled stated between a space $C$ and $D$.
 
 \begin{equation}
-\ket{\Phi^{+}}_{AB} \otimes \ket{\Phi^{+}}_{CD} = \ket{\Phi^{+}}_{(AC),(BD)}
+\ket{\Phi^{+}}_{AB} \otimes \ket{\Phi^{+}}_{CD} = \ket{\Phi^{+}}_{(AC),(BD)},
 \end{equation}
 
 where $\ket{\Phi^{+}}_{(AC),(BD)}$ is the maximally entangled state between $(AC)$ and $(BD)$. 
@@ -122,6 +122,7 @@ completing the proof.
 :::
 ```
 
+(target_Generating_Maximally_Entangled_Basis)=
 ```{card} 
 :header: **Generating Maximally Entangled Basis**
 
@@ -151,7 +152,7 @@ where $\ket{\Phi_{ab}^{+}} = (\mathbb{I} \otimes W_{a,b}) \big( \ket{\Phi^{+}_{0
         & (W_{\alpha, \beta}) ^ {t} = \Omega^{-\alpha \beta}W_{-\alpha, \beta}, \\
         & (W_{\alpha, \beta}) ^ {\dagger} = \Omega^{\alpha \beta}W_{-\alpha, -\beta}, \\
         & W_{\alpha, \beta}W_{\gamma, \delta} = \Omega^{\beta\gamma}W_{\alpha + \gamma, \beta + \delta} = \Omega^{\beta\gamma - \alpha\delta}W_{\gamma, \delta}W_{\alpha, \beta}. \\ \label{weylIdentites}
-        & \textrm{tr}\big[ W_{a,b} \big] = \left
+        & \textrm{tr}\big[ W_{a,b} \big] = \left\{
               \begin{array}{ll}
                 n  & \mbox{if } (a,b) = (0,0) \\
                 0 & \mbox{if } \textrm{otherwise}
