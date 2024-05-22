@@ -22,7 +22,7 @@ exports:
 
 ### Overview 
 
-In a state exclusion task, a referee has a set of states $\{\rho_{x} \}^{N}, ~ x \in \{1, \ldots ,N\}$ and sends one state from the set, with probability $p_{x}$, to a player. The player then performs a general $N$ outcome measurement on the state, as described by a positive operator-valued measure (POVM) $\{T_{g}\}_{g=1}^{N}$, where $T_g\ge0$ $\forall\,g$ and $\sum_gT_g=\mathbb{I}$. From this measurement, the player outputs a label $g \in \{1, \ldots , N\}$. The player wins the task if $g \neq x$ and fail if $g=x$. Namely, they win if they successfully exclude the state by outputting a label that was not associated to the sent state; the player fails if they output the label associated to the sent state. 
+In a state exclusion task, a referee has a set of states $\{\rho_{x} \}^{N}, ~ x \in \{1, \ldots ,N\}$ and sends one state from the set, with probability $p_{x}$, to a player. The player then performs a general $N$ outcome measurement on the state, as described by a positive operator-valued measure (POVM) $\{T_{g}\}_{g=1}^{N}$, where $T_g\ge0$ $\forall\,g$ and $\sum_gT_g=\mathbb{I}$. From this measurement, the player outputs a label $g \in \{1, \ldots , N\}$. The player wins the task if $g \neq x$ and fail if $g=x$. Namely, they win if they successfully exclude the state by outputting a label that was not associated to the sent state; the player fails if they output the label associated to the sent state (https://link.aps.org/doi/10.1103/PhysRevA.66.062111, https://doi.org/10.1038/nphys2309, http://dx.doi.org/10.1103/PhysRevA.89.022336). 
 
 ### 1-State Exclusion
 If the player outputs a single label $g$ such that $g \neq x$ with certainty, this is conclusive $1$-state exclusion. This occurs if the player is able to find a POVM such that  
@@ -44,7 +44,7 @@ If the player outputs a set of $k$ labels, $\{ g_{i} \}^{k}$, such that $g_{i} \
 
 #### k-State Exclusion as 1-State Exclusion
 
-All $k$-state exclusion tasks can be recast as $1$-state exclusion tasks by reformulating the set $\{\rho_{x}\}^{N}$. Conceptually, this means all $k$-state exclusion tasks have a $1$-state exclusion task that they are dual to, allowing all state exclusion tasks to be studied under the $1$-state exclusion framework. 
+All $k$-state exclusion tasks can be recast as $1$-state exclusion tasks by reformulating the set $\{\rho_{x}\}^{N}$ [](http://dx.doi.org/10.1103/PhysRevA.89.022336). Conceptually, this means all $k$-state exclusion tasks have a $1$-state exclusion task that they are dual to, allowing all state exclusion tasks to be studied under the $1$-state exclusion framework. 
 
 Let $Y_{(N, k)}$ be the set of all subsets of the integers $\{1,2,...,N\}$ of length $k$. The player aims to measure a POVM on a state $\sigma \in \{ \rho_{x} \}^{N}$, given to them by the referee, and output a set of labels $Y \in Y_{(N,k)}$ such that $\sigma \notin \{ \rho_{y} \}_{y \in Y}$. Such a measurement will be a POVM with $a = {N \choose k}$ terms as there are $a$ subsets of $\{1,2,...,N\}$ of length $k$. For each elements of this POVM, $S = \{S_{l}\}^{a}_{l=1}$, the following equation must hold, 
 \begin{equation}
@@ -68,4 +68,5 @@ Using the dual $1$-state exclusion task, $k$-state exclusion can also now be for
 
 where $P^{k}_{err} > 0$ if no POVM to conclusively perform $k$-state exclusion exists. 
 
-\cite{PhysRevA.66.062111, Pusey2012, Bandyopadhyay_2014}
+
+

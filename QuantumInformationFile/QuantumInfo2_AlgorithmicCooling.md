@@ -41,3 +41,4 @@ where $\rho_{s,m}$ is the joint state of the system and thermal machine after a 
 A coherent control algorithmic cooling protocol is then defined as a methodical sequence which alternative between a unitary control step and a thermalisation step with the aim to reduce the entropy in the target system. 
 
 
+

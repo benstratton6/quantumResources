@@ -27,7 +27,7 @@ Contents:
 - Generating Maximally Entangled Basis
 
 
-<!-- ```{card} 
+```{card} 
 :header: **Expectation Values Squared** 
 
 Let $A$ be some operator and $\ket{\psi}$ be some state.
@@ -165,4 +165,4 @@ W_{0,0} = \mathbb{I}, ~~ W_{0,1} = \sigma_{z}, ~~ W_{1,0} = \sigma_{x}, ~~ W_{1,
 \end{equation}
 :::
 
-``` -->
+```
