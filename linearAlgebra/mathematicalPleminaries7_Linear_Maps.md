@@ -116,6 +116,7 @@ The **image** of L is defined to be
 These are the possible output vectors or the linear map.
 
 The **kernel** of L is defined to be 
+(kernal_linear_maps_target)=
 \begin{equation}
 \textrm{Ker} L \coloneqq \{\bm{x} \in \mathbb{F}^{n} : L(\bm{x}) = 0 \} \subset \mathbb{F}^{n}.
 \end{equation}

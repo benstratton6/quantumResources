@@ -76,6 +76,7 @@ e_n &= \begin{bmatrix}
 :::
 :::{tab-item} Orthonormal Basis 
 :sync: tab2
+(Orthonormal_Basis_basis_target)=
 Let the set of vectors $\{ a_{1}, ~a_{2}, \ldots, ~a_{n} \} $ be a basis of a vector space $V$. This basis is an orthonormal basis if 
 \begin{equation}
 a_{i} \cdot a_{j} = \delta_{ij},

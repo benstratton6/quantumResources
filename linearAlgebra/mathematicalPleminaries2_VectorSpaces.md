@@ -137,9 +137,10 @@ U \cap W \subset V
 :::{tab-item} Direct Sum
 :sync: tab2
 
-Let $V$ be a vector space and $U$ and $W$ be subsets of $V$, $U,W~\subset~V$, such that $U \cap W = \{0\}$.
+Let $V$ be a vector space and $U$ and $W$ be subsets of $V$, $~U,W~\subset~V$, such that $U \cap W = \{0\}$.
 
 The direct sum of these subspace is given by
+(direct_sum_vector_spaces)=
 \begin{equation}
 U \oplus W \coloneqq U + V \coloneqq \{u + w: u~\in~U, w~\in~W\}
 \end{equation}

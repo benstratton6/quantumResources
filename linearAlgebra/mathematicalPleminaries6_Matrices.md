@@ -252,7 +252,9 @@ A = \begin{pmatrix}
 :sync: tab12
 Let $A~\in~\mathbb{M}_{nm}$. 
 
-A is hermitian if $A=A^{\dagger}$ where $(\cdot)^{\dagger}$ is the [conjugate transpose operation](#conjugate_tranpose_matrix_operations_target).
+$A$ is hermitian if $A=A^{\dagger}$ where $(\cdot)^{\dagger}$ is the [conjugate transpose operation](#conjugate_tranpose_matrix_operations_target).
+
+If $A$ is hermitian then it has only real [eigenvalues](#eigenvalues_definition_target_eigenvalues). 
 
 :::
 :::{tab-item} Diagonal 
