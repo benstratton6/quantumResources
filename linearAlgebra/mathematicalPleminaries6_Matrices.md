@@ -20,7 +20,7 @@ exports:
     article_type: Report
 ---
 
-## Matrix Definition 
+### Matrix Definition 
 
 Let $n,m$ be some integers. An $n \times m$ matrix over a field $\mathbb{F}$ is a rectangular array of numbers $a_{ij}~\in~\mathbb{F}$ with $n$ rows and $m$ columns, such that 
 \begin{equation}
@@ -50,7 +50,7 @@ a_{nm}  \\
 \end{equation}
 which can be thought of as row and column vectors respectively. The set of $n \times m$ matrices over the field $\mathbb{F}$ is given by $\mathbb{M}_{nm}(\mathbb{F})$.
 
-## Matrix Operations:
+### Matrix Operations:
 
 ::::{tab-set}
 :::{tab-item} Scalar Multiplication 
@@ -198,9 +198,7 @@ a_{n1} b_{11} + a_{n2} b_{21} + \ldots + a_{nm} b_{m1} & \ldots & a_{n1} b_{1l} 
 ::::
 
 
-## Matrix Properties 
-
-Matrix properties 
+### Matrix Properties 
 
 ::::{tab-set}
 :::{tab-item} Triangular 
@@ -247,18 +245,10 @@ A = \begin{pmatrix}
 4 & -5 & 1 \\
 \end{pmatrix}
 \end{equation}
-:::
-:::{tab-item} Hermitian
-:sync: tab12
-Let $A~\in~\mathbb{M}_{nm}$. 
-
-$A$ is hermitian if $A=A^{\dagger}$ where $(\cdot)^{\dagger}$ is the [conjugate transpose operation](#conjugate_tranpose_matrix_operations_target).
-
-If $A$ is hermitian then it has only real [eigenvalues](#eigenvalues_definition_target_eigenvalues). 
 
 :::
 :::{tab-item} Diagonal 
-:sync: tab13
+:sync: tab12
 
 Let $A~\in~\mathbb{M}_{nm}$ with elements $a_{ij}$ ($i$th row and $j$th column)
 

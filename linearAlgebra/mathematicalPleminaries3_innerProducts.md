@@ -11,7 +11,7 @@ authors:
     orcid: 0009-0001-2746-3668
     email: ben.stratton@bristol.ac.uk
 # license: CC-BY-4.0
-keywords: Vectors, Vector Spaces, Inner Products 
+keywords: Vectors, Vector Spaces, Inner Products. 
 abstract: The conditions for a functional of two vectors to be an inner product. 
 exports:
 #   - format: docx

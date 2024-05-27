@@ -28,6 +28,7 @@ chapters:
       - file: linearAlgebra\mathematicalPleminaries8_basis
       - file: linearAlgebra\mathematicalPleminaries7_Linear_Maps
       - file: linearAlgebra\mathematicalPleminaries3_innerProducts
+      - file: linearAlgebra\mathematicalPleminaries10_theAdjoint
       - file: linearAlgebra\mathematicalPleminaries4_dualSpaces
       - file: linearAlgebra\mathematicalPleminaries9_eigenvectors
       - file: linearAlgebra\mathematicalPleminaries5_norms
