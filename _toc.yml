@@ -35,9 +35,9 @@ chapters:
       - file: linearAlgebra\mathematicalPleminariesGlossary
   - title: Resource Theories   
     sections:
-      - file: ResourceTheroriesFile\ResourceTheories1.md
-      - file: ResourceTheroriesFile\ResourceTheories2.md
-      - file: ResourceTheroriesFile\ResourceTheories3.md
+      - file: ResourceTheroriesFile\ResourceTheories1_introduction.md
+      - file: ResourceTheroriesFile\ResourceTheories2_criteria.md
+      - file: ResourceTheroriesFile\ResourceTheories3_quantifyingResources.md
       - file: ResourceTheroriesFile\resourceTheoriesGlossaryofTerms.md
   - title: Quantum Information  
     sections:

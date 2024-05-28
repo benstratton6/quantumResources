@@ -99,10 +99,10 @@ Let $A$ be normal, then:
 \begin{equation}
 A^{\dagger} \bm{x} = \lambda^{*} \bm{x},
 \end{equation}
-where $\lambda^{*}$ is the complex conjugate of $\lambda$ and $\bm{x}~\in~V$.
+where $\lambda^{*}$ is the complex conjugate of $ \lambda $ and $\bm{x}~\in~V$.
 - $A$'s eigenvectors with different eigenvalues are orthogonal.
-- The space in which $A$ is defined will have an orthonormal basis of eigenvectors of $A$.
-- There also exists a unitary matrix, $U$, that can diagonalise $A$, 
+- The space in which $A$ is defined over will have an orthonormal basis of eigenvectors of $A$.
+- There exists a unitary matrix, $U$, that can diagonalise $A$, 
 \begin{equation}
 U^{\dagger}AU = \begin{pmatrix}
 \lambda_{1} & 0 & \ldots & 0 \\

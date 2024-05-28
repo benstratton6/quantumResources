@@ -20,7 +20,7 @@ exports:
     article_type: Report
 ---
 
-## Lines Between Points
+### Lines Between Points
 
 ```{figure} mathematicalNotes2_convexity_image_1.png
 :alt: 
@@ -38,7 +38,7 @@ The above [figure](convexity_figure_vectors_target) shows two vectors, $p_1$ and
 \end{align*}
 where $t$ is a scalar. If $t~\in~[0,1]$ then $\bm{l}$ can be considered to be a probabilistic mixture of the vectors $p_1$ and $p_2$. 
 
-## Convex Functions
+### Convex Functions
 
 ```{figure} mathematicalNotes2_convexity_image_2.png
 :alt: 
@@ -57,7 +57,8 @@ The argument of the left hand side, $tx_1 + (1-t)x_2$, is the straight line betw
 
 If the above criteria is satisfied, the function $f(X)$ is a convex function. 
 
-## Convex Sets
+(convex_sets_target)=
+### Convex Sets
 
 ```{figure} mathematicalNotes2_convexity_image_3.png
 :alt: 
@@ -69,7 +70,7 @@ If the above criteria is satisfied, the function $f(X)$ is a convex function.
 a) A convex set b) a non-convex set.  
 ```
 
-Let $V$ be a vector space over a field $\mathbb{F}$. A subset $S \subset V$ is convex if for all $\psi, \sigma~\in~S$ the line segment connecting $ \psi $ and $ \sigma $ is also in $S$, as seen in Fig (a) above. Mathemtically this means that 
+Let $V$ be a vector space over a field $\mathbb{F}$. A subset $S \subset V$ is convex if for all $\psi, \sigma~\in~S$ the line segment connecting $ \psi $ and $ \sigma $ is also in $S$, as seen in Fig (a) above. Mathematically this means that 
 \begin{equation}
 t\psi + (1-t) \sigma~\in~S~\forall~(\psi,\sigma)~\in~S,~~ t~\in~[0,1].
 \end{equation}

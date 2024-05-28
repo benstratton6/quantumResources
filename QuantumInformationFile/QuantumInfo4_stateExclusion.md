@@ -19,8 +19,8 @@ exports:
     template: physical_review_journals
     article_type: Report
 ---
-
-### Overview 
+(state_exclusion_page_target)=
+### State Exclusion Overview 
 
 In a state exclusion task, a referee has a set of states $\{\rho_{x} \}^{N}, ~ x \in \{1, \ldots ,N\}$ and sends one state from the set, with probability $p_{x}$, to a player. The player then performs a general $N$ outcome measurement on the state, as described by a positive operator-valued measure (POVM) $\{T_{g}\}_{g=1}^{N}$, where $T_g\ge0$ $\forall\,g$ and $\sum_gT_g=\mathbb{I}$. From this measurement, the player outputs a label $g \in \{1, \ldots , N\}$. The player wins the task if $g \neq x$ and fail if $g=x$. Namely, they win if they successfully exclude the state by outputting a label that was not associated to the sent state; the player fails if they output the label associated to the sent state (https://link.aps.org/doi/10.1103/PhysRevA.66.062111, https://doi.org/10.1038/nphys2309, http://dx.doi.org/10.1103/PhysRevA.89.022336). 
 
