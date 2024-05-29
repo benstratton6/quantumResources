@@ -24,19 +24,19 @@ Let $\mathfrak{F}_{AB}$ be a set of quantum channels, mapping from some physical
 The tuple $\mathcal{R} = (\mathfrak{F}_{AB}, \mathfrak{O})$ is a **quantum resource theory** if:
 
 1. The identity channel, $\mathcal{I}$, is in $\mathfrak{F}_{AB}$, i.e. $\mathcal{I} \in \mathfrak{F}_{AB}$.
-    - Physical interpretation: If we do nothing we should not expect the state to become resourceful. 
+    - **Physical interpretation**: If we do nothing we should not expect the state to become resourceful. 
 
 2. If for three physical systems, $A, B, C$ there exists channels such that $\mathcal{E} \in \mathfrak{F}_{AB}$ and $\mathcal{N} \in \mathfrak{F}_{BC}$ then $\mathcal{E} \circ \mathcal{N} \in \mathfrak{F}_{AC}$
-    - Physical Interpretation: You cannot make something resourceful by applying successive free operations. 
+    - **Physical Interpretation**: You cannot make something resourceful by applying successive free operations. 
 
 A quantum resource theory $\mathcal{R}$ is said to admit a **tensor product structure if**:
 
 1. The set of allowed operations always includes the $\textrm{tr}(\cdot)$, i.e. $\textrm{tr}(\cdot) \in \mathfrak{F}_{AB}$. 
-    - Physical Interpretation: This means disregarding physical systems can always be done for free. 
+    - **Physical Interpretation**: This means disregarding physical systems can always be done for free. 
 
 2. For any three physical systems $A,B$ and $C$ and channel $\mathcal{E} \in \mathfrak{F}_{AB}(\cdot)$, the channel $\mathcal{E}_{AB} \otimes \mathcal{I}_{c} \in \mathfrak{F}_{(AC),(BC)}$, where $\mathcal{I}_{C}$ is the identity channel on the space $C$. 
-    - Physical Interpretation: Free operations are completely free. We cannot turn a free operation into something useful by just embedding the state in some higher dimensional space. 
+    - **Physical Interpretation**: Free operations are completely free. We cannot turn a free operation into something useful by just embedding the state in some higher dimensional space. 
 
 3. For any state $\sigma \in \mathfrak{O}$, the map $\mathcal{E}(\rho) = \rho \otimes \sigma \in \mathfrak{F}_{AB}$.
-    - Physical Interpretation: Adding on something that is free is always a free operations. This means that just adding something free cannot make an object more resourceful.  
+    - **Physical Interpretation**: Adding on something that is free is always a free operations. This means that just adding something free cannot make an object more resourceful.  
 
