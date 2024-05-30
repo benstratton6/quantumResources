@@ -41,10 +41,12 @@ chapters:
       - file: ResourceTheroriesFile\resourceTheoriesGlossaryofTerms.md
   - title: Quantum Information  
     sections:
-      - file: QuantumInformationFile\QuantumInfo1_entropyFunction
+      - file: QuantumInformationFile\QuantumInfo5_teleportation
       - file: QuantumInformationFile\QuantumInfo4_stateExclusion
       - file: QuantumInformationFile\QuantumInfo2_AlgorithmicCooling
+      - file: QuantumInformationFile\QuantumInfo1_entropyFunction
       - file: QuantumInformationFile\QuantumInfo3_UsefulTricks
+      - file: QuantumInformationFile\QuantumInfo_Glossary
   - title: Important Mathematical Notions
     sections:
       - file: MathNotes\mathematicalNotes4_stocasticMatrices

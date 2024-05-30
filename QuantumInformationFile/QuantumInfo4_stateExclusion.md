@@ -1,5 +1,5 @@
 ---
-title: Quantum State Exclusion
+title: State Exclusion
 subject: Tutorial
 subtitle: 
 # short_title: How to MyST

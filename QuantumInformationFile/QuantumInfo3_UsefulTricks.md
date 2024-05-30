@@ -120,13 +120,14 @@ and grouping the spaces together gives
 completing the proof. 
 :::
 ```
-
+(Generating_Maximally_Entangled_Basis_target)=
 ```{card} 
 :header: **Generating Maximally Entangled Basis**
 
 Given a maximally entangled bipartite state, $\ket{\Phi^{+}_{00}}$, one can generate a complete maximally entangled basis using the Heisenberg-Weyl operators.
 
 In a space of local dimenions $d$, the Heisenberg-Weyl operators are defined as 
+(Weyl_operators_target)=
 \begin{equation}
 W_{a,b} = U^{a}V^{b} = \sum_{k=0}^{d-1} \Omega^{bk} \ket{k+a}\bra{k},
 \end{equation}
