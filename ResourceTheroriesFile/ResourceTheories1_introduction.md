@@ -64,7 +64,7 @@ It is assumed that an agent can generate any arbitrarily large amount of free ob
 Objects in the free set are said to be *resourceless*. Any object not in the set of free objects is said to contain *resource*.
 
 ## Resource Theory Features
-
+(simulation_of_channels_target)=
 ### Simulation of Non-allowed Operations 
 
 A resourceful object allows an agent to overcome the physical constraints of their system; if the agent has access to a resourceful object and allowed operations, they will able to perform operations they would not be able to do with allowed operations only. 
