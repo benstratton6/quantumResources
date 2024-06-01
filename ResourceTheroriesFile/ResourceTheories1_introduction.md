@@ -19,7 +19,7 @@ exports:
     template: physical_review_journals
     article_type: Report
 ---
-
+(resource_theroies_introduction_page_target)=
 ## Introduction 
 
 Quantum resource theories quantify the usefulness of certain quantum phenomena in information process protocols ([](10.1103/RevModPhys.91.025001)). They provide a rigorous mathematical framework with which to compare the ability of quantum objects to provide an advantage in information processing tasks, subject to certain physical constraints. By tailoring these constraints, quantum resource theories can be applicable to tasks of both a pragmatic and fundamental nature. Thus far they have proved a fruitful way to approach problems concerning a number of different quantum phenomena, with resource theories of entanglement ([](10.1103/RevModPhys.81.865)), athermality ([](10.1088/1751-8113/49/14/143001), [](10.1038/ncomms3059), [](10.1016/j.physrep.2015.04.003), [](10.1088/1361-6633/ab46e5)), Bell-non locality ([](10.1103/RevModPhys.86.419)), measurement ([](10.1103/physrevlett.122.140403)),  and non-Gaussianity ([](10.1103/RevModPhys.84.621)) to name a few. 

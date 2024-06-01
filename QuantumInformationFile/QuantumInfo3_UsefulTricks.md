@@ -122,7 +122,7 @@ completing the proof.
 ```
 (Generating_Maximally_Entangled_Basis_target)=
 ```{card} 
-:header: **Generating Maximally Entangled Basis**
+:header: **Generating a Maximally Entangled Basis**
 
 Given a maximally entangled bipartite state, $\ket{\Phi^{+}_{00}}$, one can generate a complete maximally entangled basis using the Heisenberg-Weyl operators.
 
