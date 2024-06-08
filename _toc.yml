@@ -33,12 +33,9 @@ chapters:
       - file: linearAlgebra\mathematicalPleminaries9_eigenvectors
       - file: linearAlgebra\mathematicalPleminaries5_norms
       - file: linearAlgebra\mathematicalPleminariesGlossary
-  - title: Resource Theories   
-    sections:
-      - file: ResourceTheroriesFile\ResourceTheories1_introduction.md
-      - file: ResourceTheroriesFile\ResourceTheories2_criteria.md
-      - file: ResourceTheroriesFile\ResourceTheories3_quantifyingResources.md
-      - file: ResourceTheroriesFile\resourceTheoriesGlossaryofTerms.md
+  - title: Quantum Formalism
+    sections: 
+      - file: quantumFormalism\quantumFormalism1_hilbertSpaces.md
   - title: Quantum Information  
     sections:
       - file: QuantumInformationFile\QuantumInfo5_teleportation
@@ -48,6 +45,12 @@ chapters:
       - file: QuantumInformationFile\QuantumInfo1_entropyFunction
       - file: QuantumInformationFile\QuantumInfo3_UsefulTricks
       - file: QuantumInformationFile\QuantumInfo_Glossary
+  - title: Resource Theories   
+    sections:
+      - file: ResourceTheroriesFile\ResourceTheories1_introduction.md
+      - file: ResourceTheroriesFile\ResourceTheories2_criteria.md
+      - file: ResourceTheroriesFile\ResourceTheories3_quantifyingResources.md
+      - file: ResourceTheroriesFile\resourceTheoriesGlossaryofTerms.md
   - title: Important Mathematical Notions
     sections:
       - file: MathNotes\mathematicalNotes4_stocasticMatrices

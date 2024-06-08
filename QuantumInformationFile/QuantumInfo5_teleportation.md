@@ -24,7 +24,7 @@ exports:
 
 Let there be two spatially separated parties, Alice (A) and Bob (B), who share a $d=2$ dimension maximally entangled bipartite state,
 \begin{equation}
-\ket{\Phi^{+}_{00}}_{AB} = \frac{\ket{0}_{A}\ket{0}_{B}+\ket{1}_{A} \ket{1}_{B}}{\sqrt{2}}~\in~\mathcal{H}_{A} \otimes \mathcal{H}_{B}.
+\ket{\Phi^{+}_{00}}_{AB} = \frac{\ket{0}_{A}\ket{0}_{B}+\ket{1}_{A} \ket{1}_{B}}{\sqrt{2}}~\in~\mathcal{H}_{A}^{2} \otimes \mathcal{H}_{B}^{2}.
 \end{equation}
 
 It is assumed they have the ability to perform any operation on a quantum system in their respective labs and that they can send any amount of classical information to each other [💭](#classical_information_quantum_info_glossary). 
@@ -37,7 +37,7 @@ Alice has a single copy of the qubit,
 \end{equation}
 in her laboratory that she wants to send to Bob. The subscript $A_1$ shows that the state is in Alice's lab. Given Alice and Bob can only send classical information to each other, Alice cannot send the qubit to Bob directly. 
 
-
+(Teleportation_protocol_target)=
 ## Teleportation Protocol
 
 Alice can instead send the qubit $\ket{\psi}_{A_1}$ to Bob via the [quantum teleportation protocol](10.1103/PhysRevLett.70.1895).  
@@ -166,7 +166,7 @@ The entanglement fraction maximises the overlap between the state $\rho_{AB}$ an
 
 The teleportation protocol can be generalised to send higher dimensional states between two spatially separated parties. A state $\rho_{A_1}$, where $\textrm{dim} \rho_{A_1} = d_{A_1}$, can be teleported between Alice (A) and Bob (B) using a bipartie maximally entangled state of local dimension $d_{A_1}$,
 \begin{equation}
-\ket{\Phi^{+}_{00}}_{AB} = \frac{1}{\sqrt{2}} \sum^{d_{A_1}-1}_{i=0} \ket{ii}~\in~\mathcal{H}_{A} \otimes \mathcal{H}_{B}.
+\ket{\Phi^{+}_{00}}_{AB} = \frac{1}{\sqrt{2}} \sum^{d_{A_1}-1}_{i=0} \ket{ii}~\in~\mathcal{H}_{A}^{d_{A_1}}\otimes \mathcal{H}_{B}^{d_{A_1}}.
 \end{equation}
 
 **Firstly**, Alice measures the operator with a basis of maximally entangled states,
@@ -197,11 +197,12 @@ There is no channel in the set of allowed operations to send a quantum state fro
 \end{equation}
 where $\mathcal{T}~\in~LOCC(A_{1}A:B)$ is the quantum channel for the teleportation protocol and $\mathcal{N}~\notin~\textrm{LOCC}(A:B)$ is the quantum channel that noiselessly sends the quantum state $ \rho_{A_1} $ from Alice to Bob. 
 
+(noisy_teleportation_target)=
 As measured by the fidelity of teleportation, Alice and Bob can perform lower quality teleportation if $\rho_{AB}$ is entangled but not maximally entangled. In this case, the channel that is simulated is not noiseless, but instead noisy. Bob's final state will therefore not be exactly the state Alice tried to send. This furthers the notion of entanglement being a resource for this task; the amount of entanglement Alice and Bob shared dictates how noiselessly a quantum state can be sent from Alice to Bob. This can be succinctly formalised through the following equation
 \begin{equation}
-qq + 2[c \rightarrow c] \geq q \rightarrow q,
+qq + 2[c \rightarrow c] \geq [q \rightarrow q],
 \end{equation}
-meaning that one entangled state, $qq$, and 2 classical bits, $2[c \rightarrow c]$ simulate a noiseless quantum channels sending a quantum state, $q \rightarrow q$. The inequality represents the fact that the noiseless channel is only achievable if $qq$ is the maximally entangled state. 
+meaning that one entangled state, $qq$, and 2 classical bits, $2[c \rightarrow c]$ simulate a noiseless quantum channels sending a quantum state, $[q \rightarrow q]$. The inequality represents the fact that the noiseless channel is only achievable if $qq$ is the maximally entangled state. 
 
 
 <!-- If the two spatially separated parties did not share an entangled state they would not be able to simulate the channel $\mathcal{T}$. However, if the had a partially entangled state - a state that is entangled but not maximally entangled - they can perform lower quality teleportation, as quantifed by the fidelity of teleportation.  -->

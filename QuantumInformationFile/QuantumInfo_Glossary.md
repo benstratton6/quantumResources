@@ -25,3 +25,4 @@ exports:
 
 (LOCC_quantum_info_glossary)=
 **LOCC**: This set of operations are often taken to be the allowed operations of the resource theory of entanglement. 
+

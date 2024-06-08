@@ -24,7 +24,7 @@ A [vector space](#vector_space_axioms_target), $V$, with an inner product is cal
 
 An inner product, $(\cdot, \cdot)$, is a functional that takes two vectors from the vector space $V$, defined over a field $\mathbb{F}^{n}$, as an input and outputs a scalar, $(\cdot, \cdot): \mathbb{F}^{n} \otimes \mathbb{F}^{n} \rightarrow \mathbb{F}^{1}$. 
 
-### Inner Product Conditions
+## Inner Product Conditions
 
 Let $\psi, ~\sigma ~\in~V$ and $a \in \mathbb{F}^{1}$.
 
@@ -41,4 +41,15 @@ To be an inner product the functional $(\cdot, \cdot)$ must obeys the following 
 4. $(\psi, \omega + \sigma) = (\psi,\omega) + (\psi, \sigma)$
     - Additivity
 
+## Cauchy–Schwarz inequality
 
+The Cauchy–Schwarz inequality is an upper bound on the inner product between two vectors, in any vector space, in terms of the [norms](#norms_page_target) of the vectors, where the norm is defined via the inner product.
+
+Let $\bm{x}, \bm{y}~\in~V$, where $V$ is a inner product space defined over $\mathbb{F}$ with inner product $(\cdot, \cdot) \rightarrow \mathbb{F}^{1}$, then 
+\begin{equation}
+\vert (\bm{x}, \bm{y}) \vert ^{2} \leq \vert \vert \bm{x} \vert \vert ~ \vert \vert \bm{y}  \vert \vert, 
+\end{equation}
+where $\vert \cdot \vert$ is the absolute value and 
+\begin{equation}
+\vert \vert \bm{x} \vert \vert = \sqrt{ (\bm{x}, \bm{x}) }.
+\end{equation}  

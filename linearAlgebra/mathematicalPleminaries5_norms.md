@@ -147,6 +147,12 @@ Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{F}^{m \times n}$. The Schatte
 \end{equation}
 where $\mu_i(A)$ are the singular values of $A$. 
 
+Equally, Schatten norms can be written as 
+\begin{equation}
+\vert \vert A \vert \vert_{p} = \textrm{tr} \big[ \vert A \vert ^{p} \big]^{\frac{1}{p}},
+\end{equation}
+where $\vert A \vert = \sqrt{AA^{\dagger}}$. 
+
 If $p=1$ you get the [trace norm](#trace_norm_target_norms), if $p=2$ you get the [Frobenius Norm](#target_Frobenius_Norm_target) and if $p=\infty$ you get the [$l_{2}$ norm](#ltwo_norm_target_norms). 
 :::
 ::::

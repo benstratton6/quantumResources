@@ -84,15 +84,15 @@ Resource quantifiers using distances measures usually take the form
 f(\rho) = \min_{\sigma \in \mathfrak{O}} d(\rho, \sigma)
 \end{equation}
 
-## Resource Measure Examples 
+## Resource Measures Examples
 
 ### Robustness Measures 
 
 Robustness measures quantify the resource of an object by measuring how much of another object needs to be mixed into it to make to not resourceful. 
 
-Let $\mathfrak{F}$ be the set of free objects and $\mathfrak{T}$ some set of states.
+Let $\mathfrak{F}$ be the set of free states and $\mathfrak{T}$ some set of states.
 
-The absolute robustness of a state $ \rho $ with respect to the set $\mathfrak{T}$ is given by 
+The robustness of a state $ \rho $ with respect to the set $\mathfrak{T}$ is given by 
 \begin{equation}
 \mathcal{R}(\rho) = \min_{\sigma \in \mathfrak{T}} \bigg\{ s \geq 0 ~ : \frac{\rho + s \sigma}{1 + s} \in \mathfrak{F} \bigg\} 
 \end{equation}
@@ -120,9 +120,9 @@ This is a measure of the minimum amount of free state that must be mixed with $ 
 :::{tab-item} Generalised Robustness
 :sync: tab2
 
-Let $\mathfrak{F}$ be the set of free objects of some resource theory and $\mathfrak{D}$ be the set of all density operators.
+Let $\mathfrak{F}$ be the set of free states of some resource theory and $\mathfrak{D}$ be the set of all density operators.
 
-The generalised robustness of a state $ \rho $ is given by 
+The generalised robustness of state $ \rho $ is given by 
 \begin{equation}
 \mathcal{R}_{g}(\rho) = \min_{\sigma \in \mathfrak{D}} \bigg\{ s \geq 0 ~ : \frac{\rho + s \sigma}{1 + s} \in \mathfrak{F} \bigg\} 
 \end{equation}
@@ -138,3 +138,23 @@ This is a measure of the minimum amount of any state that must be mixed with $ \
 ::::
 
 ### Weight Measures
+
+Weight measures quantify the resource of an object by decomposing a state into a convex mixture of a resourceful state and free state, the resourcefulness is then quantified by "how much" of a general state is present within the state as compared to a resourceless state. 
+
+Let $\mathfrak{F}$ be the set of free objects and $\mathfrak{D}$ be the set of all density operators.
+
+The weight of a state $ \rho $ given by 
+
+\begin{equation}
+\mathcal{W}(\rho) = \big\{ w \geq 0: \rho = w \rho_{G} + (1-w) \sigma, \rho_{G}\in \mathcal{D}, \sigma \in \mathfrak{F} \big\}.
+\end{equation}
+
+### Entropic Measures 
+
+Entropy functions are frequently used in resource theories to quantify how far a given resourceful state is from the set of free states. Often, this includes a minimisation over the set of free states. 
+
+For example, let $\mathfrak{F}$ be a set of free states. A typical entropic resource measure, using the [quantum relative entropy](#quantum_relative_entropy), $S(\rho \vert \vert \sigma)$, is of the form
+\begin{equation}
+\mathcal{R}(\rho) = \min_{ \sigma \in \mathcal{F} } S(\rho \vert \vert \sigma).
+\end{equation} 
+
