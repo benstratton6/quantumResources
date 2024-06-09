@@ -36,6 +36,7 @@ chapters:
   - title: Quantum Formalism
     sections: 
       - file: quantumFormalism\quantumFormalism1_hilbertSpaces.md
+      - file: quantumFormalism\quantumFormalism1_quantumStates.md
   - title: Quantum Information  
     sections:
       - file: QuantumInformationFile\QuantumInfo5_teleportation

@@ -22,7 +22,7 @@ exports:
 
 ## Definition 
 
-A Hilbert space is a vector space, $\mathcal{H}$, defined over a field $\mathbb{F}$, with an inner product $(\cdot, \cdot) \rightarrow \mathbb{F}^{1}$ such that the norm defined by 
+A Hilbert space is a vector space, $\mathcal{H}$, defined over a field $\mathbb{F}$, with an inner product $(\cdot, \cdot) \rightarrow \mathbb{F}^{1}$ such that the norm induced by the inner product, 
 \begin{equation}
  \vert \vert \bm{x} \vert \vert = \sqrt{(\bm{x}, \bm{x})}
  \end{equation}
