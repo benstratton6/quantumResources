@@ -11,7 +11,7 @@ keywords: Quantum Information, Quantum Mechanics
 
 ## Quantum Resources
 
-This webpage is a collection of small notes on topics I have had throughout my PhD. I have written things in the way I understood them. I thought I would share them in the hope that someone else find them useful. 
+This is a collection of notes I have made throughout my PhD on various relevant topics to my research. I have written things in the way that I have understood them them. I thought I would share them in the hope that someone else might find them useful. 
 
 Note:
 - If you see 💭, hover to get some more information. 
