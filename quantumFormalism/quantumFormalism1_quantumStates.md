@@ -40,7 +40,7 @@ The smallest quantum systems are states of dimension $2$, known as qubits (quant
 \begin{equation}
 \ket{\psi} = \begin{pmatrix} \alpha \\ \beta \end{pmatrix} ~ \in ~ \mathcal{H}^{2},
 \end{equation}
-where $\alpha, \beta~\in~\mathbb{C}$. 
+where $\alpha, \beta~\in~\mathbb{C}^{1}$. 
 
 Note, when writing a column vector, one must do so with respect to a given [basis](#basis_page_target), meaning the column vector of a quantum state is not unique. Vectors of a basis can also be written as kets. For example, the [standard basis](#standard_basis_basis_target) in $2$ dimensions denoted in terms of kets is 
 \begin{equation}
@@ -52,8 +52,8 @@ The state $ \ket{\psi} $ written with respect to the standard basis is then
 &= \alpha \ket{0} + \beta \ket{1}.
 \end{align*}
 
-General quantum states of finite dimensional $d$ are then modelled as vectors in a Hilbert space defined over $\mathbb{C}^{d}$. If the standard basis is given by the set of vectors $\{ \ket{i} \}_{i=0}^{d-1}$ then any state in the space, $ \ket{\psi} $ can be decomposed into this basis as 
+General quantum states of finite dimensional $d$ are then modelled as vectors in a Hilbert space defined over $\mathbb{C}^{d}$. If the standard basis is given by the set of ket vectors $\{ \ket{i} \}_{i=0}^{d-1}$ then any state in the space $ \ket{\psi} $ can be decomposed into this basis as 
 \begin{equation}
 \ket{\psi} = \sum_{i} \psi_i \ket{i},
 \end{equation}
-where $\psi_i$ are coefficients.     
+where $\psi_i~\in~\mathbb{C}^{1}$ are coefficients.     
