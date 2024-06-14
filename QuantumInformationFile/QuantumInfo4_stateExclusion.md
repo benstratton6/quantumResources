@@ -70,7 +70,8 @@ where $P^{k}_{err} > 0$ if no POVM to conclusively perform $k$-state exclusion e
 
 ### Sub-Channel Exclusion
 
-A related task to state exclusion is sub-channel exclusion. Consider a collection of completely-positive {\em trace non-increasing} linear maps, $\Psi = \{\Psi_{x}\}_{x=1}^N$, such that $\sum_{x=1}^N \Psi_{x}$ is a channel. This collection is called an {\em instrument}, and each map $\Psi_{x}$ is called a {\em sub-channel}.
+A closely related task to state exclusion is sub-channel exclusion. Consider a collection of completely-positive trace non-increasing linear maps, $\Psi = \{\Psi_{x}\}_{x=1}^N$, such that $\sum_{x=1}^N \Psi_{x}$ is a channel. This collection is called a [quantum instrument](https://en.wikipedia.org/wiki/Quantum_instrument), and each map $\Psi_{x}$ is called a sub-channel.
 
-In sub-channel exclusion, a player has a reference state $\rho$ that they send to the referee. The referee then applies one of the sub-channels to $\rho$ and returns the state to the player. The player measures a POVM on the state and outputs a label $g \in \{1, \ldots ,N\}$. They succeed if they output a label of a sub-channel that was not applied. As before, the player can output the label of a sub-channel not applied with certainty, they can output $k$ labels, $\{ g_{i} \}^{k}_{i=1}$, or they can output $k$ labels with certainty.
+In sub-channel exclusion, a player has a reference state $\rho$ that they send to the referee. The referee then measures $ \rho $ using the instrument and returns the
+post-measurement state to the player. The player measures a POVM on the state and outputs a label $g \in \{1, \ldots ,N\}$. They succeed if they output a label of a sub-channel that was not applied. As before, the player can output the label of a sub-channel not applied with certainty, they can output $k$ labels, $\{ g_{i} \}^{k}_{i=1}$, or they can output $k$ labels with certainty.
 
