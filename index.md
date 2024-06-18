@@ -41,7 +41,12 @@ Other notational highlights alongside my academic pursuits have been teaching a 
 
 ::: -->
 
+**2024**
+
 - [Operational Interpretation of the Choi Rank Through k-State Exclusion](https://doi.org/10.48550/arXiv.2406.08360)
+
+**2023**
+
 - [Dynamical Resource Theory of Informational Nonequilibrium Preservability](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.132.110202)
 
 
