@@ -22,7 +22,7 @@ exports:
 
 ## Definition 
 
-A quantum state is modelled as a Vector in a Hilbert space. 
+A quantum state is modelled as a Vector in a complex Hilbert space. 
 
 ## Notation
 

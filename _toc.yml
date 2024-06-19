@@ -36,8 +36,8 @@ chapters:
   - title: Quantum Formalism
     sections: 
       - file: quantumFormalism\quantumFormalism1_hilbertSpaces.md
-      - file: quantumFormalism\quantumFormalism1_quantumStates.md
-      - file: quantumFormalism\quantumFormalism1_quantumChannels.md
+      - file: quantumFormalism\quantumFormalism2_quantumStates.md
+      - file: quantumFormalism\quantumFormalism3_quantumChannels.md
   - title: Quantum Information 1
     sections:
       - file: QuantumInformationFile\QuantumInfo5_teleportation
