@@ -67,3 +67,59 @@ for all $\rho \in \mathcal{H}_{in}$, where $\rho$ is a valid density operator, $
 This ensure that all operators output from a channel still have trace one.
 
 ## Channel Descriptions
+
+There are multiple different ways to represent a quantum channel. Each different channel description can be used whenever useful. 
+
+::::{tab-set}
+:::{tab-item} Stinespring Dilation
+:sync: tab1
+
+Let $\mathcal{E}: \mathcal{H}_{S} \rightarrow \mathcal{H}_{S'}$ be a quantum channel and $\rho~\in~\mathcal{H}_{S}$. 
+
+There exists a state, $\tau_{E}~\in~\mathcal{H}_{E}$, and isometry, $U_{SE}$, such that 
+\begin{equation}
+\mathcal{E}(\rho) = \textrm{tr}_{E} \big[ U_{SE}(\rho_{S} \otimes \tau_{E}) U_{SE}^{\dagger} \big],
+\end{equation}
+where the subscript $S$ and $E$ mean system and environment respectively.
+
+The Stinespring dilation says that all channels can be consider unitary with respect to a higher dimensional space. That is, all channels are the interaction of $\rho$ and some environment state, $\tau$ under a global unitary. 
+
+**Properties**
+
+- $\textrm{dim} ~ \tau_{E} \leq d^{2}$ where $\textrm{dim} ~ \rho = d$
+- Tracing out the system instead of the enviroment gives the complementary, $\mathcal{E}^{c}$, which can be thought as the channel from the perspective of the environment,
+\begin{equation}
+\mathcal{E}^{c}(\rho) = \textrm{tr}_{S} \big[ U_{SE}(\rho_{S} \otimes \tau_{E}) U_{SE}^{\dagger} \big].
+\end{equation}
+
+:::
+:::{tab-item} Kraus Decomposition 
+:sync: tab2
+
+Let $\mathcal{E}: \mathcal{H}_{S} \rightarrow \mathcal{H}_{S'}$ be a quantum channel and $\rho~\in~\mathcal{H}_{S}$
+
+There exists a set of $M$ operators $\{ K_{i} \}_{i=1}^{M}$ such that
+\begin{equation}
+\mathcal{E}(\rho) = \sum_{i=1}^{M} K_{i} \rho K_{i}^{\dagger},
+\end{equation}
+where 
+\begin{equation}
+\sum_{i=1}^{M} K_{i}^{\dagger}K_{i} = \mathbb{I}.
+\end{equation}
+
+This condition ensures that the quantum channel is trace preserving. 
+
+The Kraus decomposition allows one to apply channels without having to consider the environment. 
+
+**Properties** 
+- The Kraus decomposition is not unique. Although, if there are two sets of operators that both describe the same channel, those sets of operators are unitarily equivalent. 
+- $M \leq \dim \mathcal{H}_S \times \dim \mathcal{H}_{S'}$, meaning the number of operators needed for the Kraus decomposition is upper-bounded by the product of the dimensions of the input and output spaces. 
+
+:::
+:::{tab-item} Choi-Jamiolkowski isomorphism
+:sync: tab3
+
+Let $\mathcal{E}: \mathcal{H}_{S} \rightarrow \mathcal{H}_{S'}$ be a quantum channel,$~\rho~\in~\mathcal{H}_{S}$ be a state, and $\ket{\Phi}~\in~\mathcal{H}_{S} \otimes \mathcal{H}_{S}$ a full [Schmit rank state](https://en.wikipedia.org/wiki/Schmidt_decomposition). 
+
+:::
+::::

@@ -183,7 +183,7 @@ Let $A~\in~\mathbb{M}_{nm}$, $B~\in~\mathbb{M}_{ml}$ and $C~\in~\mathbb{M}_{lk}$
 - $A(BC) = (AB)C$
 
 :::{dropdown} Elements Form
-:close:
+
 (elements_view_Matrix_Multiplication_target)=
 \begin{align*}
 AB = \begin{pmatrix}
@@ -253,5 +253,26 @@ A = \begin{pmatrix}
 Let $A~\in~\mathbb{M}_{nm}$ with elements $a_{ij}$ ($i$th row and $j$th column)
 
 $A$ is diagonal if $a_{ij} = 0$ if $i \neq j$. 
+
+:::
+:::{tab-item} Positive  
+:sync: tab13
+
+Let $A~\in~\mathbb{M}_{nm}$ with elements $a_{ij}$ ($i$th row and $j$th column)
+
+$A$ is **positive definite** if for all column vectors $\bm{x}$, 
+\begin{equation}
+\bm{x}^{*} A \bm{x} > 0,
+\end{equation}
+where $*$ is the conjugate transpose operation. 
+
+$A$ is **positive semi-definite** if for all column vectors $\bm{x}$, 
+\begin{equation}
+\bm{x}^{*} A \bm{x} \geq 0. 
+\end{equation}
+
+**Negative** and **negative semi-definite** are defined the say way but with inequalities in the opposite direction. 
+
+A matrix is positive definite if it is both hermitian and has all positive eigenvalue - just having positive eigenvalues if not enough for a matrix to be positive definite or positive semi-definite. 
 
 ::::
