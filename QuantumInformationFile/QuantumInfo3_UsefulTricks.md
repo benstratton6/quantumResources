@@ -25,6 +25,7 @@ Contents:
 - Moving Operators on Entangled States
 - Alternative Bipartition of Entangled States
 - Generating Maximally Entangled Basis
+- Trace of Swap gate on two density operators
 
 
 ```{card} 
@@ -165,3 +166,61 @@ W_{0,0} = \mathbb{I}, ~~ W_{0,1} = \sigma_{z}, ~~ W_{1,0} = \sigma_{x}, ~~ W_{1,
 :::
 
 ```
+
+
+
+```{card} 
+:header: **Trace of Swap gate on two density operators** 
+
+Let $\rho, \sigma$ be density operators and $\rm{SWAP}$ the [swap gate](https://en.wikipedia.org/wiki/Quantum_logic_gate#:~:text=.-,Swap%20gate,-%5Bedit%5D).
+
+\begin{equation}
+\textrm{tr} \big[ (\rho \otimes \sigma) \textrm{SWAP} \big] = \textrm{tr} \big[\rho \sigma \big]
+\end{equation}
+
+:::{dropdown} Proof
+:open:
+
+Let 
+\begin{align*}
+
+\rho = \sum_{ij} p_{ij} \ket{i} \bra{j}, \\
+
+\sigma = \sum_{kl} q_{kl} \ket{k} \bra{l},
+
+\end{align*}
+
+be expansions of $ \rho $ and $ \sigma $ in the computational basis, and note that 
+\begin{equation}
+
+\textrm{SWAP} = \sum_{nm} \ket{n}\bra{m} \otimes \ket{m}\bra{n}.
+
+\end{equation}
+
+First, the left hand side gives 
+
+\begin{align*}
+
+&\textrm{tr} \big[ (\rho \otimes \sigma) \textrm{SWAP} \big] \\
+&= \textrm{tr} \bigg[ \bigg( \sum_{ijkl} p_{ij}q_{kl} \ket{i} \bra{j} \otimes \ket{k} \bra{l} \bigg) \sum_{nm} \ket{n}\bra{m} \otimes \ket{m}\bra{n}  \bigg] \\
+&= \textrm{tr} \bigg[ \sum_{ijkl} \sum_{nm} p_{ij}q_{kl} \ket{i} \bra{m} \delta_{jn} \otimes \ket{k} \bra{n} \delta_{ml} \bigg] \\
+&=  \textrm{tr} \bigg[ \sum_{inkm} p_{in}q_{km} \ket{i} \bra{m} \otimes \ket{k} \bra{n}  \bigg] \\
+&= \sum_{inkm} p_{in}q_{km} ~ \delta_{im} \delta_{kn} \\
+&= \sum_{ik} p_{ik}q_{ki}.
+
+\end{align*}
+
+The right hand side is then 
+\begin{align*}
+\textrm{tr} \big[\rho \sigma \big] &= \textrm{tr} \bigg[ \bigg( \sum_{ij} p_{ij} \ket{i} \bra{j} \bigg) \bigg( \sum_{kl} q_{kl} \ket{k} \bra{l} \bigg) \bigg] \\
+&= \textrm{tr} \bigg[ \sum_{ijkl} p_{ij}q_{kl} \ket{i} \bra{l} \delta_{jk}  \bigg] \\
+&= \textrm{tr} \bigg[ \sum_{ikl} p_{ik}q_{kl} \ket{i} \bra{l}  \bigg] \\
+&= \sum_{ikl} p_{ik}q_{kl} \delta_{il} \\
+&= \sum_{ik} p_{ik}q_{ki},
+\end{align*}
+
+completing the proof. 
+
+:::
+
+``` 
