@@ -58,7 +58,7 @@ This ensure that all operators output from a channel remain positive semi-defini
 
 ### Trace-preserving
 
-A map, $\mathcal{E}$ is trace preserving if 
+A map, $\mathcal{E}$, is trace preserving if 
 \begin{equation}
 \textrm{tr} \big[ \mathcal{E}(\rho) \big] = 1,
 \end{equation}
@@ -121,9 +121,9 @@ The Kraus decomposition allows one to apply channels without having to consider 
 
 Let $\mathcal{E}: \mathcal{H}_{S} \rightarrow \mathcal{H}_{S'}$ be a quantum channel,$~\rho~\in~\mathcal{H}_{S}$ be a state, and $\ket{\Phi}_{SS}~\in~\mathcal{H}_{S} \otimes \mathcal{H}_{S}$ a full [Schmit rank state](https://en.wikipedia.org/wiki/Schmidt_decomposition) with $\textrm{dim} ~ \mathcal{H}_{S} \approx \textrm{dim} ~ \mathcal{H}_{S'}$. 
 
- The Choi-Jamiolkowski isomorphism [](https://www.sciencedirect.com/science/article/pii/0024379575900750) [](https://www.sciencedirect.com/science/article/pii/0024379575900750) is a linear mapping between quantum channels and bipartite quantum states defined by
+ The Choi-Jamiolkowski isomorphism ([](https://doi.org/10.1016/0034-4877(72)90011-0) [](https://doi.org/10.1016/0024-3795(75)90075-0)) is a linear mapping between quantum channels and bipartite quantum states defined by
 \begin{equation}
-    \mathcal{J}^{\mathcal{E}}_{\rm SS'} = (\mathcal{N}_{\rm S} \otimes \mathcal{I}_{\rm S}) \big( \ket{\Phi}\bra{\Phi}_{\rm SS} \big)~\in~\mathcal{H}_{S'} \otimes \mathcal{H}_{S}, 
+    \mathcal{J}^{\mathcal{E}}_{\rm S'S} = (\mathcal{N}_{\rm S} \otimes \mathcal{I}_{\rm S}) \big( \ket{\Phi}\bra{\Phi}_{\rm SS} \big)~\in~\mathcal{H}_{S'} \otimes \mathcal{H}_{S}, 
 \end{equation}
 where $\mathcal{I}_{\rm S}$ is an identity channel acting on $\mathcal{H}_{S}$.
 
@@ -134,7 +134,7 @@ Typically, the full Schmit rank state state is taken to be a maximally entangled
 
 From the Choi-state, the action of $\mathcal{E}$ on a state $ \rho $ can be recovered as 
 \begin{equation}
-\mathcal{E}(\rho) = d ~ \textrm{tr}_{\rm S'}\left[ \left(\mathbb{I}_{\rm S} \otimes \rho^{t}\right) \mathcal{J}^{\mathcal{N}}_{\rm SS'} \right],
+\mathcal{E}(\rho) = d ~ \textrm{tr}_{\rm S}\left[ \left(\mathbb{I}_{\rm S} \otimes \rho^{t}\right) \mathcal{J}^{\mathcal{N}}_{\rm S'S} \right],
 \end{equation}
 where $(\cdot)^{t}$ is the transpose operation in the given fixed basis of the full Schmit rank state and $ \mathbb{I}_{\rm S} $ is the identity operator on $\mathcal{H}_{S}$. 
 
