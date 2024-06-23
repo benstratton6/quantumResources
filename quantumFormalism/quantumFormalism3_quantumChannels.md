@@ -119,7 +119,24 @@ The Kraus decomposition allows one to apply channels without having to consider 
 :::{tab-item} Choi-Jamiolkowski isomorphism
 :sync: tab3
 
-Let $\mathcal{E}: \mathcal{H}_{S} \rightarrow \mathcal{H}_{S'}$ be a quantum channel,$~\rho~\in~\mathcal{H}_{S}$ be a state, and $\ket{\Phi}~\in~\mathcal{H}_{S} \otimes \mathcal{H}_{S}$ a full [Schmit rank state](https://en.wikipedia.org/wiki/Schmidt_decomposition). 
+Let $\mathcal{E}: \mathcal{H}_{S} \rightarrow \mathcal{H}_{S'}$ be a quantum channel,$~\rho~\in~\mathcal{H}_{S}$ be a state, and $\ket{\Phi}_{SS}~\in~\mathcal{H}_{S} \otimes \mathcal{H}_{S}$ a full [Schmit rank state](https://en.wikipedia.org/wiki/Schmidt_decomposition) with $\textrm{dim} ~ \mathcal{H}_{S} \approx \textrm{dim} ~ \mathcal{H}_{S'}$. 
+
+ The Choi-Jamiolkowski isomorphism [](https://www.sciencedirect.com/science/article/pii/0024379575900750) [](https://www.sciencedirect.com/science/article/pii/0024379575900750) is a linear mapping between quantum channels and bipartite quantum states defined by
+\begin{equation}
+    \mathcal{J}^{\mathcal{E}}_{\rm SS'} = (\mathcal{N}_{\rm S} \otimes \mathcal{I}_{\rm S}) \big( \ket{\Phi}\bra{\Phi}_{\rm SS} \big)~\in~\mathcal{H}_{S'} \otimes \mathcal{H}_{S}, 
+\end{equation}
+where $\mathcal{I}_{\rm S}$ is an identity channel acting on $\mathcal{H}_{S}$.
+
+Typically, the full Schmit rank state state is taken to be a maximally entangled state in a fixed orthonormal basis, 
+\begin{equation}
+\ket{\Phi}_{AB} = \frac{1}{\sqrt{d}} \sum_{i=0}^{d-1} \ket{i}_{A} \ket{i}_{B}.
+\end{equation}
+
+From the Choi-state, the action of $\mathcal{E}$ on a state $ \rho $ can be recovered as 
+\begin{equation}
+\mathcal{E}(\rho) = d ~ \textrm{tr}_{\rm S'}\left[ \left(\mathbb{I}_{\rm S} \otimes \rho^{t}\right) \mathcal{J}^{\mathcal{N}}_{\rm SS'} \right],
+\end{equation}
+where $(\cdot)^{t}$ is the transpose operation in the given fixed basis of the full Schmit rank state and $ \mathbb{I}_{\rm S} $ is the identity operator on $\mathcal{H}_{S}$. 
 
 :::
 ::::

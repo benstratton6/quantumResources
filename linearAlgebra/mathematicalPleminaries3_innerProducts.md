@@ -27,7 +27,7 @@ An inner product, $(\cdot, \cdot)$, is a functional that takes two vectors from 
 ## Inner Product Conditions
 
 Let $\psi, ~\sigma ~\in~V$ and $a \in \mathbb{F}^{1}$.
-
+(inner_product_target_definition_inner_product_space)=
 To be an inner product the functional $(\cdot, \cdot)$ must obeys the following properties:
 
 1. $(\psi, \psi) \geq 0$ and $(\psi, \psi) = 0$ if and only if $\psi=0$

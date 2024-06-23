@@ -19,7 +19,7 @@ exports:
     template: physical_review_journals
     article_type: Report
 ---
-
+(dual_vector_spaces_target)=
 Given a vector space $V$, the dual space, $V^{*}$, is the space of linear [functionals](#functional_target_glossary) on $V$. Therefore the dual space can be defined as $\Omega : V \longrightarrow \mathbb{F}^{1}$ where $ \Omega $ are funcationals from the vectors in $V$ to scalars $\mathbb{F}^{1}$. $V^{*}$ is itself a [vector space](#vector_space_axioms_target) if it fulfills all the axioms of a vector space, which can do done by adding an addition and scalar multiplication operation. 
 
 Each element in $V$ has a corresponding element in $V^{*}$ that can be thought of as the funcational that takes that element to an element in $\mathbb{F}$. Equally, any [basis](#basis_vector_space_target) in $V$ has a corresponding basis in $V^{*}$.

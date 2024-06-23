@@ -22,9 +22,9 @@ exports:
 
 ## Definition 
 
-A quantum state is modelled as a Vector in a complex Hilbert space. 
+A quantum state is modelled as a vector in a complex [Hilbert space](#hilbert_space_target). 
 
-## Notation
+### Ket's
 
 In [Dirac notation](https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation), A quantum state is denoted via a ket,
 \begin{equation}
@@ -32,7 +32,51 @@ In [Dirac notation](https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation), A q
 \end{equation}
 where $ \psi $ is just some label and $\mathcal{H}$ is a Hilbert space. 
 
-This is a universal way to represent quantum states that is independent of the underlying Hilbert space upon which it is defined e.g. if the Hilbert is finite or infinite dimensional. In addition, it is a basis independent was to represent the quantum state. 
+This is a universal way to represent quantum states that is independent of the underlying Hilbert space upon which it is defined e.g. if the Hilbert is finite or infinite dimensional. In addition, it is a basis independent way to represent the quantum state. 
+
+**Properties**
+1. Given quantum state are vectors in a vector space, any linear combination of 
+quantum states is also a quantum state. This give the principal of superposition, where one would say $\ket{\phi}$ is in a superposition of states $\ket{\psi_1}, \ket{\psi_2}, \ldots, \ket{\psi_n}~\in~\mathcal{H}$ if there exists a set $\{\alpha_i: \alpha_{i}~\in~\mathbb{C}^1~\forall~n \}_{i=1}^{n}$ such that
+\begin{equation}
+\ket{\phi} = \alpha_1 \ket{\psi_1} + \alpha_2 \ket{\psi_2} \ldots + \alpha_n \ket{\psi_n}.
+\end{equation}
+2. One can find sets of basis vectors in $\mathcal{H}$ such that any vector in the space can be written as a superposition over those basis elements. 
+3.  let $\alpha_1, \alpha_2 \in~\mathbb{C}^{1}$ and $\ket{\psi}~\in~\mathcal{H}$, then $\alpha \ket{\psi} + \alpha_2 \ket{\psi} = \ket{\psi}$ unless $\alpha_1 + \alpha_2 = 0$. 
+    - From this, one reaches the important point that a ket vector multiped by any complex number that is not zero, gives the same ket vector. 
+
+### Bra's
+
+The Hilbert space in which quantum states are defined has a [dual space](#dual_vector_spaces_target) $\mathcal{H}^{*}$, with elements of this dual space called bra's,
+\begin{equation}
+\bra{\psi}~\in~\mathcal{H}^{*}.
+\end{equation}
+
+This dual vector space is the space of linear functionals mapping elements $\mathcal{H}$ to the scalars $\mathbb{C}^{1}$. Note, there is a one to one correspondence between elements in the space $\mathcal{H}$ and elements in the dual space $\mathcal{H}^{*}$. 
+
+**Properties**
+1. Let $\alpha~\in\mathbb{C}^{1}$. The bra of $\alpha \ket{\psi}$ is given by $\bra{\psi} \alpha^{*}$, where $(\cdot)^{*}$ is the complex conjugate. 
+2. Let $\ket{\psi} = \alpha \ket{0} + \beta \ket{1}$, the bra of $\ket{\psi}$ is $\bra{\psi} = \alpha^{*} \bra{0} + \beta^{*} \bra{1}$. 
+
+### Inner Product
+
+A [Hilbert space](#hilbert_space_target) is an [inner product](#inner_product_target_definition_inner_product_space) space, with the inner product, $(\cdot, \cdot): \mathcal{H} \times \mathcal{H} \rightarrow \mathbb{C}^{1}$, defined as 
+\begin{equation}
+(\ket{\psi}, \ket{\phi}) = \braket{\psi|\phi}~\in~\mathbb{C}^{1}.
+\end{equation}
+
+This inner product satisfies all the conditions of an inner product in a vector space:
+1. $\braket{\psi|\phi} \geq 0$
+    - Positive-definiteness
+2. $\braket{\psi|\phi} = \braket{\phi|\psi}^{*}$
+    - Conjugate symmetry
+3. $ \bra{\psi} \big( \alpha_1\ket{\phi_1} + \alpha_2 \ket{\phi_2} \big)  = \alpha_1 \braket{\psi|\phi_1} + \alpha_2 \braket{\psi|\phi_2}$ 
+    - Additivity and Linearity in the second argument
+
+**Properties**
+1. Two states, $\ket{\psi}$ and $\ket{\phi}$, are said to be **orthogonal** if their inner product is zero, $\braket{\psi | \phi} = 0$. 
+2. The inner product induces a norm, $ \vert \vert \ket{\psi} \vert \vert = \sqrt{\braket{\psi | \psi}}$. All valid quantum states are those such that $ \vert \vert \ket{\psi} \vert \vert = 1$. This is known as normalisation and ensures that the amplitude of quantum states - weights of the different states in the superposition - can be interpreted as probability, as will be seen below. 
+
+**Physical Interpretation of Inner Product** 
 
 ## States as Column Vectors 
 
@@ -56,4 +100,8 @@ General quantum states of finite dimensional $d$ are then modelled as vectors in
 \begin{equation}
 \ket{\psi} = \sum_{i} \psi_i \ket{i},
 \end{equation}
-where $\psi_i~\in~\mathbb{C}^{1}$ are coefficients.     
+where $\psi_i~\in~\mathbb{C}^{1}$ are coefficients given by 
+\begin{equation}
+\psi_{i} = \braket{i|\psi},
+\end{equation}
+given the standard basis is an [orthonormal basis](#Orthonormal_Basis_basis_target) meaning $\braket{i|i} = \delta_{ij}$.
