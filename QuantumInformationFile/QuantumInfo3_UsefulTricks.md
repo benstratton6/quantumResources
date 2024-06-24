@@ -179,7 +179,7 @@ Let $\rho, \sigma$ be density operators and $\rm{SWAP}$ the [swap gate](https://
 \end{equation}
 
 :::{dropdown} Proof
-:open:
+
 
 Let 
 \begin{align*}
