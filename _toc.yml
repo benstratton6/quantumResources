@@ -37,7 +37,10 @@ chapters:
     sections: 
       - file: quantumFormalism\quantumFormalism1_hilbertSpaces.md
       - file: quantumFormalism\quantumFormalism2_quantumStates.md
+      - file: quantumFormalism\quantumFormalism5_UnitaryDynamics.md
+      - file: quantumFormalism\quantumFormalism6_DensityOperators.md
       - file: quantumFormalism\quantumFormalism3_quantumChannels.md
+      - file: quantumFormalism\quantumFormalism4_measurment.md
   - title: Quantum Information 1
     sections:
       - file: QuantumInformationFile\QuantumInfo5_teleportation

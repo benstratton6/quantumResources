@@ -29,6 +29,8 @@ A channel mapping from states in an input Hilbert space $\mathcal{H}_{in}$ to an
 \mathcal{E}: \mathcal{H}_{in} \rightarrow \mathcal{H}_{out}
 \end{equation}
 
+A quantum channel is a more general notion of evolution then that captured via the Schrödinger equation and unitary dynamics as it models interacts with the environment. Unitary dynamics are subset of quantum channels. 
+
 ### Linear 
 
 A map, $\mathcal{E}$, is linear if 
@@ -121,7 +123,7 @@ The Kraus decomposition allows one to apply channels without having to consider 
 
 Let $\mathcal{E}: \mathcal{H}_{S} \rightarrow \mathcal{H}_{S'}$ be a quantum channel,$~\rho~\in~\mathcal{H}_{S}$ be a state, and $\ket{\Phi}_{SS}~\in~\mathcal{H}_{S} \otimes \mathcal{H}_{S}$ a full [Schmit rank state](https://en.wikipedia.org/wiki/Schmidt_decomposition) with $\textrm{dim} ~ \mathcal{H}_{S} \approx \textrm{dim} ~ \mathcal{H}_{S'}$. 
 
- The Choi-Jamiolkowski isomorphism ([](https://doi.org/10.1016/0034-4877(72)90011-0) [](https://doi.org/10.1016/0024-3795(75)90075-0)) is a linear mapping between quantum channels and bipartite quantum states defined by
+ The Choi-Jamiolkowski isomorphism ([](https://doi.org/10.1016/0034-4877(72)90011-0), [](https://doi.org/10.1016/0024-3795(75)90075-0)) is a linear mapping between quantum channels and bipartite quantum states defined by
 \begin{equation}
     \mathcal{J}^{\mathcal{E}}_{\rm S'S} = (\mathcal{N}_{\rm S} \otimes \mathcal{I}_{\rm S}) \big( \ket{\Phi}\bra{\Phi}_{\rm SS} \big)~\in~\mathcal{H}_{S'} \otimes \mathcal{H}_{S}, 
 \end{equation}
