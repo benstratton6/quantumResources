@@ -20,7 +20,7 @@ exports:
     article_type: Report
 ---
 
-### In terms of state vectors 
+### In terms of State Vectors 
 
 1. **States** - The state of any physical systems is represented by normalised vector in a complex Hilbert space, $ \ket{\psi}~\in~\mathcal{H}$, where $\braket{\psi|\psi} = 1$.
 

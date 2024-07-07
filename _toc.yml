@@ -22,18 +22,17 @@ parts:
 chapters:
   - title: Linear Algebra
     sections: 
-      - file: linearAlgebra\mathematicalPleminaries1_Vectors
-      - file: mathematicalPleminaries1_Vectors
-      - file: linearAlgebra\mathematicalPleminaries6_Matrices
-      - file: linearAlgebra\mathematicalPleminaries2_VectorSpaces
-      - file: linearAlgebra\mathematicalPleminaries8_basis
-      - file: linearAlgebra\mathematicalPleminaries7_Linear_Maps
-      - file: linearAlgebra\mathematicalPleminaries3_innerProducts
-      - file: linearAlgebra\mathematicalPleminaries10_theAdjoint
-      - file: linearAlgebra\mathematicalPleminaries4_dualSpaces
-      - file: linearAlgebra\mathematicalPleminaries9_eigenvectors
-      - file: linearAlgebra\mathematicalPleminaries5_norms
-      - file: linearAlgebra\mathematicalPleminariesGlossary
+      - file: linearAlgebra\mathematicalPleminaries1_Vectors.md
+      - file: linearAlgebra\mathematicalPleminaries6_Matrices.md
+      - file: linearAlgebra\mathematicalPleminaries2_VectorSpaces.md
+      - file: linearAlgebra\mathematicalPleminaries8_basis.md
+      - file: linearAlgebra\mathematicalPleminaries7_Linear_Maps.md
+      - file: linearAlgebra\mathematicalPleminaries3_innerProducts.md
+      - file: linearAlgebra\mathematicalPleminaries10_theAdjoint.md
+      - file: linearAlgebra\mathematicalPleminaries4_dualSpaces.md
+      - file: linearAlgebra\mathematicalPleminaries9_eigenvectors.md
+      - file: linearAlgebra\mathematicalPleminaries5_norms.md
+      - file: linearAlgebra\mathematicalPleminariesGlossary.md
   - title: Quantum Formalism
     sections: 
       - file: quantumFormalism\quantumFormalism1_hilbertSpaces
@@ -64,19 +63,10 @@ chapters:
       - file: MathNotes\mathematicalNotes3_majorisation
       - file: MathNotes\mathematicalNotes1_preorder
       - file: MathNotes\mathematicalNotes2_convexity
-  # - title: Quantitative Finance
   - title: Economics 
     sections:
       - file: QuantFinance\quantFinance1_utilityFunctions.md
       - file: QuantFinance\quantFinance2_risk.md
       - file: QuantFinance\quantFinance_glossary.md
       
-  # - title: My Papers
-  #   sections:
-  #     - file: >-
-  #         MyPapers\Dynamical Resource Theory of Informational Nonequilibrium
-  #         Preservability
 
-    # - title: Quantum Information 2
-  #   sections:
-  #     - file: QuantumInformationFile2\QuantumInfoTwo1_superOperations
