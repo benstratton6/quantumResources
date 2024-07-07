@@ -73,7 +73,7 @@ Let $A$ be unitary, then:
 :::{tab-item} Hermitian
 :sync: tab2
 Let $A~\in~\mathbb{M}_{nm}$. 
-
+(hermitian_adjoint_page_target)=
 $A$ is hermitian, or self-adjoint, if $A=A^{\dagger}$.
 
 **Properties** 

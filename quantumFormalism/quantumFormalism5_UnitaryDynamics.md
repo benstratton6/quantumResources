@@ -24,13 +24,14 @@ The time evolution of a closed quantum system (one not interacting with the envi
 \begin{equation}
 i \hbar \frac{d}{dt} \ket{\psi} = H \ket{\psi},
 \end{equation}
-where $H$ is a hermitian  operators called the [Hamiltonian](#https://en.wikipedia.org/wiki/Hamiltonian_(quantum_mechanics)). The Hamiltonian describes the energy landscape the system exists within and hence is depending on the system being modelled. 
+where $H$ is a hermitian  operators called the [Hamiltonian](#https://en.wikipedia.org/wiki/Hamiltonian_(quantum_mechanics)). The Hamiltonian describes the energy landscape the system exists within and hence is dependent on the system being modelled. 
 
 If a state $\ket{psi}$ is evolved into a state $\ket{\psi'}$ from $t_1$ to $t_2$, the solution to the Schrödinger equation is  
 \begin{equation}
 \ket{\psi'} = \exp \bigg[ \frac{-iH(t_1 - t_2)}{\hbar} \bigg] \ket{\psi}. 
 \end{equation}
-This is a [unitary operator](#target_unitary_adjoint_page). 
+
+This is a [unitary operator](#target_unitary_adjoint_page), meaning that the time evolution of a closed quantum system is given by the action of a unitary operator on the current state. 
 
 :::{dropdown} Proof
 
@@ -84,4 +85,4 @@ One can therefore succinctly model evolution in quantum theory through unitary o
 \begin{equation}
 \ket{\psi'} = U \ket{\psi}, ~ ~ UU^{\dagger} = U^{\dagger}U = \mathbb{I},
 \end{equation} 
-without concern for what the Hamiltonian is. 
+without concern for what the specific Hamiltonian is. 

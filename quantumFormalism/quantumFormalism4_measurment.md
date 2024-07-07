@@ -26,4 +26,4 @@ exports:
 ## POVMs
 
 
-## Generalised Measurements 
+## Generalized Measurements  

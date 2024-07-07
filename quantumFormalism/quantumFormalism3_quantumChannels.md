@@ -29,7 +29,7 @@ A channel mapping from states in an input Hilbert space $\mathcal{H}_{in}$ to an
 \mathcal{E}: \mathcal{H}_{in} \rightarrow \mathcal{H}_{out}
 \end{equation}
 
-A quantum channel is a more general notion of evolution then that captured via the Schrödinger equation and unitary dynamics as it models interacts with the environment. Unitary dynamics are subset of quantum channels. 
+A quantum channel is a more general notion of evolution then that captured via the Schrödinger equation and unitary dynamics as it models interactions with the environment. Unitary dynamics are subset of quantum channels. 
 
 ### Linear 
 

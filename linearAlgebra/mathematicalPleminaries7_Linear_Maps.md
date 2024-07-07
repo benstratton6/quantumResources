@@ -182,6 +182,7 @@ where $\textrm{dim}$ is the [dimension](#dimension_vector_spaces_target).
 Let $L: \mathbb{F}^{n} \rightarrow \mathbb{F}^{m}$ be a linear map.
 
 The rank of $L$ is defined to be 
+(rank_target_linear_maps)=
 \begin{equation}
 \textrm{rank} L \coloneqq \textrm{dim} ~\textrm{Im} L.
 \end{equation} 
