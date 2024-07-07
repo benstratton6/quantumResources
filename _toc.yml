@@ -25,16 +25,16 @@ chapters:
       # - file: .\linearAlgebra\mathematicalPleminaries1_Vectors.md
       - file: mathematicalPleminaries1_Vectors.md
       - file: mathematicalPleminaries2_VectorSpaces.md
-      - file: linearAlgebra\mathematicalPleminaries6_Matrices.md
-      - file: linearAlgebra\mathematicalPleminaries2_VectorSpaces.md
-      - file: linearAlgebra\mathematicalPleminaries8_basis.md
-      - file: linearAlgebra\mathematicalPleminaries7_Linear_Maps.md
-      - file: linearAlgebra\mathematicalPleminaries3_innerProducts.md
-      - file: linearAlgebra\mathematicalPleminaries10_theAdjoint.md
-      - file: linearAlgebra\mathematicalPleminaries4_dualSpaces.md
-      - file: linearAlgebra\mathematicalPleminaries9_eigenvectors.md
-      - file: linearAlgebra\mathematicalPleminaries5_norms.md
-      - file: linearAlgebra\mathematicalPleminariesGlossary.md
+      - file: mathematicalPleminaries6_Matrices.md
+      - file: mathematicalPleminaries2_VectorSpaces.md
+      - file: mathematicalPleminaries8_basis.md
+      - file: mathematicalPleminaries7_Linear_Maps.md
+      - file: mathematicalPleminaries3_innerProducts.md
+      - file: mathematicalPleminaries10_theAdjoint.md
+      - file: mathematicalPleminaries4_dualSpaces.md
+      - file: mathematicalPleminaries9_eigenvectors.md
+      - file: .\linearAlgebra\mathematicalPleminaries5_norms.md
+      - file: .\linearAlgebra\mathematicalPleminariesGlossary.md
   - title: Quantum Formalism
     sections: 
       - file: quantumFormalism\quantumFormalism1_hilbertSpaces
