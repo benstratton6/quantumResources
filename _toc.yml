@@ -23,6 +23,7 @@ chapters:
   - title: Linear Algebra
     sections: 
       - file: linearAlgebra\mathematicalPleminaries1_Vectors
+      - file: mathematicalPleminaries1_Vectors
       - file: linearAlgebra\mathematicalPleminaries6_Matrices
       - file: linearAlgebra\mathematicalPleminaries2_VectorSpaces
       - file: linearAlgebra\mathematicalPleminaries8_basis
