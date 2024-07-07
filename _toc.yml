@@ -38,9 +38,9 @@ chapters:
       - file: quantumFormalism\quantumFormalism1_hilbertSpaces
       - file: quantumFormalism\quantumFormalism2_quantumStates
       - file: quantumFormalism\quantumFormalism5_UnitaryDynamics
+      - file: quantumFormalism\quantumFormalism4_measurment
       - file: quantumFormalism\quantumFormalism6_DensityOperators
       - file: quantumFormalism\quantumFormalism3_quantumChannels
-      - file: quantumFormalism\quantumFormalism4_measurment
       - file: quantumFormalism\quantumFormalism7_AxiomsOfQuantumMechanics
   - title: Quantum Information 1
     sections:
@@ -51,9 +51,6 @@ chapters:
       - file: QuantumInformationFile\QuantumInfo1_entropyFunction
       - file: QuantumInformationFile\QuantumInfo3_UsefulTricks
       - file: QuantumInformationFile\QuantumInfo_Glossary
-  # - title: Quantum Information 2
-  #   sections:
-  #     - file: QuantumInformationFile2\QuantumInfoTwo1_superOperations
   - title: Resource Theories   
     sections:
       - file: ResourceTheroriesFile\ResourceTheories1_introduction.md
@@ -78,3 +75,7 @@ chapters:
   #     - file: >-
   #         MyPapers\Dynamical Resource Theory of Informational Nonequilibrium
   #         Preservability
+
+    # - title: Quantum Information 2
+  #   sections:
+  #     - file: QuantumInformationFile2\QuantumInfoTwo1_superOperations
