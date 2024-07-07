@@ -106,3 +106,5 @@ A density operator $ \rho $ is pure if and only if
 
 
 ## The Reduced Density Operator  
+
+The partial trace 
