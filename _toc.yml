@@ -22,17 +22,17 @@ parts:
 chapters:
   - title: Linear Algebra
     sections: 
-      - file: ./linearAlgebra\mathematicalPleminaries1_Vectors.md
-      - file: ./linearAlgebra\mathematicalPleminaries6_Matrices.md
-      - file: ./linearAlgebra\mathematicalPleminaries2_VectorSpaces.md
-      - file: ./linearAlgebra\mathematicalPleminaries8_basis.md
-      - file: ./linearAlgebra\mathematicalPleminaries7_Linear_Maps.md
-      - file: ./linearAlgebra\mathematicalPleminaries3_innerProducts.md
-      - file: ./linearAlgebra\mathematicalPleminaries10_theAdjoint.md
-      - file: ./linearAlgebra\mathematicalPleminaries4_dualSpaces.md
-      - file: ./linearAlgebra\mathematicalPleminaries9_eigenvectors.md
-      - file: ./linearAlgebra\mathematicalPleminaries5_norms.md
-      - file: ./linearAlgebra\mathematicalPleminariesGlossary.md
+      - file: linearAlgebra\mathematicalPleminaries1_Vectors.md
+      - file: linearAlgebra\mathematicalPleminaries6_Matrices.md
+      - file: linearAlgebra\mathematicalPleminaries2_VectorSpaces.md
+      - file: linearAlgebra\mathematicalPleminaries8_basis.md
+      - file: linearAlgebra\mathematicalPleminaries7_Linear_Maps.md
+      - file: linearAlgebra\mathematicalPleminaries3_innerProducts.md
+      - file: linearAlgebra\mathematicalPleminaries10_theAdjoint.md
+      - file: linearAlgebra\mathematicalPleminaries4_dualSpaces.md
+      - file: linearAlgebra\mathematicalPleminaries9_eigenvectors.md
+      - file: linearAlgebra\mathematicalPleminaries5_norms.md
+      - file: linearAlgebra\mathematicalPleminariesGlossary.md
   - title: Quantum Formalism
     sections: 
       - file: quantumFormalism\quantumFormalism1_hilbertSpaces
