@@ -1,5 +1,5 @@
 ---
-title: Measurement 
+title: Generalised Measurements  
 subject: 
 # subtitle: The space in which quantum states live
 # short_title: How to MyST
@@ -19,9 +19,6 @@ exports:
     template: physical_review_journals
     article_type: Report
 ---
-
-## Operators 
-
 
 ## POVMs
 

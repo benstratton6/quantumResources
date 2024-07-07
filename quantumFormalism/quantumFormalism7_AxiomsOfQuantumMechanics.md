@@ -43,7 +43,7 @@ exports:
     \rho_{post} = \frac{ \ket{\lambda_k}\bra{\lambda_k} \rho \ket{\lambda_k}\bra{\lambda_k} }{\vert \braket{\lambda_k|\psi} \vert^{2}}
     \end{equation}
 
-### In terms of density operators
+### In terms of Density Operators
 
 1. **States** - The state of any physical systems is represented by a density operator $ \rho $, where $ \rho \geq 0, ~ \textrm{tr} \big[ \rho \big] = 1$.
 

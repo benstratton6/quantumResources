@@ -22,8 +22,9 @@ parts:
 chapters:
   - title: Linear Algebra
     sections: 
-      - file: .\linearAlgebra\mathematicalPleminaries1_Vectors.md
+      # - file: .\linearAlgebra\mathematicalPleminaries1_Vectors.md
       - file: mathematicalPleminaries1_Vectors.md
+      - file: mathematicalPleminaries2_VectorSpaces.md
       - file: linearAlgebra\mathematicalPleminaries6_Matrices.md
       - file: linearAlgebra\mathematicalPleminaries2_VectorSpaces.md
       - file: linearAlgebra\mathematicalPleminaries8_basis.md
@@ -39,9 +40,10 @@ chapters:
       - file: quantumFormalism\quantumFormalism1_hilbertSpaces
       - file: quantumFormalism\quantumFormalism2_quantumStates
       - file: quantumFormalism\quantumFormalism5_UnitaryDynamics
-      - file: quantumFormalism\quantumFormalism4_measurment
+      - file: quantumFormalism\quantumFormalism8_observables.md
       - file: quantumFormalism\quantumFormalism6_DensityOperators
       - file: quantumFormalism\quantumFormalism3_quantumChannels
+      - file: quantumFormalism\quantumFormalism4_generalisedMeasurements.md
       - file: quantumFormalism\quantumFormalism7_AxiomsOfQuantumMechanics
   - title: Quantum Information 1
     sections:
