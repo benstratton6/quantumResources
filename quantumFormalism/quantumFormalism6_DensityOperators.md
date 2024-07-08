@@ -107,4 +107,46 @@ A density operator $ \rho $ is pure if and only if
 
 ## The Reduced Density Operator  
 
-The partial trace 
+Consider a state that exists across multiple systems
+\begin{equation}
+\ket{\Psi}\bra{\Psi} \in \mathcal{H}_A \otimes \mathcal{H}_B.
+\end{equation}
+The reduced density operator of $A$ is an operator on $\mathcal{H}_A$ that contains all the information about measurement outcomes one could get if measurements were only performed on the part of the state in system $A$. 
+
+The reduced density operator on system $A$ is found by tracing out system $B$, whilst the reduced density operator on system $B$ is found by tracing out system $A$,
+\begin{align*}
+\rho_A = \textrm{tr}_{B} \big[ \ket{\Psi}\bra{\Psi} \big], \\
+\rho_B = \textrm{tr}_{A} \big[ \ket{\Psi}\bra{\Psi} \big],
+\end{align*}
+where $\textrm{tr}_{\theta}$ an a map known as the partial trace. 
+
+The notion of the reduced density operator can be generalised to any number of systems and also applies to mixed states across multiple systems. 
+
+### Limitations
+
+It is important to note that the reduced density operator does not tell one about the correlations between the system A and B. It only contains information about measurement outcomes from measurements made on the part of the state in the system A. With just $ \rho_A $ one cannot say with certainty what measurement outcomes they would get from measuring the part of the state in system $B$ (they would need $ \rho_B $ for this) or what measurement outcomes they would get from measuring the global state $ \ket{\Psi}\bra{\Psi} $. In addition, the reduced state $ \rho_A $ does not lead to a unique global state, hence, from $ \rho_A $ one cannot find the global state. 
+
+### Properties of the Reduced Density Operator 
+
+1. $\rho_A^{\dagger} = \rho_A$, the reduced density operator is Hermitian. 
+2. $\rho_A \geq 0$, the reduced density operator is positive. 
+3. $\textrm{tr} \big[ \rho_A \big] = 1$, the reduced density operator has unit trace. 
+
+:::{dropdown} The Partial Trace
+
+The **partial trace** is used to find the reduced density operator and is given by the following map
+\begin{equation}
+\textrm{tr}_{B} \big[ \ket{i}\bra{j}_A \otimes \ket{l}\bra{k}_B \big] = \braket{k|l}\ket{i}\bra{j}_A.
+\end{equation}
+Here, one would say they are tracing out system $B$. This means applying the trace operation to only the $B$ system. 
+
+The partial trace is a [quantum channel](#quantum_channel_page_target), and hence it is a linear, completely positive, trace-preserving map. 
+
+The full trace can be decomposed into the partial trace over all the different sub-systems 
+\begin{align*}
+\textrm{tr} \big[ \ket{\Psi}\bra{\Psi} \big] &= \textrm{tr}_B \bigg( \textrm{tr}_A \big[ \ket{\Psi}\bra{\Psi} \big] \bigg) \\
+&= \textrm{tr}_A \bigg( \textrm{tr}_B \big[ \ket{\Psi}\bra{\Psi} \big] \bigg)
+\end{align*}
+
+The notion of the partial trace can be generalised to any number of systems. 
+:::

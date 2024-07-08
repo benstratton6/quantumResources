@@ -19,7 +19,7 @@ exports:
     template: physical_review_journals
     article_type: Report
 ---
-
+(quantum_channel_page_target)=
 ## Definition 
 
 A quantum channel is a linear, completely positive, trace-preserving map (from the set of density operators to itself). 
