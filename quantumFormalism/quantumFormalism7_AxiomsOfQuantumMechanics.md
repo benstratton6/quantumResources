@@ -26,7 +26,7 @@ exports:
 
 2. **Evolution** - closed quantum systems evolve via unitary operators
 \begin{equation}
-\ket{\psi'} = U \ket{\psi} U^{\dagger}, ~ ~ \textrm{where} ~ ~ UU^{\dagger} = U^{\dagger}U = \mathbb{I}.
+\ket{\psi'} = U \ket{\psi}, ~ ~ \textrm{where} ~ ~ UU^{\dagger} = U^{\dagger}U = \mathbb{I}.
 \end{equation}
 
 3. **Measurement** - Observables are given by Hermitian operators. For the observable $O = \sum \lambda_k \ket{\lambda_k}\bra{\lambda_k}$: 
@@ -40,7 +40,7 @@ exports:
     \end{equation}
     - The state after measuring $O$ and getting the measurement outcome $ \lambda_k $ is given by 
     \begin{equation}
-    \rho_{post} = \frac{ \ket{\lambda_k}\bra{\lambda_k} \rho \ket{\lambda_k}\bra{\lambda_k} }{\vert \braket{\lambda_k|\psi} \vert^{2}}
+    \ket{\psi_{post}} = \frac{ \ket{\lambda_k}\braket{\lambda_k|\psi}}{ \sqrt{ \vert \braket{\lambda_k|\psi} \vert^{2} }}
     \end{equation}
 
 ### In terms of Density Operators

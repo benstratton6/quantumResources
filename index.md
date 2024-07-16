@@ -11,7 +11,7 @@ keywords: Quantum Information, Quantum Mechanics
 
 ## Quantum Resources
 
-This is a collection of notes I have made throughout my PhD on various relevant topics to my research. I have written things in the way that I have understood them them. I thought I would share them in the hope that someone else might find them useful. 
+This is a collection of notes I have made throughout my PhD on various relevant topics to my research. I have written things in the way that I have understood them. I thought I would share them in the hope that someone else might find them useful. 
 
 Note:
 - If you see 💭, hover to get some more information. 
@@ -24,7 +24,7 @@ My name is Ben Stratton and I am a third year PhD student at the University of B
 
 Originally from Devon, England, I studied for my MSci in physics at the University of Bristol between 2016-2020, taking units in Quantum Information Theory, Quantum Computation, Advance Quantum Mechanics and Advance Computational Physics. I returned to Bristol in 2021 to join the Quantum Engineering Centre for Doctoral Training. During the first year of my PhD I undertook an interdisciplinary range of teaching that included courses in Quantum Light and Matter, Applied Quantum Theory, Nanofabrication and Quantum Systems Engineering. I then joined the Quantum Information Theory group under the supervision of Paul Skrzypczyk to work on problems in quantum information theory.
 
-Other notational highlights alongside my academic pursuits have been teaching a class as part of the Foundations of Physics course for foundation year students, demonstrated in the second year lab, co-organising Careers in Quantum – a student led quantum careers fair, and conducting outreach at the Blue Dot Science Festival. 
+Other notable highlights alongside my academic pursuits have been teaching a class as part of the Foundations of Physics course for foundation year students, demonstrated in the second year lab, co-organising Careers in Quantum – a student led quantum careers fair, and conducting outreach at the Blue Dot Science Festival. 
 
 
 :::{figure} ./images/BenStrattonHeadShot.png

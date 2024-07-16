@@ -43,6 +43,7 @@ chapters:
       - file: quantumFormalism\quantumFormalism3_quantumChannels
       - file: quantumFormalism\quantumFormalism4_generalisedMeasurements.md
       - file: quantumFormalism\quantumFormalism7_AxiomsOfQuantumMechanics
+      - file: quantumFormalism\quantumFormalism9_BlochSphere
   - title: Quantum Information 1
     sections:
       - file: QuantumInformationFile\QuantumInfo5_teleportation

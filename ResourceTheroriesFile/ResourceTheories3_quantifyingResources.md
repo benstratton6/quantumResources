@@ -50,7 +50,16 @@ f(\rho) \leq pf(\rho_1) + (1-p)f(\rho_2)
 where $\rho = p\rho_1 + (1-p)\rho_2$ and $0\leq \rho \leq 1$.
 
 This means that taking a mixture of two states does not make it more resourceful. 
+
 :::
+:::{tab-item} Additive 
+:sync: tab3
+
+A resource measure $f$ is additive if
+\begin{equation}
+f(\rho \otimes \sigma) = f(\rho) \otimes f(\sigma),
+\end{equation}
+
 ::::
 
 ***
