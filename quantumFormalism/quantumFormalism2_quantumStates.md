@@ -19,7 +19,7 @@ exports:
     template: physical_review_journals
     article_type: Report
 ---
-
+(quantum_state_page_target)=
 ## Definition 
 
 A quantum state is modelled as a vector in a complex [Hilbert space](#hilbert_space_target). 
@@ -93,6 +93,7 @@ More formally, the inner product between two states, $\ket{ \psi}$ and $\ket{\ph
 
 **Properties**
 1. Two states, $\ket{\psi}$ and $\ket{\phi}$, are said to be **orthogonal** if their inner product is zero, $\braket{\psi | \phi} = 0$. 
+(normalised_quantum_states_target)=
 2. The inner product induces a norm, $ \vert \vert \ket{\psi} \vert \vert = \sqrt{\braket{\psi | \psi}}$. All valid quantum states are those such that $ \vert \vert \ket{\psi} \vert \vert = 1$. This is known as normalisation and ensures that the probability of observing the state $\ket{\psi}$ to be in the state $\ket{\psi}$ is one.
 
 
