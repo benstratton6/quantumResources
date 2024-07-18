@@ -19,9 +19,8 @@ root: index
 # exclude:
 #   - file: ResourceTheroriesFile\popUpNotesResourceTheories.md
 parts:
-chapters:
-  - title: Linear Algebra
-    sections: 
+  - caption: Linear Algebra
+    chapters: 
       - file: linearAlgebra\mathematicalPleminaries1_Vectors.md
       - file: linearAlgebra\mathematicalPleminaries6_Matrices.md
       - file: linearAlgebra\mathematicalPleminaries2_VectorSpaces.md
@@ -33,8 +32,8 @@ chapters:
       - file: linearAlgebra\mathematicalPleminaries9_eigenvectors.md
       - file: linearAlgebra\mathematicalPleminaries5_norms.md
       - file: linearAlgebra\mathematicalPleminariesGlossary.md
-  - title: Quantum Formalism
-    sections: 
+  - caption: Quantum Formalism
+    chapters: 
       - file: quantumFormalism\quantumFormalism1_hilbertSpaces
       - file: quantumFormalism\quantumFormalism2_quantumStates
       - file: quantumFormalism\quantumFormalism5_UnitaryDynamics
@@ -44,8 +43,8 @@ chapters:
       - file: quantumFormalism\quantumFormalism4_generalisedMeasurements.md
       - file: quantumFormalism\quantumFormalism7_AxiomsOfQuantumMechanics
       - file: quantumFormalism\quantumFormalism9_BlochSphere
-  - title: Quantum Information 1
-    sections:
+  - caption: Quantum Information 1
+    chapters:
       - file: QuantumInformationFile\QuantumInfo5_teleportation
       - file: QuantumInformationFile\QuantumInfo6_superDenseCoding
       - file: QuantumInformationFile\QuantumInfo4_stateExclusion
@@ -53,20 +52,20 @@ chapters:
       - file: QuantumInformationFile\QuantumInfo1_entropyFunction
       - file: QuantumInformationFile\QuantumInfo3_UsefulTricks
       - file: QuantumInformationFile\QuantumInfo_Glossary
-  - title: Resource Theories   
-    sections:
+  - caption: Resource Theories   
+    chapters:
       - file: ResourceTheroriesFile\ResourceTheories1_introduction.md
       - file: ResourceTheroriesFile\ResourceTheories2_criteria.md
       - file: ResourceTheroriesFile\ResourceTheories3_quantifyingResources.md
       - file: ResourceTheroriesFile\resourceTheoriesGlossaryofTerms.md
-  - title: Important Mathematical Notions
-    sections:
+  - caption: Important Mathematical Notions
+    chapters:
       - file: MathNotes\mathematicalNotes4_stocasticMatrices
       - file: MathNotes\mathematicalNotes3_majorisation
       - file: MathNotes\mathematicalNotes1_preorder
       - file: MathNotes\mathematicalNotes2_convexity
-  - title: Economics 
-    sections:
+  - caption: Economics 
+    chapters:
       - file: QuantFinance\quantFinance1_utilityFunctions.md
       - file: QuantFinance\quantFinance2_risk.md
       - file: QuantFinance\quantFinance_glossary.md
