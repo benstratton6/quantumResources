@@ -12,6 +12,8 @@ site:
   title: Quantum Resources Site
   options:
       logo: .\images\logo2.svg
+      exclude: 
+        - MyPapers
   nav: []
   actions:
     - title: Google Scholar
@@ -19,3 +21,56 @@ site:
     - title: LinkedIn
       url: https://www.linkedin.com/in/ben-stratton-544698151/
   domains: []
+
+  
+  # toc: 
+  #   - caption: Linear Algebra
+  #     chapters: 
+  #     - file: linearAlgebra\mathematicalPleminaries1_Vectors.md
+  #     - file: linearAlgebra\mathematicalPleminaries6_Matrices.md
+  #     - file: linearAlgebra\mathematicalPleminaries2_VectorSpaces.md
+  #     - file: linearAlgebra\mathematicalPleminaries8_basis.md
+  #     - file: linearAlgebra\mathematicalPleminaries7_Linear_Maps.md
+  #     - file: linearAlgebra\mathematicalPleminaries3_innerProducts.md
+  #     - file: linearAlgebra\mathematicalPleminaries10_theAdjoint.md
+  #     - file: linearAlgebra\mathematicalPleminaries4_dualSpaces.md
+  #     - file: linearAlgebra\mathematicalPleminaries9_eigenvectors.md
+  #     - file: linearAlgebra\mathematicalPleminaries5_norms.md
+  #     - file: linearAlgebra\mathematicalPleminariesGlossary.md
+  #   - caption: Quantum Formalism
+  #     chapters: 
+  #     - file: quantumFormalism\quantumFormalism1_hilbertSpaces
+  #     - file: quantumFormalism\quantumFormalism2_quantumStates
+  #     - file: quantumFormalism\quantumFormalism5_UnitaryDynamics
+  #     - file: quantumFormalism\quantumFormalism8_observables.md
+  #     - file: quantumFormalism\quantumFormalism6_DensityOperators
+  #     - file: quantumFormalism\quantumFormalism3_quantumChannels
+  #     - file: quantumFormalism\quantumFormalism4_generalisedMeasurements.md
+  #     - file: quantumFormalism\quantumFormalism7_AxiomsOfQuantumMechanics
+  #     - file: quantumFormalism\quantumFormalism9_BlochSphere
+  #   - caption: Quantum Information 1
+  #     chapters:
+  #     - file: QuantumInformationFile\QuantumInfo5_teleportation
+  #     - file: QuantumInformationFile\QuantumInfo6_superDenseCoding
+  #     - file: QuantumInformationFile\QuantumInfo4_stateExclusion
+  #     - file: QuantumInformationFile\QuantumInfo2_AlgorithmicCooling
+  #     - file: QuantumInformationFile\QuantumInfo1_entropyFunction
+  #     - file: QuantumInformationFile\QuantumInfo3_UsefulTricks
+  #     - file: QuantumInformationFile\QuantumInfo_Glossary
+  #   - caption: Resource Theories   
+  #     chapters:
+  #     - file: ResourceTheroriesFile\ResourceTheories1_introduction.md
+  #     - file: ResourceTheroriesFile\ResourceTheories2_criteria.md
+  #     - file: ResourceTheroriesFile\ResourceTheories3_quantifyingResources.md
+  #     - file: ResourceTheroriesFile\resourceTheoriesGlossaryofTerms.md
+  #   - caption: Important Mathematical Notions
+  #     chapters:
+  #     - file: MathNotes\mathematicalNotes4_stocasticMatrices
+  #     - file: MathNotes\mathematicalNotes3_majorisation
+  #     - file: MathNotes\mathematicalNotes1_preorder
+  #     - file: MathNotes\mathematicalNotes2_convexity
+  #   - caption: Economics 
+  #     chapters:
+  #     - file: QuantFinance\quantFinance1_utilityFunctions.md
+  #     - file: QuantFinance\quantFinance2_risk.md
+  #     - file: QuantFinance\quantFinance_glossary.md
