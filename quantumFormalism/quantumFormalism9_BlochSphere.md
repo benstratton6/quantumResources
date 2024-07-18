@@ -60,6 +60,7 @@ where the norm of the Bloch vector is the taken as the radius. Each set of three
 1. $ \vert \bm{n} \vert = 1$ if and only if $ \rho $ is a pure state. If $ \vert \bm{n} \vert < 1$ then $ \rho $ is a mixed state. Hence, points on the surface of the sphere are pure states, whilst points in the interior of the sphere are mixed states. The smaller the norm of the Bloch vector, the more mixed a qubit state is. 
 2. The qubit maximally mixed state, $ \rho = \frac{1}{2} \mathbb{I}$, has Bloch vector $\bm{n}_{mm} = (0,0,0)^{t}$. With $\vert \bm{n}_{mm} \vert = 0$ it can be seen that the qubit maximally mixed state sits at the centre of the unit circle. 
  
+### Derivation 
 
 :::{dropdown} Derivation of Bloch Sphere
 :open:

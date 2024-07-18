@@ -22,7 +22,7 @@ parts:
 chapters:
   - title: Linear Algebra
     sections: 
-      - file: linearAlgebra\mathematicalPleminaries1_Vectors.md
+      - file: quantumResources\linearAlgebra\mathematicalPleminaries1_Vectors.md
       - file: linearAlgebra\mathematicalPleminaries6_Matrices.md
       - file: linearAlgebra\mathematicalPleminaries2_VectorSpaces.md
       - file: linearAlgebra\mathematicalPleminaries8_basis.md
