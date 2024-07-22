@@ -48,6 +48,8 @@ n_x = \textrm{tr} \big[ \rho X \big], \\
 n_y = \textrm{tr} \big[ \rho Y \big], \\
 n_z = \textrm{tr} \big[ \rho Z \big]. \\
 \end{align*}
+The $\frac{1}{2} \mathbb{I}$ terms fixes the normalisation, such that $\textrm{tr}\big[ \rho \big] = 1$.
+
 Alternatively, in terms of [spherical polar coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system), the Bloch vector elements are given by 
 \begin{align*}
 n_x &= \vert n \vert \sin (\theta) \cos (\phi), \\
@@ -60,10 +62,9 @@ where the norm of the Bloch vector is the taken as the radius. Each set of three
 1. $ \vert \bm{n} \vert = 1$ if and only if $ \rho $ is a pure state. If $ \vert \bm{n} \vert < 1$ then $ \rho $ is a mixed state. Hence, points on the surface of the sphere are pure states, whilst points in the interior of the sphere are mixed states. The smaller the norm of the Bloch vector, the more mixed a qubit state is. 
 2. The qubit maximally mixed state, $ \rho = \frac{1}{2} \mathbb{I}$, has Bloch vector $\bm{n}_{mm} = (0,0,0)^{t}$. With $\vert \bm{n}_{mm} \vert = 0$ it can be seen that the qubit maximally mixed state sits at the centre of the unit circle. 
  
-### Derivation 
 
 :::{dropdown} Derivation of Bloch Sphere
-:open:
+
 
 Initially, pure qubit states will be considered. 
 
@@ -144,11 +145,71 @@ where $\bm{n}$ is now take to be the mixture of Bloch vectors of each of the pur
 &= \sum_{i} \sum_j p_i p_j \bm{n}_i \cdot \bm{n}_j, \\
 & \leq 1,
 \end{align*}
-as $ \bm{n}_i \cdot \bm{n}_j \leq 1~\forall~i,j$ and $\sum_{i} \sum_j p_i p_j \leq 1$ as $\sum_i p_i =1$, and similarly for $j$. Hence, the Bloch vectors of mixed states have a norm less than one. When considered with respect to the unit sphere, this means that mixed state sit inside the sphere. As with pure qubit states, there is a one to one mapping between point inside the sphere and mixed qubit states. 
+as $ \bm{n}_i \cdot \bm{n}_j \leq 1~\forall~i,j$ and $\sum_{i} \sum_j p_i p_j \leq 1$ as $\sum_i p_i =1$, and similarly for $j$. Hence, the Bloch vectors of mixed states have a norm less than one. When considered with respect to the unit sphere, this means that mixed state sit inside the sphere. As with pure qubit states, there is a one to one mapping between points inside the sphere and mixed qubit states. 
 :::
 
 ### Orthogonality 
 
+Given a pure quantum state $\ket{\psi}$ with Bloch vector $ \bm{n} $, the orthogonal state $ \ket{\psi'}$, such that $ \braket{\psi|\psi'}=0$, has Bloch vector $-\bm{n}$. 
+
+Hence, orthogonal pure state correspond to **the opposite point** on the bloch sphere. Perpendicular Bloch vectors **do not** mean orthogonal quantum states.  
+
+:::{dropdown} Proof
+:open:
+
+Let 
+\begin{equation}
+\ket{\psi} = \cos\bigg(\frac{\theta}{2}\bigg) \ket{0} + e^{i \phi} \sin\bigg(\frac{\theta}{2}\bigg) \ket{1}.
+\end{equation}
+The state on the opposite of the Bloch sphere has 
+\begin{equation}
+\theta \rightarrow \pi - \theta, ~ ~ \phi \rightarrow \phi \pm \pi,
+\end{equation}
+giving the state 
+\begin{align*}
+\ket{\psi'} &= \cos\bigg(\frac{\pi - \theta}{2}\bigg) \ket{0} + e^{i \phi + i \pi} \sin\bigg(\frac{\pi - \theta}{2}\bigg) \ket{1}, \\
+&= \cos\bigg(\frac{\pi - \theta}{2}\bigg) \ket{0} - e^{i \phi} \sin\bigg(\frac{\pi - \theta}{2}\bigg) \ket{1}.
+\end{align*}
+The inner product between these state is then 
+\begin{align*}
+\braket{\psi'|\psi} = &\biggl( \cos\bigg(\frac{\pi - \theta}{2}\bigg) \bra{0} - e^{-i \phi} \sin\bigg(\frac{\pi - \theta}{2}\bigg) \bra{1} \biggl) \\
+&\times \biggl( \cos\bigg(\frac{\theta}{2}\bigg) \ket{0} + e^{i \phi} \sin\bigg(\frac{\theta}{2}\bigg) \ket{1}  \biggl), \\
+&= \cos\bigg(\frac{\theta}{2}\bigg)\cos\bigg(\frac{\pi - \theta}{2}\bigg) - \sin\bigg(\frac{\theta}{2}\bigg) \sin\bigg(\frac{\pi - \theta}{2}\bigg), \\
+&= \cos\bigg(\frac{\theta}{2}\bigg) \biggl[ \cos\bigg(\frac{\pi}{2}\bigg)\cos\bigg(\frac{\theta}{2}\bigg) + \sin\bigg(\frac{\pi}{2}\bigg)\sin\bigg(\frac{\theta}{2}\bigg) \biggl] \\
+&  - \sin\bigg(\frac{\theta}{2}\bigg) \biggl[ \sin\bigg(\frac{\pi}{2}\bigg)\cos\bigg(\frac{\theta}{2}\bigg) - \cos\bigg(\frac{\pi}{2}\bigg)\sin\bigg(\frac{\theta}{2}\bigg) \biggl], \\
+&= 0, 
+\end{align*}
+as
+\begin{align*}
+\sin\bigg(\frac{\pi}{2}\bigg) &= 1 ~ ~ \textrm{and} ~ ~ \cos\bigg(\frac{\pi}{2}\bigg) = 0, \\
+\cos(x-y) &= \cos(x)\cos(y) + \sin(x)\sin(y), \\
+\sin(x-y) &= \cos(x)\sin(y) - \cos(y)\sin(x).
+\end{align*}
+
+:::
+
 ### Higher Dimensions
+
+There exists generalisations of the Bloch vector form to higher dimensional states, but the nice geometrical interpretation of points in a unit sphere is lost. 
+
+In order to get a higher dimensional Bloch vector form, an operator basis is needed. Typically, in a $d$ dimensional space, an operator basis is a set of operators $d^2-1$ operators $\{ A_i \}$ such that 
+1. $\mathbb{I} \in \{ A_i \}$.
+    - The set contains the identity operator
+2. $\textrm{tr} \big[ A_i^{\dagger}A_j \big] = N \delta_{ij}$, where $N \in \mathbb{R}$ and $\delta_{ij}$ is the delta function. 
+    - The set of operators is orthogonal according to the Hilbert-Schmit inner product. 
+
+In the qubit case, these set of operators were the identity and Pauli operators, $\{ \mathbb{I}, X, Y, Z \}$. 
+
+Given $\{ A_i \}$ forms a [basis](#basis_page_target), any matrix can be decomposed into $\{ A_i \}$. For a density operators $ \rho \in \mathcal{H}^{d} $, it's density matrix with respect to $\{ A_i \}$ can be written as 
+\begin{equation}
+\rho = \frac{1}{d} \bigg( \mathbb{I} + \bm{b} \cdot \bm{\Sigma} \bigg),
+\end{equation}
+where $\bm{b} \in \mathbb{R}^{d^2-1}$ and $ \bm{\Sigma} $ is a vector whose elements are the operators in the basis, $\{ A_i \}$. Hence, $ \rho $ is written as linear combination of operators in the basis. 
+
+As before, the $\frac{1}{d} \mathbb{I}$ term fixes the normalisation, such that $\textrm{tr}\big[ \rho \big] = 1$, and the components of the Bloch vector can be found as $b_i = \textrm{tr} \big[ \rho A_i \big]$.
+
+However, not all Bloch vectors $\bm{b}$ correspond to valid density operators, as in the qubit case. 
+
+There are multiple different operator basis one could choose and hence no unique Bloch vector for a given state. See the following for more details on different operator basis one could choose: http://dx.doi.org/10.1088/1751-8113/41/23/235303, https://journals.aps.org/pra/abstract/10.1103/PhysRevA.94.010301.
 
 ## Dynamics  

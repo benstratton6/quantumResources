@@ -225,7 +225,7 @@ D_{\textrm{min}}( \rho \vert \vert \sigma) \geq D_{\textrm{min}}( \mathcal{E}(\r
 
 Let $\rho, \sigma$ be two states, the hypothesis testing relative entropy
 \begin{equation}
-D_{H}^{\epsilon}(\rho \vert \vert \sigma) \coloneqq - \log  \inf_{ \substack{0 \leq Q \leq \mathbb{I}, \\ \textrm{tr}[ Q \rho]  \geq 1 - \epsilon}} \textrm{tr}\big[Q \sigma \big]
+D_{H}^{\epsilon}(\rho \vert \vert \sigma) \coloneqq - \log  \inf_{ \substack{0 \leq Q \leq \mathbb{I}, \\ \textrm{tr}[ Q \rho ]  \geq 1 - \epsilon}} \textrm{tr}\big[Q \sigma \big]
 \end{equation}
 
 :::{dropdown} Properties
