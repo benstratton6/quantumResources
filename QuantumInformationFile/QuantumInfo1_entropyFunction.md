@@ -220,3 +220,29 @@ D_{\textrm{min}}( \rho \vert \vert \sigma) \geq D_{\textrm{min}}( \mathcal{E}(\r
 \end{equation}
   - This is the [data processing inequality.](https://en.wikipedia.org/wiki/Data_processing_inequality)
 :::
+
+## Hypothesis Testing Relative Entropy
+
+Let $\rho, \sigma$ be two states, the hypothesis testing relative entropy
+\begin{equation}
+D_{H}^{\epsilon}(\rho \vert \vert \sigma) \coloneqq - \log  \inf_{ \substack{0 \leq Q \leq \mathbb{I}, \\ \textrm{tr}[ Q \rho]  \geq 1 - \epsilon}} \textrm{tr}\big[Q \sigma \big]
+\end{equation}
+
+:::{dropdown} Properties
+
+1. $D_{H}^{\epsilon}(\rho \vert \vert \sigma) \geq 0$, where $D_{H}^{\epsilon}(\rho \vert \vert \sigma) = 0$ iif $\rho = \sigma$.
+2. If $\mathcal{E}$ is a quantum channel then 
+\begin{equation}
+D_{H}^{\epsilon}(\rho \vert \vert \sigma) \geq D_{H}^{\epsilon}( \mathcal{E}(\rho) \vert \vert \mathcal{E}(\sigma)).
+\end{equation}
+  - This is the [data processing inequality.](https://en.wikipedia.org/wiki/Data_processing_inequality)
+3. Let $H_b(\cdot)$ be the [binary entropy function](https://en.wikipedia.org/wiki/Binary_entropy_function) then 
+\begin{equation}
+ D_{H}^{\epsilon}(\rho \vert \vert \sigma) \leq \frac{ \bigg( S(\rho \vert \vert \sigma ) + H_b(\epsilon) \bigg)}{1 - \epsilon}.
+ \end{equation}
+4. For any $ \epsilon \in (0,1)$ in 
+\begin{equation}
+\lim_{n \rightarrow \infty} \frac{1}{n} D_{H}^{\epsilon}(\rho^{\otimes n} \vert \vert \sigma^{\otimes n}) = S(\rho \vert \vert \sigma).
+\end{equation}
+  - This is the Quantum Stein's Lemma
+:::

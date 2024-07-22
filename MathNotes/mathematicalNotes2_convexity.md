@@ -1,5 +1,5 @@
 ---
-title: Convexity 
+title: Convex and Affine Sets
 subject: Tutorial
 subtitle: 
 # short_title: How to MyST
@@ -11,8 +11,8 @@ authors:
     orcid: 0009-0001-2746-3668
     email: ben.stratton@bristol.ac.uk
 license: 
-keywords:  
-abstract: The conditions for a set to be convex. 
+keywords: Sets, Convex, Affine.
+abstract: The conditions for a set to be convex and affine. 
 exports:
 #   - format: docx
   - format: pdf
@@ -72,10 +72,31 @@ a) A convex set b) a non-convex set.
 
 Let $V$ be a vector space over a field $\mathbb{F}$. A subset $S \subset V$ is convex if for all $\psi, \sigma~\in~S$ the line segment connecting $ \psi $ and $ \sigma $ is also in $S$, as seen in Fig (a) above. Mathematically this means that 
 \begin{equation}
-t\psi + (1-t) \sigma~\in~S~\forall~(\psi,\sigma)~\in~S,~~ t~\in~[0,1].
+t\psi + (1-t) \sigma~\in~S,~\forall~(\psi,\sigma)\in S,~~ t\in[0,1].
 \end{equation}
 If a mixture of elements in the subset can lead to an element outside of the subset, as seen in fig (b) above where some points on the line segment are outside the boundary of the set, the subset is not convex. 
+
+In general, a set $S$ is convex if for all subsets of objects in $S$,  $\{ \psi_1, \psi_2, \ldots, \psi_n \} \in S~\forall~\psi_i$, then 
+\begin{equation}
+a_1 \psi_1 + a_2 \psi_2 + \ldots + a_n \psi_n~\in~S,~~ a_i \geq 0 ~\forall~i, ~ ~ \sum_{i=1}^{n} a_i = 1.
+\end{equation}
 
 The boundary of a convex set is always a convex curve.
 
 The convex hull of a set $S' \subset V$ is the smallest convex set that contains $S'$. 
+
+### Affine 
+
+Let $V$ be a vector space over a field $\mathbb{F}$. A subset $S \subset V$ is affine if for every pair in the set the whole infinite line through those two points is in $S$. Mathematically, this means that 
+\begin{equation}
+t \psi + (1-t) \sigma ~\in~S, ~\forall~(\psi, \sigma)\in S. 
+\end{equation} 
+The key difference between affine sets and convex sets is that $t$ does not need to be in the set $[0,1]$ and can be negative. This means that the *whole line* including $ \psi $ and $ \sigma $ is included, not just the line segment *between* $ \psi $ and $ \sigma $. 
+
+In general, a set $S$ is affine if for all subsets of objects in $S$,  $\{ \psi_1, \psi_2, \ldots, \psi_n \} \in S~\forall~\psi_i$, then 
+\begin{equation}
+a_1 \psi_1 + a_2 \psi_2 + \ldots + a_n \psi_n~\in~S, ~ \sum_{i=1}^{n} a_i = 1.
+\end{equation}
+where, as before, the condition for $a_i$ to be positive has been removed. 
+
+Hence, convex combinations can be thought of as a weighted average of elements of the set, whilst affine combinations can be thought of as a weighted average where the weights can be negative. 
