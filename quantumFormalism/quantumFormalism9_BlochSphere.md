@@ -203,12 +203,73 @@ Given $\{ A_i \}$ forms a [basis](#basis_page_target), any matrix can be decompo
 \begin{equation}
 \rho = \frac{1}{d} \bigg( \mathbb{I} + \bm{b} \cdot \bm{\Sigma} \bigg),
 \end{equation}
-where $\bm{b} \in \mathbb{R}^{d^2-1}$ and $ \bm{\Sigma} $ is a vector whose elements are the operators in the basis, $\{ A_i \}$. Hence, $ \rho $ is written as linear combination of operators in the basis. 
+where $\bm{b} \in \mathbb{R}^{d^2-1}$ and $ \bm{\Sigma} $ is a vector whose elements are the operators in the basis $\{ A_i \}$. Hence, $ \rho $ is written as linear combination of operators in the basis. 
 
 As before, the $\frac{1}{d} \mathbb{I}$ term fixes the normalisation, such that $\textrm{tr}\big[ \rho \big] = 1$, and the components of the Bloch vector can be found as $b_i = \textrm{tr} \big[ \rho A_i \big]$.
 
-However, not all Bloch vectors $\bm{b}$ correspond to valid density operators, as in the qubit case. 
+However, not all Bloch vectors, $\bm{b}$, correspond to valid density operators, as they did in the qubit case. 
 
 There are multiple different operator basis one could choose and hence no unique Bloch vector for a given state. See the following for more details on different operator basis one could choose: http://dx.doi.org/10.1088/1751-8113/41/23/235303, https://journals.aps.org/pra/abstract/10.1103/PhysRevA.94.010301.
 
 ## Dynamics  
+
+### Unitaries 
+
+Unitary operators cause rotations of points on the Bloch sphere. 
+
+The Pauli operators, $\{ X, Y, Z \}$, give rise to rotations around the $x, y$, and $z$ axis respectively when exponentiated, 
+\begin{align*}
+R_x(\Theta) &= e^{-i \Theta X/2} = \cos \bigg(\frac{\Theta}{2} \bigg)\mathbb{I} - i \sin \bigg( \frac{\Theta}{2} \bigg) X , \\
+R_y(\Theta) &= e^{-i \Theta Y/2} = \cos \bigg(\frac{\Theta}{2} \bigg)\mathbb{I} - i \sin \bigg( \frac{\Theta}{2} \bigg) Y, \\
+R_z(\Theta) &= e^{-i \Theta Z/2} = \cos \bigg(\frac{\Theta}{2} \bigg)\mathbb{I} - i \sin \bigg( \frac{\Theta}{2} \bigg) Z.
+\end{align*}
+
+:::{dropdown} Proof 
+
+The exponential of an operator $X$ is given by 
+\begin{equation}
+e^{X} = \sum_{k=0}^{\infty} \frac{X^k}{k!} = \mathbb{I} + X + \frac{X^2}{2!} + \frac{X^3}{3!} + \ldots
+\end{equation}
+
+Therefore, 
+\begin{equation}
+e^{i\Theta A} = \mathbb{I} + i\Theta A + \frac{\big(i\Theta A\big)^2}{2!} + \frac{\big(i\Theta A \big)^3}{3!} + \frac{\big(i\Theta A \big)^4}{4!} + \ldots
+\end{equation}
+
+If $A^2 = \mathbb{I}$ then 
+\begin{align*}
+e^{i\Theta A} &= \mathbb{I} + i\Theta A - \frac{\Theta^2}{2!} \mathbb{I} - i \frac{\Theta^3 A}{3!} + \frac{\Theta^4}{4!} + \ldots, \\
+&= \biggl( 1 - \frac{\Theta^2}{2!} + \frac{\Theta^4}{4!} + \ldots  \biggl) \mathbb{I} + i \biggl(1 - \frac{\Theta^3}{3!} + \ldots \biggl) A, \\
+&= \cos\big(\Theta\big) \mathbb{I} + i \sin\big( \Theta \big) A,
+\end{align*}
+where the taylor series of $\cos(\cdot)$ and $\sin(\cdot)$ have been used. Taking $\Theta \rightarrow -\Theta/2$ and noting that $X^2=Y^2=Z^2=\mathbb{I}$ completes the proof.
+:::
+
+General rotations around an axis defined by the Bloch vector $\bm{n} = (n_x, n_y, n_z )^{t}$ are given by 
+\begin{align*}
+R_{\bm{n}}(\Theta) &= e^{-i \Theta \bm{n} \cdot \bm{\sigma}/2}, \\
+&= \cos \bigg(\frac{\Theta}{2} \bigg)\mathbb{I} - i \sin \bigg( \frac{\Theta}{2} \bigg) \big( n_x X + n_y Y + n_z Z \big), 
+\end{align*}
+as $\big(\bm{n} \cdot \bm{\sigma} \big)^2=\mathbb{I}$. 
+
+Using this general rotation, any single qubit unitary can be created by adding an additional phase factor,
+\begin{equation}
+U = e^{-i a} R_{\bm{n}}(\Theta), ~ ~ UU^{\dagger}=U^{\dagger}U=\mathbb{I},
+\end{equation}
+where $a, \Theta \in \mathbb{R}^{1}$. 
+
+### Channels 
+
+Quantum channels that are not unitary will act to take points on the surface of the Bloch sphere into the interior - pure states are taken to mixed states. 
+
+More generally, the set of output states from a channel can be visualised on the Bloch sphere. Consider the quantum depolarising channel,
+\begin{equation}
+\mathcal{D}^{\textrm{pol}}_p(\rho) = p \rho + (1-p)\mathbb{I}/2,
+\end{equation} 
+which can be interpreted as returning the state unchanged with probability $p$, and returning noise with probability $1-p$. The action of this channel is a uniform contraction of the Bloch sphere, with the radius of the new sphere depending on $p$. If $p=0$, the set of possible output states becomes just a point as the channel will output a single state - the maximally mixed state - for all input states. 
+
+Consider instead the dephasing channel, 
+\begin{equation}
+\mathcal{D}^{\textrm{ph}}_p(\rho) = p \rho + (1-p) \sum_n \ket{n}\bra{n} \rho \ket{n}\bra{n},
+\end{equation} 
+which acts to dampen the off-diagonal terms of the density matrix with respect to some basis. If the off-diagonal terms with respect to the standard basis are dampened, the set of possible output states is an ellipsoid, a sphere contracted along the $x$ and $y$ axis wih the complete $z$ axis contained. This highlights the fact that any state that is diagonal in the standard basis is left unchanged by the dephasing channel. If the dephasing is performed with respect to a different basis, then the ellipsoid with be rotated compared to the above. 
