@@ -178,6 +178,11 @@ Let $\rho, \sigma$ be density operators and $\rm{SWAP}$ the [swap gate](https://
 \textrm{tr} \big[ (\rho \otimes \sigma) \textrm{SWAP} \big] = \textrm{tr} \big[\rho \sigma \big]
 \end{equation}
 
+This can be generalised further using the same proof technique as 
+\begin{equation}
+\textrm{tr} \big[ (\rho_1 \otimes \sigma_2 \otimes \omega_3) \textrm{SWAP}_{12} \textrm{SWAP}_{13} \big] = \textrm{tr}\big[\rho \sigma \omega \big],
+\end{equation}
+where $\textrm{SWAP}_{ij}$ is a swap on the $i$th and $j$th system. 
 :::{dropdown} Proof
 
 

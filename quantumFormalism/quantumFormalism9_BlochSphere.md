@@ -155,7 +155,6 @@ Given a pure quantum state $\ket{\psi}$ with Bloch vector $ \bm{n} $, the orthog
 Hence, orthogonal pure state correspond to **the opposite point** on the bloch sphere. Perpendicular Bloch vectors **do not** mean orthogonal quantum states.  
 
 :::{dropdown} Proof
-:open:
 
 Let 
 \begin{equation}
