@@ -82,6 +82,7 @@ Let $A$ be hermitian, then:
 
 - $A$ has only real [eigenvalues](#eigenvalues_page_target). 
 - $A$'s eigenvectors with different eigenvalues are orthogonal.
+- $A$'s eigenvectors form a complete orthonormal basis. 
 
 :::
 :::{tab-item} Normal 
