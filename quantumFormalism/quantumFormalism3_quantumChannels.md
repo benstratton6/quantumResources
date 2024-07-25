@@ -151,7 +151,7 @@ where $(\cdot)^{t}$ is the transpose operation in the given fixed basis of the f
 
 **Qubits**
 
-Let $ \rho \in \mathcal{H}$. The dephasing channel acting on $ \rho $ is given by 
+Let $ \rho \in \mathcal{H}^2$. The dephasing channel acting on $ \rho $ is given by 
 \begin{equation}
 \mathcal{D}^{\textrm{ph}}_p(\rho) = p \rho + (1-p) \sum_{n} \ket{n}\bra{n} \rho \ket{n}\bra{n}.
 \end{equation} 
@@ -161,12 +161,12 @@ With respect to the standard basis this becomes
 \mathcal{D}^{\textrm{ph}}_p(\rho) = p \rho + (1-p) \bigg( \ket{0}\bra{0} \rho \ket{0}\bra{0} + \ket{1}\bra{1} \rho \ket{1}\bra{1} \bigg)
 \end{equation} 
 
-The *Kraus operators* are 
+1. The *Kraus operators* are 
 \begin{align*}
 K_0 &= \sqrt{ 1 - p} \mathbb{I}, ~ ~ K_1 = \sqrt{ p } \ket{0}\bra{0}, ~ ~ K_2 = \sqrt{ p } \ket{1}\bra{1}.
 \end{align*}
 
-The *Choi-state* is
+2. The *Choi-state* is
 \begin{equation}
 
 \mathcal{J}^{\textrm{ph}} = \frac{1}{2}(1+p) \ket{\Phi^+_{00}} \bra{\Phi^+_{00}} + \frac{1}{2}(1-p) \ket{\Phi^+_{01}} \bra{\Phi^+_{01}},
@@ -175,8 +175,8 @@ The *Choi-state* is
 where 
 \begin{align*}
 
-\ket{\Phi_{00}^{+}} &= \frac{\ket{0}_{A}\ket{0}_{B}+\ket{1}_{A} \ket{1}_{B}}{\sqrt{2}}, \\
-\ket{\Phi_{01}^{+}} &= \frac{\ket{0}_{A}\ket{0}_{B}-\ket{1}_{A} \ket{1}_{B}}{\sqrt{2}}.
+\ket{\Phi_{00}^{+}} &= \frac{\ket{0}\ket{0}+\ket{1} \ket{1}}{\sqrt{2}}, \\
+\ket{\Phi_{01}^{+}} &= \frac{\ket{0}\ket{0}-\ket{1} \ket{1}}{\sqrt{2}}.
 
 \end{align*}
 
@@ -195,20 +195,24 @@ Let $ \rho \in \mathcal{H}^2$. The qubit depolarising channel acting on $ \rho $
 \mathcal{D}^{\textrm{pol}}_p(\rho) = p \rho + (1-p)\mathbb{I}/2.
 \end{equation} 
 
-The *Kraus operators* are 
+1. The *Kraus operators* are 
 \begin{align*}
 K_0 &= \sqrt{ \frac{1}{4} + \frac{3p}{4}} \mathbb{I}, ~ ~ K_1 = \sqrt{ \frac{1-p}{4}} X, \\
 K_2 &= \sqrt{ \frac{1-p}{4}} Y, ~ ~ K_3 = \sqrt{ \frac{1-p}{4}} Z.
 \end{align*}
 
-The *Choi-state* is the so-called isotropic state,
+2. The *Choi-state* is the so-called isotropic state,
 \begin{equation}
 
 \mathcal{J}^{\textrm{pol}} = p \ket{\Phi^+} \bra{\Phi^+}+ (1-p) \mathbb{I}/4,
 
 \end{equation}
 
-where $ \ket{\Phi^+} $ is the maximally entangled state. 
+where $ \ket{\Phi^+} $ is the maximally entangled state, 
+\begin{align*}
+
+\ket{\Phi^{+}} &= \frac{\ket{0}\ket{0}+\ket{1} \ket{1}}{\sqrt{2}}, 
+\end{align*}
 
 **d-dimensional**
 

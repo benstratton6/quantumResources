@@ -81,7 +81,7 @@ e^{0} = \mathbb{I}.
 Repeating for $U^{\dagger}U$ completes the proof. 
 :::
 
-One can therefore succinctly model evolution in quantum theory through unitary operators, 
+One can therefore succinctly model the evolution of closed systems in quantum theory through unitary operators, 
 \begin{equation}
 \ket{\psi'} = U \ket{\psi}, ~ ~ UU^{\dagger} = U^{\dagger}U = \mathbb{I},
 \end{equation} 
