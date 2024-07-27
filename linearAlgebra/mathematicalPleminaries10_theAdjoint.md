@@ -19,7 +19,7 @@ exports:
     template: physical_review_journals
     article_type: Report
 ---
-
+(the_adjoint_page_target)=
 ### Adjoint Definition 
 
 Let $V$ be an inner product space defined over $\mathbb{C}$, with inner product $(\cdot, \cdot): \mathbb{C}^{n} \otimes \mathbb{C}^{n} \rightarrow \mathbb{C}^{1}$, and $L: V \rightarrow V$ a linear operator. 
@@ -41,7 +41,7 @@ For this reason, the adjoint is also sometimes referred to as the conjugate tran
 ### Properties of the Adjoint
 
 Let $V, (\cdot, \cdot)$ be an inner product space defined over $\mathbb{C}$, let $L, T: V \rightarrow V$ be linear operators and $\lambda~\in~\mathbb{C}^{1}$. 
-
+(the_adjoint_page_properties)=
 - $(L+T)^{\dagger} = L^{\dagger} + T^{\dagger}$. 
 - $(\lambda L)^{\dagger} = \lambda^{*} L^{\dagger}$, where $(\cdot)^{*}$ is the complex conjugate. 
 - $(LT)^{\dagger} = T^{\dagger}L^{\dagger}.$

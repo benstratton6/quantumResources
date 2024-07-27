@@ -45,6 +45,7 @@ Let $\psi~\in~V$ be a vector such that $\psi~\in~\mathbb{F}^{n}$ with elements $
 \vert \vert \psi \vert \vert_{p} = \big( \vert \psi_1 \vert^p + \vert \psi_2 \vert^p + \ldots + \vert \psi_n \vert^p)^{1/p}
 \end{equation}
 With $p=1$ and $p=2$ being the $1$-norm and Euclidean ($l_2$) Norm:
+(l2_norm_norms_page_target)=
 \begin{align*}
 \vert \vert \psi \vert \vert_{1} &= \big( \vert \psi_1 \vert + \vert \psi_2 \vert + \ldots + \vert \psi_n \vert) \\
 \vert \vert \psi \vert \vert_{2} &= \big( \vert \psi_1 \vert^2 + \vert \psi_2 \vert^2 + \ldots + \vert \psi_n \vert^2)^{1/2}

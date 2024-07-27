@@ -70,11 +70,13 @@ The conjugate transpose of a ket gives it's associated bra,
 ### Inner Product
 
 A [Hilbert space](#hilbert_space_target) is an [inner product](#inner_product_target_definition_inner_product_space) space, with the inner product, $(\cdot, \cdot): \mathcal{H} \times \mathcal{H} \rightarrow \mathbb{C}^{1}$, defined as 
+(inner_product_hilbert_space_definition)=
 \begin{equation}
 (\ket{\psi}, \ket{\phi}) = \braket{\psi|\phi}~\in~\mathbb{C}^{1}.
 \end{equation}
 
 This inner product satisfies all the conditions of an inner product in a vector space:
+(hilbert_space_inner_product_properties)=
 1. $\braket{\psi|\phi} \geq 0$
     - Positive-definiteness
 2. $\braket{\psi|\phi} = \braket{\phi|\psi}^{*}$

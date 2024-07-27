@@ -32,7 +32,7 @@ To be an inner product the functional $(\cdot, \cdot)$ must obeys the following 
 
 1. $(\psi, \psi) \geq 0$ and $(\psi, \psi) = 0$ if and only if $\psi=0$
     - Positive-definiteness
-2. $(\psi,\omega) = \overline{(\omega, \psi})$
+2. $(\psi,\omega) = (\omega, \psi)^{*}$
     - Conjugate symmetry
     - If $V$ is defined over $\mathbb{R}$ then $(\psi,\omega) = (\omega, \psi)$
 3. $(\psi, a \omega) = a (\psi, \omega)$

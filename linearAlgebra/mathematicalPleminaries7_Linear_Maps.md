@@ -192,7 +192,7 @@ where $\textrm{dim}$ is the [dimension](#dimension_vector_spaces_target).
 ::::
 
 ### Projections
-
+(projections_linear_maps_target)=
 A linear map $L: V \rightarrow V$ is a projection if $L^{2}=L$. 
 
 This means applying the map twice gives the same results as applying the map once. 
