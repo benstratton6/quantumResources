@@ -138,7 +138,7 @@ $L$ is surjective if and only if
 \begin{equation}
 \textrm{Im}L = \mathbb{F}^{m},
 \end{equation}
-meaning the map can output possible vectors in the output space. 
+meaning the map can output all possible vectors in the output space. 
 
 :::
 :::{tab-item} Injective

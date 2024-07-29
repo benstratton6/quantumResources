@@ -51,6 +51,7 @@ parts:
       - file: QuantumInformationFile\QuantumInfo4_stateExclusion
       - file: QuantumInformationFile\QuantumInfo2_AlgorithmicCooling
       - file: QuantumInformationFile\QuantumInfo1_entropyFunction
+      - file: QuantumInformationFile\QuantumInfo7_wignerFunctions
       - file: QuantumInformationFile\QuantumInfo3_UsefulTricks
       - file: QuantumInformationFile\QuantumInfo_Glossary
   - caption: Resource Theories   
