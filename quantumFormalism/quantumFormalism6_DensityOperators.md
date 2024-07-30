@@ -124,7 +124,7 @@ The notion of the reduced density operator can be generalised to any number of s
 
 ### Limitations
 
-It is important to note that the reduced density operator does not tell one about the correlations between the system A and B. It only contains information about measurement outcomes from measurements made on the part of the state in the system A. With just $ \rho_A $ one cannot say with certainty what measurement outcomes they would get from measuring the part of the state in system $B$ (they would need $ \rho_B $ for this) or what measurement outcomes they would get from measuring the global state $ \ket{\Psi}\bra{\Psi} $. In addition, the reduced state $ \rho_A $ does not lead to a unique global state, hence, from $ \rho_A $ one cannot find the global state. 
+It is important to note that the reduced density operator does not tell one about the correlations between the system A and B. It only contains information about measurement outcomes from measurements made on the part of the state in system A. With just $ \rho_A $ one cannot say with certainty what measurement outcomes they would get from measuring the part of the state in system $B$ (they would need $ \rho_B $ for this) or what measurement outcomes they would get from measuring the global state $ \ket{\Psi}\bra{\Psi} $. In addition, the reduced state $ \rho_A $ does not lead to a unique global state, hence, from $ \rho_A $ one cannot find the global state. 
 
 ### Properties of the Reduced Density Operator 
 

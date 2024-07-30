@@ -36,7 +36,7 @@ By applying a local unitary to her system before she sends it, Alice is aiming t
 
 Alice wants to send two classical bits to Bob. 
 
-**Firstly**, Alice encodes the two bits she wants to send by applying the following unitary to her the state in her system:
+**Firstly**, Alice encodes the two bits she wants to send by applying the following unitaries to the state in her system:
 \begin{align*}
 00 &\rightarrow \mathbb{I}, \\
 01 & \rightarrow \mathbb{Z}, \\
@@ -71,7 +71,7 @@ Therefore, by sending one qubit, that is part of a maximally entangled state, Al
 
 ## Higher Dimensional Systems
 
-The super-dense coding protocol can be generlised to allow Alice to communicate $n= \log_{2}(d^{2})$ bits to Bob by sending him half of a $d$ dimensional maximally entangled state, 
+The super-dense coding protocol can be generalised to allow Alice to communicate $n= \log_{2}(d^{2})$ bits to Bob by sending him half of a $d$ dimensional maximally entangled state, 
 \begin{equation}
 \ket{\Phi^{+}_{00}}_{AB} = \frac{1}{\sqrt{2}} \sum^{d-1}_{i=0} \ket{ii}~\in~\mathcal{H}_{A}^{d} \otimes \mathcal{H}_{B}^{d}.
 \end{equation} 

@@ -21,13 +21,13 @@ exports:
 ---
 
 Contents: 
-- Expectation Values Squared
-- Moving Operators on Entangled States
-- Alternative Bipartition of Entangled States
-- Generating Maximally Entangled Basis
-- Trace of Swap gate on two density operators
+- [Expectation Values Squared](#Expectation_Values_Squared_card)
+- [Moving Operators on Entangled States](#Moving_Operators_on_Entangled_States)
+- [Alternative Bipartition of Entangled States](#Alternative_Bipartition_of_Entangled_States)
+- [Generating Maximally Entangled Basis](#Generating_Maximally_Entangled_Basis_target)
+- [Trace of Swap gate on two density operators](#Trace_of_Swap_gate_on_two_density_operators)
 
-
+(Expectation_Values_Squared_card)=
 ```{card} 
 :header: **Expectation Values Squared** 
 
@@ -37,7 +37,7 @@ Let $A$ be some operator and $\ket{\psi}$ be some state.
 \bra{\psi} A \ket{\psi}^{2} = \bra{\psi}\bra{\psi} A \otimes A \ket{\psi}\ket{\psi}
 \end{equation}
 ``` 
-
+(Moving_Operators_on_Entangled_States)=
 ```{card} 
 :header: **Moving Operators on Entangled States** 
 
@@ -49,7 +49,7 @@ Let $A$ be some operator and $\ket{\Phi^{+}}$ be a bipartite maximally entangled
 where $(\cdot)^{t}$ is the transpose operation. 
 
 :::{dropdown} Proof
-:closed:
+
 Let $A$ be some operator and $\ket{\Phi^{+}} = \frac{1}{\sqrt{d}} \sum_{i} \ket{ii}$ be the bipartite maximally entangled state.
 
 Consider the elements of the vector $(A \otimes \mathbb{I}) \big( \ket{\Phi^{+}} \big)$ ,
@@ -74,7 +74,7 @@ If the elements of these two vector are the same, they must be the same vector. 
 
 :::
 ```
-
+(Alternative_Bipartition_of_Entangled_States)=
 ```{card} 
 :header: **Alternative Bipartition of Entangled States** 
 
@@ -92,7 +92,7 @@ This can be generalised to more tensor products of the maximally entangled state
 \end{equation}
 
 :::{dropdown} Proof
-:closed:
+
 \begin{align*}
 \ket{\Phi^{+}}_{AB} &= \frac{1}{\sqrt{2}} ( \ket{00}_{AB} + \ket{11}_{AB}) \\
 \ket{\Phi^{+}}_{CD} &= \frac{1}{\sqrt{2}} ( \ket{00}_{CD} + \ket{11}_{CD}) \\
@@ -146,7 +146,7 @@ The set of states,
 where $\ket{\Phi_{ab}^{+}} = (\mathbb{I} \otimes W_{a,b}) \big( \ket{\Phi^{+}_{00}} \big)$ then forms a complete maximally entangled basis. 
 
 :::{dropdown} Properties of Heisenberg-Weyl operators
-:closed:
+
 \begin{equation}
     \begin{split}
         & (W_{\alpha, \beta}) ^ {t} = \Omega^{-\alpha \beta}W_{-\alpha, \beta}, \\
@@ -168,7 +168,7 @@ W_{0,0} = \mathbb{I}, ~~ W_{0,1} = \sigma_{z}, ~~ W_{1,0} = \sigma_{x}, ~~ W_{1,
 ```
 
 
-
+(Trace_of_Swap_gate_on_two_density_operators)=
 ```{card} 
 :header: **Trace of Swap gate on two density operators** 
 
