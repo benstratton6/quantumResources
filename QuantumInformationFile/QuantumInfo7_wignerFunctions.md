@@ -12,7 +12,7 @@ authors:
     email: ben.stratton@bristol.ac.uk
 license: 
 keywords:  Phase space, Wigner functions, continuous systems, discrete systems, Wooters. 
-abstract: An overview of Winger functions for continuous and discrete quantum systems. 
+abstract: An overview of Winger functions for continuous and discrete quantum systems. Particular detail is given to the discrete case. 
 exports:
 #   - format: docx
   - format: pdf
@@ -23,6 +23,74 @@ exports:
 ## Introduction
 
 [Quantum states](#quantum_state_page_target), both continuous and discrete, can be represented in terms of operators on a [Hilbert space](#hilbert_space_target). Alternatively, they can be represented as real valued functions - Wigner functions - on a phase space. Both methods contain the same information and the laws of quantum mechanics can be formulated in both paradigms. 
+
+This article will primarily focus on the discrete Wigner function. However, given its was initially form for continuous systems they will be briefly covered. 
+
+## Continuous Systems
+
+In this section, Wigners orginal formulation of quantum mechanics in phase space is briefly covered. 
+
+Let $\rho \in \mathcal{H}^d$ be the density operator of a particle that is able to move in one dimension. The Wigner function is defined as 
+\begin{equation}
+W^{\rho}(q, p) = \frac{1}{\pi \hbar} \int \bra{q-x} \rho \ket{q+x} e^{\frac{2ipx}{h}} dx,
+\end{equation}
+where $ q $ and $ p $ are the position and momentum operators (they could also be quadratures when considered quantum optics). 
+
+Here, we will only consider the Wigner function for position and momentum, see https://doi.org/10.1002/qute.202100016 for details on the Wigner function for arbitrary operators. 
+
+**Properties** 
+(winger_function_proerties_continious)=
+1. The Wigner function is normalised, 
+\begin{equation}
+\int \int W^{\rho}(p, q) dq ~ dp = 1.
+\end{equation}
+2. Let $\rho, \rho' \in \mathcal{H}^d$ have Wigner functions $W^{\rho}(q,p)$ and $W^{\rho'}(q,p)$ respectively, then 
+\begin{equation}
+\textrm{tr}\big[ \rho \rho' \big] = \int \int W^{\rho}(q, p) W^{\rho'}(q, p) dq ~ dp.
+\end{equation}
+3. Let $O=a p + b q$ be an observable, where $a, b \in \mathbb{R}$, then 
+\begin{equation}
+P(c_1 \leq O \leq c_2) = \int_{c_1}^{c_2} \int_{c_1}^{c_2} W^{\rho}(p, q) dq ~ dp,
+\end{equation}
+where $c_1, c_2 \in \mathbb{R}$, and $P(\cdot)$ means the probability of getting the measurement outcome $(\cdot)$ if one measures $O$ on $ \rho $.  
+4. The Wigner function can be used to find the marginals of the distribution as 
+\begin{align*}
+\int W^{\rho}(q,p) dp &= \bra{x} \rho \ket{x}, \\
+\int W^{\rho}(q,p) dq &= \bra{p} \rho \ket{p}.
+\end{align*}
+
+
+### Phase Space
+
+The phase space on which the Wigner function is defined is $\mathbb{R}^2$. This is due to position and momentum being continuous variables and hence they are able to be any real value, $(q,p), \in \mathbb{R}^2$.  
+
+### Phase Point Operators 
+
+The Wigner function for a state can be calculated using the so-called phase-point operators. These are a set of Hermitian operators, $\{A(q,p)\}$, so that there exists one operator for each point in phase space. 
+
+The phase-point operators are defined such that 
+\begin{equation}
+\rho = \int \int W^{\rho}(q,p) A(q,p) dq~dp. \label{test}
+\end{equation}
+
+The Wigner function at a point $(q,p)$ can be found from the phase-point operators as 
+\begin{equation}
+W^{\rho}(q,p) = \frac{1}{2 \pi \hbar} \textrm{tr} \big[ \rho A(q,p) \big].
+\end{equation}
+
+The phase point operators have the following properties:
+1. $\textrm{tr}\big[ A(q,p) \big] = 1~\forall~(q,p) \in \mathbb{R}^2$. 
+2. $\textrm{tr}\big[ A(q,p) A(q',p') \big] = 2 \pi \hbar \delta(q - q') \delta(p-p') ~\forall~(q,p), (q',p') \in \mathbb{R}^2$
+3. Given an operator $O=a p + b q$, consider the strip of phase space such that $c_1 \leq O \leq c_2$. The follow operator is a projection onto the eigenstates of $O$ with eigenvalues between $c_1$ and $c_2$, 
+\begin{equation}
+P = \int_{c_1}^{c_2} \int_{c_1}^{c_2} A(q,p) dq~dp.
+\end{equation}
+
+If the phase-point operators obey these properties, then the Winger functions obeys the conditions given [above](#winger_function_proerties_continious). 
+
+Note, when considering the Wigner function for general operators, the phase point operators can be defined in terms of the action of a displacement operator on a fixed initial phase-point operator (as will be seen in the discrete case below). See https://doi.org/10.1002/qute.202100016 detail of this.
+
+The Wigner function is not the unique function that is able to represent quantum system. Each of the different formulations put forward have different merits, and hence can be useful in different situations. However, the Wigner is the mostly commonly used in the literature as it a) has the correct marginals ([property 4](#winger_function_proerties_continious) above), and b) it is the distribution for which the phase-point operators can be used to both decompose the state with coefficients of the Wigner function, and to calculate the Wigner function as the trace of the product of the phase-point operators and $\rho$. Other formulations require different states for these two operations. Again, see https://doi.org/10.1002/qute.202100016 for more details. 
 
 ## Discrete Systems
 
