@@ -227,16 +227,18 @@ From this, the standard deviation can be found as
 \end{align*}
 which can be interpreted as the standard deviation of the measurement outcomes if the observable $A$ is measured on many copies of $\ket{\psi}$.  
 
+## The Uncertainty Principle
 
 ## Why Hermitian Operators as Observables
 
-In this section we will aim to motivate why hermitian operators should be used to represent things that can be measured in quantum mechanics. 
+In this section we will aim to motivate why hermitian operators should be used to represent things that can be measured in quantum mechanics. So reasoning commonly found in the literature is given. 
 
-1. **Real Measurement Outcomes** . 
+1. **They give real measurement outcomes**. As proved above, the eigenvalues of Hermitian matrices are real. Given the eigenvalues of an observables are the possible measurement outcomes one can get, this means that all possible measurement outcomes, for all possible things that can be measured, are real. In [The Principles of Quantum Mechanics](https://philarchive.org/rec/DIRTPO), Dirac argues that all possible measurement outcomes must be real due to the potential for the measurement of an observables to alter the state (e.g the post measurement state becomes an eigenstate of the observable measured). If one were to try and measure a complex number associated to a quantum state, they would need two real numbers to specify it. The observer could try and measure the real and imaginary part separately. However, in general, performing a measurement to extract the real part will alter the state, changing what one would get if they then performed a measurement to extract the imaginary part. For this reason, Dirac claims that all measurement outcomes must be real. 
+
 2. **Repeat Measurements** 
 3. **Retains probability**
 
-## The Uncertainty Principle
+
 
 
 
