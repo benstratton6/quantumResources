@@ -34,11 +34,53 @@ Let $\rho \in \mathcal{H}^d$ be the density operator of a particle that is able 
 \begin{equation}
 W^{\rho}(q, p) = \frac{1}{\pi \hbar} \int \bra{q-x} \rho \ket{q+x} e^{\frac{2ipx}{h}} dx,
 \end{equation}
-where $ q $ and $ p $ are the position and momentum operators (they could also be quadratures when considered quantum optics). 
+where $ q $ and $ p $ are the position and momentum operators (they could also be [quadratures](https://en.wikipedia.org/wiki/Optical_phase_space) when considered quantum optics). 
 
 Here, we will only consider the Wigner function for position and momentum, see https://doi.org/10.1002/qute.202100016 for details on the Wigner function for arbitrary operators. 
 
-**Properties** 
+**Properties of the Continuous Winger Function** 
+(winger_function_proerties_continious)=
+::::{tab-set}
+:::{tab-item} Normalisation
+:sync: tab1
+
+The Wigner function is normalised, 
+\begin{equation}
+\int \int W^{\rho}(p, q) dq ~ dp = 1.
+\end{equation}
+
+:::
+:::{tab-item} Inner Product 
+:sync: tab2
+
+Let $\rho, \rho' \in \mathcal{H}^d$ have Wigner functions $W^{\rho}(q,p)$ and $W^{\rho'}(q,p)$ respectively, then 
+\begin{equation}
+\textrm{tr}\big[ \rho \rho' \big] = \int \int W^{\rho}(q, p) W^{\rho'}(q, p) dq ~ dp.
+\end{equation}
+
+:::
+:::{tab-item} Observables
+:sync: tab3
+
+Let $O=a p + b q$ be an observable, where $a, b \in \mathbb{R}$, then 
+\begin{equation}
+P(c_1 \leq O \leq c_2) = \int_{c_1}^{c_2} \int_{c_1}^{c_2} W^{\rho}(p, q) dq ~ dp,
+\end{equation}
+where $c_1, c_2 \in \mathbb{R}$, and $P(\cdot)$ means the probability of getting the measurement outcome $(\cdot)$ if one measures $O$ on $ \rho $.
+
+:::
+:::{tab-item} Marginals 
+:sync: tab4
+
+The Wigner function can be used to find the marginals of the distribution as 
+\begin{align*}
+\int W^{\rho}(q,p) dp &= \bra{x} \rho \ket{x}, \\
+\int W^{\rho}(q,p) dq &= \bra{p} \rho \ket{p}.
+\end{align*}
+
+::::
+
+<!-- **Properties** 
 (winger_function_proerties_continious)=
 1. The Wigner function is normalised, 
 \begin{equation}
@@ -57,7 +99,7 @@ where $c_1, c_2 \in \mathbb{R}$, and $P(\cdot)$ means the probability of getting
 \begin{align*}
 \int W^{\rho}(q,p) dp &= \bra{x} \rho \ket{x}, \\
 \int W^{\rho}(q,p) dq &= \bra{p} \rho \ket{p}.
-\end{align*}
+\end{align*} -->
 
 
 ### Phase Space
@@ -66,7 +108,7 @@ The phase space on which the Wigner function is defined is $\mathbb{R}^2$. This 
 
 ### Phase Point Operators 
 
-The Wigner function for a state can be calculated using the so-called phase-point operators. These are a set of Hermitian operators, $\{A(q,p)\}$, so that there exists one operator for each point in phase space. 
+The Wigner function for a state can be calculated using the so-called phase-point operators. These are a set of Hermitian operators, $\{A(q,p)\}$. There exists one phase-point operator for each point in phase space. 
 
 The phase-point operators are defined such that 
 \begin{equation}
@@ -90,7 +132,9 @@ If the phase-point operators obey these properties, then the Winger functions ob
 
 Note, when considering the Wigner function for general operators, the phase point operators can be defined in terms of the action of a displacement operator on a fixed initial phase-point operator (as will be seen in the discrete case below). See https://doi.org/10.1002/qute.202100016 detail of this.
 
-The Wigner function is not the unique function that is able to represent quantum system. Each of the different formulations put forward have different merits, and hence can be useful in different situations. However, the Wigner is the mostly commonly used in the literature as it a) has the correct marginals ([property 4](#winger_function_proerties_continious) above), and b) it is the distribution for which the phase-point operators can be used to both decompose the state with coefficients of the Wigner function, and to calculate the Wigner function as the trace of the product of the phase-point operators and $\rho$. Other formulations require different states for these two operations. Again, see https://doi.org/10.1002/qute.202100016 for more details. 
+**Uniqueness**
+
+The Wigner function is not the unique function that is able to represent quantum systems. Each of the different formulations put forward have different merits, and hence can be useful in different situations. However, the Wigner function is the mostly commonly used in the literature as it a) has the correct marginals, and b) it is the function for which the phase-point operators can be used to both decompose the state with coefficients of the Wigner function, and to calculate the Wigner function as the trace of the product of the phase-point operators and $ \rho $. Other formulations require different operators for these two operations. Again, see https://doi.org/10.1002/qute.202100016 for more details on this. 
 
 ## Discrete Systems
 
@@ -110,7 +154,7 @@ Each axis of the space is represented by an observable. If the horizontal axis i
 
 ### Phase-point Operators 
 
-Each point in phase space is associated an Hermitian operator $A_{\bm{z}}$, giving a set of operators $\{ A_{\bm{z} }\}^{d^2}$. Each operators has the following properties: 
+Each point in phase space is associated an Hermitian operator $A_{\bm{z}}$, giving a set of operators $\{ A_{\bm{z} }\}^{d^2}$, one for each point in phase space. Each operator obeys the following properties: 
 (conditions_on_phase_point_operators)=
 1. $\textrm{tr} \big[ A_{\bm{z}} \big] = 1 ~ \forall ~ \bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d$.
 2. $\textrm{tr} \big[ A_{\bm{z_i}} A_{\bm{z_j}} \big] = d \delta_{i,j} ~ \forall ~ \bm{z_i}, \bm{z_j} \in \mathbb{Z}_d \times \mathbb{Z}_d$.
@@ -150,6 +194,14 @@ The phase point operators are then defined in terms of the Heisenberg-Weyl opera
 A_{\bm{0}} = \frac{1}{d} \sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d} T_{\bm{z}}, ~ ~ ~ A_{\bm{z}} = T_{\bm{z}}A_{\bm{0}} T_{\bm{z}}. 
 \end{equation}
 
+**Additional Phase-point Operator Properties**
+1. $A_{\bm{z}}^{\dagger} = A_{\bm{z}}$
+    - They are Hermitian. 
+2. $\frac{1}{d}\sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d} A_{\bm{z}} = \mathbb{I}$.
+    - They sum to the identity. 
+3. $ \{ A_{\bm{z}} \} = \{ A_{\bm{z}}^{t} \}$
+    - Taking the transpose off all elements of the set gives back the set.
+
 ```{figure} quantumInfo_phaseSpaceImage.png
 :alt: 
 :class: bg-primary
@@ -162,23 +214,23 @@ A graphical depiction of the phase space for the discrete Wigner function.
 
 ### The Discrete Wigner Function 
 
-Let $\rho \in \mathcal{H}^{d}$. Given [condition 2](#conditions_on_phase_point_operators) stated above in the list of properties of phase-point operators, the set of phase-point operators form a complete basis for the set of $d \times d$ Hermitian matrices. The discrete Wigner function, denoted $W^{\rho}_{\bm{z}}$ at the point $\bm{z}$ for the state $ \rho $, is then defined as
+Let $\rho \in \mathcal{H}^{d}$. Given [condition 2](#conditions_on_phase_point_operators) stated above in the list of properties of phase-point operators, the set of phase-point operators form a complete basis for the set of $d \times d$ Hermitian matrices. The discrete Wigner function, denoted $W^{\rho}(\bm{z})$ at the point $\bm{z}$ for the state $ \rho $, is then defined as
 \begin{equation}
-\rho = \sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d }   W^{\rho}_{\bm{z}} A_{\bm{z}}, 
+\rho = \sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d }   W^{\rho}(\bm{z}) A_{\bm{z}}, 
 \end{equation}
 such that 
 \begin{equation}
-W^{\rho}_{\bm{z}} = \frac{1}{d} \textrm{tr} \big[ \rho A_{\bm{z}} \big].
+W^{\rho}(\bm{z}) = \frac{1}{d} \textrm{tr} \big[ \rho A_{\bm{z}} \big].
 \end{equation}
 
 The discrete Wigner function then satisfies the following properties
 (discrete_winger_function_conditions)=
-1. $ \sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d } W^{\rho}_{\bm{z}} = 1$. 
-2. Let $\rho, \rho' \in \mathcal{H}^d$ have Wigner functions $W^{\rho}$ and $W^{\rho'}$ respectively, then 
+1. $ \sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d } W^{\rho}(\bm{z}) = 1$. 
+2. Let $\rho, \rho' \in \mathcal{H}^d$ have Wigner functions $W^{\rho}(\bm{z})$ and $W^{\rho'}(\bm{z})$ respectively, then 
 \begin{equation}
-\textrm{tr} \big[ \rho \rho' \big] = d \sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d } W^{\rho}_{\bm{z}} W^{\rho'}_{\bm{z}}.
+\textrm{tr} \big[ \rho \rho' \big] = d \sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d } W^{\rho}(\bm{z}) W^{\rho'}(\bm{z}).
 \end{equation}
-3. The phase space can be foliated into a set of $d$ parallel lines. For each line, given by $ \lambda $, the sum over the Wigner functions for the points in $ \lambda $, $p_{\lambda} = \sum_{\lambda} W^{\rho}_\lambda$, describes the probability of a measurement associated to that foliation. The eigenstate associated to this measurement is that of the projection operator, given in [condition 3](#conditions_on_phase_point_operators), for the given foliation. 
+3. The phase space can be foliated into a set of $d$ parallel lines. For each line, given by $ \lambda $, the sum over the Wigner functions for the points in $ \lambda $, $p_{\lambda} = \sum_{\lambda} W^{\rho}_\lambda(\bm{z})$, describes the probability of a measurement associated to that foliation. The eigenstate associated to this measurement is that of the projection operator, given in [condition 3](#conditions_on_phase_point_operators), for the given foliation. 
 
 Note, the Wigner function can be negative, meaning it cannot be directly interpreted as a probability distribution. As with the state vector or density operator, it is instead an object from which probabilities of measurement outcomes can be found. 
 
@@ -231,18 +283,18 @@ See https://dx.doi.org/10.1088/1367-2630/14/11/113011 and https://dx.doi.org/10.
 
 1. Discrete Hudson's Theorem (prime dimensions): A pure state, $\ket{S}$, is a stabliser state, $\ket{S} \in \textrm{STAB}$, if and only if it has positve Wigner representation 
 \begin{equation}
-W^{\ket{S}}_{\bm{z}} \geq 0 ~ \forall ~\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d.
+W^{\ket{S}}(\bm{z}) \geq 0 ~ \forall ~\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d.
 \end{equation}
 2. Clifford operators act as permutations of the phase-space
 \begin{equation}
-W_{\bm{z}}^{U \rho U^{\dagger}} = W_{\bm{z'}}^{\rho}, ~ ~ U \in C.
+W^{U \rho U^{\dagger}}(\bm{z}) = W^{\rho}(\bm{z}), ~ ~ U \in C.
 \end{equation}
 Although, only the [symplectic](https://en.wikipedia.org/wiki/Symplectic_matrix) permutations of phase space correspond to clifford operators. 
 
 3. As discussed above, the phase-point operators are a basis for all $d \times d$ Hermitian matrices. Hence, the trace of any Hermitain matrix can be found by summing over it's Wigner function for all point in phase space, 
 \begin{align*}
-B &= \sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d} W^{B}_{\bm{z}} A_{\bm{z}}, \\
-\textrm{tr} \big[ B \big] &= \sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d} W^{B}_{\bm{z}},
+B &= \sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d} W^{B}(\bm{z}) A_{\bm{z}}, \\
+\textrm{tr} \big[ B \big] &= \sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d} W^{B}(\bm{z}),
 \end{align*}
 where the fact that $\textrm{tr}\big[ A_{\bm{z}} \big] = 1 ~\forall~\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d$ has been used. 
 
