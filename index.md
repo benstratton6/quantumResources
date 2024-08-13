@@ -37,6 +37,7 @@ Other notable highlights alongside my academic pursuits have been teaching a cla
 
 **2024**
 
+- [Dynamical Resource Theory of Incompatibility Preservability](https://doi.org/10.48550/arXiv.2408.06315)
 - [Operational Interpretation of the Choi Rank Through k-State Exclusion](https://doi.org/10.48550/arXiv.2406.08360)
 
 **2023**
