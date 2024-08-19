@@ -235,14 +235,75 @@ which can be interpreted as the standard deviation of the measurement outcomes i
 
 ## The Uncertainty Principle
 
+The Heisenberg uncertainty principle sets a fundamental limit on the accuracy to which two non-commuting observables can be known. It comes in a few different forms, with the Robertson form being most widely used.
+
+Let $A$ and $B$ be two observables. The Robertson form of the uncertainty principle is:
+\begin{equation}
+\sigma_A \sigma_B \geq \frac{1}{2} \vert \braket{ \big[A,B\big]} \vert,
+\end{equation}
+where $\sigma_A, \sigma_B$ are the standard deviations of the measurement outcomes of the observables $A$ and $B$ respectively, and $[A,B] = AB-BA$ is the [commutator](https://en.wikipedia.org/wiki/Commutator#:~:text=The%20commutator%20of%20two%20operators,operators%20can%20be%20measured%20simultaneously.) of the observables. 
+
+One should interpret this as preparing some number of copies of a state $\ket{\psi}$, and measuring $A$ on half the copies, and $B$ on the other half of the copies. The product of the standard deviation of the $A$ measurement outcomes and the standard deviation of the $B$ measurement outcomes, is what the uncertainty principle bounds. 
+
+Note, the expectation value included in the above definition of the uncertainty principle is a state dependent quantity. Hence, the limitation on the accuracy imposed by the uncertainty principle is dependent on the state, $\ket{\psi}$, upon which the measurements are being made.  
+
+If two observables commute, meaning $[A,B]=0$, then there is no limit to the accuracy with which the two observables can be simultaneously known. 
+
+:::{dropdown} Some Details on Commutators 
+
+The commutator of two observables, $A$ and $B$, is given by 
+\begin{equation}
+[A,B] = AB - BA. 
+\end{equation}
+This means multiply the operator $A$ on the left by $B$, and then take off the operator $B$ multiplied on the left by $A$. When considering the matrix decomposition of these operators, this relation can be seen as matrices for which $AB \neq BA$.  
+
+The fact that there exists observables for which $[A,B] \neq 0$ is the origin of much that is interesting about quantum mechanics. Physically, it means that measuring $A$ and then $B$ on a state $\ket{\psi}$ will give a different outcome to measuring $B$ and then $A$ on $\ket{\psi}$. This is due to measurement physically changing the underlying state. 
+
+The consequence of this is that it is not possible to simultaneously measure the observables $A$ and $B$. For example, there exists sets of states and measurements for which a measurement of $A$ means one is completely uncertain about what measurement outcome they would get if they were to then measure $B$. In this case, measuring $A$ (and hence knowing it with certainty) makes one maximally uncertain about what measurement outcome they would get when measuring $B$.  
+
+When two observables, $A$ and $B$, commute, meaning $[A,B] = 0$, they share a basis. This means the two observables become simultaneously measurable. 
+
+**Proof:** Let $A = \sum_{j} j \ket{j}\bra{j}$, such that $A \ket{j} = j \ket{j}$. 
+
+Consider the following: 
+\begin{align*}
+AB \ket{j} &= A \big( B \ket{j} \big). \\
+BA \ket{j} &= B \big( A \ket{j} \big) = B \big( j \ket{j} \big) = j \big( B \ket{j} \big),
+\end{align*}
+where the $j$ can be moved past the operator B in the final line as $j$ is just some number. Given $AB=BA$, we can then write 
+\begin{equation}
+A \big( B \ket{j} \big) = j \big( B \ket{j} \big),
+\end{equation}
+meaning that $B\ket{j}$ is an eigenvector of $A$ with eigenvalue $j$. Hence, $B\ket{j}$ is proportional to $\ket{j}$ - it is a vector that points in the same direction as $\ket{j}$ but does not necessarily have the same length. One can therefore write 
+\begin{equation}
+B \ket{j} = b_j \ket{j},
+\end{equation}
+where $b_j$ is some number, meaning that $\ket{j}$ is also an eigenvector of $B$. This can be repeated for the whole basis, such that it is possible to write $B = \sum_j b_j \ket{j} \bra{j}$.
+
+$\Box$
+
+Consider a state $\ket{\psi}$, upon which the observable $A$ is measured ($[A,B] = 0$ still). If one got a measurement outcome of $j$, then the post measurement state would be $\ket{j}$. Considering now that the observable $B$ is measured on the same system. As seen above, $\ket{j}$ is also an eigenstate of $B$ and hence the measurement outcome will be $b_j$ with certainty. Therefore, if one knows the measurement outcome from measuring $A$, they know for certain what the measurement outcome form measuring $B$ would be. Moreover, if they were to measure $A$ again, they would again get $j$ with certainty. Hence, they can know both measurement outcomes simultaneously. 
+
+If the observables do not commute, $[A,B] \neq 0$, they do not share a basis. After measuring $A$, the state will be in an eigenvector of the observable $A$. After measuring $B$, the state will be in an eigenvector of the observable $B$. Each measurement projects the state onto a different basis, with the output state being probabilistic each time. cycling through measurements of $A, B, A, B \ldots$ could therefore give different measurement outcomes each time. 
+
+:::
+
 ## Why Hermitian Operators as Observables
 
-In this section we will aim to motivate why hermitian operators should be used to represent things that can be measured in quantum mechanics. So reasoning commonly found in the literature is given. 
+In this section we will aim to motivate why hermitian operators should be used to represent things that can be measured in quantum mechanics. Below are some reasons commonly found in the literature. 
 
-1. **They give real measurement outcomes**. As proved above, the eigenvalues of Hermitian matrices are real. Given the eigenvalues of an observables are the possible measurement outcomes one can get, this means that all possible measurement outcomes, for all possible things that can be measured, are real. In [The Principles of Quantum Mechanics](https://philarchive.org/rec/DIRTPO), Dirac argues that all possible measurement outcomes must be real due to the potential for the measurement of an observables to alter the state (e.g the post measurement state becomes an eigenstate of the observable measured). If one were to try and measure a complex number associated to a quantum state, they would need two real numbers to specify it. The observer could try and measure the real and imaginary part separately. However, in general, performing a measurement to extract the real part will alter the state, changing what one would get if they then performed a measurement to extract the imaginary part. For this reason, Dirac claims that all measurement outcomes must be real. 
+1. **They give real measurement outcomes:** as proved above, the eigenvalues of Hermitian matrices are real. Given the eigenvalues of an observables are the possible measurement outcomes one can get, this means that all possible measurement outcomes, for all possible things that can be measured, are real. In [The Principles of Quantum Mechanics](https://philarchive.org/rec/DIRTPO), Dirac argues that all possible measurement outcomes must be real due to the potential for the measurement of an observables to alter the state (e.g the post measurement state becomes an eigenstate of the observable measured). If one were to try and measure a complex number associated to a quantum state, they would need two real numbers to specify it. The observer could try and measure the real and imaginary part separately. However, in general, performing a measurement to extract the real part will alter the state, changing what one would get if they then performed a measurement to extract the imaginary part. For this reason, Dirac claims that all measurement outcomes must be real. 
 
 2. **Repeat Measurements** 
-3. **Retains probability**
+
+
+3. **Retains probability:** this refers to the eigenvectors of Hermitian operators forming a complete basis, as stated by the spectral theorem. This ensures that the sum of the probabilities of getting the different possible measurement outcomes always sums to one. To see this, let $A = \sum_i \lambda_i P_i$. Given $A$ is Hermitian, $\sum P_i = \mathbb{I}$. Hence, the sum over the probabilities of the different possible measurement outcomes of measuring $A$ on $\ket{\psi}$ is
+\begin{align*}
+\sum_i \bra{\psi} P_i \ket{\psi} &= \bra{\psi} \bigg( \sum_i P_i \bigg) \ket{\psi}, \\
+&= \braket{\psi|\psi}, \\
+&= 1
+\end{align*}
+Therefore, all possibilities are properly accounted for, when measuring $A$ on a normalised state $\ket{\psi}$, one will get a measurement outcome associated to $A$ with certainty. If the sum was less then $1$, then there would be some probability "unaccounted" for. 
 
 
 
