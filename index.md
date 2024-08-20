@@ -53,8 +53,8 @@ Other notable highlights alongside my academic pursuits have been teaching a cla
 
 ## CVs
 
-- [Scientific CV](CVs\Benjamin_Stratton_CV.pdf)
-- [non-Scientific CV](CVs\Benjamin_Stratton_CV___Non_Scientific.pdf)
+- [Scientific CV](Benjamin_Stratton_CV.pdf)
+- [non-Scientific CV](Benjamin_Stratton_CV___Non_Scientific.pdf)
 
 ## Teaching
 

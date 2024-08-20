@@ -229,7 +229,8 @@ which generalises to the $n$th moment as expected.
 
 From this, the standard deviation can be found as
 \begin{align*}
-\sigma_{A} = \sqrt{\braket{A^2} - \braket{A}^2},
+\sigma_{A} &= \sqrt{\braket{A^2} - \braket{A}^2}, \\
+&= \sqrt{ \braket{ (A - \braket{A} )^2  } },
 \end{align*}
 which can be interpreted as the standard deviation of the measurement outcomes if the observable $A$ is measured on many copies of $\ket{\psi}$.  
 
@@ -294,10 +295,7 @@ In this section we will aim to motivate why hermitian operators should be used t
 
 1. **They give real measurement outcomes:** as proved above, the eigenvalues of Hermitian matrices are real. Given the eigenvalues of an observables are the possible measurement outcomes one can get, this means that all possible measurement outcomes, for all possible things that can be measured, are real. In [The Principles of Quantum Mechanics](https://philarchive.org/rec/DIRTPO), Dirac argues that all possible measurement outcomes must be real due to the potential for the measurement of an observables to alter the state (e.g the post measurement state becomes an eigenstate of the observable measured). If one were to try and measure a complex number associated to a quantum state, they would need two real numbers to specify it. The observer could try and measure the real and imaginary part separately. However, in general, performing a measurement to extract the real part will alter the state, changing what one would get if they then performed a measurement to extract the imaginary part. For this reason, Dirac claims that all measurement outcomes must be real. 
 
-2. **Repeat Measurements** 
-
-
-3. **Retains probability:** this refers to the eigenvectors of Hermitian operators forming a complete basis, as stated by the spectral theorem. This ensures that the sum of the probabilities of getting the different possible measurement outcomes always sums to one. To see this, let $A = \sum_i \lambda_i P_i$. Given $A$ is Hermitian, $\sum P_i = \mathbb{I}$. Hence, the sum over the probabilities of the different possible measurement outcomes of measuring $A$ on $\ket{\psi}$ is
+2. **Retains probability:** this refers to the eigenvectors of Hermitian operators forming a complete basis, as stated by the spectral theorem. This ensures that the sum of the probabilities of getting the different possible measurement outcomes always sums to one. To see this, let $A = \sum_i \lambda_i P_i$. Given $A$ is Hermitian, $\sum P_i = \mathbb{I}$. Hence, the sum over the probabilities of the different possible measurement outcomes of measuring $A$ on $\ket{\psi}$ is
 \begin{align*}
 \sum_i \bra{\psi} P_i \ket{\psi} &= \bra{\psi} \bigg( \sum_i P_i \bigg) \ket{\psi}, \\
 &= \braket{\psi|\psi}, \\
@@ -305,8 +303,44 @@ In this section we will aim to motivate why hermitian operators should be used t
 \end{align*}
 Therefore, all possibilities are properly accounted for, when measuring $A$ on a normalised state $\ket{\psi}$, one will get a measurement outcome associated to $A$ with certainty. If the sum was less then $1$, then there would be some probability "unaccounted" for. 
 
+Another question one might have is
 
+**Why are post-measurement states eigenvectors of an observables:** it is easy to see from the framework presented above that if one has a state that is an eigenvector of an observable, and that observable is then measured on the state, that one will get the same outcome each time. Namely, they will get the eigenvalue associated to that eigenvector. But, is the converse true? Is a state that always gives the same outcome when an observable is measured on it necessarily an eigenvector of the observable being measured? The answer, proved below, is yes. 
 
+:::{dropdown} Proof
+:open:
+
+Consider one has multiple copies of a state $\ket{\psi}$ and on each copy they measure the observable $A$ and get the real outcome $a \in \mathbb{R}^1$. 
+
+The standard deviation of the measurement is zero, $\sigma=0$, and the average is $a$, $\braket{A}=a$. 
+
+Therefore, 
+\begin{align*}
+
+\sigma^2 &= \braket{ (A - \braket{A})^2 }, \\
+&= \bra{\psi} (A - a)^2 \ket{\psi}, \\
+&= \bra{\psi} \big[ (A-a)(A-a)\ket{\psi} \big], \\
+&= \big[ \bra{\psi} (A-a)^{\dagger} \big] \big[ (A-a)\ket{\psi} \big], \\
+&= \big[ \bra{\psi} (A-a) \big] \big[ (A-a)\ket{\psi} \big],
+
+\end{align*}
+The adjoint of the operator is taken so that (A-a) now acts on the bra, but $A-a$ is Hermitian. 
+
+The above is zero if and only if 
+\begin{equation}
+(A-a)\ket{\psi} = 0,
+\end{equation}
+as the only vector who's inner product with itself is zero is the zero vector. 
+
+Hence, 
+\begin{equation}
+A \ket{\psi} = a \ket{\psi},
+\end{equation}
+which is the eigenvalue equations, proving that a state with a definitive outcome when measured by an observables is an eigenvector of that observable. 
+
+see (Name)[https://www.google.co.uk/books/edition/Introduction_to_Quantum_Mechanics/82FjDwAAQBAJ?hl=en&gbpv=0]
+
+:::
 
 
 
