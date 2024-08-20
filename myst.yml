@@ -11,7 +11,7 @@ site:
   template: book-theme
   title: Quantum Resources Site
   options:
-      logo: .\images\logo2.svg
+      logo: logo2.svg
       exclude: 
         - MyPapers
   nav: []

@@ -157,7 +157,7 @@ which is the dot product between the $i$th row of A and $j$th column of B. [Elem
 
 Note the columns of $A$ must equal the rows of $B$ for matrix multiplication to be a valid operation. The output matrix $C$ is then a $n \times l$ matrix, $C~\in~\mathbb{M}_{nl}$. See the below figure for details. 
 
-```{figure} mathematicalPleminaries_matrix_mat_conditions.png
+```{figure} images\LinearAlgebra_matrix_mat_conditions.png
 :alt: 
 :class: bg-primary
 :width: 400px
