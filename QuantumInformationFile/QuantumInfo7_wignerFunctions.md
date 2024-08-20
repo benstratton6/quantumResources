@@ -38,7 +38,7 @@ where $ q $ and $ p $ are the position and momentum operators (they could also b
 
 Here, we will only consider the Wigner function for position and momentum, see https://doi.org/10.1002/qute.202100016 for details on the Wigner function for arbitrary operators. 
 
-**Properties of the Continuous Winger Function** 
+**Properties of the Continuous Winger Function:** 
 (winger_function_proerties_continious)=
 ::::{tab-set}
 :::{tab-item} Normalisation
@@ -102,11 +102,11 @@ where $c_1, c_2 \in \mathbb{R}$, and $P(\cdot)$ means the probability of getting
 \end{align*} -->
 
 
-### Phase Space
+**Phase Space:**
 
 The phase space on which the Wigner function is defined is $\mathbb{R}^2$. This is due to position and momentum being continuous variables and hence they are able to be any real value, $(q,p), \in \mathbb{R}^2$.  
 
-### Phase Point Operators 
+**Phase Point Operators:**
 
 The Wigner function for a state can be calculated using the so-called phase-point operators. These are a set of Hermitian operators, $\{A(q,p)\}$. There exists one phase-point operator for each point in phase space. 
 
@@ -142,7 +142,7 @@ In this section, the details of the [Wooters](https://doi.org/10.1016/0003-4916(
 
 This is only valid for $d$-dimensional system where $d$ is a prime number. Systems that are not prime in dimension can be modelled in the phase space formalism by considering a composition of subsystems that are prime in dimension [💭](#prime_dimensions_quantum_info_glossary).  
 
-### Phase Space
+**Phase Space:**
 
 Consider a $d$-dimensional Hilbert space, $\mathcal{H}^d$, where $d$ is prime. This space has $d$ orthogonal states $\{ \ket{0}, \ket{1}, \ldots, \ket{d-1} \}$. 
 
@@ -152,7 +152,7 @@ A line in phase space is given by a set of points that satisfy $mz_1 + nz_2 = p$
 
 Each axis of the space is represented by an observable. If the horizontal axis is labelled by the observable $O_1$ then each vertical line is associated to a different eigenstate of $O_1$, with the eigenvalue labelling that horizontal coordinate. Likewise, if $O_2$ labels the vertical axis, each horizontal line is associated to a different eigenstate of $O_2$, with the eigenvalue labelling that vertical coordinate. 
 
-### Phase-point Operators 
+**Phase-point Operators:**
 
 Each point in phase space is associated an Hermitian operator $A_{\bm{z}}$, giving a set of operators $\{ A_{\bm{z} }\}^{d^2}$, one for each point in phase space. Each operator obeys the following properties: 
 (conditions_on_phase_point_operators)=
@@ -212,7 +212,7 @@ A_{\bm{0}} = \frac{1}{d} \sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d} T_{\
 A graphical depiction of the phase space for the discrete Wigner function. 
 ```
 
-### The Discrete Wigner Function 
+**The Discrete Wigner Function:**
 
 Let $\rho \in \mathcal{H}^{d}$. Given [condition 2](#conditions_on_phase_point_operators) stated above in the list of properties of phase-point operators, the set of phase-point operators form a complete basis for the set of $d \times d$ Hermitian matrices. The discrete Wigner function, denoted $W^{\rho}(\bm{z})$ at the point $\bm{z}$ for the state $ \rho $, is then defined as
 \begin{equation}
@@ -304,4 +304,5 @@ where the fact that $\textrm{tr}\big[ A_{\bm{z}} \big] = 1 ~\forall~\bm{z} \in \
 
  1. For Wigner Functions in Discrete Spaces - [A Wigner-function formulation of finite-state quantum mechanics](https://doi.org/10.1016/0003-4916(87)90176-X)
  2. Review Article on quantum mechanics in phase space - [Overview of the Phase Space Formulation of Quantum Mechanics with Application to Quantum Technologies](https://doi.org/10.1002/qute.202100016)
+ 3. Review Article on general quasi-probability representations of quantum theory - [Quasi-probability representations of quantum theory with applications to quantum information science](https://doi.org/10.1088/0034-4885/74/11/116001)
 

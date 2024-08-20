@@ -16,7 +16,9 @@ This is a collection of notes I have made throughout my PhD on various relevant 
 Note:
 - If you see 💭, hover to get some more information. 
 
-Please do get in touch if you would like to add anything or notice a mistake. 
+Please do get in touch with me if you would like to add anything, think something is missing that I should have covered, or notice a mistake. However, please note that this is an on going project and so some pages might only be partly finished. 
+
+**Contact:** ben.stratton@bristol.ac.uk
 
 ## About Me
 

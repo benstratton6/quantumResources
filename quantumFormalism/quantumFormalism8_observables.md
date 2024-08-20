@@ -168,7 +168,7 @@ A = \sum_{i} \lambda_i P_{i},
 \end{equation}
 where $P_i$ is the projection onto the eigenspace of $A$ with eigenvalue $\lambda_i$, and $\ket{\psi}\in\mathcal{H}$. 
 
-### Probabilities of Measurement Outcomes
+**Probabilities of Measurement Outcomes:**
 
 The probability of measuring the observable $A$ on $\ket{\psi}$ [💭](#Probability_Notation_equation) and getting the outcome $\lambda_i$ is 
 \begin{equation}
@@ -187,7 +187,7 @@ where $p_i = \braket{\lambda_i|\psi}$. It can therefore be seen that $\vert p_i 
 
 Therefore, when considering measuring the observable $A$ on a state $\psi$, one should first decompose the state $\ket{\psi}$ in the eigenbasis of $A$. The coefficients of the decomposition can then be used to find the probabilities of getting the different measurement outcomes. Note, when measuring the observable $A$ one should **not** apply the observable to the state. 
 
-### Post Measurement State:
+**Post Measurement State:**
 
 After measuring an observable $A$ on the state $\ket{\psi}$ and getting the outcome $\lambda_i$ the post measurement state, $\ket{\psi_{\rm post}}$, is the state $\ket{\psi}$ projected into the eigenspace of the $A$ with eigenvalue $\lambda_i$,
 \begin{align*}
@@ -204,7 +204,7 @@ where $ \vert \vert \cdot \vert \vert_2$ is the [2-norm](#l2_norm_norms_page_tar
 \end{align*}
 where we have used the fact that projection operators onto eigenspaces of hermitian operators are hermitian, $P_i^{\dagger}=P_i$ and $P_i^{2} = P_iP_i = P_i$. 
 
-### Expectation Values
+**Expectation Values:**
 
 The expectation value of an observable is the average outcome one would expect if measuring $A$ on many copies of a state, 
 \begin{align*}
