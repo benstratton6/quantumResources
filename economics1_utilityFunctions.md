@@ -12,7 +12,7 @@ authors:
     email: ben.stratton@bristol.ac.uk
 # license: CC-BY-4.0
 keywords: Utility, Expected Utility, Risk.
-abstract: A brief overview of utility functions, there uses, properties and some examples.  
+abstract: A brief overview of utility functions, their uses, properties and some examples.  
 exports:
 #   - format: docx
   - format: pdf
