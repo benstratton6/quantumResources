@@ -124,6 +124,7 @@ The Kraus decomposition allows one to apply channels without having to consider 
 Let $\mathcal{E}: \mathcal{H}_{S} \rightarrow \mathcal{H}_{S'}$ be a quantum channel,$~\rho~\in~\mathcal{H}_{S}$ be a state, and $\ket{\Phi}_{SS}~\in~\mathcal{H}_{S} \otimes \mathcal{H}_{S}$ a full [Schmit rank state](https://en.wikipedia.org/wiki/Schmidt_decomposition) with $\textrm{dim} ~ \mathcal{H}_{S} \approx \textrm{dim} ~ \mathcal{H}_{S'}$. 
 
  The Choi-Jamiolkowski isomorphism ([](https://doi.org/10.1016/0034-4877(72)90011-0), [](https://doi.org/10.1016/0024-3795(75)90075-0)) is a linear mapping between quantum channels and bipartite quantum states defined by
+(choi_state_target_quantum_channels_page)=
 \begin{equation}
     \mathcal{J}^{\mathcal{E}}_{\rm S'S} = (\mathcal{N}_{\rm S} \otimes \mathcal{I}_{\rm S}) \big( \ket{\Phi}\bra{\Phi}_{\rm SS} \big)~\in~\mathcal{H}_{S'} \otimes \mathcal{H}_{S}, 
 \end{equation}

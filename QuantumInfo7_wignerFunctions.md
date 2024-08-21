@@ -298,8 +298,45 @@ B &= \sum_{\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d} W^{B}(\bm{z}) A_{\bm{z}}
 \end{align*}
 where the fact that $\textrm{tr}\big[ A_{\bm{z}} \big] = 1 ~\forall~\bm{z} \in \mathbb{Z}_d \times \mathbb{Z}_d$ has been used. 
 
-## Phase Space for POVMs and Channels
+## Phase Space for General Hermitian Operators, POVMs and Channel
 
+See https://doi.org/10.1088/1367-2630/ab451d more full details on these definitions. 
+
+**General Hermitian Operators**
+
+Let $X \in \mathcal{H}^d$ be a Hermitian operator, such that $X^\dagger = X$.  
+
+The discrete Winger function at a point $\bm{z}$ of the operator $X$ is given by
+\begin{equation}
+W(X) = \frac{1}{d}~\textrm{tr}\big[XA_{\bm{z}}\big].
+\end{equation}
+
+**POVMS**
+
+Let $\{ E_u \}$ be a POVM, so that $E_u \geq 0~\forall~u$ and $\sum_u E_u = \mathbb{I}$. 
+
+The discrete Winger function at a point $\bm{z}$ of an operator $E_u$ is given by 
+\begin{equation}
+W(E_u \vert \bm{z}) = \textrm{tr}\big[EA_{\bm{z}}\big],
+\end{equation}
+where 
+\begin{equation}
+\sum_u W(E_u \vert \bm{z}) = 1.
+\end{equation}
+
+**Channels** 
+
+Let $\mathcal{N}: \mathcal{H}_A \rightarrow \mathcal{H}_B$ be a [quantum channel](#quantum_channel_page_target). 
+
+The discrete Winger function at a point $\bm{z}$ of the operator $X$ is given by
+\begin{align*}
+W_{\mathcal{N}}(\bm{z} \vert \bm{y}) &= \frac{1}{d_b} \textrm{tr} \big[ ((A_A^{\bm{y}})^{t} \otimes A_B^{\bm{z}}) \mathcal{J}^{\mathcal{N}}_{AB} \big], \\
+&= \frac{1}{d_b} \textrm{tr} \big[ A^{\bm{z}}_B \mathcal{N}(A^{\bm{y}}_A) \big],
+\end{align*}
+where $\mathcal{J}^{\mathcal{N}}_{AB}$ is the [Choi-state](choi_state_target_quantum_channels_page) of $\mathcal{N}$ and $A_A^{\bm{u}}$ is the phase point operator in the $A$ space at the point $\bm{u}$. It is the case that 
+\begin{equation}
+\sum_{\bm{z}} W_{\mathcal{N}}(\bm{z} \vert \bm{y}) = 1 ~\forall ~ \bm{y}.
+\end{equation}
 ## Further Reading
 
  1. For Wigner Functions in Discrete Spaces - [A Wigner-function formulation of finite-state quantum mechanics](https://doi.org/10.1016/0003-4916(87)90176-X)
