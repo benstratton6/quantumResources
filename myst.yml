@@ -12,6 +12,7 @@ site:
   title: Quantum Resources Site
   options:
       logo: logo2.svg
+      logo_text: "Quantum Resources"
       exclude: 
         - MyPapers
   nav: []
