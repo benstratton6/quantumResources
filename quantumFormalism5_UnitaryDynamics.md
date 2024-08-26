@@ -20,13 +20,15 @@ exports:
     article_type: Report
 ---
 
+## Time Evolution
+
 The time evolution of a closed quantum system (one not interacting with the environment and hence described by a ket vector) is given by the Schrödinger equation, 
 \begin{equation}
 i \hbar \frac{d}{dt} \ket{\psi} = H \ket{\psi},
 \end{equation}
-where $H$ is a hermitian  operators called the [Hamiltonian](#https://en.wikipedia.org/wiki/Hamiltonian_(quantum_mechanics)). The Hamiltonian describes the energy landscape the system exists within and hence is dependent on the system being modelled. 
+where $H$ is a hermitian  operators called the [Hamiltonian](https://en.wikipedia.org/wiki/Hamiltonian_(quantum_mechanics)). The Hamiltonian describes the energy landscape the system exists within and hence is dependent on the system being modelled. 
 
-If a state $\ket{psi}$ is evolved into a state $\ket{\psi'}$ from $t_1$ to $t_2$, the solution to the Schrödinger equation is  
+If a state $\ket{\psi}$ is evolved into a state $\ket{\psi'}$ from $t_1$ to $t_2$, the solution to the Schrödinger equation is  
 \begin{equation}
 \ket{\psi'} = \exp \bigg[ \frac{-iH(t_1 - t_2)}{\hbar} \bigg] \ket{\psi}. 
 \end{equation}
@@ -86,6 +88,23 @@ One can therefore succinctly model the evolution of closed systems in quantum th
 \ket{\psi'} = U \ket{\psi}, ~ ~ UU^{\dagger} = U^{\dagger}U = \mathbb{I},
 \end{equation} 
 without concern for what the specific Hamiltonian is. 
+
+## Properties of Unitary Operators
+
+Unitary operators have the following properties:
+1. They act linearly on superpositions
+    - Let $\ket{+} = \frac{1}{\sqrt{2}} \big( \ket{0} + \ket{1}) \in \mathcal{H}$, then 
+  \begin{equation}
+  U \ket{+} =  \frac{1}{\sqrt{2}} \big( U\ket{0} + U\ket{1})
+  \end{equation}
+2. They take normalised states to normalised states 
+    - Let $\ket{\psi} \in \mathcal{H}$ such that $ \braket{\psi|\psi} = 1$ and let $\ket{\psi'} = U \ket{\psi}$, then 
+ \begin{equation}
+ \braket{\psi'|\psi'} = \bra{\psi}U^{\dagger}U\ket{\psi} = \braket{\psi|\psi}=1,~~{\rm as}~ ~ U^\dagger U=UU^\dagger =\mathbb{I}.
+ \end{equation}
+
+3. They represent reversible dynamics. 
+    - If $U$ is a unitary operator, then $V=U^\dagger$ is a unitary operator. Hence, if there exists a unitary $U$ evolving a state $\ket{\psi} \rightarrow \ket{\psi'}$, then there always exists a unitary operators $V$ evolving $\ket{\psi'} \rightarrow \ket{\psi}$. In practice, reversing a unitary evolution, or even finding $V$ from $U$ can be very difficult. 
 
 <!-- ## Pauli Operators
 

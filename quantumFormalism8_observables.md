@@ -305,7 +305,7 @@ Therefore, all possibilities are properly accounted for, when measuring $A$ on a
 
 Another question one might have is
 
-**Why are post-measurement states eigenvectors of an observables:** it is easy to see from the framework presented above that if one has a state that is an eigenvector of an observable, and that observable is then measured on the state, that one will get the same outcome each time. Namely, they will get the eigenvalue associated to that eigenvector. But, is the converse true? Is a state that always gives the same outcome when an observable is measured on it necessarily an eigenvector of the observable being measured? The answer, proved below, is yes. 
+**Why are post-measurement states are eigenvectors of an observables:** it is easy to see from the framework presented above that if one has a state that is an eigenvector of an observable, and that observable is then measured on the state, that one will get the same outcome each time. Namely, they will get the eigenvalue associated to that eigenvector. But, is the converse true? Is a state that always gives the same outcome when an observable is measured on it necessarily an eigenvector of the observable being measured? The answer, proved below, is yes. 
 
 :::{dropdown} Proof
 :open:
@@ -337,8 +337,6 @@ Hence,
 A \ket{\psi} = a \ket{\psi},
 \end{equation}
 which is the eigenvalue equations, proving that a state with a definitive outcome when measured by an observables is an eigenvector of that observable. 
-
-see (Name)[https://www.google.co.uk/books/edition/Introduction_to_Quantum_Mechanics/82FjDwAAQBAJ?hl=en&gbpv=0]
 
 :::
 

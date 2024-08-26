@@ -37,12 +37,13 @@ parts:
       - file: quantumFormalism1_hilbertSpaces
       - file: quantumFormalism2_quantumStates
       - file: quantumFormalism5_UnitaryDynamics
-      - file: quantumFormalism\quantumFormalism8_observables.md
+      - file: quantumFormalism8_observables.md
       - file: quantumFormalism6_DensityOperators
       - file: quantumFormalism3_quantumChannels
       - file: quantumFormalism\quantumFormalism4_generalisedMeasurements.md
       - file: quantumFormalism7_AxiomsOfQuantumMechanics
       - file: quantumFormalism9_BlochSphere
+      - file: quantumFormalism\quantumFormalism10_symmetry
       - file: quantumFormalism10_glossary
   - caption: Quantum Information 1
     chapters:
