@@ -65,6 +65,7 @@ This state, $\ket{\Psi}_{A_{1}AB}$, can then be expanded and rewritten as
 O = \lambda_{00} \ket{\Phi^{+}_{00}}\bra{\Phi^{+}_{00}} + \lambda_{01} \ket{\Phi^{+}_{01}}\bra{\Phi^{+}_{01}} + \lambda_{10} \ket{\Phi^{+}_{10}}\bra{\Phi^{+}_{10}} + \lambda_{11} \ket{\Phi^{+}_{11}}\bra{\Phi^{+}_{11}},
 \end{equation}
 where $\lambda_{00} \neq \lambda_{01} \neq \lambda_{10} \neq \lambda_{11}$, and 
+(bell_states_teleportation_target)=
 \begin{align*}
 
 \ket{\Phi_{00}^{+}} &= \frac{\ket{0}_{A}\ket{0}_{B}+\ket{1}_{A} \ket{1}_{B}}{\sqrt{2}}, \\
