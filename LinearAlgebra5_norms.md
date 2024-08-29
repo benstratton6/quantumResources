@@ -70,6 +70,8 @@ In addition to satisfying the above requirements, to be considered a norm on a v
 
 The following norms are all unitarily invariant, meaning $\vert \vert A \vert \vert =  \vert \vert UAU^{\dagger} \vert \vert$. 
 
+Note, for [Hermitian](#hermitian_adjoint_page_target) matrices, the singular values are the absolute values of the eigenvalues. 
+
 ::::{tab-set}
 :::{tab-item} Trace Norm
 :sync: tab3

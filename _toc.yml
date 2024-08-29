@@ -60,7 +60,7 @@ parts:
       - file: ResourceTheories1_introduction.md
       - file: ResourceTheories2_criteria.md
       - file: ResourceTheories3_quantifyingResources.md
-      - file: ResourceTheroriesFile\ResourceTheories4_coherence
+      - file: ResourceTheories4_coherence
       - file: ResourceTheoriesGlossaryofTerms.md
   - caption: Important Mathematical Notions
     chapters:
