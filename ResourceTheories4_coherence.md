@@ -152,3 +152,60 @@ If $\mathcal{E} \in \mathfrak{O}$ is a unitary operation, $\mathcal{E}(\cdot) = 
 [U_{L}(x), V] = 0 ~\forall~x~\in~\mathbb{R}^1.
 \end{equation}
 which is equivalent to $[L, V] = 0$, meaning $V$ is block diagonal with respect to the eigenspaces of $L$. 
+
+### Resource Measures
+
+The spectral decompostion of $L$ is 
+\begin{equation}
+L = \sum_k \lambda_k \Pi_k,
+\end{equation}
+where $ \Pi_k$ is the projector onto the eigenspace of $L$ associated to the eigenvalue $ \lambda_k $.
+
+The dephasing channel with respect to the operator $L$ is then 
+\begin{equation}
+\mathcal{D}(\rho) = \sum_k \Pi_k (\rho) \Pi_k.
+\end{equation}
+
+The following functions are [resource measures](#quantifying_resource_page_target) of unspeakable coherence. This means they are at least faithful and monotonic under allowed operations. 
+
+::::{tab-set}
+:::{tab-item} Relative Entropy
+:sync: tab1
+
+let $\rho \in \mathcal{H}$. 
+
+The relative entropy of asymmetry is defined as 
+\begin{equation}
+A(\rho) \coloneqq S(\rho \vert \vert \mathcal{D}(\rho)) = S(\mathcal{D}(\rho)) - S(\rho),
+\end{equation}
+
+where $S(\cdot \vert \vert \cdot)$ is the [quantum relative entropy](#quantum_relative_entropy) and $S(\cdot)$ is the [Von Neumann Entropy](#Von_Neumann_Entropy_Equation_target).
+
+:::
+:::{tab-item} Trace Norm
+:sync: tab2
+
+let $\rho \in \mathcal{H}$. 
+
+The *distance* to the dephased state is a measure of coherence and is given by 
+\begin{equation}
+\mathcal{R}(\rho) \coloneqq \vert \vert \rho - \mathcal{D}(\rho) \vert \vert_1,
+\end{equation}
+where $\vert \vert \cdot \vert \vert_1$ is the [trace norm](#schatten_norms_target_norms_page). 
+
+:::
+:::{tab-item} Trace Norm 2
+:sync: tab3
+
+let $\rho \in \mathcal{H}$. 
+
+The coherence can be quantified by the operator that is output from the commutator of the state $ \rho $ and $L$,  
+\begin{equation}
+\mathcal{F}(\rho) \coloneqq \vert \vert ~ [\rho, L] ~ \vert \vert_1,
+\end{equation}
+where $\vert \vert \cdot \vert \vert_1$ is the [trace norm](#schatten_norms_target_norms_page). 
+
+Note that if $[\rho, L]=0$ then the state has no coherence. 
+
+:::
+::::

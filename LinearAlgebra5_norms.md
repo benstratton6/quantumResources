@@ -145,6 +145,7 @@ for all $k$, then for all unitarily invariant norms it is the case that
 :::{tab-item} Schatten Norms
 :sync: tab7
 Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{F}^{m \times n}$. The Schatten norms are given by
+(schatten_norms_target_norms_page)=
 \begin{equation}
 \vert \vert A \vert \vert_{p} = \bigg( \sum_{i}^{k} \big[\mu_{i}(A)\big]^{p} \bigg)^{\frac{1}{p}},
 \end{equation}
