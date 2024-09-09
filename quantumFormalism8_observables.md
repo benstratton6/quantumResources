@@ -23,7 +23,7 @@ exports:
 ## Definition 
 
 An observables is a physical property that can be measured. 
-
+(obersvables_definition_observable_page_target)=
 In quantum mechanics, observables are modelled by [hermitian operators](#hermitian_adjoint_page_target).
 
 In the following all the concepts needed to understand this definition and why it is used will be built up. 
@@ -250,44 +250,7 @@ Note, the expectation value included in the above definition of the uncertainty 
 
 If two observables commute, meaning $[A,B]=0$, then there is no limit to the accuracy with which the two observables can be simultaneously known. 
 
-:::{dropdown} Some Details on Commutators 
-
-The commutator of two observables, $A$ and $B$, is given by 
-\begin{equation}
-[A,B] = AB - BA. 
-\end{equation}
-This means multiply the operator $A$ on the left by $B$, and then take off the operator $B$ multiplied on the left by $A$. When considering the matrix decomposition of these operators, this relation can be seen as matrices for which $AB \neq BA$.  
-
-The fact that there exists observables for which $[A,B] \neq 0$ is the origin of much that is interesting about quantum mechanics. Physically, it means that measuring $A$ and then $B$ on a state $\ket{\psi}$ will give a different outcome to measuring $B$ and then $A$ on $\ket{\psi}$. This is due to measurement physically changing the underlying state. 
-
-The consequence of this is that it is not possible to simultaneously measure the observables $A$ and $B$. For example, there exists sets of states and measurements for which a measurement of $A$ means one is completely uncertain about what measurement outcome they would get if they were to then measure $B$. In this case, measuring $A$ (and hence knowing it with certainty) makes one maximally uncertain about what measurement outcome they would get when measuring $B$.  
-
-When two observables, $A$ and $B$, commute, meaning $[A,B] = 0$, they share a basis. This means the two observables become simultaneously measurable. 
-
-**Proof:** Let $A = \sum_{j} j \ket{j}\bra{j}$, such that $A \ket{j} = j \ket{j}$. 
-
-Consider the following: 
-\begin{align*}
-AB \ket{j} &= A \big( B \ket{j} \big). \\
-BA \ket{j} &= B \big( A \ket{j} \big) = B \big( j \ket{j} \big) = j \big( B \ket{j} \big),
-\end{align*}
-where the $j$ can be moved past the operator B in the final line as $j$ is just some number. Given $AB=BA$, we can then write 
-\begin{equation}
-A \big( B \ket{j} \big) = j \big( B \ket{j} \big),
-\end{equation}
-meaning that $B\ket{j}$ is an eigenvector of $A$ with eigenvalue $j$. Hence, $B\ket{j}$ is proportional to $\ket{j}$ - it is a vector that points in the same direction as $\ket{j}$ but does not necessarily have the same length. One can therefore write 
-\begin{equation}
-B \ket{j} = b_j \ket{j},
-\end{equation}
-where $b_j$ is some number, meaning that $\ket{j}$ is also an eigenvector of $B$. This can be repeated for the whole basis, such that it is possible to write $B = \sum_j b_j \ket{j} \bra{j}$.
-
-$\Box$
-
-Consider a state $\ket{\psi}$, upon which the observable $A$ is measured ($[A,B] = 0$ still). If one got a measurement outcome of $j$, then the post measurement state would be $\ket{j}$. Considering now that the observable $B$ is measured on the same system. As seen above, $\ket{j}$ is also an eigenstate of $B$ and hence the measurement outcome will be $b_j$ with certainty. Therefore, if one knows the measurement outcome from measuring $A$, they know for certain what the measurement outcome form measuring $B$ would be. Moreover, if they were to measure $A$ again, they would again get $j$ with certainty. Hence, they can know both measurement outcomes simultaneously. 
-
-If the observables do not commute, $[A,B] \neq 0$, they do not share a basis. After measuring $A$, the state will be in an eigenvector of the observable $A$. After measuring $B$, the state will be in an eigenvector of the observable $B$. Each measurement projects the state onto a different basis, with the output state being probabilistic each time. cycling through measurements of $A, B, A, B \ldots$ could therefore give different measurement outcomes each time. 
-
-:::
+See [here](#commutators_whole_page_target) for some details on commutators 
 
 ## Why Hermitian Operators as Observables
 

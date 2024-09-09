@@ -29,3 +29,6 @@ exports:
 (prime_dimensions_quantum_info_glossary)=
 **Prime Dimensions:** This appear to be the case as $N=2$ systems have to be treated differently, and hence all factors of 2 in a $d$-dimensional (not prime $d$) systems would also need to be treated differently. 
 
+(multiplicity_quantum_info_glossary)=
+**multiplicity:** the number of different eigenvectors that a given degenerate eigenvalue corresponds to. 
+

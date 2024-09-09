@@ -43,6 +43,7 @@ parts:
       - file: quantumFormalism\quantumFormalism4_generalisedMeasurements.md
       - file: quantumFormalism7_AxiomsOfQuantumMechanics
       - file: quantumFormalism9_BlochSphere
+      - file: quantumFormalism12_commutators.md
       - file: quantumFormalism10_symmetry
       - file: quantumFormalism11_wignerFunctions
       - file: quantumFormalism10_glossary

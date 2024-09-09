@@ -29,7 +29,7 @@ L(\bm{v}) = \lambda \bm{v},
 where $\lambda~\in~\mathbb{F}^{1}$ is the **eigenvalue** of the eigenvector $\bm{v}$.
 
 The set of all eigenvalues of a linear map $L$ is called the spectrum of $L$, denoted $\textrm{spec}L$. 
-
+(degenerate_definition_target_eigenvalues_page)=
 An vector space is said to be degenerate if different eigenvectors have the same eigenvalue.  
 
 ### Basis of Eigenvectors
