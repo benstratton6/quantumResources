@@ -99,7 +99,7 @@ The Stinespring dilation says that all channels can be consider unitary with res
 :sync: tab2
 
 Let $\mathcal{E}: \mathcal{H}_{S} \rightarrow \mathcal{H}_{S'}$ be a quantum channel and $\rho~\in~\mathcal{H}_{S}$
-
+(Kraus_decomposition_quantum_channel_target)=
 There exists a set of $M$ operators $\{ K_{i} \}_{i=1}^{M}$ such that
 \begin{equation}
 \mathcal{E}(\rho) = \sum_{i=1}^{M} K_{i} \rho K_{i}^{\dagger},

@@ -40,7 +40,7 @@ parts:
       - file: quantumFormalism8_observables.md
       - file: quantumFormalism6_DensityOperators
       - file: quantumFormalism3_quantumChannels
-      - file: quantumFormalism\quantumFormalism4_generalisedMeasurements.md
+      - file: .\quantumFormalism\quantumFormalism4_generalisedMeasurements.md
       - file: quantumFormalism7_AxiomsOfQuantumMechanics
       - file: quantumFormalism9_BlochSphere
       - file: quantumFormalism12_commutators.md
