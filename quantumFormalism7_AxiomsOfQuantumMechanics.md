@@ -20,7 +20,11 @@ exports:
     article_type: Report
 ---
 
+
+ 
 ### In terms of State Vectors 
+
+The following axioms are for closed quantum systems, hence, all systems are in pure states and all dynamics are unitary. Measurement in only considered via [observables](#obersvables_definition_observable_page_target) and not extended to [generalised measurements](#Generalised_measurement_definition_target). 
 
 1. **States** - The state of any physical systems is represented by normalised vector in a complex Hilbert space, $ \ket{\psi}~\in~\mathcal{H}$, where $\braket{\psi|\psi} = 1$.
 
@@ -44,6 +48,8 @@ exports:
     \end{equation}
 
 ### In terms of Density Operators
+
+These axioms cover quantum systems where the state has interacted with an environment to become mixed, but now evolves via closed dynamics. Measurement in only considered via [observables](#obersvables_definition_observable_page_target) and not extended to [generalised measurements](#Generalised_measurement_definition_target). 
 
 1. **States** - The state of any physical systems is represented by a density operator $ \rho $, where $ \rho \geq 0, ~ \textrm{tr} \big[ \rho \big] = 1$.
 
