@@ -68,7 +68,42 @@ In addition to satisfying the above requirements, to be considered a norm on a v
 
 ## Matrix Norm Examples
 
-The following norms are all unitarily invariant, meaning $\vert \vert A \vert \vert =  \vert \vert UAU^{\dagger} \vert \vert$. 
+The following norms depend only on the singular values of the matrices they act upon. This means that the following conditions are true:
+\begin{align*}
+\vert \vert A \vert \vert = \vert \vert A V \vert \vert = \vert \vert U A  \vert \vert 
+\end{align*}
+where $V$ and $U$ are unitary matrices. 
+
+Hence, these norms are all also unitarily invariant, meaning $\vert \vert A \vert \vert =  \vert \vert UAU^{\dagger} \vert \vert$. 
+
+:::{dropdown} Proof
+
+The singular valued decomposition of a matrix $A~\in~\mathbb{M}_{nm}(\mathbb{C})$ is 
+\begin{equation}
+A = U D V^{\dagger},
+\end{equation}
+where $U$ is an $m \times m$ complex unitary matrix, $V$ is a $n \times n$ complex unitary matrix, and $D$ is an $m \times n$ diagonal matrix with non-negative real numbers on the diagonal. These non-negative real numbers are the singular values of $A$. 
+
+Consider a norm $\vert \vert \cdot \vert \vert: \mathbb{M}_{nm}(\mathbb{C}) \rightarrow \mathbb{R}^+$ that depends only on the singular values of the matrix it is applied to and let $W$ be a unitary operator. Consider now 
+\begin{align*}
+AW &= UDV^\dagger W, \\
+&=  UD\tilde{V}^\dagger, 
+\end{align*}
+where $\tilde{V}^\dagger = V^\dagger W$ is just a different unitary matrix. Hence, it can be seen that the singular values of $A$ and $AW$ are the same - the non-negative real numbers on the diagonal of $D$ - and therefore that $ \vert \vert A W \vert \vert = \vert \vert A \vert \vert$. 
+
+The same argument can be made to prove that $ \vert \vert W A \vert \vert = \vert \vert A \vert \vert$
+
+A matrix $A \in \mathbb{M}_{nn}(\mathbb{C})$ has an [eigen-decomposition](https://mathworld.wolfram.com/EigenDecomposition.html) if 
+\begin{align*}
+A = Q P Q^\dagger
+\end{align*}
+where $Q$ has the eigenvectors of $A$ as it's columns and $P$ is a diagonal matrix with the eigenvalues of $A$ on it's diagonals. 
+
+All matrices have a singular valued decompostion, but not all matrices have an eigen-decomposition. Moreover, unlike the singular values, the eigenvalues can be negative and complex. 
+
+For [Hermitian](#hermitian_adjoint_page_target) matrices, the singular values are the absolute values of the eigenvalues. 
+
+:::
 
 Note, for [Hermitian](#hermitian_adjoint_page_target) matrices, the singular values are the absolute values of the eigenvalues. 
 
@@ -76,7 +111,7 @@ Note, for [Hermitian](#hermitian_adjoint_page_target) matrices, the singular val
 :::{tab-item} Trace Norm
 :sync: tab3
 
-Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{F}^{m \times n}$. The trace norm is given by
+Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{M}_{mn}(\mathbb{F})$. The trace norm is given by
 (trace_norm_target_norms)=
 \begin{equation}
 \vert \vert A \vert \vert_{\textrm{tr}} = \sum_{i} \mu_{i}(A),
@@ -92,7 +127,7 @@ It is also given by
 :::
 :::{tab-item} Frobenius Norm 
 :sync: tab4
-Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{F}^{m \times n}$. The Frobenius norm is given by
+Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{M}_{mn}(\mathbb{F})$. The Frobenius norm is given by
 (target_Frobenius_Norm_target)=
 \begin{equation}
 \vert \vert A \vert \vert_{F} = \sqrt{ \sum_{j}^{n} \sum_{i}^{m} \vert a_{ij} \vert ^{2} }.
@@ -106,7 +141,7 @@ It is also given by
 :::
 :::{tab-item} l_2 norm 
 :sync: tab5
-Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{F}^{m \times n}$. Let $\psi~\in~V$ be a vector such that $\psi~\in~\mathbb{F}^{n}$ with elements $(\psi_1, \psi_2, \ldots, \psi_n)$.
+Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{M}_{mn}(\mathbb{F})$. Let $\psi~\in~V$ be a vector such that $\psi~\in~\mathbb{M}_{mn}(\mathbb{F})$ with elements $(\psi_1, \psi_2, \ldots, \psi_n)$.
 
 The $l_2$ vector norm is given by 
 \begin{equation}
@@ -127,13 +162,13 @@ It is also given by
 :::
 :::{tab-item} Ky Fan Norm
 :sync: tab6
-Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{F}^{m \times n}$. The $k$-Ky Fan norm is given by
+Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{M}_{mn}(\mathbb{F})$. The $k$-Ky Fan norm is given by
 \begin{equation}
 \vert \vert A \vert \vert^{k} _{*} = \sum_{i}^{k} \vert \mu^{\downarrow}_{i}(A) \vert,
 \end{equation}
 where $\mu^{\downarrow}_i (A)$ is the $i$th singular value of $A$ such that $ \mu^{\downarrow}_i(A) \geq \mu^{\downarrow}_{i+1}(A)~\forall~i$. Hence the Ky Fan Norm is the sum of the $k$th largest singular values.
 
-**Ky Fan Dominance**: Let $B~\in~M$ be a matrix such that $B~\in~\mathbb{F}^{m \times n}$. If it follows that
+**Ky Fan Dominance**: Let $B~\in~M$ be a matrix such that $B~\in~\mathbb{M}_{mn}(\mathbb{F})$. If it follows that
 \begin{equation}
 \vert \vert A \vert \vert^{k} _{*} \leq \vert \vert B \vert \vert^{k} _{*},
 \end{equation}
@@ -144,7 +179,7 @@ for all $k$, then for all unitarily invariant norms it is the case that
 :::
 :::{tab-item} Schatten Norms
 :sync: tab7
-Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{F}^{m \times n}$. The Schatten norms are given by
+Let $A~\in~M$ be a matrix such that $A~\in~\mathbb{M}_{mn}(\mathbb{F})$. The Schatten norms are given by
 (schatten_norms_target_norms_page)=
 \begin{equation}
 \vert \vert A \vert \vert_{p} = \bigg( \sum_{i}^{k} \big[\mu_{i}(A)\big]^{p} \bigg)^{\frac{1}{p}},
@@ -161,7 +196,7 @@ If $p=1$ you get the [trace norm](#trace_norm_target_norms), if $p=2$ you get th
 :::
 ::::
 
-The following norms are not necessarily unitarily invariant.
+The following norms do not necessarily depend on the singular values and hence the above conditions might not hold. 
 
 ::::{tab-set}
 :::{tab-item} Operator Norm
@@ -193,4 +228,39 @@ where $a_{j}$ are the columns of the matrix $A$.
 :::
 ::::
 
+## Cross Norms
 
+Consider a tensor product space $V = \mathcal{X} \otimes \mathcal{Y}$. 
+
+A norm, $ \vert \vert \cdot \vert \vert $, is a cross norm if 
+\begin{equation}
+\vert \vert V \vert \vert = \vert \vert \mathcal{X} \otimes \mathcal{Y} \vert \vert = \vert \vert \mathcal{X} \vert \vert ~ \vert \vert \mathcal{Y} \vert \vert.
+\end{equation}
+
+All norms that depend only on the singular values are cross norms. 
+
+:::{dropdown} Proof
+
+
+**Note**: this is a somewhat *hand-wavey* proof.
+
+Let the singular valued decomposition of a matrix $A~\in~\mathbb{M}_{nm}(\mathbb{C})$ be
+\begin{equation}
+A = U D_A V^{\dagger},
+\end{equation}
+and the singular valued decomposition of a matrix $B~\in~\mathbb{M}_{nm}(\mathbb{C})$ be
+\begin{equation}
+B = W D_B T^{\dagger}.
+\end{equation}
+
+Hence, the singular values of $A \otimes B$ are the product all of the singular values of $A$ with the singular values of $B$. 
+
+The singular valued decomposition of a matrix $A \otimes B$ can then be seen to be 
+\begin{align*}
+A \otimes B = (U \otimes W)(D_A \otimes D_B)(V \otimes T)^\dagger.
+\end{align*}
+
+By observing this fact, it can be seen that any norms that depends only the singular values of a matrix can be factorised into a product of the norm applied to $A$ and $B$ separately. 
+
+
+:::
