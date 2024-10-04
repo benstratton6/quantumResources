@@ -264,3 +264,35 @@ By observing this fact, it can be seen that any norms that depends only the sing
 
 
 :::
+
+## Useful Norm Inequalities 
+
+::::{tab-set}
+:::{tab-item} Hölder's Inequality 
+:sync: tab1
+
+Let $\mathcal{H}$ be a [Hilbert space](#hilbert_space_target), and let $ A, B \in \mathcal{H}$ be operators on the space. 
+
+The following inequality:
+\begin{equation}
+\vert \vert AB \vert \vert_r \leq \vert \vert A \vert \vert_p ~ \vert \vert B \vert \vert_q, 
+\end{equation}
+where $\frac{1}{p} + \frac{1}{q} = \frac{1}{r}$. 
+
+Note, Hölder's Inequality is more general than this, and applies to vector spaces other than Hilbert spaces and objects other than operators.  
+
+:::
+:::{tab-item} Cauchy–Schwarz Inequality
+:sync: tab2
+
+Let $\bm{x}, \bm{y}~\in~V$, where $V$ is a [inner product space](#inner_product_space_definition_target) defined over $\mathbb{F}$ with inner product $(\cdot, \cdot) \rightarrow \mathbb{F}^{1}$, then 
+\begin{equation}
+\vert (\bm{x}, \bm{y}) \vert ^{2} \leq \vert \vert \bm{x} \vert \vert ~ \vert \vert \bm{y}  \vert \vert, 
+\end{equation}
+where $\vert \cdot \vert$ is the absolute value and 
+\begin{equation}
+\vert \vert \bm{x} \vert \vert = \sqrt{ (\bm{x}, \bm{x}) }.
+\end{equation}  
+
+:::
+::::

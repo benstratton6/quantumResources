@@ -19,7 +19,7 @@ exports:
     template: physical_review_journals
     article_type: Report
 ---
-
+(inner_product_space_definition_target)=
 A [vector space](#vector_space_axioms_target), $V$, with an inner product is called an *inner product space*. 
 
 An inner product, $(\cdot, \cdot)$, is a functional that takes two vectors from the vector space $V$, defined over a field $\mathbb{F}^{n}$, as an input and outputs a scalar, $(\cdot, \cdot): \mathbb{F}^{n} \otimes \mathbb{F}^{n} \rightarrow \mathbb{F}^{1}$. 
