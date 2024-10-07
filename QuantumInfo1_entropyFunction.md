@@ -128,11 +128,11 @@ or
 \begin{equation}
 D_{\textrm{max}}(\rho \vert \vert \sigma) = \log \big[ \mu_{max} (\sigma^{\frac{1}{2}} \rho \sigma^{\frac{1}{2}} ) \big]
 \end{equation}
-where $\mu_{min}(A)$ is the minimum eigenvalue of the operator $A$ if $\textrm{supp}(\rho) \subseteq \textrm{supp}(\sigma)$, it is defined as $+ \infty $ otherwise.
+where $\mu_{max}(A)$ is the maximum eigenvalue of the operator $A$ if $\textrm{supp}(\rho) \subseteq \textrm{supp}(\sigma)$, it is defined as $+ \infty $ otherwise.
 
 :::{dropdown} Properties
 
-1. $D_{\textrm{max}}( \rho \vert \vert \sigma) \geq 0$ with $D_{\textrm{max}}(\rho \vert \vert \sigma)=0$ iif $\rho=\sigma$ and both are states. 
+1. $D_{\textrm{max}}( \rho \vert \vert \sigma) \geq 0$ with $D_{\textrm{max}}(\rho \vert \vert \sigma)=0$ if and only if $\rho=\sigma$ and both are states. 
 2. If $\mathcal{E}$ is a quantum channel then 
 \begin{equation}
 D_{\textrm{max}}( \rho \vert \vert \sigma) \geq D_{\textrm{max}}( \mathcal{E}(\rho) \vert \vert \mathcal{E}(\sigma)).
@@ -165,7 +165,7 @@ D_{\textrm{min}}( \rho \vert \vert \sigma) = \lim_{\alpha \rightarrow 0^+} S_{\a
 
 :::{dropdown} Properties
 
-1. $D_{\textrm{min}}( \rho \vert \vert \sigma) \geq 0$ with $D_{\textrm{min}}(\rho \vert \vert \sigma)=0$ iif $\rho=\sigma$ and both are states. In general, $D_{\textrm{min}}( \rho \vert \vert \sigma)=0$ if $\rho$ and $\sigma$ have identical supports. 
+1. $D_{\textrm{min}}( \rho \vert \vert \sigma) \geq 0$ with $D_{\textrm{min}}(\rho \vert \vert \sigma)=0$ if $\rho=\sigma$ and both are states, or $\textrm{supp}(\rho)=\textrm{supp}(\sigma)$. In general, $D_{\textrm{min}}( \rho \vert \vert \sigma)=0$ if $\rho$ and $\sigma$ have identical supports. 
 2. $D_{\textrm{min}}( \rho \vert \vert \sigma) \leq D_{\textrm{max}}( \rho \vert \vert \sigma)$
 3. If $\mathcal{E}$ is a quantum channel then 
 \begin{equation}
