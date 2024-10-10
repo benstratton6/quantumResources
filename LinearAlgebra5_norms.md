@@ -282,8 +282,20 @@ where $\frac{1}{p} + \frac{1}{q} = \frac{1}{r}$.
 Note, Hölder's Inequality is more general than this, and applies to vector spaces other than Hilbert spaces and objects other than operators.  
 
 :::
-:::{tab-item} Cauchy–Schwarz Inequality
+:::{tab-item} Rastegin
 :sync: tab2
+
+Let $A \in \mathcal{H}_1 \otimes \mathcal{H}_2$ be an operator acting on the bipartite Hilbert space $\mathcal{H}$, and $\vert \vert \cdot \vert \vert_p $ be the [Schatten norm](#schatten_norms_target_norms_page), then: 
+\begin{equation}
+\vert \vert ~ \textrm{tr}_1 [ A ] ~ \vert \vert_p \leq \big[ {\rm dim}(\mathcal{H}_1)]^{(p-1)/p} \vert \vert A \vert \vert_p.
+\end{equation}
+
+As show in [here](
+https://doi.org/10.48550/arXiv.1202.3853)
+
+:::
+:::{tab-item} Cauchy–Schwarz Inequality
+:sync: tab3
 
 Let $\bm{x}, \bm{y}~\in~V$, where $V$ is a [inner product space](#inner_product_space_definition_target) defined over $\mathbb{F}$ with inner product $(\cdot, \cdot) \rightarrow \mathbb{F}^{1}$, then 
 \begin{equation}
@@ -294,5 +306,10 @@ where $\vert \cdot \vert$ is the absolute value and
 \vert \vert \bm{x} \vert \vert = \sqrt{ (\bm{x}, \bm{x}) }.
 \end{equation}  
 
-:::
+
+
+
 ::::
+
+
+Rastegin
