@@ -290,7 +290,7 @@ Let $A \in \mathcal{H}_1 \otimes \mathcal{H}_2$ be an operator acting on the bip
 \vert \vert ~ \textrm{tr}_1 [ A ] ~ \vert \vert_p \leq \big[ {\rm dim}(\mathcal{H}_1)]^{(p-1)/p} \vert \vert A \vert \vert_p.
 \end{equation}
 
-As show in [here](
+The result it more general than this and more details can be found [here](
 https://doi.org/10.48550/arXiv.1202.3853)
 
 :::

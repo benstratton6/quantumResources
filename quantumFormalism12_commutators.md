@@ -71,13 +71,13 @@ where $b_j$ is some number, meaning that $\ket{j}$ is also an eigenvector of $B$
 
 :::
 
-### Degenerate Operators
+###  Non-degenerate Operators
 
 If $A$ and $B$ are [non-degenerate](#degenerate_definition_target_eigenvalues_page) operators then the shared eigenbasis is unique. 
 
 That is, each non-degenerate eigenvector of $A$ is also an eigenvector of $B$. 
 
-### Non-degenerate Operators
+### Degenerate Operators
 
 If $A$ is degenerate then in the degenerate sub-space there are an infinite number of vectors that are eigenvectors of $A$ - namely, any linear combination of eigenvectors in the degenerate eigenspace is also an eigenvector $A$. A common eigenbasis can still be found but it is in general not unique. 
 
