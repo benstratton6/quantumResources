@@ -40,7 +40,7 @@ parts:
       - file: quantumFormalism8_observables.md
       - file: quantumFormalism6_DensityOperators
       - file: quantumFormalism3_quantumChannels
-      - file: .\quantumFormalism\quantumFormalism4_generalisedMeasurements.md
+      - file: quantumFormalism4_generalisedMeasurements.md
       - file: quantumFormalism7_AxiomsOfQuantumMechanics
       - file: quantumFormalism9_BlochSphere
       - file: quantumFormalism12_commutators.md
@@ -63,6 +63,9 @@ parts:
       - file: ResourceTheories3_quantifyingResources.md
       - file: ResourceTheories4_coherence
       - file: ResourceTheoriesGlossaryofTerms.md
+  - caption: Error Correction
+    chapters: 
+      - file: .\ErrorCorrection\errorCorrection_classical.md
   - caption: Important Mathematical Notions
     chapters:
       - file: mathematicalNotes4_stocasticMatrices

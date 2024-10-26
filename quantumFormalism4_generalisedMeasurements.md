@@ -66,7 +66,7 @@ All generalised measurements can always be produced from the action of a joint u
 :class: bg-primary
 :width: 600px
 :align: center
-:target: generalised_Measurements_image_target
+<!-- :target: generalised_Measurements_image_target -->
 
 The orange box represents the generalised measurement. A state, $\ket{\psi} \in \mathcal{H}_{S}$ first has an ancilla, $\ket{0} \in \mathcal{H}_A$, appended. A joint unitary, $U_{SA}$, is then applied on the system and ancilla. A projective measurement is then applied on $A$. The outcome of this measurement then informs the post measurement state in $S$. 
 ```
@@ -92,9 +92,9 @@ In the literature, this is referred to as a [quantum instrument](https://en.wiki
 
 ## POVMs
 
-A Positive Operator Valued Measure (POVM) is a generalised measurement where one does not care about the post measurement state, only the probability of getting different outcomes. This might be the case because the post measurement states is unimportant for any future use, or, it might be because it physically does not exists, such as when a photon is measured - the photon is destroyed, leaving no photon for a post measurement state to exist in. 
+A Positive Operator Valued Measure (POVM) is a generalised measurement where one does not care about the post measurement state, only the probability of getting different outcomes. This might be the case because the post measurement states is unimportant for any future use, or, it might be because it physically does not exists, such as when a photon is measured. In this case, the photon is destroyed, leaving no photon for a post measurement state to exist in. 
 
-Hence, rather then considering the set of operators $\{ M_{x} \}_{x=0}^{m-1}$, one can instead consider the set $\{ T_x = M_x^\dagger M_{x} \}_{x=0}^{m-1}$ which are enough to give the probabilities of the possible outcomes.
+Hence, rather than considering the set of operators $\{ M_{x} \}_{x=0}^{m-1}$, one can instead consider only the set $\{ T_x = M_x^\dagger M_{x} \}_{x=0}^{m-1}$ which is enough to give the probabilities of the different possible outcomes occurring. However, one loses the ability to calculate the post measurement state.
 
 ### Definition 
 
@@ -107,12 +107,28 @@ The first condition carries from the definition of the generalised measurement a
 
 ### Physical Realisation
 
-All POVM's can be physically realised by just performing the generalised measurement and ignoring the post measurement state. 
-
-Moreover, it can be shown that all POVM's can be physically realised by projective measurements on a higher dimensional Hilbert space. 
+All POVM's can be physically realised by just performing the associated generalised measurement and ignoring the post measurement state.   
 
 **Naimark's dilation theorem**
 
+Naimark's dilation theorem states that every POVM can be realised by a projective measurement (the measurement of some [observable](#obersvables_definition_observable_page_target)) on a higher dimensional space. 
+
+Consider a POVM, $\mathcal{T}$, acting on a Hilbert space $\mathcal{H}^{d}$ given by 
+\begin{equation}
+\mathcal{T} = \{ T_i : T_i \geq 0, \sum_i T_i = \mathbb{I} \}.
+\end{equation}
+
+Then there exists a projective measurement 
+\begin{equation}
+\mathcal{P} = \{ \Pi_i: \Pi_i^2 = \Pi_i,~ \Pi_i \Pi_j = \delta_{ij}\Pi_i, \sum_i \Pi_i = \mathbb{I} \}.
+\end{equation}
+acting on a Hilbert space $\mathcal{H}^{d'}$, where $d' \geq d$, such that 
+\begin{equation}
+T_i = V^\dagger \Pi_i V ~ \forall ~i,
+\end{equation}
+where $V: \mathcal{H}^{d'} \rightarrow \mathcal{H}^{d}$, is an isometry.
+
+This theorem ensures that all POVMs are physically realisable through the measurement of an observable on a higher dimensional space. 
 
 
 ### Properties 
