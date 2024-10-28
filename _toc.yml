@@ -63,9 +63,9 @@ parts:
       - file: ResourceTheories3_quantifyingResources.md
       - file: ResourceTheories4_coherence
       - file: ResourceTheoriesGlossaryofTerms.md
-  - caption: Error Correction
-    chapters: 
-      - file: .\ErrorCorrection\errorCorrection_classical.md
+  # - caption: Error Correction
+  #   chapters: 
+  #     - file: .\ErrorCorrection\errorCorrection_classical.md
   - caption: Important Mathematical Notions
     chapters:
       - file: mathematicalNotes4_stocasticMatrices

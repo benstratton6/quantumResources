@@ -58,10 +58,11 @@ Other notable highlights alongside my academic pursuits have been working with t
 - [non-Scientific CV](Benjamin_Stratton_CV___Non_Scientific.pdf)
 
 ## Teaching
-
-- Foundations of Physics ([PHYS00001](https://www.bristol.ac.uk/unit-programme-catalogue/UnitDetails.jsa;jsessionid=D9AEFE5068F1DB877698DA8F19A11B19?ayrCode=25%2F26&unitCode=PHYS00001))
+- Applications of Quantum Information 
+    * Topics Include: Dirac Notion, Quantum Information, Quantum Computation. 
+- Foundations of Physics
     * Topics Include: Mechanics, Thermodynamics, Optics, Quantum Mechanics. 
-- Second Year Lab Demonstrator ([PHYS10004](https://www.bris.ac.uk/unit-programme-catalogue/UnitDetails.jsa?unitCode=PHYS10004))
+- Second Year Lab Demonstrator
 - Private Tutor 
     * Topics Include: A-level Mathematics, A-level Physics, STAT Prep. 
 

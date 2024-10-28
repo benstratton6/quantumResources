@@ -42,6 +42,22 @@ After the information has been sent or stored in memory for some time, it needs 
 
 Error correction aims to combat noise through redundancy - each logical bit is instead encoded in many physical bits. A method of encoding logical information through redundancy in order to protect against errors is known as an **error correcting code**. 
 
+<!-- Whilst physical error rates are low when storing classical information, it is still necessary to employ error correction in scenarios such as deep space communication where the large distance between the sender and receiver leads to more physical errors occurring.  -->
+
+### Error Detection 
+
+When an error occurs on the physical bits an error correcting code aims to:
+
+1. identify that an error has occurred, 
+2. if so, identify where the error has occurred (to which bits), 
+3. finally, correct the error. 
+
+Typically, steps (1) and (2) occur at the same time. However, in some codes step (2) may be not be necessary, with the error being correctable without its location being know (see the repetition code below). 
+
+On the other hand, some codes are able fulfill (1) without being able to fulfill (2) or (3). Such codes are said to perform **error detection**. In these cases, it is known that an error has occurred, but it is not know how to fix it. 
+
+With only the use of error detection, one can ensure the correct performance of some information process protocol in the presence of noise by just repeat the protocol until it happens error free, discarding any cases where an error is detected and starting again. 
+
 ### The Repetition Code
 
 The simplest classical error correcting code is the 3-bit repetition code. Here, each bit of logical information is encoded via three physical bits of information. Specifically,
@@ -67,6 +83,8 @@ A majority vote will count one $\ket{0}$ and two $\ket{1}$'s, leading to $\ket{1
 \end{equation}
 meaning the $\ket{0}_L = \ket{000}$ codeword is flipped to the $\ket{1}_L=\ket{111}$ codeword. A majority vote will therefore decode $\ket{1}_L$ without knowing an error as occurred. 
 
+The repetition code is able to detect and then correct errors if the noise consists of only a single bit flip. It is able to detect errors if the noise consists of one or two bits flips. Hence, for singular errors it is an error correcting code, whilst for one or two errors it is an error detecting code.  
+
 ### Code Distance
 
 This distance of a code is the minimum numbers of errors that will change one codeword to another. Alternatively, the distance of a code is the minimum number of errors that will go undetected. 
@@ -80,7 +98,14 @@ d = 2t + 1.
 
 ### Labelling Codes
 
-Codes are labelled as
-\begin{equation}
-[ n: {\rm number of physicals}, k : {\rm number of logicals}, d: { \rm code distance}].
-\end{equation}
+Codes are labelled as $[n, k, d]$, where $n$ is the number of physical bits, $k$ is the number of logical bits and $d$ is the code distance.
+
+
+## The Need for Quantum Error Correction
+
+There exists the need for new error correcting codes when considering quantum systems for the following reasons: 
+1. **Quantum states experience errors beyond bit flips**:
+
+2. **The No Cloning Theorem prevents protection through repetition**: 
+
+3. **Measurements can irreversible alter quantum states**:
