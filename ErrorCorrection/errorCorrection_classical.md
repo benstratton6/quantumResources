@@ -29,7 +29,7 @@ https://doi.org/10.48550/arXiv.quant-ph/9705052)
 https://doi.org/10.1080/00107514.2019.1667078)
 - [Surface codes: Towards practical large-scale quantum computation](
 https://doi.org/10.1103/PhysRevA.86.032324)
-- [Quantum Error Correction](https://www.thp.uni-koeln.de/kastoryano/ExSheets/Notes_v7.pdf)
+- [Quantum Error Correction, Prof. Kastoryano](https://www.thp.uni-koeln.de/kastoryano/ExSheets/Notes_v7.pdf)
 - Lectures On Computation, Feynman, R.P.
 
 ## Noise in Classical Information Processing
@@ -113,10 +113,58 @@ Codes are labelled as $[n, k, d]$, where $n$ is the number of physical bits, $k$
 
 ## The Need for Quantum Error Correction
 
-There exists the need for new error correcting codes when considering quantum systems, the previously discovered classical codes are not sufficient to perform quantum error correction for the following reasons:
+There exists the need for new error correcting codes when considering quantum systems as the previously discovered classical codes are not sufficient for the following reasons:
 
-1. **Quantum states experience errors beyond bit flips**:
+1. **Quantum states experience errors beyond bit flips**: 
+
+    Whilst bits can take only one of two     values, $\ket{0}$ or $\ket{1}$, qubits can be in any state of the form 
+
+    \begin{equation}
+    \ket{\psi} = \alpha \ket{0} + \beta \ket{1} : \alpha, \beta~\in~\mathbb{C}^1, ~ ~ \vert \alpha \vert^2 + \vert \beta \vert^2 = 1.
+    \end{equation}
+
+    Hence, qubits form a continuous set, rather then a discrete set like classical bits. This means errors beyond just bit-flips ($X$ errors) can occur. Specifically, an infinite number of potential errors could occur if $ \alpha $ and $ \beta $ are changed by any amount. Fortunately, however, errors on quantum states can be digitised, with only phase errors needing to be considered in addition to bit-flip errors. The phase error is modelled by the Pauli-$Z$ operator
+    \begin{equation}
+    Z \ket{0} = \ket{0}, ~ ~ Z \ket{1} = - \ket{1}, ~~ {\rm where} ~  Z = \ket{0} \bra{0} - \ket{1} \bra{1},
+    \end{equation}
+    which acts on the qubit state as 
+    \begin{equation}
+    \ket{\psi}  \xrightarrow{\rm Phase~Error} Z \ket{\psi} = \alpha \ket{0} - \beta \ket{1}.
+    \end{equation}
+
+    :::{dropdown} Proof 
+    
+    
+    Firstly, note that an error applied to a qubit is just some unitary operator, $U$. 
+    
+    Given that the set of operators $\{ \mathbb{I}, X, Y, Z \}$ form an operator basis for all $2 \times 2$ complex matrices, there exists complex numbers $\alpha, \beta, \gamma, \delta$ such that 
+    \begin{equation}
+    U = \alpha \mathbb{I} + \beta X + \gamma Y + \delta Z. 
+    \end{equation}
+    Furthermore, given that $Y=iXZ$, $U$ can be written as
+    \begin{equation}
+    U = \alpha \mathbb{I} + \beta X + \tilde{\gamma} XZ + \delta Z, 
+    \end{equation}
+    where $\tilde{\gamma} = i \gamma$ is just some other complex number. 
+
+    The error $U$ applied to $\ket{\psi}$ is then 
+    \begin{align*}
+    U \ket{\psi} &= \big( \alpha \mathbb{I} + \beta X + \tilde{\gamma} XZ + \delta Z \big) \ket{\psi}, \\
+    &= \alpha \mathbb{I} \ket{\psi} + \beta X \ket{\psi}+ \tilde{\gamma} XZ \ket{\psi} + \delta Z \ket{\psi}.
+    \end{align*}
+
+    Hence, all errors applied to qubits are some combination of $X$ and $Z$ errors. 
+    
+    Error correction then involves a projective measurement step, meaning that for any error $U$, once measured the error that will have occurred with be either an $X$ error, $Z$ error or both in succession.
+
+    Any quantum error correcting protocol involving qubits therefore needs only to be able to identify and correct $X$ and $Z$ errors. 
+
+    :::
 
 2. **The No Cloning Theorem prevents protection through repetition**: 
 
+    There exists no universal quantum cloner, meaning there exists no operation that can take as an input some arbitrary quantum state $\ket{\psi}$ and return as an output $\ket{\psi} \otimes \ket{\psi}$. Classical error correction makes use of the fact that information can be duplicated at will. The no-cloning theorem prevents this being possible in quantum error correction. 
+
 3. **Measurements can irreversible alter quantum states**:
+
+    As seen above in the repetition code, classical information can be measured and the value of the a bit found without the stored information being altered. This means that given a bit $\ket{0}$,a measurement can be made which tells some agent that the bit is $\ket{0}$ with the bit being changing from being a $\ket{0}$. This measurement can be made as many times as one likes without the information being altered. This is not the case with quantum information, where in general measurement will irreversible alter the state and hence the encoded information. 
