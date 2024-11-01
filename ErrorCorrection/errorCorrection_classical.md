@@ -12,7 +12,7 @@ authors:
     email: ben.stratton@bristol.ac.uk
 # license: CC-BY-4.0
 keywords: bits, bit-flips, repetition code 
-abstract: A brief overview of the terminology of error correction, including simple forms of classical error correction.  
+abstract: A brief overview of the terminology of error correction, including an example of the simplest forms of classical error correction - the repetition codes, and details on why different error correcting codes are needed in the quantum case. 
 exports:
 #   - format: docx
   - format: pdf

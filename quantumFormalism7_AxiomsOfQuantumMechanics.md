@@ -24,7 +24,7 @@ exports:
  
 ### In terms of State Vectors 
 
-The following axioms are for closed quantum systems, hence, all systems are in pure states and all dynamics are unitary. Measurement in only considered via [observables](#obersvables_definition_observable_page_target) and not extended to [generalised measurements](#Generalised_measurement_definition_target). 
+The following axioms are for closed quantum systems, hence, all systems are in pure states and all dynamics are unitary. Measurement is only considered via [observables](#obersvables_definition_observable_page_target) and not extended to [generalised measurements](#Generalised_measurement_definition_target). 
 
 1. **States** - The state of any physical systems is represented by normalised vector in a complex Hilbert space, $ \ket{\psi}~\in~\mathcal{H}$, where $\braket{\psi|\psi} = 1$.
 

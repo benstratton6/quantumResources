@@ -23,3 +23,4 @@ exports:
 The Quantum Repetition Code comes in two flavours, one protects against bit-flip errors and the other protects against phase-flip errors. The code encodes one logical qubit in three physical qubits and is able to correct one error, but detect up to two errors, of the respective error it is able to protect against. 
 
 ## The Bit-flip Repetition Code
+
