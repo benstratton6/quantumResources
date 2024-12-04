@@ -157,12 +157,10 @@ which is the dot product between the $i$th row of A and $j$th column of B. [Elem
 
 Note the columns of $A$ must equal the rows of $B$ for matrix multiplication to be a valid operation. The output matrix $C$ is then a $n \times l$ matrix, $C~\in~\mathbb{M}_{nl}$. See the below figure for details. 
 
-```{figure} images\LinearAlgebra_matrix_mat_conditions.png
-:alt: 
+```{figure} LinearAlgebra_matrix_mat_conditions.png
 :class: bg-primary
 :width: 400px
 :align: center
-:target: matrix_multplication_condition_target
 
 The conditions on a matrix $A$ and $B$ for them to be compatible for matrix multiplication. The size of the output matrix from the multiplication is shown arising from the size of the input matrices. 
 ```

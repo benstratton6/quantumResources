@@ -193,7 +193,7 @@ See the appendix of https://doi.org/10.48550/arXiv.2406.08360 for the Choi-state
 Let $ \rho \in \mathcal{H}^2$. The qubit depolarising channel acting on $ \rho $ is given by 
 
 \begin{equation}
-\mathcal{D}^{\textrm{pol}}_p(\rho) = p \rho + (1-p)\mathbb{I}/2.
+\mathcal{D}^{\textrm{pol}}_p(\rho) = p \rho + (1-p) \textrm{tr}\big[\rho\big] \mathbb{I}/2.
 \end{equation} 
 
 1. The *Kraus operators* are 
