@@ -79,6 +79,7 @@ let $\bm{x} \in \mathbb{F}^{n}, ~\bm{y} \in \mathbb{F}^{n}, ~\bm{v} \in \mathbb{
 - $\bm{x} \cdot (\bm{y} + \bm{v}) = \bm{x} \cdot \bm{y} + \bm{x} \cdot \bm{v}$
 - $(\bm{x} + \bm{y}) \cdot \bm{v} = \bm{x} \cdot \bm{v} + \bm{y} \cdot \bm{v}$
 - $(\lambda \bm{x}) \cdot \bm{y} = \lambda(\bm{x} \cdot \bm{y}) = \bm{x} \cdot (\lambda \bm{y})$
+- $(A\bm{x}) \cdot \bm{y} = \bm{x} \cdot (A^t\bm{y})$, where $(\cdot)^t$ is the transpose and $A$ is an $n \times n$ matrix. 
 :::
 :::{tab-item} Cross Product 
 :sync: tab4
