@@ -41,7 +41,8 @@ Other notable highlights alongside my academic pursuits have been working with t
 
 - [Informational Non-equilibrium Concentration](https://doi.org/10.48550/arXiv.2409.12759)
 - [Dynamical Resource Theory of Incompatibility Preservability](https://doi.org/10.48550/arXiv.2408.06315)
-- [Operational Interpretation of the Choi Rank Through k-State Exclusion](https://doi.org/10.1103/PhysRevA.110.L050601)
+- [Operational Interpretation of the Choi Rank Through k-State Exclusion](
+https://doi.org/10.48550/arXiv.2406.08360)
 
 **2023**
 
