@@ -46,7 +46,7 @@ Other notable highlights alongside my academic pursuits have been working with t
 
 **2023**
 
-- [Dynamical Resource Theory of Informational Nonequilibrium Preservability](https://doi.org/10.1103/PhysRevLett.132.110202)
+- [Dynamical Resource Theory of Informational Nonequilibrium Preservability](https://doi.org/n89h)
 
 
 ## Talks
