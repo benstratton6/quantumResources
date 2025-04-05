@@ -62,7 +62,7 @@ When an error occurs on the physical bits an error correcting code aims to:
 2. if so, identify where the error has occurred (to which bits), 
 3. correct the error. 
 
-Typically, steps (1) and (2) occur at the same time. A measurement in made on the physical bits with the ouput of the measurement (known as aa **syndrome**) detailing both that an error has occurred and where that error has occurred. In some codes, step (2) may not be necessary to fulfil step (3), with the error being correctable without its location being known (or, perhaps, without its exact location being known). 
+Typically, steps (1) and (2) occur at the same time. A measurement in made on the physical bits with the ouput of the measurement (known as aa **syndrome**) detailing both that an error has occurred and where that error has occurred. In some codes, step (2) may not be necessary to fulfil step (3), with the error being correctable without its location (on which bit is has occurred) being known (or, perhaps, without its exact location being known). 
 
 On the other hand, some codes are able fulfill (1) without being able to fulfill (2) or (3). Such codes are said to perform **error detection**. In these cases, it is known that an error has occurred, but it is not know how to correct it. 
 
@@ -74,14 +74,14 @@ The simplest classical error correcting code is the 3-bit repetition code. Here,
 \begin{equation}
 \ket{0}_{L} \rightarrow \ket{000}, ~~~ \ket{1}_L \rightarrow \ket{111}, 
 \end{equation}
-where the left side of the arrow is a bit of logical information, denoted by the subscript $L$, and the right hand side is the physical information. The bit-string of logical information $\ket{010}_L$ is therefore physically encoded as $\ket{000111000}$, where 9 physical bits are used to encode 3 logical bits. The bit-string $\ket{000}$ and $\ket{111}$ are called **logical codewords** of this error correcting code. 
+where the left side of the arrow is a bit of logical information, denoted by the subscript $L$, and the right hand side is the physical information. The bit-string of logical information $\ket{010}_L$ is therefore physically encoded as $\ket{000111000}$, where 9 physical bits have been used to encode 3 logical bits. The bit-string $\ket{000}$ and $\ket{111}$ are called **logical codewords** of this error correcting code. 
 
 Consider a logical bit, say $\ket{0}$, is sent from one party to another via a noisy channel that causes the first physical bit to be flipped,
 \begin{equation}
 \ket{0}_L = \ket{000} \xrightarrow{\rm Noisy~ Channel} (X \otimes \mathbb{I} \otimes \mathbb{I}) \ket{000} = \ket{100}.
 \end{equation}
 
-Upon receiving the three physical bits, a **majority vote** can then be used to identify if any errors have occurred. The three bits are read-out (measured) and the number of $\ket{0}$ and $\ket{1}$'s are counted. If there are more $\ket{0}$'s than $\ket{1}$'s then the logical information is decoded as $\ket{0}_L$ and vice versa. In the above example, there are two $\ket{0}$'s and one $\ket{1}$, so $\ket{0}_L$ is decoded. 
+Upon receiving the three physical bits, a **majority vote** can be used to identify if any errors have occurred. The three bits are read-out (measured) and the number of $\ket{0}$ and $\ket{1}$'s are counted. If there are more $\ket{0}$'s than $\ket{1}$'s then the logical information is decoded as $\ket{0}_L$ and vice versa. In the above example, there are two $\ket{0}$'s and one $\ket{1}$, so $\ket{0}_L$ is decoded. 
 
 The 3 bit repetition code fails if a bit-flip (X) error occurs on more then one physical bit. For example, consider the following error on two physical bits, 
 \begin{equation}
@@ -91,7 +91,7 @@ A majority vote will count one $\ket{0}$ and two $\ket{1}$'s, leading to $\ket{1
 \begin{equation}
 \ket{0}_L = \ket{000} \xrightarrow{\rm Noisy~ Channel} (X \otimes X \otimes X) \ket{000} = \ket{111},
 \end{equation}
-meaning the $\ket{0}_L = \ket{000}$ codeword is flipped to the $\ket{1}_L=\ket{111}$ codeword. A majority vote will therefore decode $\ket{1}_L$ without knowing an error as occurred. 
+meaning the $\ket{0}_L = \ket{000}$ codeword is flipped to the $\ket{1}_L=\ket{111}$ codeword. A majority vote will therefore decode $\ket{1}_L$, meaning a logical error will have occurred whilst believe no physical error has occurred. 
 
 The repetition code is able to detect and then correct errors if the noisy channel consists of only a single bit flip. It is able to only detect errors if the noisy channel consists of one or two bits flip. Hence, for singular errors, the  repetition code is an error correcting code, whilst for one or two errors it is an error detecting code.  
 

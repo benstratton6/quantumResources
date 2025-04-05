@@ -279,7 +279,7 @@ The following inequality:
 \end{equation}
 where $\frac{1}{p} + \frac{1}{q} = \frac{1}{r}$. 
 
-Note, Hölder's Inequality is more general than this, and applies to vector spaces other than Hilbert spaces and objects other than operators.  
+Note, Hölder's Inequality is more general than this, and applies to vector spaces other than Hilbert spaces and objects other than operators. See [here](https://mathoverflow.net/questions/158881/h%C3%B6lders-inequality-for-matrices) for some details
 
 :::
 :::{tab-item} Rastegin
@@ -312,4 +312,3 @@ where $\vert \cdot \vert$ is the absolute value and
 ::::
 
 
-Rastegin
