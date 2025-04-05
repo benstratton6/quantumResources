@@ -48,7 +48,7 @@ Z_1 \otimes Z_2 &= \big( \ket{0}\bra{0} - \ket{1}\bra{1} \big) \otimes \big( \ke
 &= \ket{00}\bra{00} - \ket{01}\bra{01} - \ket{10}\bra{10} + \ket{11}\bra{11}, \\
 &= \ket{\Phi_{00}^{+}}\bra{\Phi_{00}^{+}} + \ket{\Phi_{01}^{+}}\bra{\Phi_{01}^{+}} - \ket{\Phi_{10}^{+}}\bra{\Phi_{10}^{+}} - \ket{\Phi_{11}^{+}}\bra{\Phi_{11}^{+}},
 \end{align*}
-where in the final line $Z_1 \otimes Z_2$ has been written in its eigenbasis, namely the [Bell basis](#bell_states_teleportation_target).
+where in the final line $Z_1 \otimes Z_2$ has been written in its eigenbasis, namely the [Bell basis](#bell_states_teleportation_target) [💭](parity_check_operator_target_glossary). 
 
 Firstly, it can be seen that measuring $Z_1 \otimes Z_2$ on any state supported only within $\mathfrak{C}$ always gives a measurement outcome of $(+1)$ **and** returns the state unchanged, 
 \begin{equation}
@@ -80,4 +80,4 @@ The 2-qubit bit-flip repetition code is therefore only useful for detecting the 
 
 ## The 3-Qubit Bit-flip Repetition Code
 
-The code encodes one logical qubit in three physical qubits and is able to **correct** one bit-flip error, but detect up to two bit-flip errors.
+The 3-qubit bit-flip repetition code functions very similarly to the 2-qubit version. However, this encodes one logical qubit in three physical qubits and is therefore able to **correct** one bit-flip error and detect up to two bit-flip errors.
