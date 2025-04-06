@@ -62,7 +62,7 @@ When an error occurs on the physical bits an error correcting code aims to:
 2. if so, identify where the error has occurred (to which bits), 
 3. correct the error. 
 
-Typically, steps (1) and (2) occur at the same time. A measurement in made on the physical bits with the ouput of the measurement (known as aa **syndrome**) detailing both that an error has occurred and where that error has occurred. In some codes, step (2) may not be necessary to fulfil step (3), with the error being correctable without its location (on which bit is has occurred) being known (or, perhaps, without its exact location being known). 
+Typically, steps (1) and (2) occur at the same time. A measurement in made on the physical bits with the ouput of the measurement (known as a **syndrome**) detailing both that an error has occurred and where that error has occurred. In some codes, step (2) may not be necessary to fulfil step (3), with the error being correctable without its location (on which bit is has occurred) being known (or, perhaps, without its exact location being known). 
 
 On the other hand, some codes are able fulfill (1) without being able to fulfill (2) or (3). Such codes are said to perform **error detection**. In these cases, it is known that an error has occurred, but it is not know how to correct it. 
 
@@ -91,7 +91,7 @@ A majority vote will count one $\ket{0}$ and two $\ket{1}$'s, leading to $\ket{1
 \begin{equation}
 \ket{0}_L = \ket{000} \xrightarrow{\rm Noisy~ Channel} (X \otimes X \otimes X) \ket{000} = \ket{111},
 \end{equation}
-meaning the $\ket{0}_L = \ket{000}$ codeword is flipped to the $\ket{1}_L=\ket{111}$ codeword. A majority vote will therefore decode $\ket{1}_L$, meaning a logical error will have occurred whilst believe no physical error has occurred. 
+meaning the $\ket{0}_L = \ket{000}$ codeword is flipped to the $\ket{1}_L=\ket{111}$ codeword. A majority vote will therefore decode $\ket{1}_L$, meaning a logical error will have occurred whilst believing that no physical error has occurred. 
 
 The repetition code is able to detect and then correct errors if the noisy channel consists of only a single bit flip. It is able to only detect errors if the noisy channel consists of one or two bits flip. Hence, for singular errors, the  repetition code is an error correcting code, whilst for one or two errors it is an error detecting code.  
 
