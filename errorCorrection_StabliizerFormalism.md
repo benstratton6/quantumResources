@@ -50,7 +50,7 @@ The justification of these conditions are as follows:
     This avoids any logical information encoded in the code space being destroyed when a stablizer is measured on $\ket{\psi}_L$.
 
     :::{dropdown} Further Details
-    :open:
+
     A state, $\ket{\omega}$ is said to be stabilized by an operator $U$ if $U\ket{\omega} = \ket{\omega}$, meaning $\ket{\omega}$ is a $(+1)$ eigenstate of $U$. 
     
     From the above definition of $\mathcal{S}$, it can be seen that $\forall~P_i \in \mathcal{S}$ all logical states $\ket{\psi}_L$ are stabilized by $P_i$. Therefore, if one were to measure or apply $P_i$ on any logical state $\ket{\psi}_L$ they would return the state $\ket{\psi}_L$ unchanged. This avoids any logical information encoded in the code space being destroyed when a stablizer is measured on $\ket{\psi}_L$. (Does it also prevent loss of logical information in general? I am currently not sure). 
