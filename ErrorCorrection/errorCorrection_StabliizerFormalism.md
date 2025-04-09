@@ -87,6 +87,8 @@ The justification of these conditions are as follows:
     \end{align*}
     This is only true if $\ket{\psi}_L = 0$, meaning that non-[Abelian subgroups](#Abelian_group_target_glossary) of $\mathcal{P}_n$ can only stabilize a trivial subspace. 
 
+    (Note, the equation $\ket{\psi}=-\ket{\psi}$ is about the physical equivalence of vectors in a Hilbert space, with this equation only being satasfied for the zero vector. It is not about whether two states are physically distinguishable under global phases.)
+
     :::
 
 3. $- \mathbb{I} \notin \mathcal{S}$: 
