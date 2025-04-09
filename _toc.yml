@@ -65,10 +65,10 @@ parts:
       - file: ResourceTheoriesGlossaryofTerms.md
   - caption: Error Correction
     chapters: 
-      - file: .\ErrorCorrection\errorCorrection_classical.md
-      - file: .\ErrorCorrection\errorCorrection_QuantumRepetitionCode.md
-      - file: .\ErrorCorrection\errorCorrection_StabliizerFormalism.md
-      - file: .\ErrorCorrection\errorCorrection_glossary.md
+      - file: errorCorrection_classical.md
+      - file: errorCorrection_QuantumRepetitionCode.md
+      - file: errorCorrection_StabliizerFormalism.md
+      - file: errorCorrection_glossary.md
   - caption: Important Mathematical Notions
     chapters:
       - file: mathematicalNotes4_stocasticMatrices
