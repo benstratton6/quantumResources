@@ -149,7 +149,7 @@ X_1X_3 &\rightarrow (1,1), \\
 X_1X_2 &\rightarrow (0,1). 
 \end{align*}
 
-If a three qubit $X$-error occurs, the state remains in $\mathfrak{C}, giving 
+If a three qubit $X$-error occurs, the state remains in $\mathfrak{C}$, giving 
 \begin{align*}
 X_1X_2X_3 &\rightarrow (0,0),
 \end{align*}
