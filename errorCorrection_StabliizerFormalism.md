@@ -115,4 +115,60 @@ The justification of these conditions are as follows:
 
     :::
 
-     
+
+## Measuring Stabilizer 
+
+All elements of $\mathcal{P}_n$ are unitary, $PP^{\dagger}=\mathbb{I}~\forall P \in \mathcal{P}_n$. If $P \in \mathcal{P}_n$ is also Hermitian, $P^\dagger=P$, then any $P$ stabilizer can be measured on the logic state indirectly, with the measurement outcome stored in an ancilla [💭](anti_hermitain_pauli_stab_measures_target_glossary).
+
+```{figure} errorCorrectionStabMeasureCircuit.png
+:alt: 
+:class: bg-primary
+:width: 600px
+:align: center
+:target: stab_measure_circuit_target
+
+A schematic of the circuit used to measure the stabilizer $P$ on the logical state $\ket{\psi}_L$. 
+```
+
+Assume that $P \in \mathcal{P}_n$ is a stabilizer of the logical state $\ket{\psi}_L$ such that $P \ket{\psi}_L = \ket{\psi}_L$. Let $E$ be some correctable error that has occurred on the logical state, such that $P ( E \ket{\psi}_L) = E \ket{\psi}_L$ or $P ( E \ket{\psi}_L)- E \ket{\psi}_L$, depending on whether $E \ket{\psi}_L$ is in the positive or negative eigenspace of $P$. 
+
+The input state into the circuit is $E\ket{\psi}_L \otimes \ket{0}_A$, where $A$ labels the ancillary space and the $L$ subscript now doubles as a label for the space of the logical state.  
+
+The output state is then 
+\begin{equation}
+\frac{1}{2} \big( \mathbb{I}_L \otimes \mathbb{I}_A + P_L \otimes \mathbb{I}_A) E \ket{\psi}_L \ket{0}_A + \frac{1}{2} \big( \mathbb{I}_L \otimes \mathbb{I}_A - P_L \otimes \mathbb{I}_A) E \ket{\psi}_L \ket{1}_A.
+\end{equation}
+
+:::{dropdown} Proof
+
+The input state to the circuit is 
+\begin{equation}
+E\ket{\psi}_L \otimes \ket{0}_A.
+\end{equation}
+The controlled stabilizer gate can be written as 
+\begin{equation}
+P_LC_A = \mathbb{I}_L \otimes \ket{0}\bra{0}_A + P_L \otimes \ket{1}\bra{1}_A.
+\end{equation}
+The output state of the circuit is then 
+\begin{align*}
+
+&(\mathbb{I} \otimes H) P_L C_A (\mathbb{I} \otimes H) \big(E\ket{\psi}_L \otimes \ket{0}_A \big), \\
+=& (\mathbb{I} \otimes H)\big(\mathbb{I}_L \otimes \ket{0}\bra{0}_A + P_L \otimes \ket{1}\bra{1}_A \big)\big(E \ket{\psi}_L \otimes \ket{+} \big), \\
+=& \frac{1}{\sqrt{2}}(\mathbb{I} \otimes H) \big( E\ket{\psi}_L \otimes \ket{0} + PE\ket{\psi}_L \otimes \ket{1}   \big), \\
+=& \frac{1}{\sqrt{2}}\big( E\ket{\psi}_L \otimes \ket{+} + PE\ket{\psi}_L \otimes \ket{-}   \big), \\
+\end{align*}
+expanding $\ket{+}$ and $\ket{-}$ in the computational basis and factorising completes the proof. 
+:::
+
+Therefore, if $P ( E \ket{\psi}_L) = E \ket{\psi}_L$, the second term will go to zero and the output state becomes 
+\begin{equation}
+E \ket{\psi}_L \ket{0}_A,
+\end{equation}
+such that if one measures $Z$ on the ancilla they will get the outcome $+1$ (syndrome bit $0$) with certainty. If $P ( E \ket{\psi}_L) = - E \ket{\psi}_L$, the first term will go to zero and the output state becomes 
+\begin{equation}
+E \ket{\psi}_L \ket{1}_A,
+\end{equation}
+such that a $Z$ measurement performed on the ancilla now gives the outcome $-1$ (syndrome bit $1$) with certainty. By performing the above circuit and measuring the ancilla one can determine if the logical state is in the $+1$ or $-1$ eigenspace of $P$. 
+
+Note, this method of performing measurements only really works for measuring observables in $\mathcal{P}_n$ on stabilizer states. 
+
