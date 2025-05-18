@@ -149,7 +149,7 @@ Strictly speaking, the above definition is for invariance with respect to the tr
 
 ### Symmetric and Anti-symmetric states 
 
-Another notion of the symmetry of a quantum state arises when discussing fermions and bosons. Let  
+Another notion of the symmetry of a quantum state arises when considering multipartite states. Let  
 \begin{equation}
 \ket{\psi} \in \mathcal{H}_A \otimes \mathcal{H}_B
 \end{equation}
