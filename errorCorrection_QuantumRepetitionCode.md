@@ -23,7 +23,7 @@ exports:
 The Quantum Repetition Code comes in two flavours, one protects against bit-flip errors and the other protects against phase-flip errors. As with the classical repetition code, the code works increasing the size of the Hilbert space, allowing logical qubits to be encoded in multiple physical qubits.  
 
 
-
+(target_error_correction_2_bit_repetition_code)=
 ## The 2-Qubit Bit-flip Repetition Code
 
 This code encodes one logical qubit in two physical qubits and is able to detect a single bit-flip $\big(X \big)$ error.

@@ -118,7 +118,7 @@ The justification of these conditions are as follows:
 
 ## Measuring Stabilizer 
 
-All elements of $\mathcal{P}_n$ are unitary, $PP^{\dagger}=\mathbb{I}~\forall P \in \mathcal{P}_n$. If $P \in \mathcal{P}_n$ is also Hermitian, $P^\dagger=P$, then any $P$ stabilizer can be measured on the logic state indirectly, with the measurement outcome stored in an ancilla [💭](anti_hermitain_pauli_stab_measures_target_glossary).
+All elements of $\mathcal{P}_n$ are [unitary](#target_unitary_adjoint_page_unitary_definition). If $P \in \mathcal{P}_n$ is also [Hermitian](#hermitian_adjoint_page_target), then any stabilizer $P$ can be measured on the logic state indirectly, with the measurement outcome stored in an ancilla [💭](#anti_hermitain_pauli_stab_measures_target_glossary).
 
 ```{figure} errorCorrectionStabMeasureCircuit.png
 :alt: 
@@ -130,9 +130,9 @@ All elements of $\mathcal{P}_n$ are unitary, $PP^{\dagger}=\mathbb{I}~\forall P 
 A schematic of the circuit used to measure the stabilizer $P$ on the logical state $\ket{\psi}_L$. 
 ```
 
-Assume that $P \in \mathcal{P}_n$ is a stabilizer of the logical state $\ket{\psi}_L$ such that $P \ket{\psi}_L = \ket{\psi}_L$. Let $E$ be some correctable error that has occurred on the logical state, such that $P ( E \ket{\psi}_L) = E \ket{\psi}_L$ or $P ( E \ket{\psi}_L)- E \ket{\psi}_L$, depending on whether $E \ket{\psi}_L$ is in the positive or negative eigenspace of $P$. 
+Assume that $P \in \mathcal{P}_n$ is a stabilizer of the logical state $\ket{\psi}_L$ such that $P \ket{\psi}_L = \ket{\psi}_L$. Let $E$ be some correctable error that has occurred on the logical state, such that $P ( E \ket{\psi}_L) = E \ket{\psi}_L$ or $P ( E \ket{\psi}_L) = - E \ket{\psi}_L$, depending on whether $E \ket{\psi}_L$ is in the positive or negative eigenspace of $P$. 
 
-The input state into the circuit is $E\ket{\psi}_L \otimes \ket{0}_A$, where $A$ labels the ancillary space and the $L$ subscript now doubles as a label for the space of the logical state.  
+The input state into the circuit is $E\ket{\psi}_L \ket{0}_A$, where $A$ labels the ancillary space and the $L$ subscript now doubles as a label for the space of the logical state.  
 
 The output state is then 
 \begin{equation}
@@ -152,23 +152,77 @@ P_LC_A = \mathbb{I}_L \otimes \ket{0}\bra{0}_A + P_L \otimes \ket{1}\bra{1}_A.
 The output state of the circuit is then 
 \begin{align*}
 
-&(\mathbb{I} \otimes H) P_L C_A (\mathbb{I} \otimes H) \big(E\ket{\psi}_L \otimes \ket{0}_A \big), \\
-=& (\mathbb{I} \otimes H)\big(\mathbb{I}_L \otimes \ket{0}\bra{0}_A + P_L \otimes \ket{1}\bra{1}_A \big)\big(E \ket{\psi}_L \otimes \ket{+} \big), \\
-=& \frac{1}{\sqrt{2}}(\mathbb{I} \otimes H) \big( E\ket{\psi}_L \otimes \ket{0} + PE\ket{\psi}_L \otimes \ket{1}   \big), \\
-=& \frac{1}{\sqrt{2}}\big( E\ket{\psi}_L \otimes \ket{+} + PE\ket{\psi}_L \otimes \ket{-}   \big), \\
+&(\mathbb{I} \otimes H) P_L C_A (\mathbb{I} \otimes H) \big(E\ket{\psi}_L \otimes \ket{0}_A \big) \\
+=& (\mathbb{I} \otimes H)\big(\mathbb{I}_L \otimes \ket{0}\bra{0}_A + P_L \otimes \ket{1}\bra{1}_A \big)\big(E \ket{\psi}_L \otimes \ket{+} \big) \\
+=& \frac{1}{\sqrt{2}}(\mathbb{I} \otimes H) \big( E\ket{\psi}_L \otimes \ket{0} + PE\ket{\psi}_L \otimes \ket{1}   \big) \\
+=& \frac{1}{\sqrt{2}}\big( E\ket{\psi}_L \otimes \ket{+} + PE\ket{\psi}_L \otimes \ket{-}   \big).\\
 \end{align*}
-expanding $\ket{+}$ and $\ket{-}$ in the computational basis and factorising completes the proof. 
+Expanding $\ket{+}$ and $\ket{-}$ in the computational basis and factorising completes the proof. 
 :::
 
 Therefore, if $P ( E \ket{\psi}_L) = E \ket{\psi}_L$, the second term will go to zero and the output state becomes 
 \begin{equation}
 E \ket{\psi}_L \ket{0}_A,
 \end{equation}
-such that if one measures $Z$ on the ancilla they will get the outcome $+1$ (syndrome bit $0$) with certainty. If $P ( E \ket{\psi}_L) = - E \ket{\psi}_L$, the first term will go to zero and the output state becomes 
+such that if one measures $Z$ on the ancilla they will get the outcome $+1$ (syndrome bit $0$) with certainty. 
+
+If $P ( E \ket{\psi}_L) = - E \ket{\psi}_L$, the first term will go to zero and the output state becomes 
 \begin{equation}
 E \ket{\psi}_L \ket{1}_A,
 \end{equation}
-such that a $Z$ measurement performed on the ancilla now gives the outcome $-1$ (syndrome bit $1$) with certainty. By performing the above circuit and measuring the ancilla one can determine if the logical state is in the $+1$ or $-1$ eigenspace of $P$. 
+such that a $Z$ measurement performed on the ancilla now gives the outcome $-1$ (syndrome bit $1$) with certainty. 
 
-Note, this method of performing measurements only really works for measuring observables in $\mathcal{P}_n$ on stabilizer states. 
+By performing the above circuit and measuring the ancilla one can therefore determine if the logical state is in the $+1$ or $-1$ eigenspace of the stabilizer $P$. 
 
+Note, this method of performing measurements only really works for measuring observables in $\mathcal{P}_n$ on stabilizer states.
+
+:::{dropdown} Parity Measurements Circuits
+
+When discussing the [2-bit repetition code](#target_error_correction_2_bit_repetition_code) it was noted that the measurement of the stabilizer was akin to performing a parity check on the qubits. Specifically, a logical qubit was encoded into space ${\rm Span}\{ \ket{00}, \ket{11}\}$ such that 
+\begin{equation}
+\ket{\psi}_L = \alpha \ket{00} + \beta \ket{11}, ~ ~ \vert \alpha \vert^2 + \vert \beta \vert^2=1.
+\end{equation}
+It was then seen that it was possible to perform error detection on the set of errors $\{\mathbb{I}, X_1, X_2 \}$ by measuring the stabilizer $Z_1 \otimes Z_2$. If $\mathbb{I}$ occurs, the state stays in the code space and measuring the stabilizer gives the output $+1$ (syndrome bit $0$). If either an $X_1$ or $X_2$ occurs, the state is mapped into the space ${\rm Span}\{ \ket{01}, \ket{10} \}$, and a measurement of the stabilizer gives the output $-1$ (syndrome bit $1$).
+
+A simpler circuit can be used for measuring stabilizers that perform a parity check. The circuit for performing the parity check in the 2-bit repetition code is shown in the below figure. 
+
+```{figure} errorCorrectionStabMeasureCircuitParity.png
+:alt: 
+:class: bg-primary
+:width: 600px
+:align: center
+:target: stab_measure_circuit_target
+
+A circuit that checks the parity of two qubits and stores the result in an ancilla. $L_1$ and $L_2$ are used to label the two physical qubits used to create the single logical qubit. 
+```
+
+Firstly, the parity of two bits, $i_1, i_2 \in \{0,1\}$, is given by $i_1 \oplus i_2$. This will be zero if both bits are zero or both bits are one. If the bits differ, it will be one. 
+
+Now, note that the action of a CNOT gate on some arbitrary computational basis state can be written as 
+\begin{equation}
+C_1X_2 \ket{i_1i_2} = \ket{i_1(i_2 \oplus i_1)}, ~ ~ i_1, i_2~\in~\{0,1\}.
+\end{equation}
+This works because a CNOT gate applies an $X$ gate to the second qubit if the first qubit is $i_1 = 1$. This $X$ gate will flip the second qubit, which can be done by adding $1$ to it. Hence, if $i_1 = 0$ nothing is added to the second qubit and it remains $i_2$. If $i_1=1$ then $1$ is added to $i_2$, flipping it. 
+
+From here, consider that if it is not known if an error has occurred on an arbitrary qubit encoded into the code space, ${\rm Span}\{\ket{00}, \ket{11}\}$, the state can be written as
+\begin{equation}
+\alpha \ket{i_1 i_2} + \beta \ket{(i_1 \oplus 1)(i_2 \oplus 1)}.
+\end{equation}
+The input into the circuit is then 
+\begin{align*}
+\big( \alpha \ket{i_1 i_2} + \beta \ket{(i_1 \oplus 1)(i_2 \oplus 1)} \big) \otimes \ket{0}_A.
+\end{align*}
+The action of the first CNOT gate is then 
+\begin{align*}
+&C_2X_A \big( \alpha \ket{i_1 i_2} \otimes \ket{0}_A + \beta \ket{(i_1 \oplus 1)(i_2 \oplus 1)} \otimes \ket{0}_A \big) \\
+=&\alpha \ket{i_1 i_2} \otimes \ket{0 \oplus i_2}_A + \beta \ket{(i_1 \oplus 1)(i_2 \oplus 1)} \otimes \ket{(i_2 \oplus 1)}_A \\
+=& \alpha \ket{i_1 i_2} \otimes \ket{i_2} + \beta \ket{(i_1 \oplus 1)(i_2 \oplus 1)} \otimes \ket{(i_2 \oplus 1)}_A,
+\end{align*}
+as $0 \oplus i_2 = i_2$. The action of the second CNOT gate is then 
+\begin{align*}
+&C_1X_A \big( \alpha \ket{i_1 i_2} \otimes \ket{i_2} + \beta \ket{(i_1 \oplus 1)(i_2 \oplus 1)} \otimes \ket{(i_2 \oplus 1)}_A \big) \\
+=&\alpha \ket{i_1 i_2} \otimes \ket{i_2 \oplus i_1} + \beta \ket{(i_1 \oplus 1)(i_2 \oplus 1)} \otimes \ket{(i_2 \oplus 1) \oplus (i_1 \oplus 1)}_A \\
+=& \alpha \ket{i_1 i_2} \otimes \ket{i_2 \oplus i_1} + \beta \ket{(i_1 \oplus 1)(i_2 \oplus 1)} \otimes \ket{i_2 \oplus i_1}_A,
+\end{align*}
+as $1 \oplus 1 = 0$. Hence, if $Z$ is measured on the computational basis then the parity is output with certainty. 
+:::

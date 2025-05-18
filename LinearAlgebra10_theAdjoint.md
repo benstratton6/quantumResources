@@ -57,6 +57,7 @@ Let $V, (\cdot, \cdot)$ be an inner product space defined over $\mathbb{C}$, let
 (target_unitary_adjoint_page)=
 Let $A~\in~\mathbb{M}_{nm}$. 
 
+(target_unitary_adjoint_page_unitary_definition)=
 $A$ is unitary if $A^{\dagger}A=AA^{\dagger}=\mathbb{I}$,
 
 where $\mathbb{I}$ is the identity. 
