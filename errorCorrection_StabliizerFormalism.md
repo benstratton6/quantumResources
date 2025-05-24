@@ -35,6 +35,8 @@ The $n$-qubit Pauli-group , $\mathcal{P}_n$, is then the $n$-fold tensor product
 P_1P_2 = (\pm)P_2P_1 ~~ \forall ~ ~ P_1, P_2~\in~\mathcal{P}_n,
 \end{equation} 
 
+All elements of the Pauli-group have eigenvalues $\{+1, -1\}$ or $\{+i, -i\}$. Here, we mostly consider just the elements with eigenvalues $\{+1, -1\}$ (the Hermitian elements of the Pauli-group). 
+
 ## Stabilizer Codes
 
 The stabilizers of an error correcting code are defined as 
@@ -115,8 +117,60 @@ The justification of these conditions are as follows:
 
     :::
 
+### Operation 
 
-## Measuring Stabilizer 
+A stablizer code works by first encoding a logical state into a subspace. Each stablizer in the set $\mathcal{S}$ is then measured. Each measurement gives an output of $+1$ or $-1$, from which one can establish if an error from a given set has occurred and offer a method to correct it. We will work through the logic of these codes step by step. 
+
+#### Preliminaries 
+
+An error correcting code is defined by first establishing a set of code words. These are typically a set of orthogonal pure states $ \{ \ket{i} \}_{i=0}^{N}$ such that $\braket{i | j}=\delta_{i,j}$. The code space, $\mathfrak{C}_L$, is then the subspace of the full Hilbert space, $\mathcal{H}$, spanned by the set of code words,
+\begin{equation}
+\mathfrak{C}_L = { \rm Span }\big\{ \{\ket{i}\}_{i=0}^N \big\} \subsetneq \mathcal{H}.
+\end{equation}
+The logical state is then some state encoded within this code space, $\ket{\psi}_L \in \mathfrak{C}_L$. We define $\Pi_L$ to the projector onto the code space. 
+
+If some unitary error, $U$, acts on the logical state, the state will be mapped to the space spanned by $U$ acting on the basis vectors,
+\begin{equation}
+U \ket{\psi}_L \in {\rm Span} \big\{ \{ U \ket{i} \}_{i=0}^{N} \big\} = \mathfrak{C}_U \subseteq \mathcal{H},
+\end{equation}
+where we define this subspace $\mathfrak{C}_U$ and the projector onto the space as $\Pi_{U}$. The goal of an error correcting code is then to (a) determine if $\mathbb{I}$ or $\mathcal{U}$ has been applied to the state without (b) disturbing the encoded logical information. 
+
+This can be thought of in terms of the task of quantum channel discrimnation, with the addational of constraint (b)... 
+
+It is a well known result in quantum information theory that for two quantum states to be deterministically distinguishable they must be orthogonal. Here, we are not concerned with specific states, but rather arbitary states encoded into subspaces. Hence, it is only possible to deterministically determine if $\mathbb{I}$ or $U$ has been applied to the logical state if 
+\begin{equation}
+\Pi_{L} \Pi_{U} = 0,
+\end{equation}
+meaning that for any arbitrary state $\ket{\psi}_L \in \mathfrak{C}_L$, $\bra{\psi}_L U \ket{\psi}_L=0$. If this first condition is met it is always the case that one can find a projector $\Pi_R$, such that 
+\begin{equation}
+\Pi_L + \Pi_U + \Pi_R = \mathbb{I}, 
+\end{equation}
+such that $\Pi_R$ the projector onto the reminder of the Hilbert space. One can therefore defined an observable, 
+\begin{equation}
+O = \lambda_L \Pi_L + \lambda_U \Pi_U + \lambda_R \Pi_R,
+\end{equation}
+the fullfils both criteria. If one gets the outcome $\lambda_L$ they know for certain they have the state $\ket{\psi}_L$ and hence that the $\mathbb{I}$ has been applied. Moreover, given the operator projects into the whole codespace, the state remains unchanged post measurement. The same is then true for the outcome $\lambda_U$ and the state $U \ket{\psi}_L$. 
+
+
+Given the set of stabilizers is defined for an arbitrary state within the code space, the set of stablizers should be thought of as stabilizing the code space rather than a given logical state. In reality, the code space is defined in the opposite direction: each stabliser, $P_i$, is an element of the Pauli-group and can hence be written as
+\begin{equation}
+P_i = \Pi^i_{+1} - \Pi^i_{-1} 
+\end{equation}
+where $\Pi^i_{+1}$ is the projector onto the $+1$ eigenspace $P_i$, and $\Pi^i_{-1}$ the projector onto the $-1$ eigenspace. One can then defined the code space, via the projector on the space $\Pi_{\mathfrak{C}_L}$, as 
+\begin{equation}
+\Pi_{\mathfrak{C}_L} = \cap_{i=0}^{\vert \mathcal{S} \vert} \Pi^i_{+1}.
+\end{equation}
+
+
+
+
+
+Consider now some set of unitary errors $\mathfrak{E} = \{ U_k : U_{k}U_{k}^\dagger = \mathbb{I}\}$. If an err
+
+
+
+
+### Measuring Stabilizer 
 
 All elements of $\mathcal{P}_n$ are [unitary](#target_unitary_adjoint_page_unitary_definition). If $P \in \mathcal{P}_n$ is also [Hermitian](#hermitian_adjoint_page_target), then any stabilizer $P$ can be measured on the logic state indirectly, with the measurement outcome stored in an ancilla [💭](#anti_hermitain_pauli_stab_measures_target_glossary).
 
