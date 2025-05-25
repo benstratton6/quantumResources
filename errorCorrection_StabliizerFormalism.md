@@ -39,6 +39,8 @@ All elements of the Pauli-group have eigenvalues $\{+1, -1\}$ or $\{+i, -i\}$. H
 
 ## Stabilizer Codes
 
+### Definition
+
 The stabilizers of an error correcting code are defined as 
 \begin{equation}
 \mathcal{S} = \big\{ P_i \in \mathcal{P}_n: P_i \ket{\psi}_L = \ket{\psi}_L~\forall~\ket{\psi}_L \wedge [P_i, P_j] = 0 ~ \forall ~ (i,j) \big\},
@@ -119,7 +121,9 @@ The justification of these conditions are as follows:
 
 ### Operation 
 
-A stablizer code works by first encoding a logical state into a subspace. Each stablizer in the set $\mathcal{S}$ is then measured. Each measurement gives an output of $+1$ or $-1$, from which one can establish if an error from a given set has occurred and offer a method to correct it. We will work through the logic of these codes step by step. 
+A stablizer code works by first encoding a logical state into a subspace. Each stablizer in the set $\mathcal{S}$ is then measured, with each measurement giving an output of $+1$ or $-1$. From these measurement outcomes one can establish if an error from a given set has occurred and offer a method to correct it. 
+
+We will work through the logic of these codes step by step. 
 
 #### Preliminaries 
 
@@ -127,30 +131,66 @@ An error correcting code is defined by first establishing a set of code words. T
 \begin{equation}
 \mathfrak{C}_L = { \rm Span }\big\{ \{\ket{i}\}_{i=0}^N \big\} \subsetneq \mathcal{H}.
 \end{equation}
-The logical state is then some state encoded within this code space, $\ket{\psi}_L \in \mathfrak{C}_L$. We define $\Pi_L$ to the projector onto the code space. 
+The logical state is then some state encoded within this code space, $\ket{\psi}_L \in \mathfrak{C}_L$. We define $\Pi_L$ to be the projector onto the code space. 
 
-If some unitary error, $U$, acts on the logical state, the state will be mapped to the space spanned by $U$ acting on the basis vectors,
+If some unitary error, $U$, acts on the logical state, the state will be mapped to the space spanned by $U$ acting on the code words,
 \begin{equation}
 U \ket{\psi}_L \in {\rm Span} \big\{ \{ U \ket{i} \}_{i=0}^{N} \big\} = \mathfrak{C}_U \subseteq \mathcal{H},
 \end{equation}
-where we define this subspace $\mathfrak{C}_U$ and the projector onto the space as $\Pi_{U}$. The goal of an error correcting code is then to (a) determine if $\mathbb{I}$ or $\mathcal{U}$ has been applied to the state without (b) disturbing the encoded logical information. 
+where we define this subspace $\mathfrak{C}_U$ and the projector onto the space as $\Pi_{U}$. The goal of an error correcting code is then to (a) determine if which of $\mathbb{I}$ or $U$ has been applied to the logical state without (b) disturbing the logical state and hence the encoded information. 
 
-This can be thought of in terms of the task of quantum channel discrimnation, with the addational of constraint (b)... 
+Criteria (a) can be considered as an example of quantum channel discrimination, where the logical state is the reference state, with the added constraint of criteria (b). 
 
-It is a well known result in quantum information theory that for two quantum states to be deterministically distinguishable they must be orthogonal. Here, we are not concerned with specific states, but rather arbitary states encoded into subspaces. Hence, it is only possible to deterministically determine if $\mathbb{I}$ or $U$ has been applied to the logical state if 
+:::{dropdown} Error Correction as Quantum Channel Discrimination
+
+In the task of quantum channel discrimination one considers two parties, Alice and a referee. The referee has some reference state, $\rho_R$, and a predetermined set of quantum channels $\{ \mathcal{E}_i \}_{i=0}^{M}$. Both the reference state and the set of quantum channels are known to Alice.  
+
+The referee chooses an index $j \in [0,M]$ and then applies the channel $\mathcal{E}_j \in \{ \mathcal{E}_i \}_{i=0}^{M}$ to the reference state. The referee then sends the state, $\mathcal{E}_j(\rho_R)$, to Alice. Alice makes a measurement on the state with the intention of identify the channel the referee applied to the reference state. The output of the measurement will therefore be some index $k \in [0, M]$, such that if $k=j$ Alice has succeed in the task and if $k \neq j$ she has failed.
+
+```{figure} error_correction_EC_as_channel_discrimination.png
+:alt: 
+:class: bg-primary
+:width: 600px
+:align: center
+:target: quantum_channel_discrimination
+
+A schematic of a quantum channel discrimination task. R and A are the referee and Alice respectively. The referee applies a channel from a predetermined set to the reference state and then sends it to Alice. Alice performs a measurement on the state and aims to identify which channel the referee applied. 
+
+```
+
+With some added constraints, error correction can be reframed as a quantum channel discrimination task. The reference state is no-longer a predetermined state but rather an arbitrary state within some predetermined subspace. The referee is then the noise, with it being assumed that the noise is restricted to some likely set of possible channels. Finally, Alice is the decoder of the error correction protocol aiming to identify with error has occurred.  
+
+The major addition to quantum error correction is the need for the logical information encoded into the subspace to not be disturbed by the measurement made by Alice (the decoder). Practically, this means a restriction on the measurements Alice is allowed to perform.   
+
+:::
+
+It is a well known result in quantum information theory that for two quantum states to be deterministically distinguishable they must be orthogonal. Here, we are not concerned with specific states, but rather arbitary states encoded into subspaces. However, the result instead just applies the the subspaces. Hence, it is only possible to deterministically determine if $\mathbb{I}$ or $U$ has been applied to the logical state if 
 \begin{equation}
 \Pi_{L} \Pi_{U} = 0,
 \end{equation}
-meaning that for any arbitrary state $\ket{\psi}_L \in \mathfrak{C}_L$, $\bra{\psi}_L U \ket{\psi}_L=0$. If this first condition is met it is always the case that one can find a projector $\Pi_R$, such that 
+meaning that for any arbitrary state $\ket{\psi}_L \in \mathfrak{C}_L$, $\bra{\psi}_L U \ket{\psi}_L=0$. 
+
+If this first condition is met it is always the case that one can find a projector $\Pi_R$, such that 
 \begin{equation}
 \Pi_L + \Pi_U + \Pi_R = \mathbb{I}, 
 \end{equation}
-such that $\Pi_R$ the projector onto the reminder of the Hilbert space. One can therefore defined an observable, 
+where $\Pi_R$ is the projector onto the reminder of the Hilbert space not covered by $\Pi_L$ and $\Pi_U$. This will defined a subspace orthogonal to both $\mathfrak{C}_L$ and $\mathfrak{C}_U$. From here, one can therefore defined an observable
 \begin{equation}
 O = \lambda_L \Pi_L + \lambda_U \Pi_U + \lambda_R \Pi_R,
 \end{equation}
-the fullfils both criteria. If one gets the outcome $\lambda_L$ they know for certain they have the state $\ket{\psi}_L$ and hence that the $\mathbb{I}$ has been applied. Moreover, given the operator projects into the whole codespace, the state remains unchanged post measurement. The same is then true for the outcome $\lambda_U$ and the state $U \ket{\psi}_L$. 
+the fulfils both criteria (a) and (b). 
 
+If one has the state $\ket{\psi}_L$, meaning $\mathbb{I}$ has been applied, upon measuring $O$ they will get the outcome $\lambda_L$ with certainty. Hence, if they get the outcome $\lambda_L$ they know the $\mathbb{I}$ has been applied with certainty, satisfying criteria (a). Moreover, given the operator projects into the whole codespace,
+\begin{equation}
+\Pi_L \ket{\psi}_L = \ket{\psi_L}~\forall~\ket{\psi}_L \in \mathfrak{C}_L,
+\end{equation}
+the state remains unchanged by the measurement, satisfying criteria (b). If one instead has the state $U\ket{\psi}_L$, meaning $U$ has been applied, upon measuring $O$ they will get the outcome $\lambda_U$ with certainty and hence they can be sure $U$ was applied if they get this outcome. The post measurement state will also be $U \ket{\psi}_L$, meaning an application of $U^\dagger$ will correct the error.
+
+#### Correctable Errors 
+
+
+
+#### The Role of the Stabilizers
 
 Given the set of stabilizers is defined for an arbitrary state within the code space, the set of stablizers should be thought of as stabilizing the code space rather than a given logical state. In reality, the code space is defined in the opposite direction: each stabliser, $P_i$, is an element of the Pauli-group and can hence be written as
 \begin{equation}
@@ -160,14 +200,6 @@ where $\Pi^i_{+1}$ is the projector onto the $+1$ eigenspace $P_i$, and $\Pi^i_{
 \begin{equation}
 \Pi_{\mathfrak{C}_L} = \cap_{i=0}^{\vert \mathcal{S} \vert} \Pi^i_{+1}.
 \end{equation}
-
-
-
-
-
-Consider now some set of unitary errors $\mathfrak{E} = \{ U_k : U_{k}U_{k}^\dagger = \mathbb{I}\}$. If an err
-
-
 
 
 ### Measuring Stabilizer 
