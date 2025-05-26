@@ -170,7 +170,7 @@ where $P_i$ is the projection onto the eigenspace of $A$ with eigenvalue $\lambd
 
 **Probabilities of Measurement Outcomes:**
 
-The probability of measuring the observable $A$ on $\ket{\psi}$ [💭](#Probability_Notation_equation) and getting the outcome $\lambda_i$ is 
+The probability of measuring the observable $A$ on $\ket{\psi}$ and getting the outcome $\lambda_i$ is 
 \begin{equation}
 P(\lambda_i \vert A) = \bra{\psi} P_i \ket{\psi}.
 \end{equation}
