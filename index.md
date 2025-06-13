@@ -37,16 +37,20 @@ Other notable highlights alongside my academic pursuits have been working with t
 
 ## Publications
 
+**2025**
+
+- [Cooling a Qubit with $n$ Others](https://doi.org/10.48550/arXiv.2506.10059)
+
 **2024**
 
 
-- [Informational Non-equilibrium Concentration](https://doi.org/10.1103/PhysRevA.111.052423)
-- [Dynamical Resource Theory of Incompatibility Preservability](https://doi.org/10.1103/PhysRevA.111.022422)
+- [Informational Non-equilibrium Concentration](https://doi.org/10.48550/arXiv.2409.12759)
+- [Dynamical Resource Theory of Incompatibility Preservability](https://doi.org/10.48550/arXiv.2408.06315)
 - [Operational Interpretation of the Choi Rank Through k-State Exclusion](https://doi.org/10.48550/arXiv.2406.08360)
 
 **2023**
 
-- [Dynamical Resource Theory of Informational Nonequilibrium Preservability](https://doi.org/n89h)
+- [Dynamical Resource Theory of Informational Nonequilibrium Preservability](https://doi.org/10.48550/arXiv.2306.16848)
 
 
 ## Talks
