@@ -38,9 +38,9 @@ U_c (\ket{\psi} \otimes \ket{0}) = \ket{\psi} \otimes \ket{\psi},
 \end{equation}
 where $\ket{\psi}$ is some arbitrary quantum state. 
 
-However, it can be shown that no such unitary exists [](https://link.aps.org/doi/10.1103/RevModPhys.77.1225). Below is two proofs of this fact. 
+However, it can be shown that no such unitary exists [](https://link.aps.org/doi/10.1103/RevModPhys.77.1225). Below is three proofs of this fact. 
 
-:::{dropdown} Proof 1
+:::{dropdown} Proof 1: Linearity
 
 
 The first proof is by linearity. Consider the state 
@@ -61,7 +61,7 @@ U_c (\ket{\Theta} \otimes \ket{0}) &= \frac{1}{\sqrt{2}} \big( U_c(\ket{\psi} \o
 The output state is not the desired product state and is instead some entangled state. 
 :::
 
-:::{dropdown} Proof 2
+:::{dropdown} Proof 2: Distinguishability
 
 
 The second proof concerns distinguishability. Let $\ket{\psi}$ and $\ket{\phi}$ be two arbitary quantum states such that 
@@ -88,6 +88,42 @@ meaning one has
 \braket{\psi | \phi}^2 = \braket{\psi | \phi}.
 \end{equation}
 This only has a solution if $\braket{\psi | \phi} = 1$, such that $\ket{\psi}=\ket{\phi}$, or $\braket{\psi | \phi}=0$, such that $\ket{\psi}$ is orthogonal to $\ket{\phi}$. This tells us that a universal cloner does exists for states that are othronormal, such as in the example of classical bits above. 
+:::
+
+:::{dropdown} Proof 3: No-signalling
+:open:
+
+The third proof concerns no-signalling. Let Alice and Bob be two spatially separated parties who share the Bell state 
+\begin{equation}
+\ket{\Phi^+}_{AB} = \frac{\ket{00}_{AB} + \ket{11}_{AB}}{\sqrt{2}},
+\end{equation}
+and assume a universal cloner exists. It is assumed that Alice can measure either $Z$ or $X$ on her system. If Bob is able to determine which measurement Alice made without some subluminal communication, then superluminal signalling would be possible. 
+
+If Alice measures $Z$ and gets the outcome $+1$ then Bob has the state $\ket{0}$, if she gets the outcome $-1$ then Bob has the state $\ket{1}$. As Bob does not know Alice's measurement outcome he has the local state 
+\begin{align*}
+\rho_B &= \frac{1}{2} \vert 0 \rangle \langle  0 \vert + \frac{1}{2} \vert 1 \rangle \langle  1 \vert \\
+&= \frac{1}{2} \mathbb{I}.
+\end{align*}
+This is the same as the state he had before Alice made her measurement. 
+
+If Alice measures $X$ and gets the outcome $+1$ then Bob has the state $\ket{+}$, if she gets the outcome $-1$ then Bob has the state $\ket{-}$. As Bob does not know Alice's measurement outcome he has the local state 
+\begin{align*}
+\rho_B &= \frac{1}{2} \vert + \rangle \langle  + \vert + \frac{1}{2} \vert - \rangle \langle  - \vert \\
+&= \frac{1}{2} \mathbb{I}.
+\end{align*}
+Which is also the same as the state he had before Alice made her measurement. 
+
+Hence, Bob cannot tell if Alice has made a measurement, let alone which measurement she has made. 
+
+Now assume that Bob waits for some amount of time so that he knows Alice has made her measurement. This solve the issue of Bob not knowing if Alice has made a measurement. He then puts his state through the cloner. If Alice measured $Z$, Bob will have the state
+\begin{equation}
+\rho_B &= \frac{1}{2} \vert 00 \rangle \langle  00 \vert + \frac{1}{2} \vert 11 \rangle \langle  11 \vert.
+\end{equation}
+If Alice measured $X$, Bob will have the state 
+\begin{equation}
+\rho_B &= \frac{1}{2} \vert ++ \rangle \langle  ++ \vert + \frac{1}{2} \vert -- \rangle \langle  -- \vert.
+\end{equation}
+As these two state have different probabilities of measurement outcomes, one will at least probabilistically be able to perform superluminal communication if a cloner exists. By making repeat measurement on copies of the state Bob will be able to determine which of the two measurements Alice made, allowing her to communicate one bit superluminally. 
 :::
 
 ## Broadcasting Quantum Information
