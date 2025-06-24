@@ -51,6 +51,7 @@ parts:
     chapters:
       - file: QuantumInfo5_teleportation
       - file: QuantumInfo6_superDenseCoding
+      - file: QuantumInfo7_noCloning
       - file: QuantumInfo4_stateExclusion
       - file: QuantumInfo2_AlgorithmicCooling
       - file: QuantumInfo1_entropyFunction

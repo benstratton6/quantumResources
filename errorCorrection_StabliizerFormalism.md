@@ -137,7 +137,7 @@ If some unitary error, $U$, acts on the logical state, the state will be mapped 
 \begin{equation}
 U \ket{\psi}_L \in {\rm Span} \big\{ \{ U \ket{i} \}_{i=0}^{N} \big\} = \mathfrak{C}_U \subseteq \mathcal{H},
 \end{equation}
-where we define this subspace $\mathfrak{C}_U$ and the projector onto the space as $\Pi_{U}$. The goal of an error correcting code is then to (a) determine which of $\mathbb{I}$ or $U$ has been applied to the logical state without (b) disturbing the logical state and hence the encoded information. 
+where we define this subspace $\mathfrak{C}_U$ and the projector onto the space as $\Pi_{U}$. The goal of an error correcting code is then to (a) determine which of $\mathbb{I}$ or $U$ has been applied to the logical state without (b) disturbing the logical state and hence destroying the encoded information. 
 
 Criteria (a) can be considered as an example of quantum channel discrimination, where the logical state is the reference state, with the added constraint of criteria (b). 
 
