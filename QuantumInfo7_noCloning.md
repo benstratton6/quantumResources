@@ -91,7 +91,6 @@ This only has a solution if $\braket{\psi | \phi} = 1$, such that $\ket{\psi}=\k
 :::
 
 :::{dropdown} Proof 3: No-signalling
-:open:
 
 The third proof concerns no-signalling. Let Alice and Bob be two spatially separated parties who share the Bell state 
 \begin{equation}
