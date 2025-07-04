@@ -9,7 +9,7 @@ title: Home
 keywords: Quantum Information, Quantum Mechanics
 ---
 
-## Quantum Resources
+## Quantum Resources 
 
 This is a collection of notes I have made throughout my PhD on various relevant topics to my research. I have written things in the way that I have understood them. I thought I would share them in the hope that someone else might find them useful. 
 
@@ -39,6 +39,7 @@ Other notable highlights alongside my academic pursuits have been working with t
 
 **2025**
 
+- [An Algorithm for Estimating $\alpha$-Stabilizer Rényi Entropies via Purity](https://doi.org/10.48550/arXiv.2507.02540)
 - [Cooling a Qubit with $n$ Others](https://doi.org/10.48550/arXiv.2506.10059)
 
 **2024**
