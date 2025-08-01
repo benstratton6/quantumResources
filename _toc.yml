@@ -53,8 +53,9 @@ parts:
       - file: QuantumInfo6_superDenseCoding
       - file: QuantumInfo7_noCloning
       - file: QuantumInfo4_stateExclusion
-      - file: QuantumInfo2_AlgorithmicCooling
       - file: QuantumInfo1_entropyFunction
+      # - file: QuantumInfo8_Haar_Measure
+      - file: QuantumInfo2_AlgorithmicCooling
       - file: QuantumInfo3_UsefulTricks
       - file: QuantumInfo_Glossary
   - caption: Resource Theories   

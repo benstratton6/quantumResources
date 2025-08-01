@@ -77,7 +77,7 @@ A [Hilbert space](#hilbert_space_target) is an [inner product](#inner_product_ta
 
 This inner product satisfies all the conditions of an inner product in a vector space:
 (hilbert_space_inner_product_properties)=
-1. $\braket{\psi|\phi} \geq 0$
+1. $\braket{\psi|\psi} \geq 0$
     - Positive-definiteness
 2. $\braket{\psi|\phi} = \braket{\phi|\psi}^{*}$
     - Conjugate symmetry
