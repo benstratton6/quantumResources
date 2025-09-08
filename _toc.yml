@@ -32,6 +32,7 @@ parts:
       - file: LinearAlgebra9_eigenvectors.md
       - file: LinearAlgebra5_norms.md
       - file: LinearAlgebraGlossary.md
+      - file: LinearAlgebra11_algebras.md
   - caption: Quantum Formalism
     chapters: 
       - file: quantumFormalism1_hilbertSpaces

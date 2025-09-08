@@ -29,3 +29,6 @@ exports:
 
 (functional_target_glossary)=
 **A functional**: takes a vector as input and outputs an element of the field the vector is defined over
+
+(binary_operation_glossary)=
+**Binary operation**: an operation taking two inputs to a single output.  

@@ -68,7 +68,7 @@ Hence, $\lambda (\bm{x} + \bm{y}) = \lambda \bm{x} + \lambda \bm{y}$
 :::{tab-item} Dot Product
 :sync: tab3
 let $\bm{x} \in \mathbb{F}^{n}, ~\bm{y} \in \mathbb{F}^{n}, ~\bm{v} \in \mathbb{F}^{n},~ \lambda \in \mathbb{F}^{1}$ 
-
+(dot_product_target_vectors)=
 \begin{equation}
     \bm{x} \cdot \bm{y} = x_{1}y_{1} + x_{2}y_{2} \ldots x_{n}y_{n}
 \end{equation}
@@ -84,7 +84,7 @@ let $\bm{x} \in \mathbb{F}^{n}, ~\bm{y} \in \mathbb{F}^{n}, ~\bm{v} \in \mathbb{
 :::{tab-item} Cross Product 
 :sync: tab4
 let $\bm{x} \in \mathbb{F}^{n}, ~\bm{y} \in \mathbb{F}^{n}, \bm{v} \in \mathbb{F}^{n}, ~ \lambda \in \mathbb{F}^{1}$
-
+(cross_product_target_vectors)=
 \begin{equation}
 \bm{x} \times \bm{y} = \vert \vert \bm{x} \vert \vert ~ \vert \vert \bm{y} \vert \vert \textrm{sin}(\theta) \bm{\hat{m}}
 \end{equation}

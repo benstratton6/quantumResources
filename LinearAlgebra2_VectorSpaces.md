@@ -27,11 +27,10 @@ Vector spaces defined over $\mathbb{R}$ are known as real vector spaces, whilst 
 ### Vector Space Axioms
 Let $\psi, ~\sigma, ~\omega~\in~V$ and $a,b \in \mathbb{F}^{1}$.
 
-(vector_space_axioms_target)=
 In order for $V$ to be a vector space, the addition and scalar multiplication operations must meet a set of Axioms, defined below.
 
 The addition operation must obey the following conditions 
-
+(vector_space_axioms_target)=
 1. $~~\psi + \sigma = \sigma + \psi$
     - Commutativity
 2. $\psi + (\sigma + \omega) = (\psi + \sigma) + \omega$
