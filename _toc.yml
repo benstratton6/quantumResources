@@ -31,8 +31,8 @@ parts:
       - file: LinearAlgebra4_dualSpaces.md
       - file: LinearAlgebra9_eigenvectors.md
       - file: LinearAlgebra5_norms.md
-      - file: LinearAlgebraGlossary.md
       - file: LinearAlgebra11_algebras.md
+      - file: LinearAlgebraGlossary.md
   - caption: Quantum Formalism
     chapters: 
       - file: quantumFormalism1_hilbertSpaces
