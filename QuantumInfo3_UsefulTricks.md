@@ -27,6 +27,7 @@ Contents:
 - [Generating Maximally Entangled Basis](#Generating_Maximally_Entangled_Basis_target)
 - [Trace of Swap gate on two density operators](#Trace_of_Swap_gate_on_two_density_operators)
 - [Eigenvalues of general $2 \times 2$ Operator](#Eigenvalues_of_general_2x2_matrix)
+- [Operator Inequalities and Supports](#Operator_Inequalities_and_Supports)
 
 (Expectation_Values_Squared_card)=
 ```{card} 
@@ -269,6 +270,51 @@ This can be easily solved for $\lambda$, giving
 \lambda = \alpha + \sqrt{n_x^2 + n_y^2 + n_z^2},
 \end{equation}
 completing the proof. 
+
+:::
+
+``` 
+
+(Operator_Inequalities_and_Supports)=
+```{card} 
+:header: **Operator Inequalities and Supports** 
+
+ Let $\Pi_A, \Pi_B$ be hermitian projectors, such that $\Pi_i \Pi_i = \Pi_i$ and $\Pi_i^\dagger = \Pi_i$. 
+
+ The following conditions holds:
+ \begin{equation}
+ \Pi_A \leq \Pi_B ~ \iff ~ \mathrm{Supp}(A) \subseteq  \mathrm{Supp}(B).
+\end{equation}
+:::{dropdown} Proof
+
+**Firstly, we prove that $\Pi_A \leq \Pi_B ~ \implies ~ \mathrm{Supp}(A) \subseteq  \mathrm{Supp}(B)$:**
+
+We have $\Pi_B - \Pi_A \geq 0$, meaning that $\Pi_B - \Pi_A$ is positive semi-definite. From here it holds that  
+\begin{align*}
+\langle x, (\Pi_B - \Pi_A) x \rangle \geq 0 = \langle x, \Pi_B x \rangle \geq \langle x, \Pi_A x \rangle,
+\end{align*}
+where $\langle \cdot, \cdot \rangle$ is some inner product, for all $x$. If $x \in \mathrm{Ker}(B)$, it follows that $ \langle x, \Pi_A x \rangle = 0$, as $\langle x, \Pi_B x \rangle = 0$ and $\langle x, \Pi_A x \rangle \geq 0$. 
+
+Therefore, if $x \in \mathrm{Ker}(B)$ then $x \in \mathrm{Ker}(A)$, and it can be concluded that 
+\begin{equation}
+\mathrm{Ker}(B) \subseteq \mathrm{Ker}(A).
+\end{equation}
+As 
+\begin{equation}
+\mathrm{Supp}(A) = \big( \mathrm{Ker}(A) \big)^{\perp},
+\end{equation}
+meaning the support is the [orthogonal complement](#orthogonal_complement_quantum_info_glossary) of the kernal. Using this definition, it can be seen that 
+\begin{equation}
+\mathrm{Supp}(A) \subseteq \mathrm{Supp}(B).
+\end{equation}
+
+**Now, we prove that $\mathrm{Supp}(A) \subseteq  \mathrm{Supp}(B) ~ \implies ~ \Pi_A \leq \Pi_B$:**
+
+If $\mathrm{Supp}(A) \subseteq  \mathrm{Supp}(B)$ there exists some subspace $M$ such that 
+\begin{equation}
+\mathrm{Supp}(A) \oplus M = \mathrm{Supp}(B).
+\end{equation}
+This implies that $\Pi_{A} + \Pi_M = \Pi_B$, where $\Pi_M$ is the projector onto the subspace $M$. This is defined as the projector onto $\Pi_B - \Pi_A$, which, by assumption, is postive semi-definite, $\Pi_M \geq 0$. Hence, $\Pi_A \leq \Pi_B$, completing the proof. 
 
 :::
 

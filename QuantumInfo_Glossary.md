@@ -32,3 +32,6 @@ exports:
 (multiplicity_quantum_info_glossary)=
 **multiplicity:** the number of different eigenvectors that a given degenerate eigenvalue corresponds to. 
 
+(orthogonal_complement_quantum_info_glossary)=
+**Orthogonal Complement:** The orthogonal complement of a vector space $V$ is the set of vectors orthogonal to all vectors in $V$. 
+
