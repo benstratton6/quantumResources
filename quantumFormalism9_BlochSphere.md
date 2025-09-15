@@ -21,7 +21,7 @@ exports:
 ---
 
 ## Definition 
-
+(bloch_vector_page_target)=
 The Bloch sphere is a geometrical way to represent both $d=2$ dimensional quantum systems (qubits) and the unitary dynamics of those $d=2$ dimensional systems.  
 
 All possible qubit states, both pure and mixed, can be represented as a point on or inside of a unit sphere. Qubit dynamics can then be represented as rotations on the unit sphere. 
@@ -37,6 +37,7 @@ where $\mathbb{I}$ is the $d=2$ dimensional identity operator, $\bm{n} \in \math
 \bm{n} = \begin{pmatrix} n_x \\ n_y \\ n_z \end{pmatrix}, ~ ~ ~  \bm{\sigma} = \begin{pmatrix} X \\ Y \\ Z \end{pmatrix},
 \end{equation}
 where 
+(Pauli_operators_bloch_sphere)=
 \begin{equation}
 
 X = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, ~~ Y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, ~ ~ Z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.

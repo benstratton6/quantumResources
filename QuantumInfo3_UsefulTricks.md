@@ -26,6 +26,7 @@ Contents:
 - [Alternative Bipartition of Entangled States](#Alternative_Bipartition_of_Entangled_States)
 - [Generating Maximally Entangled Basis](#Generating_Maximally_Entangled_Basis_target)
 - [Trace of Swap gate on two density operators](#Trace_of_Swap_gate_on_two_density_operators)
+- [Eigenvalues of general $2 \times 2$ Operator](#Eigenvalues_of_general_2x2_matrix)
 
 (Expectation_Values_Squared_card)=
 ```{card} 
@@ -224,6 +225,49 @@ The right hand side is then
 &= \sum_{ik} p_{ik}q_{ki},
 \end{align*}
 
+completing the proof. 
+
+:::
+
+``` 
+
+(Eigenvalues_of_general_2x2_matrix)=
+```{card} 
+:header: **Eigenvalues of general $2 \times 2$ Operator** 
+
+The operators $\big\{ \mathbb{I}, X, Y, Z \big\}$, which is the identity plus the [Pauli-operators](#Pauli_operators_bloch_sphere), form an operator basis for the space of $2 \times 2$ matrices over the complex numbers. 
+
+Hence, if $A \in \mathbb{M}_{2,2}(\mathbb{C})$ then there exists an $\alpha \in \mathbb{R}^1$ and $\mathbf{n} \in \mathbb{R}^3$ such that
+\begin{align*}
+A &= \alpha \mathbb{I} + \mathbf{n} \cdot \mathbf{\sigma} \\
+&= \alpha \mathbb{I} + n_x X + n_y Y + n_z Z,
+\end{align*}
+where
+\begin{equation}
+\bm{n} = \begin{pmatrix} n_x \\ n_y \\ n_z \end{pmatrix}, ~ ~ ~  \bm{\sigma} = \begin{pmatrix} X \\ Y \\ Z \end{pmatrix},
+\end{equation}
+as seen [here](#bloch_vector_page_target)
+
+The eigenvalues of $A$ are then $\lambda = \alpha \pm \vert \mathbf{n} \vert$.
+:::{dropdown} Proof
+
+The fact that $\big\{ \mathbb{I}, X, Y, Z \big\}$ forms an operator basis for the space of $2 \times 2$ complex matrices can be seen by comparing coefficients of a decomposition in this basis to a general $2 \times 2$ matrix. This is not proved here, but taken as a given.  
+
+The result about the eigenvalues can then be seen by direct calculation. In this basis $A$ can written as 
+\begin{align*}
+A = \begin{pmatrix}
+\alpha + n_z & n_x - in_y \\
+n_x + in_y & \alpha - n_z
+\end{pmatrix}.
+\end{align*}
+One can then find the eigenvectors, $\lambda$, of $A$ from 
+\begin{equation}
+\mathrm{Det}\big( A - \lambda \mathbb{I}) = 0.
+\end{equation}
+This can be easily solved for $\lambda$, giving 
+\begin{equation}
+\lambda = \alpha + \sqrt{n_x^2 + n_y^2 + n_z^2},
+\end{equation}
 completing the proof. 
 
 :::
