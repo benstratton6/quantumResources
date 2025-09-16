@@ -291,7 +291,11 @@ completing the proof.
 
 We have $\Pi_B - \Pi_A \geq 0$, meaning that $\Pi_B - \Pi_A$ is positive semi-definite. From here it holds that  
 \begin{align*}
-\langle x, (\Pi_B - \Pi_A) x \rangle \geq 0 = \langle x, \Pi_B x \rangle \geq \langle x, \Pi_A x \rangle,
+\langle x, (\Pi_B - \Pi_A) x \rangle \geq 0,
+\end{align*}
+such that 
+\begin{align*}
+\langle x, \Pi_B x \rangle \geq \langle x, \Pi_A x \rangle,
 \end{align*}
 where $\langle \cdot, \cdot \rangle$ is some inner product, for all $x$. If $x \in \mathrm{Ker}(B)$, it follows that $ \langle x, \Pi_A x \rangle = 0$, as $\langle x, \Pi_B x \rangle = 0$ and $\langle x, \Pi_A x \rangle \geq 0$. 
 
