@@ -58,6 +58,7 @@ Other notable highlights alongside my academic pursuits have been working with t
 
 - **Informational Non-equilibrium Concentration,** [_slides_](Talk_4_Informational_non-equilibrium_concentration.pptx)
     1. Quantum Resource Theories Workshop, Jeju Island, South Korea, March 2025.
+    2. Fundamental Limits of Quantum Technologies, Dublin, Ireland, August 2025. 
 - **Where is the value in Quantum (PhDs),** [_slides_](Talk_3_Where_is_the_value_in_quantum(PhDs).pptx)
     1. Institute of Physics (IoP) Quantum and Nano Undergraduate Day, November 2024.
 - **Operational Interpretation of the Choi Rank Through k-State Exclusion,** [_slides_](Talk_2_Operational_Interpretation_of_the_Choi_Rank_Through_Exclusion.pptx)
@@ -73,11 +74,11 @@ Other notable highlights alongside my academic pursuits have been working with t
 - [non-Scientific CV](Benjamin_Stratton_CV___Non_Scientific.pdf)
 
 ## Teaching
-- Applications of Quantum Information 
+- Applications of Quantum Information, _Post Graduate Course_. 
     * Topics Include: Dirac Notion, Quantum Information, Quantum Computation. 
-- Foundations of Physics
+- Foundations of Physics, _Foundation Year Course_.
     * Topics Include: Mechanics, Thermodynamics, Optics, Quantum Mechanics. 
-- Second Year Lab Demonstrator
+- Second Year Lab Demonstrator, _Second Year Unit_.
 - Private Tutor 
     * Topics Include: A-level Mathematics, A-level Physics, STAT Prep. 
 
