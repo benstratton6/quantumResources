@@ -297,7 +297,7 @@ such that
 \begin{align*}
 \langle x, \Pi_B x \rangle \geq \langle x, \Pi_A x \rangle,
 \end{align*}
-where $\langle \cdot, \cdot \rangle$ is some inner product, for all $x$. If $x \in \mathrm{Ker}(B)$, it follows that $ \langle x, \Pi_A x \rangle = 0$, as $\langle x, \Pi_B x \rangle = 0$ and $\langle x, \Pi_A x \rangle \geq 0$. 
+where $\langle \cdot, \cdot \rangle$ is some inner product, and this holds for all $x$. If $x \in \mathrm{Ker}(B)$, such that $\langle x, \Pi_B x \rangle = 0$, it follows that $ \langle x, \Pi_A x \rangle = 0$, as $\langle x, \Pi_A x \rangle \geq 0$. 
 
 Therefore, if $x \in \mathrm{Ker}(B)$ then $x \in \mathrm{Ker}(A)$, and it can be concluded that 
 \begin{equation}
@@ -307,7 +307,7 @@ As
 \begin{equation}
 \mathrm{Supp}(A) = \big( \mathrm{Ker}(A) \big)^{\perp},
 \end{equation}
-meaning the support is the [orthogonal complement](#orthogonal_complement_quantum_info_glossary) of the kernal. Using this definition, it can be seen that 
+meaning the support is the [orthogonal complement](#orthogonal_complement_quantum_info_glossary) of the kernal, it can be concluded that 
 \begin{equation}
 \mathrm{Supp}(A) \subseteq \mathrm{Supp}(B).
 \end{equation}
