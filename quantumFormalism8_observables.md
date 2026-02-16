@@ -78,8 +78,7 @@ A^\dagger = A.
 
 Let $A$ be a hermitian operators acting on a Hilbert space. 
 
-1. **Hermitian operators have real eigenvalues:**
-The [eigenvalue equation](#eigenvalues_page_target) in terms of bra-ket notion is 
+1. **Hermitian operators have real eigenvalues:** The [eigenvalue equation](#eigenvalues_page_target) in terms of bra-ket notion is 
 \begin{equation}
 A \ket{a} = a \ket{a},
 \end{equation}
@@ -112,6 +111,7 @@ Hence, $a=a^*$ meaning $a$ must be a real number.
 \begin{equation}
 A \ket{a} = a \ket{a}~~ \textrm{and} ~ ~ A \ket{a'} = a' \ket{a'},
 \end{equation}
+
 such that $a \neq a'$. Inputting them into the definition of the adjoint gives 
 \begin{align*}
 \bra{a'} A \ket{a} = \bra{a} A \ket{a'}^{*},
@@ -124,33 +124,33 @@ Given $a \neq a'$ it must be the case that $\braket{a'|a} = 0$.
 
 3. **The eigenvectors of hermitian operators form a complete set of basis states:** This result is given by the spectral theorem which says that an operator $A$ acting on $\mathcal{H}^d$ is normal, meaning $A^\dagger A = A A^\dagger$ (which is satisfied by all hermitian operators), if and only if it is diagonalisable in some [othronormal basis](#Orthonormal_Basis_basis_target). 
 
-Hence, $A$ can be written as 
-\begin{equation}
-A = \sum^{d-1}_{i=0} \lambda_i \ket{\lambda_i}\bra{\lambda_i},
-\end{equation}
-where 
-\begin{equation}
-A \ket{\lambda_i} = \lambda_i \ket{\lambda_i} ~ \forall~i
-\end{equation}
-and 
-\begin{equation}
-\braket{i|j} = \delta_{ij}~\forall~i,j.
-\end{equation}
+    Hence, $A$ can be written as 
+    \begin{equation}
+    A = \sum^{d-1}_{i=0} \lambda_i \ket{\lambda_i}\bra{\lambda_i},
+    \end{equation}
+    where 
+    \begin{equation}
+    A \ket{\lambda_i} = \lambda_i \ket{\lambda_i} ~ \forall~i
+    \end{equation}
+    and 
+    \begin{equation}
+    \braket{\lambda_i| \lambda_j} = \delta_{ij}~\forall~i,j.
+    \end{equation}
 
-This means $A$ can always be written as a diagonal operator with respect to it's orthonormal eigenbasis. 
+    This means $A$ can always be written as a diagonal operator with respect to it's orthonormal eigenbasis. 
 
-It could be the case that $\lambda_i = \lambda_j$ for some values of $i,j$. In this case the eigenvalues are said to be degenerate. In this case, $A$ can be written as 
-\begin{equation}
-A = \sum_{i} \lambda_i P_{i},
-\end{equation}
-where $P_{i}$ is the [projection](#projections_linear_maps_target) onto the eigenspace with eigenvalue $\lambda_i$ (meaning the Hilbert space spanned by the set of eigenvectors with eigenvalue $\lambda_i$). Hence, if 
-\begin{equation}
-A \ket{\kappa_j} = \lambda_i \ket{\kappa_j}
-\end{equation}
-for all vectors in the set $\{ \ket{\kappa_j} \}_j^{k\leq d}$ then 
-\begin{equation}
-P_{i} = \sum_j^{k} \ket{\kappa_j}\bra{\kappa_j}. 
-\end{equation}
+    It could be the case that $\lambda_i = \lambda_j$ for some values of $i,j$. In this case the eigenvalues are said to be degenerate. In this case, $A$ can be written as 
+    \begin{equation}
+    A = \sum_{i} \lambda_i P_{i},
+    \end{equation}
+    where $P_{i}$ is the [projection](#projections_linear_maps_target) onto the eigenspace with eigenvalue $\lambda_i$ (meaning the Hilbert space spanned by the set of eigenvectors with eigenvalue $\lambda_i$). Hence, if 
+    \begin{equation}
+    A \ket{\kappa_j} = \lambda_i \ket{\kappa_j}
+    \end{equation}
+    for all vectors in the set $\{ \ket{\kappa_j} \}_j^{k\leq d}$ then 
+    \begin{equation}
+    P_{i} = \sum_j^{k} \ket{\kappa_j}\bra{\kappa_j}. 
+    \end{equation}
 
 :::
 
