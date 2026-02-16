@@ -29,6 +29,8 @@ Here are a list of books I have read since 2021 with a (1-5)⭐ rating:
 
 Within each genre, they are roughly in the order in which I read them. 
 
+🛸 marks books read in the current year. 
+
 # Fiction 
 
 ## Fantasy 
@@ -65,12 +67,12 @@ Within each genre, they are roughly in the order in which I read them.
 - **Revelation Space**, _Alastair Reynolds_, 4 ⭐
 - **Altered Carbon**, _Richard K. Morgan_, 5 ⭐
 - **Old Mans War**, _John Scalzi_, 3 ⭐
-- **Snow Crash**, _Neal Stephenson_, 3 ⭐
+- **Snow Crash**, _Neal Stephenson_, 3 ⭐ 🛸
 
 ## Spy 
 
 - **Damascus Station**, _David McCloskey_, 4 ⭐
-- **The Spy Who Came in from the Cold**, _John le Carré_, 5 ⭐
+- **The Spy Who Came in from the Cold**, _John le Carré_, 5 ⭐ 🛸
 
 ## Other 
 
