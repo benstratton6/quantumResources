@@ -25,6 +25,7 @@ The Pauli Group is a [group](https://en.wikipedia.org/wiki/Group_(mathematics)) 
 ## Single Qubit Group
 
 The Pauli operators in the computational basis are 
+(single_qubit_pauli_operators_target)=
 \begin{equation}
 X = \sigma_1 = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}, ~ ~ Y = \sigma_2 =\begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix}, ~ ~ Z = \sigma_3 = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}.
 \end{equation}
@@ -60,7 +61,7 @@ The $n$-qubit Pauli group is then given by the tensor product of the elements of
 
 The $n$-qubit Pauli group is 
 \begin{align*}
-\mathcal{P}_n &\coloneqq \big\{ \beta P_1 \otimes P_2 \otimes P_3 \otimes ... \otimes P_n : P_j \in \mathcal{P}_1~\forall~j, \forall \beta \in \{\pm 1, \pm i \} \big\}.
+\mathcal{P}_n &\coloneqq \big\{ \beta P_1 \otimes P_2 \otimes P_3 \otimes ... \otimes P_n : P_j \in \mathcal{P}_1~\forall~j, \beta \in \{\pm 1, \pm i \} \big\}.
 \end{align*}
 
 The group has $4^{n+1}$ elements, as there are $4^n$ different combinations of tensor products of $\{X, Y, Z, \mathbb{I} \}$ of length $n$, with the group then containing each potential combination with a phase of $\pm 1$ and $\pm i$. 
@@ -210,7 +211,47 @@ Below we highlight and prove key properties of the Pauli-group and the set of Pa
     To determine if two Pauli string commute or anti-commute, one therefore needs to count the number of locations where the Pauli-strings intersect non-trivially.   
     :::
 
-6. Let $P_k, P_l \in \mathcal{P}^s_n$, then
+6. All Hermitian elements of $\mathcal{P}_n \setminus \mathbb{I}$ have eigenvalues $\pm 1$, where the $+1$ and $-1$ degenerate eigenspaces are of equal dimension. 
+
+    All non-Hermitian elements of $\mathcal{P}_n$ have eigenvalues $\pm i$, where the $+i$ and $-i$ degenerate eigenspaces are of equal dimension.
+    :::{dropdown} Proof
+    Let $P$ be a Hermitian element of $\mathcal{P}_n \setminus \mathbb{I}$.
+
+    The vector $\ket{\psi}$ is an eigenvector of the Pauli-string $P$ with eigenvalue $\lambda$ if 
+    \begin{equation}
+    P \ket{\psi} = \lambda \ket{\psi}.
+    \end{equation}
+    From here, it can be seen that 
+    \begin{equation}
+    P \big[ P \ket{\psi} \big] = P \big[ \lambda \ket{\psi} \big] = \lambda \big[ P \ket{\psi} \big] = \lambda^2 \ket{\psi}.
+    \end{equation}
+    By using [Property 1](#property_1_of_Pauli_Strings) it can also be seen that
+    \begin{equation}
+    P \big[ P \ket{\psi} \big] = P^2 \ket{\psi} = \ket{\psi}.
+    \end{equation}
+    Therefore, 
+    \begin{equation}
+    \lambda^2 \ket{\psi} = \ket{\psi},
+    \end{equation}
+    meaning $\lambda = \pm 1$. Hence, the eigenvalues of any Hermitian element of the Pauli-group are $+1$ or $-1$.
+
+    Now, using [Property 4](#property_4_Pauli_strings), it can be seen that the sum of the eigenvalues of any Pauli-group element is zero (as the trace of a square operator is the sum of its eigenvalues). As each of the eigenvalues can only be $-1$ or $-1$, there must be an equal number of eigenvectors that have eigenvalue $+1$ and there are with eigenvalue $-1$. Therefore, there are $2^{n-1}$ eigenvalues of $+1$ and $2^{n-1}$ eigenvalues of $-1$, as $\textrm{dim}~P=2^n$ meaning it has $2^n$ total eigenvalues.  
+
+    Then, as $P$ is Hermitian, each of its eigenvectors are orthonormal. Hence, the $+1$ eigenspace of $P$ is spanned by $2^{n-1}$ orthogonal vectors, and is therefore of dimension $2^{n-1}$. The same argument can be made for the $-1$ eigenspace.   
+
+    Now, let $P$ be a anti-Hermitian element of $\mathcal{P}_n$.
+
+    As $P^2=-\mathbb{I}$ now, following the same proof as above it can be seen that the eigenvalues of $P$ will be $\pm i$. 
+
+    We now note that any anti-Hermitian element of $\mathcal{P}_n$ can be written as 
+    \begin{equation}
+    P=\beta P_H,
+    \end{equation}
+    where $\beta = \pm i$ and $P_H$ is a Hermitian Pauli-group element. The rest of the above proof then applies, with the eigenvectors of $P$ and $P_H$ being the same,  completing the proof. 
+
+    :::
+
+7. Given any two Pauli-strings, $P_k, P_l \in \mathcal{P}^s_n$, it holds that
     \begin{equation}
     \textrm{tr}\big[P_k P_l \big] = 
     \begin{cases} 
@@ -252,50 +293,55 @@ Below we highlight and prove key properties of the Pauli-group and the set of Pa
     completing the proof.
     :::
 
-7. All Hermitian elements of $\mathcal{P}_n \setminus \mathbb{I}$ have eigenvalues $\pm 1$, where the $+1$ and $-1$ degenerate eigenspaces are of equal dimension. 
-
-    All non-Hermitian elements of $\mathcal{P}_n$ have eigenvalues $\pm i$, where the $+i$ and $-i$ degenerate eigenspaces are of equal dimension.
+8. The set $\mathcal{P}^s_n$ forms a complete basis for the space of $2^n \times 2^n$ complex matrices. 
     :::{dropdown} Proof
-    Let $P$ be a Hermitian element of $\mathcal{P}_n \setminus \mathbb{I}$.
+    :open:
+    We first consider the space of $2 \times 2 $ complex matrices. 
 
-    The vector $\ket{\psi}$ is an eigenvector of the Pauli-string $P$ with eigenvalue $\lambda$ if 
+    An arbitrary $2 \times 2$ complex matrix is of the form 
     \begin{equation}
-    P \ket{\psi} = \lambda \ket{\psi}.
+    A = \begin{bmatrix} a & b \\
+    c & d 
+    \end{bmatrix} ~ ~ \textrm{where} ~ ~ a,b,c,d \in \mathbb{C}.
     \end{equation}
-    From here, it can be seen that 
+    Now, let 
+    \begin{align*}
+    B &= \alpha \mathbb{I} + \beta X + \gamma Y + \delta Z, \\
+    &= \begin{bmatrix} \alpha + \delta  & \beta - i \gamma \\
+    \beta + i \gamma & \alpha - \delta 
+    \end{bmatrix}
+    \end{align*}
+    where $\mathbb{I}$ is the qubit identity and $X, Y, Z$ are the [single qubit Pauli-operators](#single_qubit_pauli_operators_target).
+
+    For $A=B$ it must be the case that 
+    \begin{align*}
+    \alpha &= \frac{a+d}{2} \\
+    \beta &=  \frac{b+c}{2}            \\
+    \gamma &=  \frac{c-b}{2i}   \\
+    \delta &=  \frac{a-d}{2}              \\ 
+    \end{align*}
+    Therefore, for every combination of $a,b,c,d$ there exists a $\alpha, \beta, \gamma, \delta$ such that $A$ can be decomposed as a combination of the identity plus Pauli's. 
+
+    We note that, in general, $\alpha, \beta, \gamma, \delta \in \mathbb{C}$. 
+
+    To expand to $2^n \times 2^n$ complex matrices, we first note that the space of operators on $\mathcal{H}^{2^n}$ is equilivent to the space of operators on $(\mathcal{H}^2)^{\otimes n}$, i.e., 
     \begin{equation}
-    P \big[ P \ket{\psi} \big] = P \big[ \lambda \ket{\psi} \big] = \lambda \big[ P \ket{\psi} \big] = \lambda^2 \ket{\psi}.
+    \mathcal{L}(\mathcal{H}^{2^n}) = \mathcal{L}(\mathcal{H}^2)^{\otimes n},
     \end{equation}
-    By using [Property 1](#property_1_of_Pauli_Strings) it can also be seen that
-    \begin{equation}
-    P \big[ P \ket{\psi} \big] = P^2 \ket{\psi} = \ket{\psi}.
-    \end{equation}
-    Therefore, 
-    \begin{equation}
-    \lambda^2 \ket{\psi} = \ket{\psi},
-    \end{equation}
-    meaning $\lambda = \pm 1$. Hence, the eigenvalues of any Hermitian element of the Pauli-group are $+1$ or $-1$.
+    where $\mathcal{L}(\mathcal{V})$ is the set of operators on the space $\mathcal{V}$. Therefore, if a basis of the space of operators on $(\mathcal{H}^2)^{\otimes n}$ can be found then it is also a basis of the space of operators on $\mathcal{H}^{2^n}$. 
 
-    Now, using [Property 4](#property_4_Pauli_strings), it can be seen that the sum of the eigenvalues of any Pauli-group element is zero (as the trace of a square operator is the sum of its eigenvalues). As each of the eigenvalues can only be $-1$ or $-1$, there must be an equal number of eigenvectors that have eigenvalue $+1$ and there are with eigenvalue $-1$. Therefore, there are $2^{n-1}$ eigenvalues of $+1$ and $2^{n-1}$ eigenvalues of $-1$, as $\textrm{dim}~P=2^n$ meaning it has $2^n$ total eigenvalues.  
+    We then note the following fact:
 
-    Then, as $P$ is Hermitian, each of its eigenvectors are orthonormal. Hence, the $+1$ eigenspace of $P$ is spanned by $2^{n-1}$ orthogonal vectors, and is therefore of dimension $2^{n-1}$. The same argument can be made for the $-1$ eigenspace.   
+    ```{card} 
+    :header: **Tensor Product Basis**
 
-    Now, let $P$ be a anti-Hermitian element of $\mathcal{P}_n$.
+    Let the set of vectors $\{ a_i \}_i$ be a basis of the space $\mathcal{A}$,
 
-    As $P^2=-\mathbb{I}$ now, following the same proof as above it can be seen that the eigenvalues of $P$ will be $\pm i$. 
+    And the set of vectors $\{ b_j \}_j$ be a basis of the space $\mathcal{B}$.
 
-    We now note that any anti-Hermitian element of $\mathcal{P}_n$ can be written as 
-    \begin{equation}
-    P=\beta P_H,
-    \end{equation}
-    where $\beta = \pm i$ and $P_H$ is a Hermitian Pauli-group element. The rest of the above proof then applies, with the eigenvectors of $P$ and $P_H$ being the same,  completing the proof. 
+    Then the set of vectors $\{ a_i \otimes b_j\}_{i,j}$ are a basis of the space $\mathcal{A} \otimes \mathcal{B}$. 
 
-    :::
-
-8. $\mathcal{P}^s_n$ forms a complete basis for the space of $2^n \times 2^n$ dimension complex matrices. 
-    :::{dropdown} Proof
-    
-    Proof to be added soon.
+    ```
 
     
     :::

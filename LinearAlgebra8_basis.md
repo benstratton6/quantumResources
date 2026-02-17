@@ -93,3 +93,29 @@ where $\delta_{ij}$ is the [Kronecker delta function](https://en.wikipedia.org/w
 :::
 ::::
 
+### Tensor Product Basis 
+
+Let the set of vectors $\{ a_i \}_i$ be a basis of the space $\mathcal{A}$, and the set of vectors $\{ b_j \}_j$ be a basis of the space $\mathcal{B}$.
+
+Then the set of vectors $\{ a_i \otimes b_j\}_{i,j}$ are a basis of the space $\mathcal{A} \otimes \mathcal{B}$. 
+
+:::{dropdown} Proof
+:open:
+
+A general element of the space $\mathcal{A} \otimes \mathcal{B}$, denoted $V$, is 
+\begin{equation}
+V = \sum_k c_k v^k \otimes u^k,
+\end{equation} 
+where 
+\begin{equation}
+c_k \in \mathbb{C}, v^k \in \mathcal{A}, u^k \in \mathcal{B} ~\forall~k.
+\end{equation}
+Given $v_k \in \mathcal{A}$ and the fact that $\{ a_i \}_i$ is a basis for $\mathcal{A}$, there exists a set of complex coefficients $\{\alpha^k_i : \alpha^k_i \in \mathbb{C} \}_i$ such that 
+\begin{equation}
+v^k = \sum_i \alpha^k_i a_i.
+\end{equation}
+The same holds for $u^k \in \mathcal{B}$ i.e., there exists a set of complex coefficients, $\{\beta^k_i : \beta^k_i \in \mathbb{C} \}_i$ such that 
+\begin{equation}
+u^k = \sum_i \beta^k_i b_i.
+\end{equation}
+:::
