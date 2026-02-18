@@ -320,9 +320,7 @@ Below we highlight and prove key properties of the Pauli-group and the set of Pa
     \gamma &=  \frac{c-b}{2i}   \\
     \delta &=  \frac{a-d}{2}              \\ 
     \end{align*}
-    Therefore, for every combination of $a,b,c,d$ there exists a $\alpha, \beta, \gamma, \delta$ such that $A$ can be decomposed as a combination of the identity plus Pauli's. 
-
-    We note that, in general, $\alpha, \beta, \gamma, \delta \in \mathbb{C}$. 
+    Therefore, for every combination of $a,b,c,d$ there exists a $\alpha, \beta, \gamma, \delta$ such that $A$ can be decomposed as a combination of the identity plus Pauli's. Therefore, the set $\{\mathbb{I}, X, Y, Z\}$ form an operator basis for the space of $2 \times 2$ complex matrices (for qubits). We note that, in general, $\alpha, \beta, \gamma, \delta \in \mathbb{C}$. 
 
     To expand to $2^n \times 2^n$ complex matrices, we first note that the space of operators on $\mathcal{H}^{2^n}$ is equilivent to the space of operators on $(\mathcal{H}^2)^{\otimes n}$, i.e., 
     \begin{equation}
@@ -330,18 +328,13 @@ Below we highlight and prove key properties of the Pauli-group and the set of Pa
     \end{equation}
     where $\mathcal{L}(\mathcal{V})$ is the set of operators on the space $\mathcal{V}$. Therefore, if a basis of the space of operators on $(\mathcal{H}^2)^{\otimes n}$ can be found then it is also a basis of the space of operators on $\mathcal{H}^{2^n}$. 
 
-    We then note the following fact:
+    We then use the fact that in a tensor product space a basis of the whole space can be found by taking the tensor product of basis states from each subspace. See [here](#tensor_product_basis_target_basis_page) for a proof.  
 
-    ```{card} 
-    :header: **Tensor Product Basis**
-
-    Let the set of vectors $\{ a_i \}_i$ be a basis of the space $\mathcal{A}$,
-
-    And the set of vectors $\{ b_j \}_j$ be a basis of the space $\mathcal{B}$.
-
-    Then the set of vectors $\{ a_i \otimes b_j\}_{i,j}$ are a basis of the space $\mathcal{A} \otimes \mathcal{B}$. 
-
-    ```
+    Hence, the set of operators 
+    \begin{equation}
+    \{\mathbb{I}, X, Y, Z\}^{\otimes n},
+    \end{equation}
+    i.e., the $n$-fold tensor product of all single qubit Pauli-operators, is basis of $\mathcal{H}^{2^n}$ — the $n$-qubit space. This set of operators is exactly $\mathcal{P}^s_n$ (the Pauli-strings), completing the proof.
 
     
     :::

@@ -38,6 +38,12 @@ For any $\psi~\in~V$, if $\{ a_{1}, ~a_{2}, \ldots, ~a_{n} \} $ forms a basis, t
 \end{equation}
 Hence, given a basis one can write any vector in the space as a sum over those vectors in the basis.  
 
+#### Dimension Definition
+
+The dimension of a vector space $V$ is the number of linearly independent vectors that span the space i.e., the dimension of a vector space is the number of vectors in any basis of the space. 
+
+Therefore, if a vector space is known to be of dimension $n$, and it is spanned by $n$ vectors, those vectors must be linearly independent. 
+
 ### Basis Properties 
 
 - All linear subspaces of a vector space have a basis. 
@@ -92,30 +98,53 @@ where $\delta_{ij}$ is the [Kronecker delta function](https://en.wikipedia.org/w
 \end{equation}
 :::
 ::::
-
+(tensor_product_basis_target_basis_page)=
 ### Tensor Product Basis 
 
-Let the set of vectors $\{ a_i \}_i$ be a basis of the space $\mathcal{A}$, and the set of vectors $\{ b_j \}_j$ be a basis of the space $\mathcal{B}$.
+Let the set of vectors $\{ a_i \}_i$ be a basis of the space $A$ and the set of vectors $\{ b_j \}_j$ be a basis of the space $B$.
 
-Then the set of vectors $\{ a_i \otimes b_j\}_{i,j}$ are a basis of the space $\mathcal{A} \otimes \mathcal{B}$. 
+Then the set of vectors $\{ a_i \otimes b_j\}_{i,j}$ are a basis of the space $A \otimes B$, where $\otimes$ is the [tensor product](https://en.wikipedia.org/wiki/Tensor_product). 
 
 :::{dropdown} Proof
-:open:
 
-A general element of the space $\mathcal{A} \otimes \mathcal{B}$, denoted $V$, is 
+A general element of the space $A \otimes B$, denoted $U$, is 
 \begin{equation}
-V = \sum_k c_k v^k \otimes u^k,
+U = \sum_k c_k v^k \otimes u^k,
 \end{equation} 
 where 
 \begin{equation}
-c_k \in \mathbb{C}, v^k \in \mathcal{A}, u^k \in \mathcal{B} ~\forall~k.
+c_k \in \mathbb{C}, ~ ~  v^k \in A, ~ ~ u^k \in B ~ ~\forall~k.
 \end{equation}
-Given $v_k \in \mathcal{A}$ and the fact that $\{ a_i \}_i$ is a basis for $\mathcal{A}$, there exists a set of complex coefficients $\{\alpha^k_i : \alpha^k_i \in \mathbb{C} \}_i$ such that 
+Given $v_k \in A$ and the fact that $\{ a_i \}_i$ is a basis for $A$, there exists a set of complex coefficients $\{\alpha^k_i : \alpha^k_i \in \mathbb{C} \}_i$ such that 
 \begin{equation}
 v^k = \sum_i \alpha^k_i a_i.
 \end{equation}
-The same holds for $u^k \in \mathcal{B}$ i.e., there exists a set of complex coefficients, $\{\beta^k_i : \beta^k_i \in \mathbb{C} \}_i$ such that 
+The same holds for $u^k \in B$ i.e., 
 \begin{equation}
-u^k = \sum_i \beta^k_i b_i.
+u^k = \sum_i \beta^k_i b_i,
 \end{equation}
+where $\{\beta^k_i : \beta^k_i \in \mathbb{C} \}_i$ is a set of complex coefficients. 
+
+Hence, $U$ can be decomposed as 
+\begin{align*}
+U &= \sum_k \sum_i \sum_j c_k \alpha^k_i \beta^k_j a_i \otimes b_j \\
+&= \sum_i \sum_j \kappa_{i,j} a_i \otimes b_j,
+\end{align*}
+where $\kappa_{i,j} = \sum_k c_k \alpha^k_i \beta^k_j$. Therefore, any arbitrary vector in $A \otimes B$ can be decomposed in terms of $\{ a_i \otimes b_j\}_{i,j}$. 
+
+This shows that $\{ a_i \otimes b_j\}_{i,j}$ spans the space $A \otimes B$. 
+
+To be a basis, the vectors $\{ a_i \otimes b_j\}_{i,j}$ must also be linearly independent. It can be seen that this must be the case, as 
+\begin{equation}
+\textrm{dim}(A \otimes B) = \textrm{dim}(A) \times \textrm{dim}(B).
+\end{equation}
+Then, as 
+\begin{equation}
+\textrm{dim}(A) = \vert \{ a_i \}_i \vert, ~ ~ \textrm{dim}(B) = \vert \{ b_i \}_i \vert,
+\end{equation}
+it is the case that 
+\begin{equation}
+\vert \{ a_i \otimes b_j \}_{i,j} \vert = \textrm{dim}(A \otimes B).
+\end{equation}
+Hence, the set of vectors $\{ a_i \otimes b_j \}_{i,j}$ span the space and the number of them is equal to the dimension of $A \otimes B$, hence they must be linearly independent and therefore form a basis of $A \otimes B$. 
 :::
