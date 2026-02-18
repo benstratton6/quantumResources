@@ -295,7 +295,7 @@ Below we highlight and prove key properties of the Pauli-group and the set of Pa
 
 8. The set $\mathcal{P}^s_n$ forms a complete basis for the space of $2^n \times 2^n$ complex matrices. 
     :::{dropdown} Proof
-    :open:
+    
     We first consider the space of $2 \times 2 $ complex matrices. 
 
     An arbitrary $2 \times 2$ complex matrix is of the form 
