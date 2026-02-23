@@ -28,6 +28,7 @@ Contents:
 - [Trace of Swap gate on two density operators](#Trace_of_Swap_gate_on_two_density_operators)
 - [Eigenvalues of general $2 \times 2$ Operator](#Eigenvalues_of_general_2x2_matrix)
 - [Operator Inequalities and Supports](#Operator_Inequalities_and_Supports)
+- [SWAP and Partial Transpose of Max Entangled States](#SWAP_and_Partial_Transpose_of_Max_Entangled_States)
 
 (Expectation_Values_Squared_card)=
 ```{card} 
@@ -323,3 +324,63 @@ This implies that $\Pi_{A} + \Pi_M = \Pi_B$, where $\Pi_M$ is the projector onto
 :::
 
 ``` 
+
+(SWAP_and_Partial_Transpose_of_Max_Entangled_States)=
+```{card} 
+:header: **SWAP and Partial Transpose of Max Entangled State** 
+
+Let $ \vert \Phi^+_{00} \rangle = (1/\sqrt{2}) \sum_{i,j=0}^1 \ket{ii} \in \mathcal{H}_A \otimes \mathcal{H}_B$. Then 
+\begin{equation}
+ \vert \Phi^+_{00} \rangle \langle \Phi^+_{00} \vert^{t_A} = 2 ~ \mathtt{SWAP},
+\end{equation}
+where $(\cdot)^{t_A}$ is the partial transpose in the $A$ system and $\mathtt{SWAP} = \sum_{i,j=0}^1 \vert ij \rangle \langle ji \vert$. 
+
+:::{dropdown} Proof
+
+\begin{align*}
+\vert \Phi^+_{00} \rangle \langle \Phi^+_{00} \vert^{t_A} &= (1/2) \sum_{i,j=0}^1 \vert ii \rangle \langle jj \vert^{t_A} \\
+&= (1/2) \sum_{i,j=0}^1 \vert i \rangle \langle j \vert \otimes \vert i \rangle \langle j \vert^{t_A} \\
+&= (1/2) \sum_{i,j=0}^1 \vert i \rangle \langle j \vert \otimes \vert j \rangle \langle i \vert \\
+&= (1/2) \sum_{i,j=0}^1 \vert ij \rangle \langle ji \vert \\
+&= (1/2) ~ \mathtt{SWAP}.
+\end{align*}
+
+:::
+
+``` 
+
+<!-- (trace_of_product_of_operators)=
+```{card} 
+:header: **Trace of a product of operators** 
+
+Let $A,B \in \mathcal{L}(\mathcal{H}^d)$ and $\vert \Phi^+_{00} \rangle = (1/\sqrt{2}) \sum_{i,j=0}^{d-1} \ket{ii}$. Then 
+\begin{align*}
+\frac{1}{d} \textrm{tr}\big[ AB \big] &= \langle \Phi_{00}^+ \vert A \otimes B^t \vert \Phi_{00}^+ \rangle \\
+&= \textrm{tr} \big[ (A \otimes B) \mathtt{SWAP} \big].
+\end{align*}
+
+
+:::{dropdown} Proof
+:open:
+We first decompose $A$ and $B$ in some basis: 
+\begin{equation}
+A = \sum_{ij} a_{ij} \vert i \rangle \langle j \vert, ~ ~ ~ B = \sum_{kl} b_{kl} \vert k \rangle \langle l \vert.
+\end{equation}
+
+We then consider the left hand side of the above equation: 
+\begin{align*}
+
+ \textrm{tr}\big[ AB \big] &= \textrm{tr} \biggl[ \sum_{ij} a_{ij} \vert i \rangle \langle j \vert ~  \sum_{kl} b_{kl} \vert k \rangle \langle l \vert \biggl] \\
+ &= \sum_{ijl} a_{ij} b_{kl} \textrm{tr} \big[ \vert i \rangle \langle j \vert k \rangle \langle l \vert \big] \\
+ &= \sum_{ijl} a_{ij} b_{kl} \delta_{il} \delta_{jk} \\
+ &= \sum_{il} a_{ij} b_{ji}. \\
+
+\end{align*}
+
+We now consider the first part of the right hand side of the above equation:
+\begin{align*}
+\langle \Phi_{00}^+ \vert A \otimes B^t \vert \Phi_{00}^+ \rangle = 
+\end{align*}
+:::
+
+```  -->
