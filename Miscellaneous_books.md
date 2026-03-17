@@ -68,6 +68,7 @@ Within each genre, they are roughly in the order in which I read them.
 - **Altered Carbon**, _Richard K. Morgan_, 5 ⭐
 - **Old Mans War**, _John Scalzi_, 3 ⭐
 - **Snow Crash**, _Neal Stephenson_, 3 ⭐ 🛸
+- **War of the Worlds**, _H.G.Wells_, 3 ⭐ 🛸
 
 ## Spy 
 

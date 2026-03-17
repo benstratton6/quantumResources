@@ -29,6 +29,7 @@ Contents:
 - [Eigenvalues of general $2 \times 2$ Operator](#Eigenvalues_of_general_2x2_matrix)
 - [Operator Inequalities and Supports](#Operator_Inequalities_and_Supports)
 - [SWAP and Partial Transpose of Max Entangled States](#SWAP_and_Partial_Transpose_of_Max_Entangled_States)
+- [The Trace of a Product of Operators](#trace_of_product_of_operators)
 
 (Expectation_Values_Squared_card)=
 ```{card} 
@@ -345,15 +346,15 @@ where $(\cdot)^{t_A}$ is the partial transpose in the $A$ system and $\mathtt{SW
 &= (1/2) ~ \mathtt{SWAP}.
 \end{align*}
 
-:::
+::: 
 
 ``` 
 
-<!-- (trace_of_product_of_operators)=
+(trace_of_product_of_operators)=
 ```{card} 
 :header: **Trace of a product of operators** 
 
-Let $A,B \in \mathcal{L}(\mathcal{H}^d)$ and $\vert \Phi^+_{00} \rangle = (1/\sqrt{2}) \sum_{i,j=0}^{d-1} \ket{ii}$. Then 
+Let $A,B \in \mathcal{L}(\mathcal{H}^d)$, $\vert \Phi^+_{00} \rangle = (1/\sqrt{2}) \sum_{i,j=0}^{d-1} \ket{ii}$ and $\mathtt{SWAP} = \sum_{i,j=0}^1 \vert ij \rangle \langle ji \vert$. Then 
 \begin{align*}
 \frac{1}{d} \textrm{tr}\big[ AB \big] &= \langle \Phi_{00}^+ \vert A \otimes B^t \vert \Phi_{00}^+ \rangle \\
 &= \textrm{tr} \big[ (A \otimes B) \mathtt{SWAP} \big].
@@ -361,7 +362,7 @@ Let $A,B \in \mathcal{L}(\mathcal{H}^d)$ and $\vert \Phi^+_{00} \rangle = (1/\sq
 
 
 :::{dropdown} Proof
-:open:
+
 We first decompose $A$ and $B$ in some basis: 
 \begin{equation}
 A = \sum_{ij} a_{ij} \vert i \rangle \langle j \vert, ~ ~ ~ B = \sum_{kl} b_{kl} \vert k \rangle \langle l \vert.
@@ -379,8 +380,21 @@ We then consider the left hand side of the above equation:
 
 We now consider the first part of the right hand side of the above equation:
 \begin{align*}
-\langle \Phi_{00}^+ \vert A \otimes B^t \vert \Phi_{00}^+ \rangle = 
+&\langle \Phi_{00}^+ \vert A \otimes B^t \vert \Phi_{00}^+ \rangle = \\
+&= \frac{1}{d} \sum_{s} \bra{ss} \sum_{ij} a_{ij} \ket{i}\bra{j} \otimes \sum_{kl} b_{kl} \ket{l}\bra{k} \sum_r \ket{rr} \\
+&= \frac{1}{d} \sum_{srkl} a_{ij}b_{kl} ~ \delta_{si} \delta_{sl} \delta_{jr} \delta_{rk} \\
+&= \frac{1}{d} \sum_{ij} a_{ij}b_{ji},
+\end{align*}
+meaning the two sides are equal. 
+
+We now consider the second part of the right hand side of the above equation:
+\begin{align*}
+&\textrm{tr} \big[ (A \otimes B) \mathtt{SWAP} \big] = \\
+&= \textrm{tr} \biggl[ \bigg( \sum_{ij} a_{ij} \ket{i}\bra{j} \otimes \sum_{kl} b_{kl} \ket{k}\bra{l} \bigg) \sum_{rs} \ket{rs}\bra{sr} \biggl] \\
+&= \sum_{ij} \sum_{kl} \sum_{rs}  a_{ij} b_{kl} \textrm{tr} \bigg[ \ket{ik}\bra{jl} \ket{rs}\bra{sr} \bigg] \\
+&= \sum_{ij} \sum_{kl} \sum_{rs}  a_{ij} b_{kl}~\delta_{is} \delta_{kr} \delta_{jr} \delta_{ls} \\
+&= \sum_{ij} a_{ij} b_ji
 \end{align*}
 :::
 
-```  -->
+``` 

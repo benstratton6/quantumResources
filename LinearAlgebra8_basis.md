@@ -103,7 +103,7 @@ where $\delta_{ij}$ is the [Kronecker delta function](https://en.wikipedia.org/w
 
 Let the set of vectors $\{ a_i \}_i$ be a basis of the space $A$ and the set of vectors $\{ b_j \}_j$ be a basis of the space $B$.
 
-Then the set of vectors $\{ a_i \otimes b_j\}_{i,j}$ are a basis of the space $A \otimes B$, where $\otimes$ is the [tensor product](https://en.wikipedia.org/wiki/Tensor_product). 
+The set of vectors $\{ a_i \otimes b_j\}_{i,j}$ is then a basis of the space $A \otimes B$, where $\otimes$ is the [tensor product](https://en.wikipedia.org/wiki/Tensor_product). 
 
 :::{dropdown} Proof
 
