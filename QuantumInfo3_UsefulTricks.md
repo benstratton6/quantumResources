@@ -393,8 +393,9 @@ We now consider the second part of the right hand side of the above equation:
 &= \textrm{tr} \biggl[ \bigg( \sum_{ij} a_{ij} \ket{i}\bra{j} \otimes \sum_{kl} b_{kl} \ket{k}\bra{l} \bigg) \sum_{rs} \ket{rs}\bra{sr} \biggl] \\
 &= \sum_{ij} \sum_{kl} \sum_{rs}  a_{ij} b_{kl} \textrm{tr} \bigg[ \ket{ik}\bra{jl} \ket{rs}\bra{sr} \bigg] \\
 &= \sum_{ij} \sum_{kl} \sum_{rs}  a_{ij} b_{kl}~\delta_{is} \delta_{kr} \delta_{jr} \delta_{ls} \\
-&= \sum_{ij} a_{ij} b_ji
+&= \sum_{ij} a_{ij} b_{ji},
 \end{align*}
+completing the proof as all sides are therefore equal. 
 :::
 
 ``` 
