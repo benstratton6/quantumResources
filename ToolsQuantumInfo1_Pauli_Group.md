@@ -52,6 +52,33 @@ The single qubit Pauli group is
 
 Note, in the above we have give the [generator](#group_generator_definition) of the Pauli-group, denoted as $\langle \cdot \rangle$, using the fact that $Y=i XZ$.
 
+### Single Qubit Commutator Relation
+
+The single qubit Pauli operators commute as 
+\begin{equation}
+[\sigma_j, \sigma_k] = 2 i \epsilon_{jkl} \sigma_l
+\end{equation}
+where, as above, $\epsilon_{ijk}$ is the [Levi-Civita symbol](#Levi_Civita_symbol_target_bloch) and $i = \sqrt{-1}$.  
+
+:::{dropdown} Explicit Commutator Relations
+
+\begin{align*}
+
+&[X, X] = 0, \\
+&[X, Y] = 2i Z, \\
+&[X, Z] = -2iY, \\
+& \\
+&[Y, X] = -2i Z, \\
+&[Y, Y] = 0, \\
+&[Y, Z] = 2i X \\
+& \\
+&[Z, X] = 2iY, \\
+&[Z, Y] = -2i X, \\
+&[Z, Z] = 0, 
+
+\end{align*}
+:::
+
 ## n-Qubit Pauli Group
 
 The $n$-qubit Pauli group is then given by the tensor product of the elements of the single qubit Pauli-group $\mathcal{P}_1$. 
