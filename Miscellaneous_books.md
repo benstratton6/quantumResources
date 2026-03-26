@@ -55,7 +55,7 @@ Within each genre, they are roughly in the order in which I read them.
 - **Fahrenheit 451**, _Ray Bradbury_, 3 ⭐
 - **Brave New World**, _Aldous Huxley_, 4 ⭐
 - **I, Robot**, _Isaac Asimov_, 4 ⭐
-- **Hail Mary**, _Andy Weir_, 5 ⭐
+- **Project Hail Mary**, _Andy Weir_, 5 ⭐
 - **Starship Troopers**, _Robert A. Heinlein_, 4 ⭐
 - **Foundations Edge**, _Isaac Asimov_, 3 ⭐
 - **The Three Body Problem**, _Liu Cixin_, 5 ⭐
