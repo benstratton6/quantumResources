@@ -1,6 +1,9 @@
 ---
 title: Books
 subject: Tutorial
+kernelspec:
+  name: python3
+  display_name: Python 3
 subtitle: 
 # short_title: How to MyST
 authors:
@@ -11,13 +14,38 @@ authors:
     orcid: 0009-0001-2746-3668
     email: ben.stratton@bristol.ac.uk
 license:   
-abstract: Books I have read and enjoyed 
-exports:
+abstract: Books I have read and (potentially) enjoyed 
+# exports:
 #   - format: docx
-  - format: pdf
-    template: physical_review_journals
-    article_type: Report
+  # - format: pdf
+    # template: physical_review_journals
+    # article_type: Report
 ---
+
+```{code-cell} python
+:tag: remove-cell
+
+import matplotlib.pyplot as plt
+import numpy as np
+```
+
+```{code-cell} python
+:tags: [remove-input]
+
+# Data for plotting
+t = np.arange(0.0, 2.0, 0.01)
+s = 1 + np.sin(2 * np.pi * t)
+
+fig, ax = plt.subplots()
+ax.plot(t, s)
+
+ax.set(xlabel='time (s)', ylabel='voltage (mV)',
+       title='Waves in Time')
+ax.grid()
+
+fig.savefig("test.png")
+plt.show()
+```
 
 Here are a list of books I have read since 2021 with a (1-5)⭐ rating:
 
