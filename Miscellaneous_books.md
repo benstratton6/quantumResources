@@ -94,6 +94,7 @@ Within each genre, they are roughly in the order in which I read them.
 
 - **How Civil Wars Start**, _Barbara F. Walter_, 5 ⭐
 - **How Westminster Works … and Why It Doesn’t**, _Ian Dunt_, 5 ⭐
+- **Politics on the Edge**, _Rory Stewart_, 4 ⭐
 
 ## Economics
 
