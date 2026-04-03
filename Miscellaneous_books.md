@@ -1,10 +1,7 @@
 ---
 title: Books
 subject: Tutorial
-kernelspec:
-  name: python3
-  display_name: Python 3
-subtitle: 
+# subtitle: 
 # short_title: How to MyST
 authors:
   - name: Benjamin Stratton
@@ -13,8 +10,11 @@ authors:
     #   - Curvenote
     orcid: 0009-0001-2746-3668
     email: ben.stratton@bristol.ac.uk
-license:   
+# license:   
 abstract: Books I have read and (potentially) enjoyed 
+# kernelspec:
+#   name: python3
+#   display_name: Python 3
 # exports:
 #   - format: docx
   # - format: pdf
@@ -22,32 +22,20 @@ abstract: Books I have read and (potentially) enjoyed
     # article_type: Report
 ---
 
-```{code-cell} python
-:tag: remove-cell
+<!-- ```{code-cell} python
+hello = "hello"
+there = "there"
+phrase = f"{hello}, {there}!"
+print(phrase)
+``` -->
+This is my digital bookshelf, it contains lists of the books I have read since 2021 and includes a (1-5)⭐ rating for each. 
 
-import matplotlib.pyplot as plt
-import numpy as np
-```
+Within each genre, the lists are roughly in the order in which I read them. 
 
-```{code-cell} python
-:tags: [remove-input]
+Books marked with a 🛸 have been read in the current calendar year. 
 
-# Data for plotting
-t = np.arange(0.0, 2.0, 0.01)
-s = 1 + np.sin(2 * np.pi * t)
-
-fig, ax = plt.subplots()
-ax.plot(t, s)
-
-ax.set(xlabel='time (s)', ylabel='voltage (mV)',
-       title='Waves in Time')
-ax.grid()
-
-fig.savefig("test.png")
-plt.show()
-```
-
-Here are a list of books I have read since 2021 with a (1-5)⭐ rating:
+```{card} 
+:header: The ⭐ Rating System:
 
   - 1 ⭐ : Not Good
   - 2 ⭐ : Okay
@@ -55,9 +43,9 @@ Here are a list of books I have read since 2021 with a (1-5)⭐ rating:
   - 4 ⭐ : Good 
   - 5 ⭐ : Excellent 
 
-Within each genre, they are roughly in the order in which I read them. 
+```
 
-🛸 marks books read in the current year. 
+
 
 # Fiction 
 
@@ -92,7 +80,7 @@ Within each genre, they are roughly in the order in which I read them.
 - **Slaughterhouse-Five**, _Kurt Vonnegut Jr._, 5 ⭐
 - **The Dispossessed**, _Ursula K. Le Guin_, 5 ⭐
 - **The Left Hand of Darkness**, _Ursula K. Le Guin_, 4 ⭐
-- **Revelation Space**, _Alastair Reynolds_, 4 ⭐
+- **Revelation Space**, _Alastair Reynolds_, 5 ⭐
 - **Altered Carbon**, _Richard K. Morgan_, 5 ⭐
 - **Old Mans War**, _John Scalzi_, 3 ⭐
 - **Snow Crash**, _Neal Stephenson_, 3 ⭐ 🛸
@@ -102,7 +90,7 @@ Within each genre, they are roughly in the order in which I read them.
 
 - **Damascus Station**, _David McCloskey_, 4 ⭐
 - **The Spy Who Came in from the Cold**, _John le Carré_, 5 ⭐ 🛸
-- **Tinker, Tailor, Soldier, Spy**, _John le Carré_, 5 ⭐ 🛸
+- **Tinker Tailor Soldier Spy**, _John le Carré_, 5 ⭐ 🛸
 
 ## Other 
 
@@ -136,3 +124,34 @@ Within each genre, they are roughly in the order in which I read them.
 ## History 
 
 - **The Anarchy: The Relentless Rise of the East India Company**, _William Dalrymple_, 5 ⭐
+
+# Data
+
+```{figure} Miscellaneous_books_star_rating_graph.png
+:alt: star_rating_graph
+:class: bg-primary
+:width: 500px
+:align: center
+
+Distribution of star ratings. Clearly I am quite generous. 
+```
+
+```{figure} Miscellaneous_books_fiction_genre.png
+:alt: fiction_genre
+:class: bg-primary
+:width: 500px
+:align: center
+
+Number of books within each fiction genre I have read. There is a clear preference to science fiction. 
+```
+
+```{figure} Miscellaneous_books_non_fiction_genre.png
+:alt: non_fiction_genre
+:class: bg-primary
+:width: 500px
+:align: center
+
+Number of books within each non-fiction genre I have read. 
+```
+
+

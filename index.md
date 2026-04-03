@@ -7,7 +7,6 @@ title: Benjamin Stratton
 #       - H.H. Wills Physics Laboratory, University of Bristol, Tyndall Avenue, Bristol, BS8 1TL, UK
 # license: CC-BY-4.0
 keywords: Quantum Information, Quantum Mechanics
-
 project:
   title: Quantum Resources
 extends:
