@@ -15,7 +15,7 @@ extends:
 
 ## About Me
 
-My name is Ben Stratton and I am a fourth year PhD student at the University of Bristol studying problems in quantum information theory. My current interests are in and around the fields of quantum resource theories, quantum thermodynamics, and quantum computation.
+My name is Ben Stratton, and I recently graduated from my PhD at the University of Bristol, during which I studied problems in quantum information theory. My current interests are in and around the fields of quantum resource theories, quantum thermodynamics, and quantum error correction and quantum computation.
 
 :::{figure} ./images/BenStrattonHeadShot.png
 :name: BenStratonHeadShot
@@ -61,6 +61,8 @@ Please do get in touch with me if you would like to add anything, think somethin
 
 ## Talks
 
+- **The More The Merrier - Resource Enhancement in Quantum Resource Theories,** [_slides_](The_More_The_Merrier_Resource_Enhancement_in_Quantum_Resource_Theories.pptx)
+    1. Departamento de Física, Universidade Federal de Pernambuco, Recife, Brazil, April 2026, (_**Seminar**_).  
 - **Purity Enhancement from Athermaility Enhancement,** [_slides_](Talk_5_Purity_Enhancement_from_Athermaility_Enhancement.pptx)
     1. Département de Physique Appliquée, University of Geneva, Switzerland, September 2025, (_**Seminar**_).
     2. Grup d'Informació Quàntica (GIQ), Universitat Autònoma de Barcelona, Spain, October 2025. (_**Seminar**_).
