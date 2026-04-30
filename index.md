@@ -62,7 +62,8 @@ Please do get in touch with me if you would like to add anything, think somethin
 ## Talks
 
 - **The More The Merrier - Resource Enhancement in Quantum Resource Theories,** [_slides_](The_More_The_Merrier_Resource_Enhancement_in_Quantum_Resource_Theories.pptx)
-    1. Departamento de Física, Universidade Federal de Pernambuco, Recife, Brazil, April 2026, (_**Seminar**_).  
+    1. Departamento de Física, Universidade Federal de Pernambuco, Recife, Brazil, April 2026, (_**Seminar**_).
+    2. International Institute of Physics, Federal University of Rio Grande do Norte, Natal, Brazil, April 2026, (_**Seminar**_).
 - **Purity Enhancement from Athermaility Enhancement,** [_slides_](Talk_5_Purity_Enhancement_from_Athermaility_Enhancement.pptx)
     1. Département de Physique Appliquée, University of Geneva, Switzerland, September 2025, (_**Seminar**_).
     2. Grup d'Informació Quàntica (GIQ), Universitat Autònoma de Barcelona, Spain, October 2025. (_**Seminar**_).
