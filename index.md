@@ -25,7 +25,7 @@ My name is Ben Stratton, and I recently graduated from my PhD at the University 
 
 Originally from Devon, England, I studied for my MSci in physics at the University of Bristol between 2016-2020, taking units in Quantum Information Theory, Quantum Computation, Advance Quantum Mechanics and Advance Computational Physics. I returned to Bristol in 2021 to join the Quantum Engineering Centre for Doctoral Training. During the first year of my PhD I undertook an interdisciplinary range of teaching that included courses in Quantum Light and Matter, Applied Quantum Theory, Nanofabrication and Quantum Systems Engineering. I then joined the Quantum Information Theory group under the supervision of Paul Skrzypczyk and Chung-Yun Hsieh.
 
-Other notable highlights alongside my academic pursuits have been working with the venture capital fund [The Creator Fund](https://thecreatorfund.com/) on assessing deep-tech start-ups, teaching a post-graduate course on the Applications of Quantum Information, co-organising [Careers in Quantum](https://www.careers-in-quantum.com/) – a student led quantum careers fair, and conducting outreach at both the Blue Dot Science Festival and the Swindon Science Festival. 
+Other notable highlights alongside my academic pursuits have been working with the venture capital fund [The Creator Fund](https://thecreatorfund.com/) on assessing deep-tech start-ups, teaching a post-graduate course on the Applications of Quantum Information, co-organising [Careers in Quantum](https://www.careers-in-quantum.com/) – a student led quantum careers fair, conducting outreach at both the Blue Dot Science Festival and the Swindon Science Festival, and undertaking long term visits in the groups of Marcus Huber in Vienna and Rafael Chaves in Natal. 
 
 
 ## Quantum Resources 
@@ -58,12 +58,12 @@ Please do get in touch with me if you would like to add anything, think somethin
 
 - [Dynamical Resource Theory of Informational Nonequilibrium Preservability](https://doi.org/10.48550/arXiv.2306.16848)
 
-
 ## Talks
 
-- **The More The Merrier - Resource Enhancement in Quantum Resource Theories,** [_slides_](The_More_The_Merrier_Resource_Enhancement_in_Quantum_Resource_Theories.pptx)
+- **The More The Merrier - Resource Enhancement in Quantum Resource Theories,** 
+(Note, the title of this talk is actually a bit misleading, its really a pedagogical talk about the structure of resource theories) [_slides_](The_More_The_Merrier_Resource_Enhancement_in_Quantum_Resource_Theories.pptx)
     1. Departamento de Física, Universidade Federal de Pernambuco, Recife, Brazil, April 2026, (_**Seminar**_).
-    2. International Institute of Physics, Federal University of Rio Grande do Norte, Natal, Brazil, April 2026, (_**Seminar**_).
+    2. [International Institute of Physics, Federal University of Rio Grande do Norte, Natal, Brazil, April 2026](https://www.youtube.com/watch?v=U-7pwS2jC0k), (_**Seminar**_).
 - **Purity Enhancement from Athermaility Enhancement,** [_slides_](Talk_5_Purity_Enhancement_from_Athermaility_Enhancement.pptx)
     1. Département de Physique Appliquée, University of Geneva, Switzerland, September 2025, (_**Seminar**_).
     2. Grup d'Informació Quàntica (GIQ), Universitat Autònoma de Barcelona, Spain, October 2025. (_**Seminar**_).
@@ -84,6 +84,10 @@ Please do get in touch with me if you would like to add anything, think somethin
 
 - [Scientific CV](Benjamin_Stratton_CV.pdf)
 - [non-Scientific CV](Benjamin_Stratton_CV___Non_Scientific.pdf)
+
+## Thesis
+
+- [The More the Merrier: Resource enhancement and Preservation in Quantum Resource Theories](Benjamin_Stratton_PhD_Thesis_Final.pdf)
 
 ## Teaching
 - Applications of Quantum Information, _Post Graduate Course_. 
