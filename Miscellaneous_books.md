@@ -120,6 +120,7 @@ Books marked with a 🛸 have been read in the current calendar year.
 - **How to Be an Anticapitalist in the Twenty-First Century**, _Erik Olin Wright_, 3 ⭐
 - **Doughnut Economics**, _Kate Raworth_, 4 ⭐
 - **The Money Machine: How the City Works**, _Philip Coggan_, 3 ⭐
+- **Why Nations Fail: The Origins of Power, Prosperity and Poverty**, _Daron Acemoglu & James A.Robinson_, 4 ⭐ 🛸
 
 ## History 
 
