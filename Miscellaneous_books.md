@@ -68,7 +68,7 @@ Books marked with a 🛸 have been read in the current calendar year.
 - **Second Foundation**, _Isaac Asimov_, 4 ⭐
 - **Foundation and Empire**, _Isaac Asimov_, 3 ⭐
 - **The Early Asimov - Volume 1**, _Isaac Asimov_, 3 ⭐
-- **Fahrenheit 451**, _Ray Bradbury_, 3 ⭐
+- **Fahrenheit 451**, _Ray Bradbury_, 2 ⭐
 - **Brave New World**, _Aldous Huxley_, 4 ⭐
 - **I, Robot**, _Isaac Asimov_, 4 ⭐
 - **Project Hail Mary**, _Andy Weir_, 5 ⭐
@@ -85,6 +85,8 @@ Books marked with a 🛸 have been read in the current calendar year.
 - **Old Mans War**, _John Scalzi_, 3 ⭐
 - **Snow Crash**, _Neal Stephenson_, 3 ⭐ 🛸
 - **War of the Worlds**, _H.G.Wells_, 3 ⭐ 🛸
+- **Contact**, _Carl Sagan_, 4 ⭐ 🛸
+- **Solaris**, _Stanisław Lem_, 4 ⭐ 🛸
 
 ## Spy 
 
