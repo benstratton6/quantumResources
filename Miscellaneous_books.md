@@ -94,6 +94,9 @@ Books marked with a 🛸 have been read in the current calendar year.
 - **The Spy Who Came in from the Cold**, _John le Carré_, 5 ⭐ 🛸
 - **Tinker Tailor Soldier Spy**, _John le Carré_, 5 ⭐ 🛸
 
+## Historical Fiction
+- **Shogun**, _James Clavell_, 4 ⭐ 🛸
+
 ## Other 
 
 - **Where The Crawdads Sing**, _Delia Owens_, 5 ⭐
@@ -143,9 +146,10 @@ Distribution of star ratings. Clearly I am quite generous.
 :alt: fiction_genre
 :class: bg-primary
 :width: 500px
+:height 500px
 :align: center
 
-Number of books within each fiction genre I have read. There is a clear preference to science fiction. 
+<!-- Number of books within each fiction genre I have read. There is a clear preference to science fiction.  -->
 ```
 
 ```{figure} Miscellaneous_books_non_fiction_genre.png

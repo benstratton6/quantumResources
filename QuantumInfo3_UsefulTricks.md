@@ -30,6 +30,7 @@ Contents:
 - [Operator Inequalities and Supports](#Operator_Inequalities_and_Supports)
 - [SWAP and Partial Transpose of Max Entangled States](#SWAP_and_Partial_Transpose_of_Max_Entangled_States)
 - [The Trace of a Product of Operators](#trace_of_product_of_operators)
+- [Post Selecting a Pure State with a Pure State](#Post_Selecting_a_Pure_State_with_a_Pure_State)
 
 (Expectation_Values_Squared_card)=
 ```{card} 
@@ -330,7 +331,7 @@ This implies that $\Pi_{A} + \Pi_M = \Pi_B$, where $\Pi_M$ is the projector onto
 ```{card} 
 :header: **SWAP and Partial Transpose of Max Entangled State** 
 
-Let $ \vert \Phi^+_{00} \rangle = (1/\sqrt{2}) \sum_{i,j=0}^1 \ket{ii} \in \mathcal{H}_A \otimes \mathcal{H}_B$. Then 
+Let $ \vert \Phi^+_{00} \rangle = (1/\sqrt{2}) \sum_{i,j=0}^1 \ket{ii} \in \mathcal{D}(\mathcal{H}_A \otimes \mathcal{H}_B)$. Then 
 \begin{equation}
  \vert \Phi^+_{00} \rangle \langle \Phi^+_{00} \vert^{t_A} = 2 ~ \mathtt{SWAP},
 \end{equation}
@@ -396,6 +397,52 @@ We now consider the second part of the right hand side of the above equation:
 &= \sum_{ij} a_{ij} b_{ji},
 \end{align*}
 completing the proof as all sides are therefore equal. 
+:::
+
+``` 
+
+(Post_Selecting_a_Pure_State_with_a_Pure_State)=
+```{card} 
+:header: **Post Selecting a Pure State with a Pure State** 
+
+Consider a bipartite space $\mathcal{H}_A \otimes \mathcal{H}_B$, and let $\vert \Phi \rangle \langle \Phi \vert \in \mathcal{D}(\mathcal{H}_A \otimes \mathcal{H}_B)$ whilst $\vert \Psi \rangle \langle \Psi \vert \in \mathcal{D}(\mathcal{H}_B)$, such that each state is a pure state in their respective spaces. Then,
+\begin{equation}
+         \textnormal{tr}_B \big[ \vert \Phi \rangle \langle \Phi \vert_{AB} (\mathbb{I}_A \otimes \vert \Psi \rangle \langle \Psi \vert_{B} ) \big] = \alpha \vert \tilde{\chi} \rangle \langle \tilde{\chi} \vert_{A},
+\end{equation}
+where $\vert \tilde{\chi} \rangle \langle \tilde{\chi} \vert \in \mathcal{D}(\mathcal{H}_A)$ and $\alpha \in [0,1]$. 
+
+:::{dropdown} Proof
+
+Using the Schmit decomposition of $\vert \Phi \rangle \langle \Phi \vert_{AB}$, it follows that 
+\begin{equation}
+  \begin{split}
+    \textrm{tr}_B & \big[ \vert \Phi \rangle \langle \Phi \vert_{AB} (\mathbb{I}_A \otimes \vert \Psi \rangle \langle \Psi \vert_B ) \big] \\
+    &= \sum_{i,j} \sqrt{\lambda_i \lambda_j} ~ \textrm{tr}_B \big[ \vert ii \rangle \langle  jj \vert (\mathbb{I}_A \otimes \vert \Psi \rangle \langle \Psi \vert) \big] \\
+    &= \sum_{i,j} \sqrt{\lambda_i \lambda_j}~ \vert i \rangle \langle  j \vert ~( \langle j \vert \Psi \rangle \langle \Psi \vert i \rangle ). \\
+  \end{split}
+\end{equation}
+One can then define 
+\begin{equation}
+        \ket{\chi} = \sum_i \lambda_i \braket{\Psi \vert i} \ket{i},
+\end{equation}
+such that 
+\begin{equation}
+         \textrm{tr}_B \big[ \vert \Phi \rangle \langle \Phi \vert_{AB} (\mathbb{I}_A \otimes \vert \Psi \rangle \langle \Psi \vert_B ) \big] = \vert \chi \rangle \langle \chi \vert.
+\end{equation}
+It can be seen that 
+\begin{equation}
+  \alpha = \textrm{tr}\big[ \chi \big] = \sum_{i} p_{i,i} \lambda_i \leq 1,
+\end{equation}
+where the inequality comes from fact that $0 \leq p_{ii} \leq 1 ~\forall~i$, as they are the diagonal elements of a density operator ($\vert \Psi \rangle \langle \Psi \vert)$, and $0 \leq \lambda_i \leq 1~\forall~i$ as they are eigenvalues of a density operator ($\vert \Phi \rangle \langle \Phi \vert_{AB}$). Hence,
+\begin{equation}
+  \vert \tilde{\chi} \rangle \langle \tilde{\chi} \vert = \frac{1}{\alpha} \vert \chi \rangle \langle \chi \vert,
+\end{equation}
+is a valid pure quantum state, such that 
+\begin{equation}
+        \alpha \vert \tilde{\chi} \rangle \langle \tilde{\chi} \vert  = \textrm{tr}_B \big[ \vert \Phi \rangle \langle \Phi \vert_{AB} (\mathbb{I}_A \otimes \vert \Psi \rangle \langle \Psi \vert_{B} ) \big],
+\end{equation}
+completing the proof. 
+
 :::
 
 ``` 
