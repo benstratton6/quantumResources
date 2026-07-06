@@ -32,7 +32,7 @@ This is my digital bookshelf, it contains lists of the books I have read since 2
 
 Within each genre, the lists are roughly in the order in which I read them. 
 
-Books marked with a 🛸 have been read in the current calendar year. 
+<!-- Books marked with a 🛸 have been read in the current calendar year. Books marked with 🎧 were audio books.  -->
 
 ```{card} 
 :header: The ⭐ Rating System:
@@ -45,7 +45,9 @@ Books marked with a 🛸 have been read in the current calendar year.
 
 ```
 
-
+Additional info:
+ - 🛸: the book was read in the current calendar year.
+ - 🎧: the book was listened to as an audio book. 
 
 # Fiction 
 
@@ -113,7 +115,7 @@ Books marked with a 🛸 have been read in the current calendar year.
 
 ## Politics 
 
-- **How Civil Wars Start**, _Barbara F. Walter_, 5 ⭐
+- **How Civil Wars Start**, _Barbara F. Walter_, 5 ⭐ 🎧
 - **How Westminster Works … and Why It Doesn’t**, _Ian Dunt_, 5 ⭐
 - **Politics on the Edge**, _Rory Stewart_, 4 ⭐
 
