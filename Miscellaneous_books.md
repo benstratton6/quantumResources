@@ -89,6 +89,7 @@ Additional info:
 - **War of the Worlds**, _H.G.Wells_, 3 ⭐ 🛸
 - **Contact**, _Carl Sagan_, 4 ⭐ 🛸
 - **Solaris**, _Stanisław Lem_, 4 ⭐ 🛸
+- **Children of Time**, _Adrian Tchaikovsky_, 5 ⭐ 🎧 🛸
 
 ## Spy 
 
@@ -132,6 +133,7 @@ Additional info:
 ## History 
 
 - **The Anarchy: The Relentless Rise of the East India Company**, _William Dalrymple_, 5 ⭐
+- **Homage to Catalonia**, _George Orwell_, 3 ⭐ 🛸
 
 # Data
 
