@@ -41,6 +41,10 @@ Please do get in touch with me if you would like to add anything, think somethin
 
 ## Publications
 
+**2026** 
+
+- [Quantum State Discrimination With Stabilizer Circuits](https://doi.org/10.48550/arXiv.2607.27339)
+
 **2025**
 
 - [Unspeakable Coherence Concentration](https://doi.org/10.48550/arXiv.2512.04255)
