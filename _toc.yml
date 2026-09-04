@@ -98,6 +98,6 @@ parts:
   - caption: Miscellaneous 
     chapters:
       - file: Miscellaneous_books.md
-      - file: Miscellaneous_Mongol_Rally.md
+      # - file: Miscellaneous_Mongol_Rally.md
       
 

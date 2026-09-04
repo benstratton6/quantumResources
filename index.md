@@ -23,11 +23,16 @@ My name is Ben Stratton, and I am a quantum error correction theorist at [Oxford
 :align: center
 :::
 
+:::{dropdown} More details
+
 Originally from Devon, England, I studied for my MSci in physics at the University of Bristol between 2016-2020, taking units in Quantum Information Theory, Quantum Computation, Advance Quantum Mechanics and Advance Computational Physics. I returned to Bristol in 2021 to join the Quantum Engineering Centre for Doctoral Training. During the first year of my PhD I undertook an interdisciplinary range of teaching that included courses in Quantum Light and Matter, Applied Quantum Theory, Nanofabrication and Quantum Systems Engineering. I then joined the Quantum Information Theory group under the supervision of Paul Skrzypczyk and Chung-Yun Hsieh.
 
 Other notable highlights alongside my academic pursuits have been working with the venture capital fund [The Creator Fund](https://thecreatorfund.com/) on assessing deep-tech start-ups, teaching a post-graduate course on the Applications of Quantum Information, co-organising [Careers in Quantum](https://www.careers-in-quantum.com/) – a student led quantum careers fair, conducting outreach at both the Blue Dot Science Festival and the Swindon Science Festival, and undertaking long term visits in the groups of Marcus Huber in Vienna and Rafael Chaves in Natal. 
 
-In September 2026, I joined OQC as a quantum error correction theorist. 
+In September 2026, I joined OQC as a quantum error correction theorist to aid in their pursuit of fault tolerant quantum computation. 
+:::
+
+
 
 ## Quantum Resources 
 
