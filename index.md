@@ -15,7 +15,7 @@ extends:
 
 ## About Me
 
-My name is Ben Stratton, and I recently graduated from my PhD at the University of Bristol, during which I studied problems in quantum information theory. My current interests are in and around the fields of quantum resource theories, quantum thermodynamics, and quantum error correction and quantum computation.
+My name is Ben Stratton, and I am a quantum error correction theorist at [Oxford Quantum Circuits](https://oqc.tech/) (OQC). Before this, I undertook my PhD at the University of Bristol during which I studied problems in quantum information theory. My current interests are in the fields of quantum error correction, quantum computation, quantum information theory and quantum resource theories. 
 
 :::{figure} ./images/BenStrattonHeadShot.png
 :name: BenStratonHeadShot
@@ -27,6 +27,7 @@ Originally from Devon, England, I studied for my MSci in physics at the Universi
 
 Other notable highlights alongside my academic pursuits have been working with the venture capital fund [The Creator Fund](https://thecreatorfund.com/) on assessing deep-tech start-ups, teaching a post-graduate course on the Applications of Quantum Information, co-organising [Careers in Quantum](https://www.careers-in-quantum.com/) – a student led quantum careers fair, conducting outreach at both the Blue Dot Science Festival and the Swindon Science Festival, and undertaking long term visits in the groups of Marcus Huber in Vienna and Rafael Chaves in Natal. 
 
+In September 2026, I joined OQC as a quantum error correction theorist. 
 
 ## Quantum Resources 
 
