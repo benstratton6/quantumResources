@@ -147,6 +147,7 @@ where $\mathbb{I}$ is the identity matrix.
 :::
 :::{tab-item} Matrix Multiplication
 :sync: tab8
+(traget_matrix_multiplication)=
 Let $A~\in~\mathbb{M}_{nm}$ and $B~\in~\mathbb{M}_{ml}$ and $C=AB$
 
 The elements $c_{ij}$ is given by 

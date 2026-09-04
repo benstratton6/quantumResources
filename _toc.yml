@@ -88,6 +88,7 @@ parts:
       - file: mathematicalNotes1_preorder
       - file: mathematicalNotes2_convexity
       - file: mathematicalNotes6_entropies
+      - file: mathematicalNotes7_groups.md
       - file: mathematicalNotes5_probability_examples
   - caption: Economics 
     chapters:
@@ -97,5 +98,6 @@ parts:
   - caption: Miscellaneous 
     chapters:
       - file: Miscellaneous_books.md
+      - file: Miscellaneous_Mongol_Rally.md
       
 
