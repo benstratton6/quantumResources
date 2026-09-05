@@ -40,7 +40,7 @@ Here I give some advice I would have considered useful in hindsight, and some of
 
 ## Best Images
 
-```{figure} images\4.JPG
+```{figure} ./images/4.JPG
 :alt: 
 :class: bg-primary
 :width: 800px
