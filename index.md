@@ -17,7 +17,7 @@ extends:
 
 My name is Ben Stratton, and I am a quantum error correction theorist at [Oxford Quantum Circuits](https://oqc.tech/) (OQC). Before this, I undertook my PhD at the University of Bristol during which I studied problems in quantum information theory. My current interests are in the fields of quantum error correction, quantum computation, quantum information theory and quantum resource theories. 
 
-:::{figure} images\Benjmain_stratton_head_shot_2.JPG
+:::{figure} Benjmain_stratton_head_shot_2.JPG
 :name: BenStratonHeadShot
 :width: 200px
 :align: center
