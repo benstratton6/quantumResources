@@ -33,6 +33,12 @@ parts:
       - file: LinearAlgebra5_norms.md
       - file: LinearAlgebra11_algebras.md
       - file: LinearAlgebraGlossary.md
+  - caption: Group Theory
+    chapters: 
+      - file: group_theory_group_definitions.md 
+      - file: group_theory_equilivance_relations.md
+      - file: group_theory_cosets.md
+      - file: group_theory_quotient_groups.md
   - caption: Quantum Formalism
     chapters: 
       - file: quantumFormalism1_hilbertSpaces
@@ -88,7 +94,6 @@ parts:
       - file: mathematicalNotes1_preorder
       - file: mathematicalNotes2_convexity
       - file: mathematicalNotes6_entropies
-      - file: mathematicalNotes7_groups.md
       - file: mathematicalNotes5_probability_examples
   - caption: Economics 
     chapters:

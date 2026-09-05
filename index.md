@@ -17,7 +17,7 @@ extends:
 
 My name is Ben Stratton, and I am a quantum error correction theorist at [Oxford Quantum Circuits](https://oqc.tech/) (OQC). Before this, I undertook my PhD at the University of Bristol during which I studied problems in quantum information theory. My current interests are in the fields of quantum error correction, quantum computation, quantum information theory and quantum resource theories. 
 
-:::{figure} ./images/BenStrattonHeadShot.png
+:::{figure} ./images\Benjmain_stratton_head_shot_2.JPG
 :name: BenStratonHeadShot
 :width: 200px
 :align: center
@@ -25,7 +25,7 @@ My name is Ben Stratton, and I am a quantum error correction theorist at [Oxford
 
 :::{dropdown} More details
 
-Originally from Devon, England, I studied for my MSci in physics at the University of Bristol between 2016-2020, taking units in Quantum Information Theory, Quantum Computation, Advance Quantum Mechanics and Advance Computational Physics. I returned to Bristol in 2021 to join the Quantum Engineering Centre for Doctoral Training. During the first year of my PhD I undertook an interdisciplinary range of teaching that included courses in Quantum Light and Matter, Applied Quantum Theory, Nanofabrication and Quantum Systems Engineering. I then joined the Quantum Information Theory group under the supervision of Paul Skrzypczyk and Chung-Yun Hsieh.
+Originally from Devon, England, I studied for my MSci in physics at the University of Bristol between 2016-2020, taking units in Quantum Information Theory, Quantum Computation, Advance Quantum Mechanics and Advance Computational Physics. I returned to Bristol in 2021 to join the Quantum Engineering Centre for Doctoral Training. During the first year of my PhD I undertook an interdisciplinary range of teaching that included courses in Quantum Light and Matter, Applied Quantum Theory, Nanofabrication and Quantum Systems Engineering. I then joined the Quantum Information Theory group under the supervision of [Paul Skrzypczyk](https://paulskrzypczyk.github.io/) and [Chung-Yun Hsieh](https://scholar.google.com/citations?user=vPO1wCMAAAAJ&hl=zh-TW).
 
 Other notable highlights alongside my academic pursuits have been working with the venture capital fund [The Creator Fund](https://thecreatorfund.com/) on assessing deep-tech start-ups, teaching a post-graduate course on the Applications of Quantum Information, co-organising [Careers in Quantum](https://www.careers-in-quantum.com/) – a student led quantum careers fair, conducting outreach at both the Blue Dot Science Festival and the Swindon Science Festival, and undertaking long term visits in the groups of Marcus Huber in Vienna and Rafael Chaves in Natal. 
 
@@ -36,7 +36,7 @@ In September 2026, I joined OQC as a quantum error correction theorist to aid in
 
 ## Quantum Resources 
 
-In addition to detailing my academic pursuits, this website contains a collection of notes I have made throughout my PhD on various topics relevant to my research. I have written things in the way that I have understood them. I thought I would share them in the hope that someone else might find them useful. 
+In addition to detailing my academic pursuits, this website contains a collection of notes I have made on various topics relevant to my research. I have written things in the way that I have understood them. I thought I would share them in the hope that someone else might find them useful. 
 
 Note:
 - If you see 💭, hover to get some more information. 

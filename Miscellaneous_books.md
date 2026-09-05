@@ -151,10 +151,9 @@ Distribution of star ratings. Clearly I am quite generous.
 :alt: fiction_genre
 :class: bg-primary
 :width: 500px
-:height 500px
 :align: center
 
-<!-- Number of books within each fiction genre I have read. There is a clear preference to science fiction.  -->
+Number of books within each fiction genre I have read. There is a clear preference to science fiction. 
 ```
 
 ```{figure} Miscellaneous_books_non_fiction_genre.png

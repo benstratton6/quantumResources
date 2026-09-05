@@ -40,7 +40,7 @@ Here I give some advice I would have considered useful in hindsight, and some of
 
 ## Best Images
 
-```{figure} 4.JPG
+```{figure} images\4.JPG
 :alt: 
 :class: bg-primary
 :width: 800px
@@ -49,7 +49,7 @@ Here I give some advice I would have considered useful in hindsight, and some of
 Two panda's in Germany. 
 ```
 
-```{figure} 21.JPG
+```{figure} ./images/21.JPG
 :alt: 
 :class: bg-primary
 :width: 300px
@@ -58,7 +58,7 @@ Two panda's in Germany.
 The start line. 
 ```
 
-```{figure} 22.JPG
+```{figure} ./images/22.JPG
 :alt: 
 :class: bg-primary
 :width: 800px
@@ -67,7 +67,7 @@ The start line.
 Start line roof top rides.  
 ```
 
-```{figure} 54.JPG
+```{figure} ./images/54.JPG
 :alt: 
 :class: bg-primary
 :width: 800px
@@ -76,7 +76,7 @@ Start line roof top rides.
 Transfăgărășan in Romania  
 ```
 
-```{figure} 99.JPG
+```{figure} ./images/99.JPG
 :alt: 
 :class: bg-primary
 :width: 800px
@@ -85,7 +85,7 @@ Transfăgărășan in Romania
 White panda in Cappadocia.
 ```
 
-```{figure} 117.JPG
+```{figure} ./images/117.JPG
 :alt: 
 :class: bg-primary
 :width: 300px
@@ -94,7 +94,7 @@ White panda in Cappadocia.
 Balloons in Cappadocia.
 ```
 
-```{figure} 125.JPG
+```{figure} ./images/125.JPG
 :alt: 
 :class: bg-primary
 :width: 800px
@@ -103,7 +103,7 @@ Balloons in Cappadocia.
 Somewhere near Divriği.
 ```
 
-```{figure} 131.JPG
+```{figure} ./images/131.JPG
 :alt: 
 :class: bg-primary
 :width: 800px
@@ -112,7 +112,7 @@ Somewhere near Divriği.
 Tbilisi Repairs.
 ```
 
-```{figure} 185.JPG
+```{figure} ./images/185.JPG
 :alt: 
 :class: bg-primary
 :width: 800px
@@ -121,7 +121,7 @@ Tbilisi Repairs.
 In Alan we trust. 
 ```
 
-```{figure} 208.JPG
+```{figure} ./images/208.JPG
 :alt: 
 :class: bg-primary
 :width: 800px
@@ -130,7 +130,7 @@ In Alan we trust.
 Kazakhstan Steppe.
 ```
 
-```{figure} 216.JPG
+```{figure} ./images/216.JPG
 :alt: 
 :class: bg-primary
 :width: 300px
@@ -139,7 +139,7 @@ Kazakhstan Steppe.
 Samarkand.
 ```
 
-```{figure} 246.JPG
+```{figure} ./images/246.JPG
 :alt: 
 :class: bg-primary
 :width: 800px
@@ -148,7 +148,7 @@ Samarkand.
 Kyrgyzstan double breakdown.
 ```
 
-```{figure} 284.JPG
+```{figure} ./images/284.JPG
 :alt: 
 :class: bg-primary
 :width: 300px
@@ -157,7 +157,7 @@ Kyrgyzstan double breakdown.
 Kyrgyzstan mountain trekking.
 ```
 
-```{figure} 319.JPG
+```{figure} ./images/319.JPG
 :alt: 
 :class: bg-primary
 :width: 800px
@@ -166,7 +166,7 @@ Kyrgyzstan mountain trekking.
 Route to the finish. 
 ```
 
-```{figure} 335.JPG
+```{figure} ./images/335.JPG
 :alt: 
 :class: bg-primary
 :width: 800px
