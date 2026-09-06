@@ -94,6 +94,15 @@ White panda in Cappadocia.
 Balloons in Cappadocia.
 ```
 
+```{figure} ./images/122.JPG
+:alt: 
+:class: bg-primary
+:width: 800px
+:align: center
+
+First major breakdown.
+```
+
 ```{figure} ./images/125.JPG
 :alt: 
 :class: bg-primary
@@ -130,6 +139,15 @@ In Alan we trust.
 Kazakhstan Steppe.
 ```
 
+```{figure} ./images/202.JPG
+:alt: 
+:class: bg-primary
+:width: 800px
+:align: center
+
+Steppe repairs.
+```
+
 ```{figure} ./images/216.JPG
 :alt: 
 :class: bg-primary
@@ -137,6 +155,15 @@ Kazakhstan Steppe.
 :align: center
 
 Samarkand.
+```
+
+```{figure} ./images/218.JPG
+:alt: 
+:class: bg-primary
+:width: 800px
+:align: center
+
+Samarkand II.
 ```
 
 ```{figure} ./images/246.JPG
