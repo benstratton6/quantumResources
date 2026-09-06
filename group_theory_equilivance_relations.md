@@ -12,7 +12,7 @@ authors:
     email: ben.stratton@bristol.ac.uk
 # license: CC-BY-4.0
 keywords: Groups, Group Theory. 
-abstract: A brief overview of equivalence relations
+abstract: An overview of partitions, equivalence relations and their relationship
 exports:
 #   - format: docx
   - format: pdf
