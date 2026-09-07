@@ -23,7 +23,7 @@ exports:
 ## Quotient Groups
 
 Let $(G, *)$ be a [group](#group-definition) and let $(H, *)$ be a [normal subgroup](#group_page_normal_subgroup_target) of $(G, *)$. 
-
+(quotient_group_definition_target)=
 The quotient group of $(G, *)$ with respect to $(H, *)$ is defined to be the group whose elements are all the left cosets of $H$: 
 \begin{equation}
 G/H \coloneqq \big\{ gH : g \in G \big\},

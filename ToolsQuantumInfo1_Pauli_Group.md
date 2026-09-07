@@ -237,7 +237,7 @@ Below we highlight and prove key properties of the Pauli-group and the set of Pa
 
     To determine if two Pauli string commute or anti-commute, one therefore needs to count the number of locations where the Pauli-strings intersect non-trivially.   
     :::
-
+(eigenvalues_of_pauli_strings_target)=
 6. All Hermitian elements of $\mathcal{P}_n \setminus \mathbb{I}$ have eigenvalues $\pm 1$, where the $+1$ and $-1$ degenerate eigenspaces are of equal dimension. 
 
     All non-Hermitian elements of $\mathcal{P}_n$ have eigenvalues $\pm i$, where the $+i$ and $-i$ degenerate eigenspaces are of equal dimension.

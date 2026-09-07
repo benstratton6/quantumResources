@@ -44,7 +44,7 @@ A group is said to be abelian if all elements of $G$ mutually commute. If not, i
 Let $(G, *)$ be a group. Given a subset $H \subseteq G$, then $(H, *)$ is a subgroup of $(G, *)$ if $(H, *)$ is [group](#group_page_group_definition). 
 
 ## Group Generators
-
+(group_generators_definition)=
 The generators of a group $(G, *)$ are a subset of the elements of $G$ from which the whole set can be found via binary operations of the generators. 
 
 Formally, for a group $(G, *)$, a subset $S \subseteq G$ is a generating set if every element in $G$ can be written as a finite product of elements in $S$ and their inverses. Mathematically, this can captured as
@@ -52,11 +52,22 @@ Formally, for a group $(G, *)$, a subset $S \subseteq G$ is a generating set if 
 G = \langle S \rangle = \big\{ s_1^{\alpha_1}s_2^{\alpha_2}\ldots s_k^{\alpha_k} : k \geq 0, s_k \in S~\forall k, ~\alpha_k \in \mathbb{Z}~\forall ~k \big\}.
 \end{equation}
 
+(abelian_group_generators_target)=
+```{card} 
+:header: Abelian Group Generators
+
+Let $G$ be an [abelian group](#albelian_group_definition) of self inverse elements with generators $S = \big\{s_1, s_2, \cdots, s_n \big\}$. Then, any element $g \in G$ can be written as
+\begin{equation}
+g = \prod_{i=1}^m g_i^{\alpha_i} ~ : ~ ~ \alpha_i \in \{0,1\}~\forall i.
+\end{equation}
+```
+
 ## Centralizer 
 
 Let $(G, *)$ be a group and let $(H, *)$ be a [subgroup](#group_page_subgroup_definition) of $(G, *)$. 
 
 The centralizer of $(H,*)$ in $(G, *)$ is 
+(centralizer_definition_target)=
 \begin{equation}
 C_G(H) = \big\{ g \in G : ghg^{-1} = h ~\forall~h \in H \big\},
 \end{equation}
@@ -67,6 +78,7 @@ meaning that the centralizer contains all the elements of $G$ that commute with 
 Let $(G, *)$ be a group and let $(H, *)$ be a [subgroup](#group_page_subgroup_definition) of $(G, *)$. 
 
 The normalizer of $(H,*)$ in $(G, *)$ is 
+(normalizer_definition_target)=
 \begin{equation}
 N_G(H) = \big\{ g \in G : gHg^{-1} = H \big\} 
 \end{equation}

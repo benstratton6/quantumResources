@@ -47,7 +47,7 @@ The stabilizers of an error correcting code are defined as
 \begin{equation}
 \mathcal{S} = \big\{ P_i \in \mathcal{P}_n: P_i \ket{\psi}_L = \ket{\psi}_L~\forall~\ket{\psi}_L \wedge [P_i, P_j] = 0 ~ \forall ~ (i,j) \big\},
 \end{equation}
-such that $-\mathbb{I} \notin \mathcal{S}$. The stabilizers are therefore an [Abelian subgroup](#Abelian_group_target_glossary) of the $n$-qubit Pauli-group, $\mathcal{P}_n$, such that all logical states (states in the code space) are $(+1)$ eigenstates of each stabilizer, that does not contain the negative identity operator. 
+such that $-\mathbb{I} \notin \mathcal{S}$. The stabilizers are therefore an [Abelian subgroup](#albelian_group_definition) of the $n$-qubit Pauli-group, $\mathcal{P}_n$, such that all logical states (states in the code space) are $(+1)$ eigenstates of each stabilizer, that does not contain the negative identity operator. 
 
 The justification of these conditions are as follows:
 
@@ -127,11 +127,11 @@ The stabilizers are used to separate a Hilbert space into a series of orthogonal
 
 Each stabliser, $P_i$, is an element of the Pauli-group and can therefore be written as
 \begin{equation}
-P_i = \Pi^i_{+1} - \Pi^i_{-1},
+P_i = \Pi^i_{+} - \Pi^i_{-},
 \end{equation}
-where $\Pi^i_{+1}$ is the projector onto the $+1$ eigenspace of $P_i$ and $\Pi^i_{-1}$ the projector onto the $-1$ eigenspace of $P_i$. One can then defined the code space via the projector
+where $\Pi^i_{+}$ is the projector onto the $+1$ eigenspace of $P_i$ and $\Pi^i_{-}$ the projector onto the $-1$ eigenspace of $P_i$. One can then defined the code space via the projector
 \begin{equation}
-\Pi_{\mathfrak{C}_L} = \cap_{i=0}^{\vert \mathcal{S} \vert} \Pi^i_{+1},
+\Pi_{\mathfrak{C}_L} = \cap_{i=0}^{\vert \mathcal{S} \vert} \Pi^i_{+},
 \end{equation}
 which is the projector onto the intersection of all the positive eigenspaces of the stabilizers. 
 
@@ -139,7 +139,137 @@ The intersection of all the different combinations of the positive and negative 
 
 An error that maps the code space to one of these orthogonal subspaces can therefore be detected by measuring the observable who's eigenspaces are exactly these orthogonal subspaces.  
 
-<!-- Given the set of stabilizers is defined for an arbitrary state within the code space, the set of stablizers should be thought of as stabilizing the code space rather than a given logical state. In reality, the code space is defined in the opposite direction: e -->
+### Stabilizer Generators 
+
+The stabilizers form an [(abelian)](#albelian_group_definition) subgroup of the $n$-qubit Pauli-group. Hence, they can be represented in terms of a set of [independent generators](#group_generators_definition) [💭](#size_of_abelian_groups).
+
+The code space of a stabilizer code can then be defined from the stabilizer generators only. 
+
+To see this, let $\mathcal{S} = \langle \tilde{S} \rangle$ where $\tilde{S} = \big\{ S_1, S_2, \ldots, S_m \big\}$ for $S_i \in \mathcal{P}_n \forall~i$. If 
+\begin{equation}
+S_i \vert \psi \rangle_L = \vert \psi \rangle_L ~ ~ {\rm and} ~ ~ S_j \vert \psi \rangle_L = \vert \psi \rangle_L
+\end{equation}
+then 
+\begin{equation}
+S_i S_j \vert \psi \rangle_L = S_i \vert \psi \rangle_L = \vert \psi \rangle_L.
+\end{equation}
+Hence, any state in the $+1$ eigenspace of both $S_i$ and $S_j$ is also in the $+1$ eigenspace of their product $S_iS_j$. Therefore, the simultaneous $+1$ eigenspace of the generators is the simultaneous $+1$ eigenspace of the stabilizers, and hence, is the code space. 
+
+Moreover, only the stabilizer generators need to be measured, as the measurements of all other stabilizers can be calculated in post-processing from the measurement outcomes of the generators. 
+
+:::{dropdown} Proof
+
+Let $S_i$ and $S_j$ be stabilizer generators, such that $S_i, S_j \in \mathcal{P}_n$ and $[S_i, S_j]=0$. Moreover, let
+\begin{equation}
+S_i \vert \psi \rangle_L = \alpha \vert \psi \rangle_L ~ ~ {\rm and} ~ ~ S_j \vert \psi \rangle_L = \beta \vert \psi \rangle_L,
+\end{equation}
+where $\alpha, \beta \in \{0,1\}$. 
+
+The eigenvalue of the stabilizer $S_iS_j=S_jS_i$ is then 
+\begin{align*}
+S_iS_j \vert \psi \rangle_L &= S_i (\beta \vert \psi \rangle_L) \\
+&= \beta (S_i \vert \psi \rangle_L) \\
+&= \beta \alpha \vert \psi \rangle_L.
+\end{align*}
+
+Hence, the eigenvalue of $S_iS_j$ is just the product of the eigenvalues of $S_i$ and $S_j$.
+:::
+
+#### Number of Logical Qubits 
+
+If a code on $n$ physical qubits has $m$ stabilizer generators, then the number of logical qubits, $k$, is given by 
+\begin{equation}
+k = n - m.
+\end{equation}
+
+:::{dropdown} Proof
+
+Each stabilizer generator is an element of the Pauli-group, meaning its $+1$ and $-1$ eigenspaces [evenly split the Hilbert space](#eigenvalues_of_pauli_strings_target). 
+
+Given a Hilbert space of $n$-qubits, its dimension is $2^n$. The dimension of the $+1$ eigenspace of a stabilizer generator is therefore $2^n/2 = 2^{n-1}$. Hence, the constraint of a stabilizer generator can be thought of as _removing one qubit_ from the Hilbert space. 
+
+We now aim to show that each additional stabilizer generator removes one further qubit from the Hilbert space. 
+
+Let $S_i$ and $S_j$ be stabilizer generators, such that $S_i, S_j \in \mathcal{P}_n$ and $[S_i, S_j]=0$. Both $S_i$ and $S_j$ can be decomposed in their eigenbasis as 
+\begin{align*}
+S_i &= \Pi^i_{+} - \Pi^i_{-} \\
+S_j &= \Pi^j_{+} - \Pi^j_{-},
+\end{align*}
+where
+\begin{equation}
+\Pi^\alpha_{\pm} = \frac{\mathbb{I} \pm S_\alpha}{2}.
+\end{equation}
+As $[S_i, S_j]=0$, the projector onto simultaneous $+1$ eigenspace is given by 
+\begin{equation}
+\Pi^j_{+}\Pi^i_{+} = \Pi^i_{+}\Pi^j_{+}.
+\end{equation} 
+The dimension of a projector is then given by its trace, meaning the dimension of this projector is therefore 
+\begin{align*} 
+{\rm tr}\big[ \Pi^j_{+}\Pi^i_{+} \big] &= {\rm tr}\bigg[ \bigg( \frac{\mathbb{I} + S_j}{2} \bigg) \bigg( \frac{\mathbb{I} + S_i}{2} \bigg) \bigg] \\
+&= \frac{1}{4} \textrm{tr} \big[ \mathbb{I} + S_i + S_j + S_j S_i \big] \\
+&= \frac{2^n}{4},
+\end{align*}
+where we have used the fact that the trace of non-identity elements of the Pauli-group is zero, and $S_i S_j \neq \mathbb{I}$ as $S_i$ and $S_j$ are independent stabilizer generators. 
+
+Hence, the addition of another constraint of a stabilizer generator half's the size of the simultaneous $+1$ eigenspace.
+
+This can be generalized to $r$ independent commuting stabilizers, with each additional stabilizer generator halving the size of the simultaneous $+1$ eigenspace. Therefore, given $m$ stabilizer generators, the size of the simultaneous $+1$ eigenspace is 
+\begin{equation}
+\frac{2^n}{2^m} = 2^{n-m},
+\end{equation}
+which is a space capable of encoding $k=n-m$ qubits. 
+:::
+
+### Logical Operators
+
+A logical operator is an operator that acts on encoded states in the same way as it would act on a physical state. This means all expected commutations relations must hold. 
+
+The possible logical operators of a stabilizer code are
+\begin{equation}
+N(\mathcal{S}) \setminus \mathcal{S},
+\end{equation}
+where $N(\mathcal{S})$ is the [normalizer](#normalizer_definition_target) of $\mathcal{S}$. 
+
+All elements of the Pauli-group commute or anti-commute, and the stabilizer generators never include $-\mathbb{I}$. Hence, the normalizer of $\mathcal{S}$ is equal to the [centralizer](#centralizer_definition_target) of $S$.
+
+The possible logical operators are therefore the elements of the Pauli-group that mutually commute with all elements of $\mathcal{S}$ but are not in $\mathcal{S}$. 
+
+This definition ensures that states acted upon by a logical operator remain within the code space. 
+:::{dropdown} Proof
+
+Let $\vert \psi \rangle_L$ be an arbitrary state in the code space i.e., the $+1$ eigenspace of all stabilizers $\mathcal{S}$, and let $S \in \mathcal{S}$. Hence, $S \vert \psi \rangle_L = \vert \psi \rangle_L$. 
+
+Now, let $U \in N(\mathcal{S}) \setminus \mathcal{S}$. We now aim to show that $U \vert \psi \rangle_L$ remains inside the code space. 
+
+This is actually easy to see as 
+\begin{align*}
+S(U \vert \psi \rangle_L) &= U (S \vert \psi \rangle_L) \\
+&= U \vert \psi \rangle_L,
+\end{align*}  
+as $[U,S]=0$. Hence, if $\vert \psi \rangle_L$ was in the $+1$ eigenspace of $S$, so is $U \vert \psi \rangle_L$. 
+
+The above was true for an arbitrary stabilizer and, given all stabilizers commute, will generalize to the application of any number of stabilizers. 
+
+Hence, if $\vert \psi \rangle_L$ is in the simultaneous $+1$ eigenspace of all stabilizers, then so is $U \vert \psi \rangle_L$.   
+::: 
+
+#### Uniqueness 
+
+Logical operators are not unique, as any logical operator multiplied by a stabilizer will perform the same logical operation. 
+
+To see this, let $S \in \mathcal{S}$, $U \in N(\mathcal{S}) \setminus S$ and assume $\vert \psi \rangle_L$ is an arbitrary state in the code space. Then
+\begin{equation}
+U (S \vert \psi \rangle_L) = U \vert \psi \rangle_L,
+\end{equation}
+meaning $US$ and $U$ have the same effect on the logical state. 
+
+To capture this, logical operators are formally represented by [cosets](#group_theory_page_cosets_definition) of $\mathcal{S}$ insides $N(\mathcal{S})$. Given a $U \in N(\mathcal{H})$, the left [coset](#group_theory_page_cosets_definition) 
+\begin{equation}
+\big\{ US : S \in \mathcal{S} \big\},
+\end{equation}
+forms a set of equivalent logical operators. If $U \in \mathcal{S}$, then the coset is equal to $\mathcal{S}$ with the logical operator being the identity.  
+
+As a result of this, logical operators are studied via the [quotient group](#quotient_group_definition_target) of $N(\mathcal{S})$ with respect to $S$, i.e., $N(\mathcal{S}) / \mathcal{S}$. This [quotient group](#quotient_group_definition_target) combines together all the operators in $N(\mathcal{S})$ that perform the same logical operator and treats them equivalently. Relationships between these set of operators (that perform the same logical operator) can then be studied.  
 
 ### Measuring Stabilizer 
 

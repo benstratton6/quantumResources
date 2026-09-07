@@ -32,3 +32,5 @@ exports:
 (anti_hermitain_pauli_stab_measures_target_glossary)=
 **Anti-Hermitian Stabilizers**: If $\tilde{P} \in \mathcal{P}_n$ is not Hermitian, such that $\tilde{P}^\dagger \neq \tilde{P}$, the there exists a $Q \in \mathcal{P}_n$, such that $Q^\dagger = Q$, where $Q=(\pm i) \tilde{P}$. Given the complex phase does not effect the measurement outcomes, one can just measure $Q$ using this method in place of $\tilde{P}$.
 
+(size_of_abelian_groups)=
+**Size of groups of abelian generators**: As the group is abelian, any group element can be written as a product of each of the generators with an exponent of either $0$ or $1$ [(see here)](#abelian_group_generators_target). A group with $m$ generators therefore has $2^m$ group elements.  
