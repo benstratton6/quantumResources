@@ -271,6 +271,27 @@ forms a set of equivalent logical operators. If $U \in \mathcal{S}$, then the co
 
 As a result of this, logical operators are studied via the [quotient group](#quotient_group_definition_target) of $N(\mathcal{S})$ with respect to $S$, i.e., $N(\mathcal{S}) / \mathcal{S}$. This [quotient group](#quotient_group_definition_target) combines together all the operators in $N(\mathcal{S})$ that perform the same logical operator and treats them equivalently. Relationships between these set of operators (that perform the same logical operator) can then be studied.  
 
+#### Code Distance
+
+The distance of an error correcting code is the minimum number of errors that can occur without the error being detected by the code. 
+
+For a stabilizer code, the distance is given by the minimum weight of an element in $N(\mathcal{S}) \setminus \mathcal{S}$. 
+
+:::{dropdown} Justification
+
+Errors are considered to be individual Pauli-errors acting on the qubits, with the weight of a Pauli-string - the number of qubits on which the string acts non-trivially - corresponding to the number of errors that given Pauli-string will have caused. For example, 
+\begin{equation}
+X_1X_2X_5
+\end{equation} 
+corresponds to an $X$ error on qubits $1,2$ and $5$. That is $3$ errors, equal to the weight of the string.
+
+Elements of $N(\mathcal{S}) \setminus \mathcal{S}$ are the logical operators of the stabilizer code i.e., the Pauli-string that keep states within the code space but act non-trivially on them. 
+
+Hence, if an error $E \in N(\mathcal{S}) \setminus \mathcal{S}$ occurs, it will go undetected, as the state will remain in the code space but an unknown operation will have been applied. 
+
+Therefore, the minimum weight of an element in $N(\mathcal{S}) \setminus \mathcal{S}$ will be the distance of the code. 
+:::
+
 ### Measuring Stabilizer 
 
 All elements of $\mathcal{P}_n$ are [unitary](#target_unitary_adjoint_page_unitary_definition). If $P \in \mathcal{P}_n$ is also [Hermitian](#hermitian_adjoint_page_target), then any stabilizer $P$ can be measured on the logic state indirectly, with the measurement outcome stored in an ancilla [💭](#anti_hermitain_pauli_stab_measures_target_glossary).
