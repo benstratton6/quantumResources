@@ -36,7 +36,7 @@ Consider a set $G$ and a [binary operation](#binary_operation_glossary) $* :  G 
 ## Abelian Groups
 
 Let $(G, *)$ be a group. For $a,b \in G$, it is said that $a$ and $b$ commute if $a * b = b*a$. 
-
+(albelian_group_definition)=
 A group is said to be abelian if all elements of $G$ mutually commute. If not, it is said to be non-abelian. 
 
 ## Subgroups 
@@ -51,6 +51,36 @@ Formally, for a group $(G, *)$, a subset $S \subseteq G$ is a generating set if 
 \begin{equation}
 G = \langle S \rangle = \big\{ s_1^{\alpha_1}s_2^{\alpha_2}\ldots s_k^{\alpha_k} : k \geq 0, s_k \in S~\forall k, ~\alpha_k \in \mathbb{Z}~\forall ~k \big\}.
 \end{equation}
+
+## Centralizer 
+
+Let $(G, *)$ be a group and let $(H, *)$ be a [subgroup](#group_page_subgroup_definition) of $(G, *)$. 
+
+The centralizer of $(H,*)$ in $(G, *)$ is 
+\begin{equation}
+C_G(H) = \big\{ g \in G : ghg^{-1} = h ~\forall~h \in H \big\},
+\end{equation}
+meaning that the centralizer contains all the elements of $G$ that commute with all the elements of $H$. 
+
+## Normalizer 
+
+Let $(G, *)$ be a group and let $(H, *)$ be a [subgroup](#group_page_subgroup_definition) of $(G, *)$. 
+
+The normalizer of $(H,*)$ in $(G, *)$ is 
+\begin{equation}
+N_G(H) = \big\{ g \in G : gHg^{-1} = H \big\} 
+\end{equation}
+where 
+\begin{equation}
+g H g^{-1} =  H \iff \big\{ g * h_i * g^{-1} : h_i \in H \big\} = H.
+\end{equation} 
+The normalizer is therefore all the elements of $G$ that map all the elements of $H$ back to itself under conjugation. 
+
+In general the centralizer is contained within the normalizer,
+\begin{equation}
+C_G(H) \subseteq N_G(H),
+\end{equation}
+as commuting is a weaker condition than preserving under conjugation. 
 
 ## Group Examples
 

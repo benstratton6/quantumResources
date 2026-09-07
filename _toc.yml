@@ -39,6 +39,7 @@ parts:
       - file: group_theory_equilivance_relations.md
       - file: group_theory_cosets.md
       - file: group_theory_quotient_groups.md
+      - file: group_theory_group_maps.md
   - caption: Quantum Formalism
     chapters: 
       - file: quantumFormalism1_hilbertSpaces

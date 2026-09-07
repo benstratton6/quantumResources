@@ -157,7 +157,7 @@ This means the only input vector the map can output $\bm{0}$ for is $\bm{0}$.
 :::{tab-item} Bijective 
 :sync: tab7
 Let $L: \mathbb{F}^{n} \rightarrow \mathbb{F}^{m}$ be a linear map.
-
+(bijective_definition_target)=
 $L$ is bijective if it is both [surjective](#Surjective_linear_maps_target) and [injective](#injective_linear_maps_target). 
 
 **Properties:**
