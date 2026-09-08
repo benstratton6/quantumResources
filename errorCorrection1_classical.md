@@ -31,12 +31,14 @@ https://doi.org/10.1080/00107514.2019.1667078)
 https://doi.org/10.1103/PhysRevA.86.032324)
 - [Quantum Error Correction, Prof. Kastoryano](https://www.thp.uni-koeln.de/kastoryano/ExSheets/Notes_v7.pdf)
 - Lectures On Computation, Feynman, R.P.
+- [Quantum error correction and fault tolerance: A comprehensive tutorial](https://doi.org/10.48550/arXiv.2605.29137)
+- [Blog by Arthur Pesah](https://arthurpesah.me/)
 
 ## Noise in Classical Information Processing
 
-Classical information is encoded into physical systems via a binary encoding, where the information is stored as a sequence of $\ket{0}$ and $\ket{1}$'s. The given information ones wants to encode is called the **logical information** and for $n$ bits this takes the forms of a bit-string from 
+Classical information is (most often) encoded into physical systems via a binary encoding, where the information is stored as a sequence of $\ket{0}$ and $\ket{1}$'s. The given information ones wants to encode is called the **logical information** and for $k$ bits this takes the forms of a bit-string from 
 \begin{equation}
-\mathfrak{B} = \{ \ket{0}, \ket{1} \}^n.
+\mathfrak{B} = \{ \ket{0}, \ket{1} \}^k.
 \end{equation} 
 
 Once encoded, the logical information is either sent from one party to another, stored in a memory or processed to perform a computation. 
@@ -50,9 +52,7 @@ After the information has been sent or stored in memory for some time, it needs 
 
 ## Classical Error Correction
 
-Error correction aims to combat noise through redundancy — each logical bit is instead encoded in many physical bits. A method of encoding logical information through redundancy in order to protect against errors is known as an **error correcting code**. 
-
-<!-- Whilst physical error rates are low when storing classical information, it is still necessary to employ error correction in scenarios such as deep space communication where the large distance between the sender and receiver leads to more physical errors occurring.  -->
+Error correction aims to combat noise through redundancy, meaning additional physical are used to protect against errors. For example, $n$ physical bits are used to encode $k$ logical bits, where $k < n$. Any method of encoding logical information through redundancy in order to protect against errors is known as an **error correcting code**. 
 
 ### Error Detection 
 
@@ -62,21 +62,21 @@ When an error occurs on the physical bits an error correcting code aims to:
 2. if so, identify where the error has occurred (to which bits), 
 3. correct the error. 
 
-Typically, steps (1) and (2) occur at the same time. A measurement in made on the physical bits with the ouput of the measurement (known as a **syndrome**) detailing both that an error has occurred and where that error has occurred. In some codes, step (2) may not be necessary to fulfil step (3), with the error being correctable without its exact location (on exactly which bit is has occurred) being known.
+Typically, steps (1) and (2) occur at the same time. A measurement is made on the physical bits with the ouput of the measurement (known as a **syndrome**) detailing both that an error has occurred and where that error has occurred. In some codes, step (2) may not be necessary to fulfil step (3), with the error being correctable without its exact location (on exactly which bit is has occurred) being known.
 
-On the other hand, some codes are able to fulfill (1) without being able to fulfill (2) or (3). Such codes are said to perform **error detection**. In these cases, it is known that an error has occurred, but it is not know how to correct it. 
+On the other hand, some codes are able to fulfill (1) without being able to fulfill (2) or (3). Such codes are said to perform **error detection**. In these cases, it is known that an error has occurred, but it is not known how to correct it. 
 
 With only the use of error detection, one can ensure the correct performance of some information processing protocol in the presence of noise by just repeat the protocol until it happens error free, discarding any cases where an error is detected and starting again. Although, depending on the probability of an error occurring, this might be very inefficient. 
 
 ### The Repetition Code
 
-The simplest classical error correcting code is the 3-bit repetition code. Here, each bit of logical information is encoded via three physical bits of information. Specifically,
+A simple example of a classical error correcting code is the 3-bit repetition code. Here, each bit of logical information is encoded via three physical bits of information. Specifically,
 \begin{equation}
 \ket{0}_{L} \rightarrow \ket{000}, ~~~ \ket{1}_L \rightarrow \ket{111}, 
 \end{equation}
-where the left side of the arrow is a bit of logical information, denoted by the subscript $L$, and the right hand side is the physical information. The bit-string of logical information $\ket{010}_L$ is therefore physically encoded as $\ket{000111000}$, where 9 physical bits have been used to encode 3 logical bits. The bit-string $\ket{000}$ and $\ket{111}$ are called **logical codewords** of this error correcting code. 
+where the left side of the arrow is a bit of logical information, denoted by the subscript $L$, and the right hand side is the physical information. The bit-string of logical information $\ket{010}_L$ is therefore physically encoded as $\ket{000111000}$, where 9 physical bits have been used to encode 3 logical bits. The bit-string $\ket{000}$ and $\ket{111}$ are called **logical codewords** of this error correcting code, and they are the physical bit-strings used to encode the logical bit-strings.  
 
-Consider a logical bit, say $\ket{0}$, is sent from one party to another via a noisy channel that causes the first physical bit to be flipped,
+Consider now that a logical bit $\ket{0}$ is sent from one party to another via a noisy channel that causes the first physical bit to be flipped,
 \begin{equation}
 \ket{0}_L = \ket{000} \xrightarrow{\rm Noisy~ Channel} (X \otimes \mathbb{I} \otimes \mathbb{I}) \ket{000} = \ket{100}.
 \end{equation}
@@ -87,7 +87,7 @@ The 3 bit repetition code fails if a bit-flip (X) error occurs on more then one 
 \begin{equation}
 \ket{0}_L = \ket{000} \xrightarrow{\rm Noisy~ Channel} (X \otimes X \otimes \mathbb{I}) \ket{000} = \ket{110}.
 \end{equation}
-A majority vote will count one $\ket{0}$ and two $\ket{1}$'s, leading to $\ket{1}_L$ being decoded. A logical error will therefore have occurred, meaning an error has been applied to the logical information. 
+A majority vote will count one $\ket{0}$ and two $\ket{1}$'s, leading to $\ket{1}_L$ being decoded. A logical error will therefore have occurred, meaning an error has been applied to the logical information, in this case changing $\ket{0}_L$ to $\ket{1}_L$.
 
 If an error occurs on three physical bits then 
 \begin{equation}
@@ -95,7 +95,7 @@ If an error occurs on three physical bits then
 \end{equation}
 meaning the $\ket{0}_L = \ket{000}$ codeword is flipped to the $\ket{1}_L=\ket{111}$ codeword. A majority vote will therefore decode $\ket{1}_L$, meaning a logical error will have occurred whilst believing that no physical error has occurred. 
 
-The repetition code is therefore able to detect and then correct errors if the noisy channel consists of only a single bit flip. It is only able to detect errors if the noisy channel consists of one or two bits flip. Hence, for singular errors, the  repetition code is an error correcting code, whilst for one or two errors it is an error detecting code.  
+The repetition code is therefore able to detect and then correct errors if the noisy channel consists of only a single bit flip. It is only able to detect errors if the noisy channel consists of one or two bits flip, but if two bit-flips occur it will decode the error incorrectly. Hence, for singular errors, the repetition code is an error correcting code, whilst for one or two errors it is an error detecting code.  
 
 ### Code Distance
 
@@ -112,7 +112,77 @@ d = 2t + 1.
 
 Codes are labelled as $[n, k, d]$, where $n$ is the number of physical bits, $k$ is the number of logical bits and $d$ is the code distance.
 
+The rate, $R$, of an error correcting code is then the ratio of the logical bits to the physical bits
+\begin{equation}
+R = \frac{k}{n}.
+\end{equation}
 
+### Classical Linear Codes
+
+Here we will give a mathematical description of a broad class of binary classical error correcting codes called linear codes, which includes the repetition code introduce above. We will discuss several different ways of representing a given code through a simple example. 
+
+Firstly, we introduce the notion of parity and then employee it for performing error correction. 
+
+#### Parity Checks
+
+Given an $n$ bit-string $\vert \bm{a} \rangle = \vert a_1 a_2 \ldots a_n \rangle \in \mathfrak{B}$, the parity of the string, $p(\bm{a})$, is given by 
+\begin{equation}
+p(\bm{a}) = a_1 \oplus a_2 \oplus \ldots \oplus a_n,
+\end{equation}
+where $\oplus$ is addition modulo $2$. The parity therefore determines if the number of $1$'s in the bit-string is even or odd, where  
+\begin{equation}
+p(\bm{a}) = \begin{cases}
+0 \rightarrow ~{\rm even~number~of~}1's \\
+1 \rightarrow ~{\rm odd~number~of~}1's
+\end{cases}
+\end{equation}
+
+#### Parity Check Code
+
+We now consider an error correcting code where $k=3$ logical bits are stored in $n=4$ physical bits, with the redundant $4$th bit storing the parity of the logical bits. 
+
+For a bit-string $\ket{\bm{a}}=\ket{a_1a_2a_3}$, the encoding of this error correcting code is therefore 
+\begin{equation}
+\ket{a_1a_2a_3} \xrightarrow{\rm Encoding} \ket{a_1a_2a_3, p(\bm{a})}.
+\end{equation}  
+
+Now, consider that the encoded state is sent from one party to another and a bit-flip error occurs on the first bit, 
+\begin{equation}
+\ket{a_1a_2a_3, p(\bm{a})} \xrightarrow{\rm Noisy~ Channel} \ket{(a_1 \oplus 1)a_2a_3, p(\bm{a})}.
+\end{equation}
+Upon receiving the encoded state, the first three bits can be measured and their parity calculated. Then, the final bit can be measured and compared to the calculated parity value. 
+
+If the parities match, then either no error or two errors has occurred. If the parties do not match, then either one or three errors has occurred (we have assumed no error has occurred on the parity bit). 
+
+This is therefore an example of an error detecting code, as, even if we assume only one error occurred, it is still not known where that error occurs if the parity does not match. 
+
+We will now consider different methods of representing this error correcting code. 
+
+<!-- :::{dropdown} Representation of this code 
+
+ 
+
+***Code Words***
+
+One can list all the code words of the code. These are the three bit-strings with an additional bit holding their parity:
+\begin{align*}
+&\ket{000} \rightarrow \ket{0000} \\
+&\ket{001} \rightarrow \ket{0011} \\
+&\ket{010} \rightarrow \ket{0101} \\
+&\ket{011} \rightarrow \ket{0110} \\
+&\ket{100} \rightarrow \ket{1001} \\
+&\ket{101} \rightarrow \ket{1010} \\
+&\ket{110} \rightarrow \ket{1100} \\
+&\ket{111} \rightarrow \ket{1111} \\
+\end{align*}
+
+However, there can be a large number of code words, leading to this being an impractical description of a code. 
+
+***Set of Generators*** 
+
+There exists some set of bit-strings $
+
+::: -->
 ## The Need for Quantum Error Correction
 
 There exists the need for new error correcting codes when considering quantum systems as the previously discovered classical codes are not sufficient for the following reasons:
