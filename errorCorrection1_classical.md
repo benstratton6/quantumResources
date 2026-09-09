@@ -33,6 +33,7 @@ https://doi.org/10.1103/PhysRevA.86.032324)
 - Lectures On Computation, Feynman, R.P.
 - [Quantum error correction and fault tolerance: A comprehensive tutorial](https://doi.org/10.48550/arXiv.2605.29137)
 - [Blog by Arthur Pesah](https://arthurpesah.me/)
+-[But what are Hamming codes? The origin of error correction](https://www.youtube.com/watch?v=X8jsijhllIA)
 
 ## Noise in Classical Information Processing
 
@@ -117,13 +118,12 @@ The rate, $R$, of an error correcting code is then the ratio of the logical bits
 R = \frac{k}{n}.
 \end{equation}
 
-### Classical Linear Codes
+### Parity Check Codes
 
-Here we will give a mathematical description of a broad class of binary classical error correcting codes called linear codes, which includes the repetition code introduce above. We will discuss several different ways of representing a given code through a simple example. 
+Here, we introduce the notion of parity checks and give some examples of how they can be used in classical error correcting codes. 
 
-Firstly, we introduce the notion of parity and then employee it for performing error correction. 
-
-#### Parity Checks
+```{card} 
+:header: **Parity**
 
 Given an $n$ bit-string $\vert \bm{a} \rangle = \vert a_1 a_2 \ldots a_n \rangle \in \mathfrak{B}$, the parity of the string, $p(\bm{a})$, is given by 
 \begin{equation}
@@ -132,16 +132,18 @@ p(\bm{a}) = a_1 \oplus a_2 \oplus \ldots \oplus a_n,
 where $\oplus$ is addition modulo $2$. The parity therefore determines if the number of $1$'s in the bit-string is even or odd, where  
 \begin{equation}
 p(\bm{a}) = \begin{cases}
-0 \rightarrow ~{\rm even~number~of~}1's \\
-1 \rightarrow ~{\rm odd~number~of~}1's
+0 \rightarrow ~\bm{a}{\rm~has~ an~ even~number~of~}1's \\
+1 \rightarrow ~\bm{a}{\rm~has~ an~ odd~number~of~}1's
 \end{cases}
 \end{equation}
 
-#### Parity Check Code
+```
 
-We now consider an error correcting code where $k=3$ logical bits are stored in $n=4$ physical bits, with the redundant $4$th bit storing the parity of the logical bits. 
+***Error Detection With Parity***
 
-For a bit-string $\ket{\bm{a}}=\ket{a_1a_2a_3}$, the encoding of this error correcting code is therefore 
+We now demonstrate an error detecting code where $k=3$ logical bits are stored in $n=4$ physical bits, with the redundant $4$th bit storing the parity of the logical bits. 
+
+For a $3$ bit-string $\ket{\bm{a}}=\ket{a_1a_2a_3}$, the encoding of this error correcting code is therefore 
 \begin{equation}
 \ket{a_1a_2a_3} \xrightarrow{\rm Encoding} \ket{a_1a_2a_3, p(\bm{a})}.
 \end{equation}  
@@ -152,37 +154,88 @@ Now, consider that the encoded state is sent from one party to another and a bit
 \end{equation}
 Upon receiving the encoded state, the first three bits can be measured and their parity calculated. Then, the final bit can be measured and compared to the calculated parity value. 
 
-If the parities match, then either no error or two errors has occurred. If the parties do not match, then either one or three errors has occurred (we have assumed no error has occurred on the parity bit). 
+If the parities match, then the receiving party will know that either no error or two errors will have occurred, as 
+\begin{equation}
+p(\bm{a}) = p(\bm{a}) \oplus 1 \oplus 1.
+\end{equation}
+If the parties do not match, then they will know either one or three errors will have occurred, as 
+\begin{equation}
+p(\bm{a}) \oplus 1 = p(\bm{a}) \oplus 1 \oplus 1 \oplus 1.
+\end{equation}
+Note, we have assumed no error has occurred on the parity bit. 
 
-This is therefore an example of an error detecting code, as, even if we assume only one error occurred, it is still not known where that error occurs if the parity does not match. 
+More concretely, if the receiving party has the state $\ket{\bm{b}} = \ket{b_1b_2b_3p(\bm{a})}$, where $\bm{b}$ is an unknown $3$ bit-string, then they can then calculate 
+\begin{equation}
+s = b_1 \oplus b_2 \oplus b_3 \oplus p(\bm{a}),
+\end{equation} 
+where $s$ is the syndrome of this code. From this, they can concluded  
+\begin{equation}
+s = \begin{cases}
+0 \rightarrow {\rm~zero~or~two~errors~occurred} \\
+1 \rightarrow {\rm~one~or~three~errors~occurred}
+\end{cases}
+\end{equation} 
+Note, if it is assumed that most one error has occurred, including on the parity bit, then a $s=1$ syndrome will mean an error could have occurred on any of the $4$ physical bits. 
 
-We will now consider different methods of representing this error correcting code. 
+This code is an example of an error detecting code, as, even if we assume only one bit flip error has occurred, it is still not known _where_ that error has occurred i.e., to which bit. This examples does, however, demonstrate that parity checks are a powerful method for determining if bit-flip errors have occurred. 
 
-<!-- :::{dropdown} Representation of this code 
+***Error Correction With Parity***
 
- 
+We now give an example of where parity checks can be used to create an error correcting code. Interestingly, we will see that there is enough freedom to also error correct the parity bits if we assume at most one bit-flip occurred. 
 
-***Code Words***
-
-One can list all the code words of the code. These are the three bit-strings with an additional bit holding their parity:
+The code stores $k=3$ logical bits in $n=6$ physical bits as
+\begin{equation}
+\ket{a_1a_2a_3} \xrightarrow{\rm Encoding} \ket{a_1a_2a_3, p_1 p_2 p_3},
+\end{equation}  
+where 
+\begin{equation}
+p_1 = a_1 \oplus a_2, ~ ~ p_2 = a_1 \oplus a_3, ~ ~ p_3 = a_2 \oplus a_3.
+\end{equation}
+Now, if the receiving party gets the state $\ket{b_1b_2b_3, p_1'p_2'p_3'}$, where all bits are unknown, then they can then calculate the following syndromes 
 \begin{align*}
-&\ket{000} \rightarrow \ket{0000} \\
-&\ket{001} \rightarrow \ket{0011} \\
-&\ket{010} \rightarrow \ket{0101} \\
-&\ket{011} \rightarrow \ket{0110} \\
-&\ket{100} \rightarrow \ket{1001} \\
-&\ket{101} \rightarrow \ket{1010} \\
-&\ket{110} \rightarrow \ket{1100} \\
-&\ket{111} \rightarrow \ket{1111} \\
+s_1 &= b_1 \oplus b_2 \oplus p_1' \\
+s_2 &= b_1 \oplus b_3 \oplus p_2' \\
+s_3 &= b_2 \oplus b_3 \oplus p_3' \\
+\end{align*}
+It can now be verified through a quick calculation that, if it is assumed that at most one bit-flip error occurred, that there is enough combinations of syndromes to both detect and locate an error. Specifically, it is known that 
+\begin{align*}
+(s_1, s_2, s_3) &\longrightarrow ~{\rm Bit ~Flipped} \\
+(0,0,0) &\longrightarrow ~{\rm None} \\
+(0,0,1) &\longrightarrow ~ p_3 \\
+(0,1,0) &\longrightarrow ~ p_2 \\
+(0,1,1) &\longrightarrow ~ a_3 \\
+(1,0,0) &\longrightarrow ~ p_1 \\
+(1,0,1) &\longrightarrow ~ a_2 \\
+(1,1,0) &\longrightarrow ~ a_1 \\
+\end{align*}
+:::{dropdown} Proof
+
+As an example, assume that a bit-flip occurs on the first bit
+\begin{equation}
+\ket{a_1a_2a_3, p_1 p_2 p_3} \xrightarrow{\rm Noisy~ Channel} \ket{(a_1 \oplus 1)a_2a_3, p_1 p_2 p_3}.
+\end{equation}
+The output syndromes will therefore be 
+\begin{align*}
+s_1 &= (a_1 \oplus 1) \oplus a_2 \oplus p_1 = 1 \\
+s_2 &= (a_1 \oplus 1) \oplus a_3 \oplus p_2 = 1 \\
+s_3 &= a_2 \oplus a_3 \oplus p_3 = 0 \\
 \end{align*}
 
-However, there can be a large number of code words, leading to this being an impractical description of a code. 
+If, instead, an error occurs on the third parity bit
+\begin{equation}
+\ket{a_1a_2a_3, p_1 p_2 p_3} \xrightarrow{\rm Noisy~ Channel} \ket{a_1a_2a_3, p_1 p_2 (p_3 \oplus 1)},
+\end{equation}
+then the output syndromes will be 
+\begin{align*}
+s_1 &= a_1 \oplus a_2 \oplus p_1 = 0 \\
+s_2 &= a_1 \oplus a_3 \oplus p_2 = 0 \\
+s_3 &= a_2 \oplus a_3 \oplus (p_3 \oplus 1) = 1 \\
+\end{align*}
+:::
+To correct the error, one needs to check the syndrome in the table and then flip the corresponding bit. 
 
-***Set of Generators*** 
+In the next page, we will review the mathematical formulation of a broad class of quantum error correcting codes called linear codes. Firstly, however, we will argue why there is need to extend error correction to the quantum domain. 
 
-There exists some set of bit-strings $
-
-::: -->
 ## The Need for Quantum Error Correction
 
 There exists the need for new error correcting codes when considering quantum systems as the previously discovered classical codes are not sufficient for the following reasons:
